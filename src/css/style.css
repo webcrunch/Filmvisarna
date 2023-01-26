@@ -78,3 +78,26 @@ h2 {
 li {
   margin-top: 10px;
 }
+
+.movie {
+  display: block;
+  padding: 10px 30px 0 0;
+  text-decoration: none;
+  color: black;
+  margin-bottom: 20px;
+  width: 50%;
+  float: left;
+}
+
+.movie h3 {
+  text-align: center;
+}
+
+.movie img {
+  border: 1px solid black;
+  width: 30%;
+}
+
+.movie p {
+  color: white;
+}
