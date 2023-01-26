@@ -37,60 +37,60 @@ export default function App() {
 
 
   // Return som jsx (HTML-like code with expressions inside arrow brackets)
-  return <> 
+  return <>
     <header>
-    jag heter stig i laget
+      jag heter stig i laget
     </header>
-  <main>
-    {/* Some normal HTML */}
-    <h1>Hello world!</h1>
-    <p>Animals are nice and so is React as a frontend development framework!</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga ullam ex reiciendis amet consequuntur voluptatem temporibus, illum quaerat reprehenderit pariatur voluptatibus a natus modi aspernatur mollitia rem voluptate repudiandae aperiam.</p>
-    <p>The local time right now is: <b>{s.time}</b></p>
+    <main>
+      {/* Some normal HTML */}
+      <h1>Hello world!</h1>
+      <p>Animals are nice and so is React as a frontend development framework!</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga ullam ex reiciendis amet consequuntur voluptatem temporibus, illum quaerat reprehenderit pariatur voluptatibus a natus modi aspernatur mollitia rem voluptate repudiandae aperiam.</p>
+      <p>The local time right now is: <b>{s.time}</b></p>
       <h2>Movie:</h2>
-    <ul>
-      {/* A "loop" using the array method 'map' */}
-      {s.movies.map(
-        movie => <>
-<img className='posterImg' src={movie.images[0]} alt="bild" />
-        <li>
-           titel: {movie.title}
-          </li>
-          <li>
-           längd: {Math.floor(movie.length / 60)} timmar och  {movie.length % 60 } minuter
-          </li>
-          <li>
-            genre: {movie.genre}
-          </li>
-          {/* <video
+      <ul>
+        {/* A "loop" using the array method 'map' */}
+        {s.movies.map(
+          movie => <>
+            <img className='posterImg' src={movie.images[0]} alt="bild" />
+            <li>
+              titel: {movie.title}
+            </li>
+            <li>
+              längd: {Math.floor(movie.length / 60)} timmar och  {movie.length % 60} minuter
+            </li>
+            <li>
+              genre: {movie.genre}
+            </li>
+            {/* <video
             src="https://www.youtube.com/embed/Z9AYPxH5NTM"
              type="video/mp4" 
             >   </video> */}
-          
-          <iframe width="420" height="315"
-src="https://www.youtube.com/embed/Z9AYPxH5NTM">
-</iframe>
-{/* <iframe width="560" height="315" src="https://www.youtube.com/embed/Z9AYPxH5NTM" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> */}
+
+            <iframe width="420" height="315"
+              src="https://www.youtube.com/embed/Z9AYPxH5NTM">
+            </iframe>
+            {/* <iframe width="560" height="315" src="https://www.youtube.com/embed/Z9AYPxH5NTM" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> */}
 
 
 
 
           </>
-      )}  
-    </ul>
-    <p>
-      {/* A button with an onClick event */}
-      <button onClick={() => s.catImageVisible = !s.catImageVisible}>
-        {s.catImageVisible ? 'Hide the' : 'Show a'} cat image
-      </button>
-    </p>
-    <p>
-      {/* Show the cat image if s.catImageVisible is true */}
-      {s.catImageVisible && <img src="/images/cat.jpg" />}
-    </p>
+        )}
+      </ul>
+      <p>
+        {/* A button with an onClick event */}
+        <button onClick={() => s.catImageVisible = !s.catImageVisible}>
+          {s.catImageVisible ? 'Hide the' : 'Show a'} cat image
+        </button>
+      </p>
+      <p>
+        {/* Show the cat image if s.catImageVisible is true */}
+        {s.catImageVisible && <img src="/images/cat.jpg" />}
+      </p>
     </main>
     <footer>
-      hej alla ni 
+      hej alla ni
     </footer>
-    </>;
+  </>;
 }
