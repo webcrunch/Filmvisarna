@@ -13,6 +13,16 @@ body {
   background-attachment: fixed;
 }
 
+.movie {
+  width: 30px;
+  height: 30px;
+}
+
+.border {
+  border: #666 solid 2px;
+  border-radius: 2cm;
+}
+
 .posterImg {
   width: 50%;
   height: 50%;
