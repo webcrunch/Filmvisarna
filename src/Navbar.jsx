@@ -2,8 +2,8 @@ import { useStates } from './utilities/states';
 import { NavLink } from "react-router-dom"
 export default function Navbar() {
 
-  const s = useStates('main');
-    // console.log(!useStates ? null : s);
+    const s = useStates('main');
+
     return <>
         <nav className="navbar">
             <nav>
