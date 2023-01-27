@@ -1,8 +1,38 @@
 [
   {
     "auditorium": "Stora Salongen",
-    "film": "Call me by your name",
+    "film": "A Man Called Otto",
     "date": "2018-01-22",
     "time": "18.40"
+  },
+
+  {
+    "auditorium": "Lilla SAlongen",
+    "film":"Bränn Alla Mina Brev",
+    "date":"2018-01-22",
+    "time":"18.40"
+
+  },
+
+  {
+    "auditorium": "Stora Salongen",
+    "film":"Black Panther wakanda forever",
+    "date":"2018-01-24",
+    "time":"20.40"
+    
+  },
+
+  {
+    "auditorium": "Lilla Salongen",
+    "film":"Avatar The Way Of Water",
+    "date":"2018-01-24",
+    "time":"20.40"
+  },
+
+  {"auditorium": "Stora Salongen",
+  "film":"The Menu",
+  "date":"2018-01-25",
+  "time":"21.00"
+
   }
 ]
