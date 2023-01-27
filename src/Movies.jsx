@@ -33,46 +33,54 @@ export default function Movies() {
     <hr className="movieshr"></hr>
     <img className="imagesmovies" src="/images/avatar.jpg" alt="bilden kunde ej visas"></img>
     <div className="tidochsalong">
-    <h2 className="movietitlefilmer">Avatar</h2>
-    <h3 className="tidochsalongtitle">15:30, Salong 1</h3>
-</div>
-    
+        <h2 className="movietitlefilmer">Avatar</h2>
+        <h3 className="tidochsalongtitle">17:30, Salong 1</h3>
+    </div>
+    <button className="moviebtnsitplatser" type="submit" value="Submit">Välj sittplatser</button>
+ </div>
+ 
+<div className="imagelistdiv">
     <hr className="movieshr"></hr>
-    <div className="tidochsalong">  
     <img className="imagesmovies" src="/images/amancalledotto.jpg" alt="bilden kunde ej visas"></img>
-    <h2 className="movietitlefilmer">A Man Called Otto</h2>
-    <h3 className="tidochsalongtitle">17:00, Salong 2</h3>
-</div>  
-    
+    <div className="tidochsalong">
+        <h2 className="movietitlefilmer">A Man Called Otto</h2>
+        <h3 className="tidochsalongtitle">18:00, Salong 2</h3>
+    </div>
+    <button className="moviebtnsitplatser" type="submit" value="Submit">Välj sittplatser</button>
+ </div>
+
+<div className="imagelistdiv">
     <hr className="movieshr"></hr>
-<div className="tidochsalong"> 
     <img className="imagesmovies" src="/images/blackpanter.jpg" alt="bilden kunde ej visas"></img>
-    <h2 className="movietitlefilmer">Black Panter Wakanda Forever</h2>
-    <h3 className="tidochsalongtitle">17:00, Salong 2</h3>
-</div>
-
+    <div className="tidochsalong">
+        <h2 className="movietitlefilmer">Black Panter<br></br>Wakanda Forever</h2>
+        <h3 className="tidochsalongtitle">21:00, Salong 1</h3>
+    </div>
+    <button className="moviebtnsitplatser" type="submit" value="Submit">Välj sittplatser</button>
+ </div>
+ 
+<div className="imagelistdiv">
     <hr className="movieshr"></hr>
-
-<div className="tidochsalong"> 
     <img className="imagesmovies" src="/images/burnallmyletters.jpg" alt="bilden kunde ej visas"></img>
-    <h2 className="movietitlefilmer">Bränn Alla mina Brev</h2>
-    <h3 className="tidochsalongtitle">17:00, Salong 2</h3>
-</div>
-
+    <div className="tidochsalong">
+        <h2 className="movietitlefilmer">Burn All My Letters</h2>
+        <h3 className="tidochsalongtitle">21:30, Salong 2</h3>
+    </div>
+    <button className="moviebtnsitplatser" type="submit" value="Submit">Välj sittplatser</button>
+ </div>
+ 
+<div className="imagelistdiv">
     <hr className="movieshr"></hr>
-<div>
     <img className="imagesmovies" src="/images/themenu.jpg" alt="bilden kunde ej visas"></img>
-    <h2 className="movietitlefilmer">The Menu</h2>
-    <h3 className="tidochsalongtitle">17:00, Salong 2</h3>
-</div> 
+    <div className="tidochsalong">
+        <h2 className="movietitlefilmer">The Menu</h2>
+        <h3 className="tidochsalongtitle">17:05, Salong 2</h3>
+    </div>
+    <button className="moviebtnsitplatser" type="submit" value="Submit">Välj sittplatser</button>
+    <hr className="movieshrr"></hr>
+ </div>
 
-    <hr className="movieshr"></hr>
-    <br></br><br></br>
-
-
-
-</div>
-
+   
 
 
 

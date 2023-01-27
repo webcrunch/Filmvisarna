@@ -88,18 +88,70 @@ body{
 .movieshr{
   width: 80%;
 }
+.movieshrr{
+  width: 80%;
+  margin-bottom: 100px;
+}
+
+.imagelistdiv{
+  display: flexbox;
+  justify-content: space-evenly;
+}
 
 .imagesmovies {
   width: 140px;
   height: 200px;
   margin-left: 10%;
+  margin-right: 5%;
 }
 
 .movietitlefilmer{
   color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.tidochsalong{
+  display: inline-block;
+  padding-bottom: 1%;
+  width: 196px;
+}
+
+.imagelistfilm{
+ justify-content: space-between;
 }
 
 .tidochsalongtitle{
+  align-items: center;
+  justify-content: space-between;
   color: white;
+ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
+.moviebtnsitplatser{
+  color: black;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bold;
+  width: 20%;
+  height: 40px;
+  border-radius: 10px;
+  background-color: red;
+  cursor: pointer;
+  margin-left: 30%;
+  box-shadow: 3px 2px #51515128;
+  border-style: none;
+}
+.moviebtnsitplatser:hover{
+  color: black;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bold;
+  width: 22%;
+  height: 42px;
+  border-radius: 10px;
+  background-color: red;
+  cursor: pointer;
+  margin-left: 30%;
+  box-shadow: 3px 2px #51515128;
+  border-style: none;
 }
