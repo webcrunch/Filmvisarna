@@ -5,85 +5,78 @@
   box-sizing: border-box;
 }
 
-body {
-  font-family: "Arima";
-  font-size: 130%;
-  background-image: url("/images/elephant.jpg");
-  background-size: cover;
-  background-attachment: fixed;
-}
-
-.movie {
-  width: 30px;
-  height: 30px;
-}
-
-.border {
-  border: #666 solid 2px;
-  border-radius: 2cm;
-}
-
-.posterImg {
-  width: 50%;
-  height: 50%;
-  margin-bottom: 50px;
-}
-
-#root {
-  margin: 0 20px;
-}
-
-header {
-  background-color: rgba(255, 255, 255, 0.7);
-  margin: 10px;
-  padding: 20px;
-  border-radius: 15px;
-}
-
 footer {
-  background-color: rgba(255, 255, 255, 0.7);
-  margin: 10px;
-  padding: 20px;
-  border-radius: 15px;
-}
-
-main {
-  background-color: rgba(255, 255, 255, 0.7);
-  margin: 50px auto;
-  max-width: calc(600px + 20vw);
-  border-radius: 10px;
-  padding: 40px;
-  /* clearfix */
-  content: "";
-  display: table;
-  clear: both;
-}
-
-img {
-  display: block;
+  background-color: #1a1a1a;
+  color: white;
+  border-radius: 0px;
+  margin-bottom: 0%;
   width: 100%;
-  position: relative;
-  top: 30px;
-  border-radius: 20px;
-  border: 3px solid #666;
+  text-align: center;
+  justify-content: space-evenly;
 }
 
-button {
-  padding: 5px 10px;
+.infodiv {
+  font-weight: bold;
+  display: inline-block;
+  align-items: center;
+  text-align: center;
+  margin-right: 10%;
+  margin-top: -10px;
+}
+.socialsdiv {
+  font-weight: bold;
+  text-align: center;
+  align-items: center;
+  display: inline-block;
+  margin-left: 20%;
+  margin-top: 15px;
+}
+.openinghdiv {
+  align-items: center;
+  text-align: center;
+  font-weight: bold;
+  display: inline-block;
+  margin-left: 10%;
+}
+.openinghtitle {
+  margin-bottom: 10.2%;
+  margin-top: 5.2%;
+}
+.socialstitle {
+  margin-bottom: 15%;
+  margin-top: 15px;
+}
+.crfooter {
+  margin-left: 4%;
+}
+
+nav {
+  background-color: #1a1a1a;
+  text-decoration: none;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.navlinks {
+  color: white;
+  font-size: 1.2em;
+  font-weight: bold;
+  padding: 20px;
+  text-decoration: none;
+}
+.navlinks:hover {
+  background-color: #333333;
+  color: #f5f5f5;
   border-radius: 10px;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  float: right;
 }
 
-h1 {
-  margin-top: 0;
+ul {
+  list-style-type: none;
 }
-
-h1,
-h2 {
-  margin-bottom: 3px;
-}
-
-li {
-  margin-top: 10px;
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
