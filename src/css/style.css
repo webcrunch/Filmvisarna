@@ -80,3 +80,17 @@ nav ul {
   align-items: center;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
+
+body{
+  background-color: rgb(0, 0, 0)
+}
+
+.movieshr{
+  width: 80%;
+}
+
+.imagesmovies {
+  width: 140px;
+  height: 200px;
+  margin-left: 10%;
+}
