@@ -1,6 +1,14 @@
 import { useStates } from './utilities/states.js';
 import { useEffect } from 'react';
-import Test from './Test.jsx';
+import {
+  BrowserRouter,
+  Routes,
+  Route
+} from 'react-router-dom';
+
+import Test from './Test'
+import Navbar from './Navbar';
+import Footer from './Footer';
 
 // A React component is a function
 // it will run every time a state variable changes
@@ -8,6 +16,18 @@ import Test from './Test.jsx';
 export default function App() {
 
   /* State variables */
+
+    const so = useStates('main', {
+    // A menu used for the main menu and for routing
+    menu: [
+        { label: 'FILMER', path: '/', Component: Test },
+        { label: 'OM OSS ', path: '/', Component: Test },
+        { label: 'KONTAKT', path: '/', Component: Test },
+      { label: 'HEM', path: '/', Component: Test }
+
+    ]
+  });
+
   let s = useStates({
     movies: [],
     catImageVisible: false,
@@ -37,10 +57,8 @@ export default function App() {
 
 
   // Return som jsx (HTML-like code with expressions inside arrow brackets)
-  return <>
-    <header>
-      jag heter stig i laget
-    </header>
+  return <BrowserRouter>
+    <Navbar />
     <main>
       {/* Some normal HTML */}
       <h1>Hello world!</h1>
@@ -89,5 +107,6 @@ export default function App() {
         {s.catImageVisible && <img src="/images/cat.jpg" />}
       </p>
     </main>
-  </>;
+    <Footer />
+  </BrowserRouter>;
 }
