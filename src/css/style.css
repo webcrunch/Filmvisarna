@@ -65,7 +65,7 @@ nav {
   color: white;
   font-size: 1.2em;
   font-weight: bold;
-  padding:  10px;
+  padding:  20px;
   text-decoration: none;
 }
 .navlinks:hover {
@@ -81,4 +81,5 @@ nav ul{
   display: flex;
   justify-content: space-between;
   align-items: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
