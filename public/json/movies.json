@@ -1,38 +1,36 @@
 [
   {
-    "title": "Call me by your name",
+    "title": "A Man Called Otto",
     "productionCountries": [
-      "Italien",
       "USA"
     ],
     "productionYear": 2017,
-    "length": 132,
-    "genre": "Drama",
-    "distributor": "UIP",
+    "length": 126,
+    "genre": "Komedi,Drama",
+    "distributor": "Sony Pictures",
     "language": "engelska",
     "subtitles": "svenska",
-    "director": "Luca Guadagnino",
+    "director": "Marc Forster",
     "actors": [
-      "Armie Hammer",
-      "Timothée Chalamet",
-      "Michael Stuhlbarg"
+      "Tom Hanksr",
+      "Mariana Treviño",
+      "Rachel Keller"
     ],
-    "description": "<p>Filmen utspelas i norra Italien sommaren 1983. En ung amerikansk-italienare blir förälskad i en amerikansk student som kommer för att studera och bo hos hans familj.</p><p>Tillsammans upplever de en oförglömlig sommar - full av musik, mat och kärlek - som för evigt kommer att förändra dem.</p>",
+    "description": "<p>Otto Anderson är en grinig änkeman, vars enda glädje kommer från att kritisera och döma sina upprörda grannar. När en ny familj flyttar in möter han sin match i kvicktänkta och höggravida Marisol, vilket leder till en oväntad vänskap som kommer att vända upp och ner på hans värld.A Man Called Otto är den amerikanska re-maken av den svenska bok och filmsuccén ”En man som heter Ove”</p>",
     "images": [
-        "https://m.media-amazon.com/images/M/MV5BNDk3NTEwNjc0MV5BMl5BanBnXkFtZTgwNzYxNTMwMzI@._V1_.jpg",
-    "https://m.media-amazon.com/images/M/MV5BMzBlMWQ4MDMtMWEzNy00MWJiLWI2ZDgtZjBkOTkwMTFlOTNhXkEyXkFqcGdeQTNwaW5nZXN0._V1_.jpg",
-    "ttps://static.metacritic.com/images/products/movies/6/33ef47117e90c768a4632c77ed16da3e-2400.jpg",
-       "call-me-poster1.jpg",
-       "call-me-poster2.jpg"
+      "https://i.ytimg.com/vi/pbrR3MY7oDI/movieposter_en.jpg",
+      "https://www.lionheartv.net/wp-content/uploads/2022/12/A-Man-Called-Otto.jpg",
+      "A-Man-called-poster1.jpg",
+      "A-Man-called-poster2.jpg"
     ],
     "youtubeTrailers": [
-      "Z9AYPxH5NTM"
-    ], 
-    "trailer": "https://www.youtube.com/watch?v=Z9AYPxH5NTM?autoplay=1&mute=1",
+      "eFYUX9l"
+    ],
+    "trailer": "https://www.youtube.com/watch?v=eFYUX9l-m5I",
     "reviews": [
       {
-        "source": "Sydsvenskan",
-        "quote": "ett drama berättat med stor ömhet",
+        "source": "imdb",
+        "quote": "lockar en att gråta och skratta",
         "stars": 4,
         "max": 5
       },
@@ -43,10 +41,220 @@
         "max": 5
       },
       {
-        "source": "DN",
-        "quote": "en het romans i åttiotalskostym",
+        "source": "Rötten Tomatoes",
+        "quote": "Med hjärtat på rätt plats",
         "stars": 4,
         "max": 5
+      }
+    ]
+  }
+]
+
+[
+  {
+    "title": "Bränn alla mina brev",
+    "productionCountries": [
+      "Sverige"
+    ],
+    "productionYear": 2022,
+    "length": 120,
+    "genre": "Drama",
+    "distributor": "SF Studios",
+    "language": "svenska",
+    "subtitles": "svenska",
+    "director": "Björn Runge ",
+    "actors": [
+      "Bill Skarsgård",
+      "Asta Kamma August",
+      "Gustav Lindh""Marika Lindström"
+    ],
+    "description": "<p>Efter ett gräl med sin fru inser Alex Schulman att han måste ta itu med sin vrede. En ilska som gått i arv i generationer. Släktens alla konflikter och vendettor tycks börja hos en och samma person: morfar Sven Stolpe”</p>",
+    "images": [
+      "https://d2iltjk184xms5.cloudfront.net/uploads/photo/file/442684/0389000b9a3250d3ffc16727d4cd9e93-brann-alla-brev-poster.jpg",
+      "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.boktugg.se%2Fbok%2F9789188745583&psig=AOvVaw03JoyXL1hG73I3duCrZsUx&ust=1674899038987000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCIDouaS75_wCFQAAAAAdAAAAABAJ",
+      "Bränn-Alla-Mina_brev-poster1.jpg",
+      "Bränn-Alla-Mina_brev-poster2.jpg"
+    ],
+    "youtubeTrailers": [
+      "ED0NDIxHxw"
+    ],
+    "trailer": "https://www.youtube.com/watch?v=-ED0NDIxHxw",
+    "reviews": [
+      {
+        "source": "imdb",
+        "quote": "Bränn alla mina brev blir en kärlekshistoria att verkligen reflektera över",
+        "stars": 4,
+        "max": 5
+      },
+      {
+        "source": "Svenska Dagbladet",
+        "quote": "en berättelse om ett mörkt äktenskap",
+        "stars": 4,
+        "max": 4
+      },
+      {
+        "source": "SVT.se",
+        "quote": "Hur många av våra känslor och beteendemönster är nedärvda?",
+        "stars": 3,
+        "max": 4
+      }
+    ]
+  }
+]
+
+[
+  {
+    "title": "Black Panther: Wakanda Forever",
+    "productionCountries": [
+      "USA"
+    ],
+    "productionYear": 2018,
+    "length": 134,
+    "genre": "Action,Äventyr",
+    "distributor": "	Walt Disney Studios,Motion Pictures",
+    "language": "engelska",
+    "subtitles": "svenska",
+    "director": "Ryan Coogler ",
+    "actors": [
+      "Chadwick Boseman",
+      "Lupita Nyong'o",
+      "Angela Bassett""Michael B. Jordan"
+    ],
+    "description": "<p>Queen Ramonda, Shuri, M’Baku, Okoye och deras specialstyrka med kvinnliga krigare, gör allt för att skydda sin nation från angripande världsmakter efter Kung T’Challas död. Wakandas invånare försöker gå vidare och tar hjälp av War Dog Nakia och Everett Ross, för att hitta en ny väg för kungariket Wakanda. Vi får också möta Namor, kungen av en dold undervattensnation.”</p>",
+    "images": [
+      "https://terrigen-cdn-dev.marvel.com/content/prod/1x/blackpantherwakandaforever_lob_crd_06.jpg",
+      "https://thedisinsider.com/wp-content/uploads/2021/08/IMG_2821.jpg",
+      "Black-Panther-Wakanda-poster1.jpg",
+      "Black-Panther-Wakanda-poster2.jpg"
+    ],
+    "youtubeTrailers": [
+      "RlOB3UALvrQ"
+    ],
+    "trailer": "https://www.youtube.com/watch?v=RlOB3UALvrQ",
+    "reviews": [
+      {
+        "source": "imdb",
+        "quote": "Wakanda Forever! Long Live Wakanda! For Honor, For Legacy, For Wakanda!",
+        "stars": 4,
+        "max": 5
+      },
+      {
+        "source": "Svenska Dagbladet",
+        "quote": "Queen Ramonda och Wakandas kvinnliga krigare, gör allt för att skydda nationen och hitta en ny väg för kungariket Wakanda.",
+        "stars": 5,
+        "max": 5
+      },
+      {
+        "source": "Rötten Tomatoes",
+        "quote": "Wakandas invånare försöker gå vidare och tar hjälp av War Dog Nakia och Everett Ross, för att hitta en ny väg för kungariket Wakanda.",
+        "stars": 4,
+        "max": 4
+      }
+    ]
+  }
+]
+
+[
+  {
+    "title": "Avatar: The Way of Water",
+    "productionCountries": [
+      "USA"
+    ],
+    "productionYear": 2022,
+    "length": 192,
+    "genre": "Action,Äventyr",
+    "distributor": "	Walt Disney Studios,Motion Pictures",
+    "language": "engelska",
+    "subtitles": "svenska",
+    "director": "Ryan Coogler ",
+    "actors": [
+      "Chadwick Boseman",
+      "Lupita Nyong'o",
+      "Angela Bassett",
+      "Michael B. Jordan"
+    ],
+    "description": "<p>Mer än tio år efter händelserna i den första filmen berättar ”Avatar The Way of Water” historien om familjen Sully (Jake, Neytiri och deras barn), problemen som följer dem, allt de gör för att leva i säkerhet, slagen de utkämpar för att hålla sig levande och tragedierna de måste utstå.”</p>",
+    "images": [
+      "https://terrigen-cdn-dev.marvel.com/content/prod/1x/blackpantherwakandaforever_lob_crd_06.jpg",
+      "https://m.media-amazon.com/images/I/61tftxkZaDL.jpg",
+      "Avatar-WayOfWater-poster1.jpg",
+      "Avatar-WayOfWater-poster2.jpg"
+    ],
+    "youtubeTrailers": [
+      "d9MyW72ELq0"
+    ],
+    "trailer": "https://www.youtube.com/watch?v=d9MyW72ELq0",
+    "reviews": [
+      {
+        "source": "Rooten Tomatoes",
+        "quote": "The Way of Water är en fantastiskt uppslukande upplevelse",
+        "stars": 4,
+        "max": 5
+      },
+      {
+        "source": "Svenska Dagbladet",
+        "quote": "Succén upprepar sig för James Camerons Avatar-äventyr.",
+        "stars": 4,
+        "max": 5
+      },
+      {
+        "source": "Moviezine",
+        "quote": "Ursnygg,Storslagen och Emotionell.",
+        "stars": 4,
+        "max": 4
+      }
+    ]
+  }
+]
+
+[
+  {
+    "title": "The Menu",
+    "productionCountries": [
+      "USA"
+    ],
+    "productionYear": 2022,
+    "length": 106,
+    "genre": "Komedi,Skräck",
+    "distributor": "Searchlight Pictures",
+    "language": "engelska",
+    "subtitles": "svenska",
+    "director": "Mark Mylod",
+    "actors": [
+      "Ralph Fiennes",
+      "Anya Taylor-Joy",
+      "Nicholas Hoult",
+      "Hong Chau"
+    ],
+    "description": "<p>Ett ungt par bjuds, tillsammans med en grupp främlingar, in till en avskilt belägen restaurang på en avlägsen ö. Den mycket hyllade men något besatte köksmästaren har förberett en påkostad avsmakningsmeny, men också några chockerande överraskningar.”</p>",
+    "images": [
+      "https://m.media-amazon.com/images/M/MV5BMzdjNjI5MmYtODhiNS00NTcyLWEzZmUtYzVmODM5YzExNDE3XkEyXkFqcGdeQXVyMTAyMjQ3NzQ1._V1_.jpg",
+      "https://magarila.com/wp-content/uploads/2022/08/%E2%80%98The-Menu-Poster.jpg",
+      "The-Menu-poster1.jpg",
+      "The-Menu-poster2.jpg"
+    ],
+    "youtubeTrailers": [
+      "CAWZMssP3gM"
+    ],
+    "trailer": "https://www.youtube.com/watch?v=CAWZMssP3gM",
+    "reviews": [
+      {
+        "source": "imdb",
+        "quote": "Underbara överraskningar väntar er alla",
+        "stars": 4,
+        "max": 5
+      },
+      {
+        "source": "Aftonbladet",
+        "quote": "En Genreöverskridande Film Av Sällan skådat Slag.",
+        "stars": 4,
+        "max": 4
+      },
+      {
+        "source": "Moviezine",
+        "quote": "En Väl Tillagad  Thriller.",
+        "stars": 4,
+        "max": 4
       }
     ]
   }
