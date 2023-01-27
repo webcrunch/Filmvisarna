@@ -32,19 +32,45 @@ export default function Movies() {
 <div className="imagelistdiv">
     <hr className="movieshr"></hr>
     <img className="imagesmovies" src="/images/avatar.jpg" alt="bilden kunde ej visas"></img>
-    <hr className="movieshr"></hr>
-
-    <img className="imagesmovies" src="/images/thewords.jpg" alt="bilden kunde ej visas"></img>
-    <hr className="movieshr"></hr>
-
-    <img className="imagesmovies" src="/images/thelionking.jpg" alt="bilden kunde ej visas"></img>
-    <hr className="movieshr"></hr>
-
-    <img className="imagesmovies" src="/images/thegraveencounters.jpg" alt="bilden kunde ej visas"></img>
-    <hr className="movieshr"></hr>
+    <div className="tidochsalong">
+    <h2 className="movietitlefilmer">Avatar</h2>
+    <h3 className="tidochsalongtitle">15:30, Salong 1</h3>
+</div>
     
-    <img className="imagesmovies" src="/images/americanpie2.jpg" alt="bilden kunde ej visas"></img>
     <hr className="movieshr"></hr>
+    <div className="tidochsalong">  
+    <img className="imagesmovies" src="/images/amancalledotto.jpg" alt="bilden kunde ej visas"></img>
+    <h2 className="movietitlefilmer">A Man Called Otto</h2>
+    <h3 className="tidochsalongtitle">17:00, Salong 2</h3>
+</div>  
+    
+    <hr className="movieshr"></hr>
+<div className="tidochsalong"> 
+    <img className="imagesmovies" src="/images/blackpanter.jpg" alt="bilden kunde ej visas"></img>
+    <h2 className="movietitlefilmer">Black Panter Wakanda Forever</h2>
+    <h3 className="tidochsalongtitle">17:00, Salong 2</h3>
+</div>
+
+    <hr className="movieshr"></hr>
+
+<div className="tidochsalong"> 
+    <img className="imagesmovies" src="/images/burnallmyletters.jpg" alt="bilden kunde ej visas"></img>
+    <h2 className="movietitlefilmer">Bränn Alla mina Brev</h2>
+    <h3 className="tidochsalongtitle">17:00, Salong 2</h3>
+</div>
+
+    <hr className="movieshr"></hr>
+<div>
+    <img className="imagesmovies" src="/images/themenu.jpg" alt="bilden kunde ej visas"></img>
+    <h2 className="movietitlefilmer">The Menu</h2>
+    <h3 className="tidochsalongtitle">17:00, Salong 2</h3>
+</div> 
+
+    <hr className="movieshr"></hr>
+    <br></br><br></br>
+
+
+
 </div>
 
 
