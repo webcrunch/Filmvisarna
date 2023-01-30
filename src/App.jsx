@@ -6,9 +6,12 @@ import {
   Route
 } from 'react-router-dom';
 
-import Test from './Test'
 import Navbar from './Navbar';
 import Footer from './Footer';
+import Home from './pages/home.jsx';
+import Contact from './pages/contact.jsx';
+import About from './pages/about.jsx';
+import Movies from './pages/movies.jsx';
 // A React component is a function
 // it will run every time a state variable changes
 // thus rerendering the content you see in your Browser
@@ -21,10 +24,10 @@ export default function App() {
     catImageVisible: false,
     time: new Date().toLocaleString('sv-SE'),
     menu: [
-      { label: 'FILMER', path: '/movies' },  
-      { label: 'OM OSS ', path: '/about'}, //, Component:
-      { label: 'KONTAKT', path: '/contact' },
-      { label: 'HEM', path: '/#' }
+      { label: 'FILMER', path: '/movies', Component: Movies },  
+      { label: 'OM OSS ', path: '/about', Component: About}, //, Component:
+      { label: 'KONTAKT', path: '/contact', Component: Contact },
+      { label: 'HEM', path: '/#', Component: Home }
 
     ]
   });
@@ -55,9 +58,9 @@ export default function App() {
   return <BrowserRouter>
     <Navbar />
     <main>
-      {/* <Routes>
+      <Routes>
          {s.menu.map(({ path, Component }) => <Route path={path} element={<Component />} />)}
-                </Routes>               */}
+                </Routes> 
             </main> 
     <Footer />
   </BrowserRouter>;
