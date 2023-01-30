@@ -16,7 +16,7 @@ export default function Movies() {
                 {
                     <div className="imagelistdiv">
                         {/* <hr className="movieshr"></hr> */}
-                        <img className="imagesmovies" src={movie.images[0]} alt="bilden kunde ej visas"></img>
+                        <img className="imagesmovies" src={movie.image} alt="bilden kunde ej visas"></img>
                         <div className="tidochsalong">
                             <h2 className="movietitlefilmer">{movie.title}</h2>
                             <h3 className="tidochsalongtitle">17:30, Salong 1</h3>
