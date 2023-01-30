@@ -23,6 +23,7 @@ footer {
   margin-right: 10%;
   margin-top: -10px;
 }
+
 .socialsdiv {
   font-weight: bold;
   text-align: center;
@@ -31,6 +32,7 @@ footer {
   margin-left: 20%;
   margin-top: 15px;
 }
+
 .openinghdiv {
   align-items: center;
   text-align: center;
@@ -38,14 +40,17 @@ footer {
   display: inline-block;
   margin-left: 10%;
 }
+
 .openinghtitle {
   margin-bottom: 10.2%;
   margin-top: 5.2%;
 }
+
 .socialstitle {
   margin-bottom: 15%;
   margin-top: 15px;
 }
+
 .crfooter {
   margin-left: 4%;
 }
@@ -65,6 +70,7 @@ nav {
   padding: 20px;
   text-decoration: none;
 }
+
 .navlinks:hover {
   background-color: #333333;
   color: #f5f5f5;
@@ -74,6 +80,7 @@ nav {
 ul {
   list-style-type: none;
 }
+
 nav ul {
   display: flex;
   justify-content: space-between;
@@ -81,55 +88,76 @@ nav ul {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-body{
+body {
   background-color: rgb(0, 0, 0)
 }
 
-.movieshr{
-  width: 80%;
+.movieshr {
+  width: 100%;
 }
-.movieshrr{
-  width: 80%;
+
+.movieshrr {
+  width: 100%;
   margin-bottom: 100px;
 }
 
-.imagelistdiv{
-  display: flexbox;
-  justify-content: space-evenly;
+.movieList {
+  padding: 0 80px;
 }
+
+.clearfix::after {
+  /* clear fix for floating child elements */
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+.imagelistdiv {
+  text-align: center;
+  position: relative;
+  height: 220px;
+  padding-left: 220px;
+  padding-top: 30px;
+  border-bottom: 1px solid white;
+}
+
+
 
 .imagesmovies {
   width: 140px;
   height: 200px;
-  margin-left: 10%;
-  margin-right: 5%;
+  display: block;
+  position: absolute;
+  top: 10px;
+  left: 15px;
 }
 
-.movietitlefilmer{
+.movietitlefilmer {
   color: white;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   justify-content: space-between;
   text-align: center;
 }
 
-.tidochsalong{
+.tidochsalong {
   display: inline-block;
   padding-bottom: 1%;
   width: 196px;
 }
 
-.imagelistfilm{
- justify-content: space-between;
+.imagelistfilm {
+  justify-content: space-between;
 }
 
-.tidochsalongtitle{
+.tidochsalongtitle {
   align-items: center;
   justify-content: space-between;
   color: white;
- font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.moviebtnsitplatser{
+.moviebtnsitplatser {
   color: black;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-weight: bold;
@@ -142,7 +170,8 @@ body{
   box-shadow: 3px 2px #51515128;
   border-style: none;
 }
-.moviebtnsitplatser:hover{
+
+.moviebtnsitplatser:hover {
   color: black;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-weight: bold;
