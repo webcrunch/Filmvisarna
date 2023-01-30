@@ -61,7 +61,7 @@ export default function App() {
       <Routes>
          {s.menu.map(({ path, Component }) => <Route path={path} element={<Component />} />)}
                 </Routes> 
-            </main> 
+    </main> 
     <Footer />
   </BrowserRouter>;
 }
