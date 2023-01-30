@@ -21,14 +21,11 @@ export default function App() {
 
   let s = useStates('main',{
     movies: [],
-    catImageVisible: false,
-    time: new Date().toLocaleString('sv-SE'),
     menu: [
       { label: 'FILMER', path: '/movies', Component: Movies },  
       { label: 'OM OSS ', path: '/about', Component: About}, //, Component:
       { label: 'KONTAKT', path: '/contact', Component: Contact },
-      { label: 'HEM', path: '/#', Component: Home }
-
+      { label: 'HEM', path: '/', Component: Home }
     ]
   });
 
@@ -40,17 +37,6 @@ export default function App() {
         await fetch('/json/movies.json')
       ).json();
     })();
-    // Run an anonymous arrow functions that changes
-    // the state variable s.time once a second
-    // (using an interval)
-    let timeInterval = setInterval(
-      () => s.time = new Date().toLocaleString('sv-SE'),
-      1000
-    );
-    // Return an anonymous that will run when/if
-    // the component unloads (we leave the page)
-    // - it will stop/clear the interval
-    return () => clearInterval(timeInterval);
   }, []);
 
 
