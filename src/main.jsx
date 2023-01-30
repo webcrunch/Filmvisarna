@@ -10,7 +10,6 @@ import Navbar from './Navbar';
 ReactDOM.createRoot(document.querySelector('#root')).render(
   <React.StrictMode>
     <App />
-    <Footer />
   </React.StrictMode>
    
 );    
