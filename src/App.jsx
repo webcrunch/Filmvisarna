@@ -22,8 +22,6 @@ export default function App() {
 
   let s = useStates('main', {
     movies: [],
-    catImageVisible: false,
-    time: new Date().toLocaleString('sv-SE'),
     menu: [
       { label: 'FILMER', path: '/movies', Component: Movies },
       { label: 'OM OSS ', path: '/about', Component: About }, //, Component:
