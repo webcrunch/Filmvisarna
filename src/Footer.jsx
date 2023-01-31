@@ -1,31 +1,28 @@
 export default function Footer() {
   return <>
     <footer>
-      <div className="infodiv" >
-      <p className="infotitle">INFORMATION:</p>
-      <p className="adress">Stortorget 11, Småstad, 23837</p>
-      <p className="adress">Tel: <a href="tel:+4733378901">+47 333 78 901</a></p>
-      <p className="email">Email: <a href="#">info@filmvisarna.com</a></p>
+      <div className="footerleft" >
+      <h3>Information:</h3>
+      <p className="adress">Adress: Stortorget 11, 124 84 Småstad, Sverige</p>
+      <p className="phonenumber"><a href="tel:+4733378901">Telefon: (073) 337 89 01 </a></p>
+      <p className="email">Email: <a href="info@filmvisarna.com">info@filmvisarna.com</a></p>
      </div>
       
-      <div className="openinghdiv">
-        <p className="openinghtitle">
-          OPENING HOURS:
-          <br></br><br></br><br></br>
-          
-        </p>
-       
-        <pre className="hours"> 
-        Monday - Friday   : 15:00 - 23:00<br></br>
-        Saturday - Sunday : 17:00 - 23:00</pre>
+      <div className="footercenter">
+        <h3 className="openinghtitle">Opening Hours:</h3>
+        <p className="hourweekdays">Mon-Fre: 15:00-22:00</p>
+        <p className="hourweekend">Lör-Sön: 15:00-23:00</p>
       </div>
 
-      <div className="socialsdiv">
-        <p className="socialstitle">SOCIALS:
-        <br></br><br></br><br></br> <br></br></p>
-        <p className="socials"> sociala medier bilder</p>
+      <div className="footerright">
+        <h3>Socials</h3>
+          <a href="#"><img src="images/facebook.png" alt=""facebookalt width="50px" height="50px"></img></a>
+          <a href="#"><img src="images/instagram.png" alt=""facebookalt width="50px" height="50px"></img></a>
+          <a href="#"><img src="images/twitter.png" alt=""facebookalt width="50px" height="50px"></img></a>
+          
+       
       </div>
-      <p className="crfooter">©Filmvisarna AB</p>
+    
 
 
     </footer>
