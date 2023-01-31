@@ -64,3 +64,17 @@ nav ul{
   align-items: center;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
+
+/*----------------UNDER HERE IS THE CSS FOR THE HOME PAGE---------------*/
+
+body{
+  background-color: #000000;
+}
+
+.hometrailer{
+  align-items: center;
+  float: center;
+  display: block;
+  
+}

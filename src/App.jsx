@@ -43,6 +43,7 @@ export default function App() {
   // Return som jsx (HTML-like code with expressions inside arrow brackets)
   return <BrowserRouter>
     <Navbar />
+    <Home />
     <main>
       <Routes>
          {s.menu.map(({ path, Component }) => <Route path={path} element={<Component />} />)}
