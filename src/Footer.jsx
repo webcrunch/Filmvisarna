@@ -16,11 +16,11 @@ export default function Footer() {
 
       <div className="footerright">
         <h3>Socials</h3>
-          <a href="#"><img src="images/facebook.png" alt=""facebookalt width="50px" height="50px"></img></a>
-          <a href="#"><img src="images/instagram.png" alt=""facebookalt width="50px" height="50px"></img></a>
-          <a href="#"><img src="images/twitter.png" alt=""facebookalt width="50px" height="50px"></img></a>
+          <a href="#"><img src="images/facebook.png" alt=""facebookalt="true" width="50px" height="50px"></img></a>
+          <a href="#"><img src="images/instagram.png" alt=""facebookalt="true" width="50px" height="50px"></img></a>
+          <a href="#"><img src="images/twitter.png" alt=""facebookalt="true" width="50px" height="50px"></img></a>
           
-       
+
       </div>
     
 
