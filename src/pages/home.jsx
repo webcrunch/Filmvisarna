@@ -2,26 +2,21 @@ export default function Home() {
   return <>
 
 
-
    
-  <div className="hometopcontainer">
-<div className="hometopimagescontainer">
-  <img src="/images/elephant.jpg" alt="elepfat bild" width="150px"  height="200px"></img>
-</div>
-<div className="hometopimagescontainer">
-  <img src="/images/elephant.jpg" alt="elepfat bild" width="150px"  height="200px"></img>
-</div>
-<div className="hometopimagescontainer">
-  <img src="/images/elephant.jpg" alt="elepfat bild" width="150px"  height="200px"></img>
-</div>
-<div className="hometopimagescontainer">
-  <img src="/images/elephant.jpg" alt="elepfat bild" width="150px"  height="200px"></img>
-</div>
-<div className="hometopimagescontainer">
-  <img src="/images/elephant.jpg" alt="elepfat bild" width="150px"  height="200px"></img>
+  
+<div class="flex-container">
+  <div><img className="topcontainerimages" src="/images/elephant.jpg" 
+   width="275px"></img></div>
+  <div><img className="topcontainerimages" src="/images/elephant.jpg" 
+   width="275px"></img></div>
+  <div><img className="topcontainerimages" src="/images/elephant.jpg" 
+   width="275px"></img></div>  
+  <div><img className="topcontainerimages" src="/images/elephant.jpg" 
+   width="275px"></img> <button></button></div>
+  <div><img className="topcontainerimages" src="/images/elephant.jpg" 
+   width="275px"></img></div>
 </div>
 
-  </div>
    
       
 
