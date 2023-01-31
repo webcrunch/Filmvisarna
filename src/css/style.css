@@ -6,54 +6,28 @@
 }
 
 footer {
-  background-color: #1a1a1a;
+  display: flex;
+  justify-content: space-between;
+  background-color: #1A1A1A;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: white;
-  border-radius: 0px;
-  margin-bottom: 0%;
-  width: 100%;
-  text-align: center;
-  justify-content: space-evenly;
+  padding: 20px;
+  position: relative;
 }
 
-.infodiv {
-  font-weight: bold;
-  display: inline-block;
-  align-items: center;
+.footerleft, .footercenter, .footerright{
+  width: 30%;
   text-align: center;
-  margin-right: 10%;
-  margin-top: -10px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.socialsdiv {
-  font-weight: bold;
+.footerleft p{
   text-align: center;
-  align-items: center;
-  display: inline-block;
-  margin-left: 20%;
-  margin-top: 15px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.openinghdiv {
-  align-items: center;
-  text-align: center;
-  font-weight: bold;
+.footerright a img{
   display: inline-block;
-  margin-left: 10%;
+  margin: 5px;
   
-}
-
-.openinghtitle {
-  margin-bottom: 10.2%;
-  margin-top: 5.2%;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-.socialstitle {
-  margin-bottom: 15%;
-  margin-top: 15px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .crfooter {
