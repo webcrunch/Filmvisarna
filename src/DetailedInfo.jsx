@@ -13,9 +13,9 @@ export default function DetailedInfo() {
         "subtitles": "svenska",
         "director": "Luca Guadagnino",
         "actors": [
-            "Armie Hammer",
-            "Timothée Chalamet",
-            "Michael Stuhlbarg"
+            "Armie Hammer  ",
+            "Timothée Chalamet  ",
+            "Michael Stuhlbarg  "
         ],
         "description": "<p>Filmen utspelas i norra Italien sommaren 1983. En ung amerikansk-italienare blir förälskad i en amerikansk student som kommer för att studera och bo hos hans familj.</p><p>Tillsammans upplever de en oförglömlig sommar - full av musik, mat och kärlek - som för evigt kommer att förändra dem.</p>",
         "images": [
@@ -33,33 +33,36 @@ export default function DetailedInfo() {
             {
                 "source": "Sydsvenskan",
                 "quote": "ett drama berättat med stor ömhet",
-                "stars": 4,
+                "stars1": 4 / 5,
                 "max": 5
             },
             {
                 "source": "Svenska Dagbladet",
                 "quote": "en film att förälska sig i",
-                "stars": 5,
+                "stars": 5 / 5,
                 "max": 5
             },
             {
                 "source": "DN",
                 "quote": "en het romans i åttiotalskostym",
-                "stars": 4,
+                "stars": 4 / 5,
                 "max": 5
             }
         ]
     }
     return <>
         <div className="movie-page">
-            <img src={movie.poster} alt={movie.title} />
-            <p>{movie.description}</p>
-            <p>Released: {movie.release_date}</p>
-            <p>Actors: {movie.actors}</p>
-            <p>Director: {movie.actors}</p>
-            <p>PG: {movie.age}</p>
-            <p>Length: {movie.length}</p>
-            <p>Rating: {movie.rating}</p>
+            <img className="detailedImages" src={movie.images} />
+            <h1 className="detailedTitle">{movie.title}</h1>
+            <div class="movie-info">
+                <p className="detailedDesc">{movie.description}</p>
+                <p className="detailedLength">Length: {movie.length}</p>
+                <p className="detailedGenre">Genre: {movie.genre}</p>
+                <p className="detailedReleaseDate">Released: {movie.productionYear}</p>
+                <p className="detailedActors">Actors: {movie.actors}</p>
+                <p className="detailedDirector">Director: {movie.director}</p>
+                <p className="detailedRating">Rating: {movie.stars}</p>
+            </div>
             <div>
                 <h2>Trailer</h2>
                 {/* <iframe
