@@ -4,7 +4,7 @@ export default function Home() {
 
    
   
-<div class="flex-container">
+<div className="flex-container">
   <div><img className="topcontainerimages" src="/images/elephant.jpg" 
    width="275px"></img></div>
   <div><img className="topcontainerimages" src="/images/elephant.jpg" 
