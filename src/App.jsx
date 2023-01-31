@@ -1,4 +1,4 @@
-import { useStates } from './utilities/states.js';
+import { useStates } from './utilities/states';
 import { useEffect } from 'react';
 import {
   BrowserRouter,
@@ -11,7 +11,8 @@ import Footer from './Footer';
 import Home from './pages/home.jsx';
 import Contact from './pages/contact.jsx';
 import About from './pages/about.jsx';
-import Movies from './pages/movies.jsx';
+import Movies from './pages/Movies.jsx';
+
 // A React component is a function
 // it will run every time a state variable changes
 // thus rerendering the content you see in your Browser
@@ -19,11 +20,11 @@ export default function App() {
 
   /* State variables */
 
-  let s = useStates('main',{
+  let s = useStates('main', {
     movies: [],
     menu: [
-      { label: 'FILMER', path: '/movies', Component: Movies },  
-      { label: 'OM OSS ', path: '/about', Component: About}, //, Component:
+      { label: 'FILMER', path: '/movies', Component: Movies },
+      { label: 'OM OSS ', path: '/about', Component: About }, //, Component:
       { label: 'KONTAKT', path: '/contact', Component: Contact },
       { label: 'HEM', path: '/', Component: Home }
     ]
@@ -45,9 +46,9 @@ export default function App() {
     <Navbar />
     <main>
       <Routes>
-         {s.menu.map(({ path, Component }) => <Route path={path} element={<Component />} />)}
-                </Routes> 
-    </main> 
+        {s.menu.map(({ path, Component }) => <Route path={path} element={<Component />} />)}
+      </Routes>
+    </main>
     <Footer />
   </BrowserRouter>;
 }
