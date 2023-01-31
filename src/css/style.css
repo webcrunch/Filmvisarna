@@ -29,3 +29,38 @@ footer {
   margin: 5px;
   
 }
+.crfooter{
+  margin-left:4%;
+}
+
+nav {
+  background-color: #1A1A1A;
+  text-decoration: none;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  
+}
+
+.navlinks{
+  color: white;
+  font-size: 1.2em;
+  font-weight: bold;
+  padding:  20px;
+  text-decoration: none;
+}
+.navlinks:hover {
+  background-color: #333333;
+  color: #f5f5f5;
+  border-radius: 10px;
+}
+
+ul{
+  list-style-type: none;
+}
+nav ul{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
