@@ -1,3 +1,5 @@
+import Trailer from './trailer';
+
 export default function Home() {
   return <>
 

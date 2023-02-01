@@ -43,14 +43,14 @@ footer {
   text-align: center;
 }
 
-.footerleft p{
+.footerleft p {
   text-align: center;
 }
 
-.footerright a img{
+.footerright a img {
   display: inline-block;
   margin: 5px;
-  
+
 }
 .crfooter{
   margin-left:4%;
@@ -76,6 +76,8 @@ nav {
   background-color: #333333;
   color: #f5f5f5;
   border-radius: 10px;
+  height: 65px;
+
 }
 
 ul{
@@ -91,7 +93,7 @@ nav ul{
 body {
   background-color: rgb(0, 0, 0);
   margin: 0;
-  
+
 }
 
 .movieshr {
@@ -115,10 +117,14 @@ body {
 }
 
 
-/*----------------UNDER HERE IS THE CSS FOR THE HOME PAGE---------------*/
+.imagelistdiv {
+  text-align: center;
+  position: relative;
+  height: 220px;
+  padding-left: 220px;
+  padding-top: 30px;
+  border-top: 1px solid white;
 
-body{
-  background-color: #18151553;
 }
 
 
@@ -250,8 +256,55 @@ body{
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin-left: 30%;
   box-shadow: inset 250px 0 0 0 #ffffff;
-  
  
 }
 
+.contact  {
+  text-align:justify;
+  justify-content: space-between;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+  padding: 20px;
+  position: relative;
+  margin:auto;
+  /* width: 45%; */
+}
 
+.contact a{
+  color: gray;
+}
+
+
+.contact a:hover {
+  cursor:pointer;
+  color:lightblue;
+ }
+
+/* b{
+  color:green;
+} */
+
+
+
+
+
+
+.OmOss {
+  justify-content: space-between;
+  font-family: 'Segoe UI',
+    Tahoma,
+    Geneva,
+    Verdana,
+    sans-serif;
+  color: white;
+  padding: 20px;
+  position: relative;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.OmOss p {
+
+  text-align: justify;
+  word-wrap: break-word;
+}
