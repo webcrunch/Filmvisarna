@@ -1,4 +1,4 @@
-export default function Trailers(props) {
+export default function Trailer(props) {
 
   let { embedId } = props;
 
