@@ -5,6 +5,26 @@
   box-sizing: border-box;
 }
 
+
+/* Sticky footer */
+
+
+
+#root {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+
+
+
+
+
 footer {
   display: flex;
   justify-content: space-between;
@@ -71,7 +91,9 @@ nav ul {
 }
 
 body {
-  background-color: rgb(0, 0, 0)
+  background-color: rgb(0, 0, 0);
+  margin: 0;
+  
 }
 
 .movieshr {
@@ -166,3 +188,5 @@ body {
   
  
 }
+
+
