@@ -32,6 +32,7 @@ footer {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: white;
   padding: 20px;
+  margin-top: 10%;
   position: relative;
 }
 
@@ -186,6 +187,7 @@ body{
   margin-right: auto;
   box-shadow: 200px 200px 590px 480px #000000;
   margin-top: 5%;
+  border-radius: 10px;
 }
 
 /*------------------------------------------------------------------------- */
