@@ -1,4 +1,4 @@
-import { useStates } from './utilities/states.js';
+import { useStates } from './utilities/states';
 import { useEffect } from 'react';
 import {
   BrowserRouter,
@@ -11,7 +11,8 @@ import Footer from './Footer';
 import Home from './pages/home.jsx';
 import Contact from './pages/contact.jsx';
 import About from './pages/about.jsx';
-import Movies from './pages/movies.jsx';
+import Movies from './pages/Movies.jsx';
+
 // A React component is a function
 // it will run every time a state variable changes
 // thus rerendering the content you see in your Browser
