@@ -9,11 +9,11 @@ export default function Home() {
    width="275px"></img></div>
   <div><img className="topcontainerimages" src="/images/blackpanter.jpg" 
    width="275px"></img></div>
-  <div><img className="topcontainerimages" src="/images/burnallmyletters.jpg" 
+  <div><img className="topcontainerimages" src="/images/amancalledotto.jpg" 
    width="275px"></img></div>  
-  <div><img className="topcontainerimages" src="/images/.jpg" 
+      <div><img className="topcontainerimages" src="/images/burnallmyletters.jpg" 
    width="275px"></img> <button></button></div>
-  <div><img className="topcontainerimages" src="/images/elephant.jpg" 
+  <div><img className="topcontainerimages" src="/images/themenu.jpg" 
    width="275px"></img></div>
 </div>
 
