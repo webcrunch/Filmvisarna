@@ -54,13 +54,23 @@ export default function DetailedInfo() {
         <div className="movie-page">
             <img className="detailedImages" src={movie.images} />
             <h1 className="detailedTitle">{movie.title}</h1>
-            <div class="movie-info">
+            <div className="movie-info">
                 <p className="detailedDesc">{movie.description}</p>
                 <p className="detailedLength">Length: {movie.length}</p>
                 <p className="detailedGenre">Genre: {movie.genre}</p>
                 <p className="detailedReleaseDate">Released: {movie.productionYear}</p>
-                <p className="detailedActors">Actors: {movie.actors}</p>
-                <p className="detailedDirector">Director: {movie.director}</p>
+                <p className="detailedActors">Actors:</p>
+                <ul>
+                    {movie.actors.map(actor => 
+                    <li>{actor}</li>
+                )}
+                </ul>                
+                <p className="detailedDirector">Director: </p>
+                <ul>
+                    {movie.director.map(director => 
+                    <li>{director}</li>
+                )}
+                </ul>
                 <p className="detailedRating">Rating: {movie.stars}</p>
             </div>
             <div>
