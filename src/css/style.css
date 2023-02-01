@@ -35,19 +35,21 @@ footer {
   position: relative;
 }
 
-.footerleft, .footercenter, .footerright{
+.footerleft,
+.footercenter,
+.footerright {
   width: 30%;
   text-align: center;
 }
 
-.footerleft p{
+.footerleft p {
   text-align: center;
 }
 
-.footerright a img{
+.footerright a img {
   display: inline-block;
   margin: 5px;
-  
+
 }
 
 .crfooter {
@@ -76,7 +78,7 @@ nav {
   color: #f5f5f5;
   border-radius: 10px;
   height: 65px;
-  
+
 }
 
 ul {
@@ -93,7 +95,7 @@ nav ul {
 body {
   background-color: rgb(0, 0, 0);
   margin: 0;
-  
+
 }
 
 .movieshr {
@@ -124,7 +126,7 @@ body {
   padding-left: 220px;
   padding-top: 30px;
   border-top: 1px solid white;
-  
+
 }
 
 
@@ -185,8 +187,30 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin-left: 30%;
   box-shadow: inset 250px 0 0 0 #ffffff;
-  
- 
+
+
 }
 
 
+
+
+
+.OmOss {
+  justify-content: space-between;
+  font-family: 'Segoe UI',
+    Tahoma,
+    Geneva,
+    Verdana,
+    sans-serif;
+  color: white;
+  padding: 20px;
+  position: relative;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.OmOss p {
+
+  text-align: justify;
+  word-wrap: break-word;
+}
