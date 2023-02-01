@@ -100,9 +100,12 @@ body {
 }
 
 .detailedRating {
+  border: 2px solid gray;
   font-size: 18px;
-  color: #FFFFFF;
-  margin-bottom: 10px;
+  background-color: rgb(142, 126, 126);
+  padding-left: 20px;
+  color: #ffffff;
+  margin: 10px 0;
 }
 
 .bold {

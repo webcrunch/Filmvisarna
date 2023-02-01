@@ -17,7 +17,7 @@ export default function DetailedInfo() {
             "Timothée Chalamet  ",
             "Michael Stuhlbarg  "
         ],
-        "description": "<p>Filmen utspelas i norra Italien sommaren 1983. En ung amerikansk-italienare blir förälskad i en amerikansk student som kommer för att studera och bo hos hans familj.</p><p>Tillsammans upplever de en oförglömlig sommar - full av musik, mat och kärlek - som för evigt kommer att förändra dem.</p>",
+        "description": "Filmen utspelas i norra Italien sommaren 1983. En ung amerikansk-italienare blir förälskad i en amerikansk student som kommer för att studera och bo hos hans familj.Tillsammans upplever de en oförglömlig sommar - full av musik, mat och kärlek - som för evigt kommer att förändra dem.",
         "images": [
             "https://m.media-amazon.com/images/M/MV5BNDk3NTEwNjc0MV5BMl5BanBnXkFtZTgwNzYxNTMwMzI@._V1_.jpg",
             "https://m.media-amazon.com/images/M/MV5BMzBlMWQ4MDMtMWEzNy00MWJiLWI2ZDgtZjBkOTkwMTFlOTNhXkEyXkFqcGdeQTNwaW5nZXN0._V1_.jpg",
@@ -33,19 +33,19 @@ export default function DetailedInfo() {
             {
                 "source": "Sydsvenskan",
                 "quote": "ett drama berättat med stor ömhet",
-                "stars1": 4 / 5,
+                "stars": "4 / 5",
                 "max": 5
             },
             {
                 "source": "Svenska Dagbladet",
                 "quote": "en film att förälska sig i",
-                "stars": 5 / 5,
+                "stars": "5 / 5",
                 "max": 5
             },
             {
                 "source": "DN",
                 "quote": "en het romans i åttiotalskostym",
-                "stars": 4 / 5,
+                "stars": "4 / 5",
                 "max": 5
             }
         ]
@@ -65,25 +65,22 @@ export default function DetailedInfo() {
                     <li>{actor}</li>
                 )}
                 </ul>                
-                <p className="detailedDirector">Director: </p>
-                <ul>
-                    {movie.director.map(director => 
-                    <li>{director}</li>
-                )}
-                </ul>
-                <p className="detailedRating">Rating: {movie.stars}</p>
+                <p className="detailedDirector">Director: {movie.director}</p>
+                <div className="detailedRatingOverwiev">
+                        <p>Rating: {movie.reviews.map(rate => 
+                    <div className="detailedRating">
+                        <p>{rate.source}</p>
+                        <p>{rate.quote}</p>
+                        <p>{rate.stars}</p>
+                            
+                    </div>
+                )}</p>
+                </div>
+                
             </div>
             <div>
                 <h2>Trailer</h2>
-                {/* <iframe
-                    title={`Trailer for ${movie.title}`}
-                    width=""
-                    height=""
-                    src={movie.trailer}
-                    frameBorder="0"
-                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                ></iframe> */}
+                    {movie.youtubeTrailers}
             </div>
 
             <button onClick={() => alert('Booking coming soon')}>Book Now</button>
