@@ -159,7 +159,15 @@ body{
   border-bottom-right-radius: 0px;
   border-bottom:#575757 solid;
   margin-top: 5%;
+  box-shadow: inset 0 0 0 0 #ffffff28;
+  transition: ease-out 0.4s;
+
 }
+
+.flex-container>div:hover{
+  box-shadow: inset 275px 0 0 0 #722e2e;
+}
+
 
 .topcontainerimages{
   width: 100%;
