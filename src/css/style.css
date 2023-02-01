@@ -117,7 +117,7 @@ body {
 /*----------------UNDER HERE IS THE CSS FOR THE HOME PAGE---------------*/
 
 body{
-  background-color: #000000;
+  background-color: #18151553;
 }
 
 
@@ -143,6 +143,8 @@ body{
 
 .flex-container p{
   color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bold;
 }
 
 .flex-container > div {
@@ -155,8 +157,8 @@ body{
   border-radius: 10px;
   border-bottom-left-radius: 0px ;
   border-bottom-right-radius: 0px;
-  
-
+  border-bottom:#575757 solid;
+  margin-top: 5%;
 }
 
 .topcontainerimages{
@@ -168,6 +170,15 @@ body{
   box-shadow: 200px 20px 590px 75px #000000;
 }
 
+.hottestreleasemovie{
+  width: 80%;
+  height: 390px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 200px 200px 590px 480px #000000;
+  margin-top: 5%;
+}
 
 /*------------------------------------------------------------------------- */
 

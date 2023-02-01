@@ -18,7 +18,10 @@ export default function Home() {
     </div>
     
 
-
+    <div className="hottestrelease">
+      
+    <img className="hottestreleasemovie" src="/images/avatarbig.jpg"></img>
+</div>
 
    
       
