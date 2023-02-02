@@ -1,6 +1,6 @@
 import { useStates } from "../utilities/states";
 import { useEffect } from 'react';
-
+import { calculatingTime } from "../utilities/length-calculating";
 
 export default function Movies() {
 
@@ -18,6 +18,7 @@ export default function Movies() {
                 <div className="tidochsalong">
                     <h2 className="movietitlefilmer">{movie.title}</h2>
                     <h3 className="tidochsalongtitle">17:30, Salong 1</h3>
+                    <h4 className="tidochsalongtitle">{calculatingTime(movie.length)}</h4>
                 </div>
                 <button className="moviebtnsitplatser" type="submit" value="Submit">Välj sittplatser</button>
             </div>
