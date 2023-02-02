@@ -5,7 +5,7 @@ export default function Home() {
 
 
 
-
+<h1 className='flexp'>Aktuella filmer på bio</h1>
     <div className="flex-container">
       <div><a href="#"><img className="topcontainerimages" src="/images/avatar.jpg"
         width="100px"></img></a><p>Avatar: The Way Of Water</p></div>
