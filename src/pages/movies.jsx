@@ -1,17 +1,12 @@
 import { useStates } from "../utilities/states";
-import { useEffect } from 'react';
-import { calculatingTime } from "../utilities/length-calculating";
 
 export default function Movies() {
-
-    let s = useStates('main');
-
-
+    let {movies, screening} = useStates('main');
     return <div className="movieList">
 
         <h1>Movie List</h1>
         {/*</>p>filter</p> */}
-        {s.movies.map(movie => <>
+        {movies.map(movie => <>
             <div className="imagelistdiv">
                 {/* <hr className="movieshr"></hr> */}
                 <img className="imagesmovies" src={"../" + movie.images} alt={"Poster av filmen " + movie.title} />
@@ -28,3 +23,4 @@ export default function Movies() {
     
 
 }
+
