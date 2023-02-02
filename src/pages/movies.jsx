@@ -20,6 +20,7 @@ export default function Movies() {
                     <h2 className="movietitlefilmer">{display.film}</h2>
                     <h3 className="tidochsalongtitle">{display.auditorium}</h3>
                     <h3 className="tidochsalongtitle">{display.date} : {display.time}</h3>
+                    <h4 className="tidochsalongtitle">{calculatingTime(movie.length)}</h4>
                 </div>
                 <button className="moviebtnsitplatser" type="submit" value="Submit">Välj sittplatser</button>
             </div>
