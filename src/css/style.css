@@ -190,8 +190,6 @@ body {
 
 }
 
-
-
 .contact {
   text-align: justify;
   justify-content: space-between;
@@ -203,9 +201,18 @@ body {
   /* width: 45%; */
 }
 
-.contact a {
-  color: gray;
+
+
+
+.contact a:hover {
+  cursor: pointer;
+  color: lightblue;
 }
+
+/* b{
+  color:green;
+} */
+
 
 
 .contact a:hover {

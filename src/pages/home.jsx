@@ -1,3 +1,8 @@
+import Trailer from './trailer';
+
 export default function Home() {
-    return <h1> An home page that will handle things.</h1>
+    return <>
+        <Trailer embedId="_Z3QKkl1WyM" />
+        <Trailer embedId="HWEW_qTLSEE" />
+    </>
 }
