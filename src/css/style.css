@@ -210,7 +210,9 @@ body {
 }
 
 .OmOss p {
-
-  text-align: justify;
+  margin: 0 auto;
+  padding: 10px 2px;
+  width: 50%;
+  text-align: start;
   word-wrap: break-word;
 }
