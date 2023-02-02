@@ -19,10 +19,13 @@ export default function Home() {
         width="100px"></img></a><p>The Menu</p></div>
     </div>
 
-
+<div className='flexppp>'>
+<h1 className='flexp'>Hetaste just nu</h1><p className='felxpp'>Avatar: The Way of water</p>
+</div>
+   
+    
     <div className="hottestrelease">
-      <p>Hetaste just nu</p>
-      <img className="hottestreleasemovie" src="/images/avatarbig.jpg"></img>
+      <img className="hottestreleasemovie" src="/images/avatarbig2.jpg"></img>
     </div>
 
 
