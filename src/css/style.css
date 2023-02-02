@@ -188,9 +188,40 @@ body {
   margin-left: 30%;
   box-shadow: inset 250px 0 0 0 #ffffff;
 
+<<<<<<< Updated upstream
 
 }
 
+=======
+}
+
+.contact {
+  text-align: justify;
+  justify-content: space-between;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+  padding: 20px;
+  position: relative;
+  margin: auto;
+  /* width: 45%; */
+}
+
+.contact a {
+  color: gray;
+}
+
+
+.contact a:hover {
+  cursor: pointer;
+  color: lightblue;
+}
+
+/* b{
+  color:green;
+} */
+
+
+>>>>>>> Stashed changes
 
 
 
@@ -207,10 +238,14 @@ body {
   position: relative;
   padding-right: 20px;
   padding-left: 20px;
+
 }
 
 .OmOss p {
-
-  text-align: justify;
+  margin: 0 auto;
+  padding: 10x 2px;
+  width: 50%;
+  text-align: start;
   word-wrap: break-word;
+
 }
