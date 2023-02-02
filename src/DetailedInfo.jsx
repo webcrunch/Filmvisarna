@@ -33,19 +33,19 @@ export default function DetailedInfo() {
             {
                 "source": "Sydsvenskan",
                 "quote": "ett drama berättat med stor ömhet",
-                "stars": "4 / 5",
+                "stars": 4,
                 "max": 5
             },
             {
                 "source": "Svenska Dagbladet",
                 "quote": "en film att förälska sig i",
-                "stars": "5 / 5",
+                "stars": 5,
                 "max": 5
             },
             {
                 "source": "DN",
                 "quote": "en het romans i åttiotalskostym",
-                "stars": "4 / 5",
+                "stars": 4,
                 "max": 5
             }
         ]
@@ -71,8 +71,7 @@ export default function DetailedInfo() {
                     <div className="detailedRating">
                         <p>{rate.source}</p>
                         <p>{rate.quote}</p>
-                        <p>{rate.stars}</p>
-                            
+                        <p>{rate.stars}</p>      
                     </div>
                 )}</p>
                 </div>

@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Arima:wght@400;700&display=swap");
 @import "normalize.css";
-
+@import url("star.css");
 * {
   box-sizing: border-box;
 }
