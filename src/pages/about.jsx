@@ -2,7 +2,7 @@ export default function About() {
     return <>
         <div className="OmOss">
             <h2>Om Oss</h2>
-            <img src="" alt="Here will be a image" />
+            <img src="images/Om.jpg" alt="Here will be a image" />
             <p>Vårt varumärkeslöfte, <b>We Make Movies Better</b>, innebär att vi alltid strävar efter att erbjuda de mest minnesvärda och omvälvande  upplevelserna i biografer i världsklass.</p>
 
             <p>Vi är stolta över att göra det genom ett förstklassigt bemötande från vår personal, stor duk, bekväma VIP-fåtöljer med maximal komfort tillsammans med den bästa tekniken för ljud och bild. Dessutom utvecklar vi löpande våra digitala plattformar där man enkelt kan finna inspiration och information.</p>

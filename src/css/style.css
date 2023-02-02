@@ -226,6 +226,7 @@ body {
 
 
 .OmOss {
+  text-align: center;
   justify-content: space-between;
   font-family: 'Segoe UI',
     Tahoma,
@@ -247,6 +248,12 @@ body {
   width: 50%;
   text-align: start;
   word-wrap: break-word;
+}
 
+.OmOss img {
 
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
 }
