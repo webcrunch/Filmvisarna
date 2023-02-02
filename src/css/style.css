@@ -234,10 +234,12 @@ body {
 }
 
 .OmOss p {
+
   margin: 0 auto;
-  padding: 10x 2px;
+  padding: 10px 2px;
   width: 50%;
   text-align: start;
   word-wrap: break-word;
+
 
 }
