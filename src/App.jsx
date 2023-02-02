@@ -22,11 +22,13 @@ export default function App() {
   let s = useStates('main',{
     movies: [],
     menu: [
+      { label: 'HEM', path: '/', Component: Home },
       { label: 'FILMER', path: '/movies', Component: Movies },  
       { label: 'OM OSS ', path: '/about', Component: About}, //, Component:
       { label: 'KONTAKT', path: '/contact', Component: Contact },
-      { label: 'HEM', path: '/', Component: Home }
-    ]
+    ],
+    screening: [],
+    sallons: []
   });
 
   /* Runs when the component App loads */
@@ -36,6 +38,12 @@ export default function App() {
       s.movies = await (
         await fetch('/json/movies.json')
       ).json();
+      s.screening = await (
+        await fetch('/json/screening.json')
+      ).json();
+      s.sallons = await (
+        await fetch('/json/saloons.json')
+      )
     })();
   }, []);
 
