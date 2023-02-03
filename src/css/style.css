@@ -201,18 +201,8 @@ body {
   /* width: 45%; */
 }
 
-<<<<<<< Updated upstream
-
-=======
 .contact a {
   color: gray;
-}
->>>>>>> Stashed changes
-
-
-.contact a:hover {
-  cursor: pointer;
-  color: lightblue;
 }
 
 /* b{
@@ -254,16 +244,5 @@ body {
   width: 50%;
   text-align: start;
   word-wrap: break-word;
-<<<<<<< Updated upstream
-}
 
-.OmOss img {
-
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-=======
-
->>>>>>> Stashed changes
 }
