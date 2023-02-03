@@ -127,12 +127,13 @@ body {
 
 }
 
-
+/*---------------home page start under here------------------*/
 .flex-container {
   display: flex;
   flex-wrap: nowrap;
   background-color: rgba(0, 0, 0, 0.537);
   height: 50%;
+  width: 100%;
 
 }
 
@@ -154,25 +155,74 @@ body {
   font-weight: bold;
 }
 
+.flexp{
+  font-size: 40px;
+  font-weight: bolder;
+  letter-spacing: 3px;
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin-top: 5%;
+  margin-left: 2%;
+  margin-bottom: -1%;
+  
+}
+
 .flex-container > div {
   background-color: #1A1A1A;
-  width: 275px;
+  width: 100%;
   margin: 20px;
-  height: 300px;
+  padding: 1px;
+  height: auto;
   text-align: center;
   position: relative;
   border-radius: 10px;
   border-bottom-left-radius: 0px ;
   border-bottom-right-radius: 0px;
   border-bottom:#575757 solid;
-  margin-top: 5%;
+  margin-top: 3%;
   box-shadow: inset 0 0 0 0 #ffffff28;
   transition: ease-out 0.4s;
-
+  
+}
+@media (max-width: 767px) {
+  .flexp {
+    padding:0;
+    padding-bottom: 0%;
+    margin-top: 5%;
+    width: 50%;
+    margin-bottom: 10px;
+    font-size: 20px;
+    margin-left: 4%;
+    
+  }
 }
 
+@media (max-width: 767px) {
+  .flex-container > div {
+    padding:0;
+    padding-bottom: 0%;
+    width: 35%;
+    height:270px;
+    
+  }
+}
+@media (max-width: 767px) {
+   .flex-container > div img  {
+    
+    margin-left: 0;
+    margin-right: 0;
+    height: 200px;
+    width: 110px;
+  }
+}
+
+
+
+
+
+
 .flex-container>div:hover{
-  box-shadow: inset 275px 0 0 0 #722e2e;
+  box-shadow: inset 375px 0 0 0 #722e2e;
 }
 
 
@@ -187,17 +237,37 @@ body {
 }
 
 .hottestreleasemovie{
-  width: 80%;
-  height: 390px;
+  width: 100%;
+  height: 600px;
   display: block;
   margin-left: auto;
   margin-right: auto;
   box-shadow: 200px 200px 590px 480px #000000;
-  margin-top: 5%;
+  margin-top: 1%;
   border-radius: 10px;
+  box-shadow: inset 0 0 0 0 #ffffff28;
+  transition: ease-out 0.4s;
+}
+
+.hottestreleasemovie:hover{
+  box-shadow: inset 800px 0 0 0 #e60b0bba;
+  
+}
+
+.flexp p{
+ color: white;
+ display: inline;
+ width: 100%;
+ margin-left: 20%
+ 
 }
 
 
+
+.flexppp{
+  color: white;
+  text-align: center;
+}
 /*------------------------------------------------------------------------- */
 
 .imagesmovies {
@@ -256,29 +326,29 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin-left: 30%;
   box-shadow: inset 250px 0 0 0 #ffffff;
- 
+
 }
 
-.contact  {
-  text-align:justify;
+.contact {
+  text-align: justify;
   justify-content: space-between;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: white;
   padding: 20px;
   position: relative;
-  margin:auto;
+  margin: auto;
   /* width: 45%; */
 }
+
 
 .contact a{
   color: rgb(8, 109, 14);
 }
 
-
 .contact a:hover {
-  cursor:pointer;
-  color:lightblue;
- }
+  cursor: pointer;
+  color: lightblue;
+}
 
 /* b{
   color:green;
@@ -286,10 +356,18 @@ body {
 
 
 
+.contact a:hover {
+  cursor: pointer;
+  color: lightblue;
+}
 
+/* b{
+  color:green;
+} */
 
 
 .OmOss {
+  text-align: center;
   justify-content: space-between;
   font-family: 'Segoe UI',
     Tahoma,
@@ -301,10 +379,22 @@ body {
   position: relative;
   padding-right: 20px;
   padding-left: 20px;
+
 }
 
 .OmOss p {
 
-  text-align: justify;
+  margin: 0 auto;
+  padding: 10px 2px;
+  width: 50%;
+  text-align: start;
   word-wrap: break-word;
+}
+
+.OmOss img {
+
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
 }

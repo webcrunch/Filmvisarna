@@ -5,7 +5,7 @@ export default function Home() {
 
   return <>
 
-
+    <h1 className='flexp'>Aktuella filmer på bio</h1>
       <div className="flex-container">
           {movies.map(movie =>
               <>
@@ -15,10 +15,13 @@ export default function Home() {
           )}
     </div>
 
-
+<div className='flexppp>'>
+<h1 className='flexp'>Hetaste just nu</h1><p className='felxpp'>Avatar: The Way of water</p>
+</div>
+   
+    
     <div className="hottestrelease">
-      <p>Hetaste just nu</p>
-      <img className="hottestreleasemovie" src="/images/avatarbig.jpg"></img>
+      <img className="hottestreleasemovie" src="/images/avatarbig2.jpg"></img>
     </div>
 
 
