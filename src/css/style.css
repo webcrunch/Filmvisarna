@@ -326,29 +326,29 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin-left: 30%;
   box-shadow: inset 250px 0 0 0 #ffffff;
- 
+
 }
 
-.contact  {
-  text-align:justify;
+.contact {
+  text-align: justify;
   justify-content: space-between;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: white;
   padding: 20px;
   position: relative;
-  margin:auto;
+  margin: auto;
   /* width: 45%; */
 }
+
 
 .contact a{
   color: rgb(8, 109, 14);
 }
 
-
 .contact a:hover {
-  cursor:pointer;
-  color:lightblue;
- }
+  cursor: pointer;
+  color: lightblue;
+}
 
 /* b{
   color:green;
@@ -356,10 +356,18 @@ body {
 
 
 
+.contact a:hover {
+  cursor: pointer;
+  color: lightblue;
+}
 
+/* b{
+  color:green;
+} */
 
 
 .OmOss {
+  text-align: center;
   justify-content: space-between;
   font-family: 'Segoe UI',
     Tahoma,
@@ -371,10 +379,22 @@ body {
   position: relative;
   padding-right: 20px;
   padding-left: 20px;
+
 }
 
 .OmOss p {
 
-  text-align: justify;
+  margin: 0 auto;
+  padding: 10px 2px;
+  width: 50%;
+  text-align: start;
   word-wrap: break-word;
+}
+
+.OmOss img {
+
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
 }
