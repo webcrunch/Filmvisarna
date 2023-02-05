@@ -12,7 +12,7 @@ body {
   font-size: 130%;
 }
 
-.movie-page {
+.detailedPageContainer {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -44,6 +44,12 @@ body {
   cursor: pointer;
 }
 
+h1 {
+  color: white;
+}
+
+
+/* 
 .movie-info {
   flex: 2;
   display: flex;
@@ -110,4 +116,4 @@ body {
 
 .bold {
   color: #BBBBBB;
-}
+} */
