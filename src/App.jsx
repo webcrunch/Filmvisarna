@@ -1,9 +1,11 @@
 import { useStates } from './utilities/states.js';
 import { useEffect } from 'react';
+
 import {
   BrowserRouter,
   Routes,
-  Route
+  Route,
+  useLocation  
 } from 'react-router-dom';
 
 import Navbar from './Navbar';
@@ -12,12 +14,25 @@ import Home from './pages/home.jsx';
 import Contact from './pages/contact.jsx';
 import About from './pages/about.jsx';
 import Movies from './pages/movies.jsx';
+import DetailedInfo from './detailedInfo.jsx';
 // A React component is a function
 // it will run every time a state variable changes
 // thus rerendering the content you see in your Browser
 export default function App() {
 
   /* State variables */
+
+  function ScrollToTop( { children } ) {
+    let location = useLocation();
+
+    useEffect( () => {
+        window.scrollTo(0, 0);
+    }, [ location ] );
+
+    return children
+}
+
+
 
   let s = useStates('main',{
     movies: [],
@@ -26,6 +41,7 @@ export default function App() {
       { label: 'FILMER', path: '/movies', Component: Movies },  
       { label: 'OM OSS ', path: '/about', Component: About}, //, Component:
       { label: 'KONTAKT', path: '/contact', Component: Contact },
+       { path: '/movie/:moviePath', Component: DetailedInfo }
     ],
     screening: [],
     sallons: []
@@ -50,13 +66,14 @@ export default function App() {
 
   // Return som jsx (HTML-like code with expressions inside arrow brackets)
   return <BrowserRouter>
+    <ScrollToTop>
     <Navbar />
     <main> 
       <Routes>
          {s.menu.map(({ path, Component }) => <Route path={path} element={<Component />} />)}
                 </Routes> 
     </main> 
-    
-    <Footer />
+      <Footer />
+      </ScrollToTop>
   </BrowserRouter>;
 }

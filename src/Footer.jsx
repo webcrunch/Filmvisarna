@@ -9,8 +9,8 @@ export default function Footer() {
      </div>
       
       <div className="footercenter">
-        <h3 className="openinghtitle">Opening Hours:</h3>
-        <p className="hourweekdays">Mon-Fre: 15:00-22:00</p>
+        <h3 className="openinghtitle">Öppetider:</h3>
+        <p className="hourweekdays">Mån-Fre: 15:00-22:00</p>
         <p className="hourweekend">Lör-Sön: 15:00-23:00</p>
       </div>
 
