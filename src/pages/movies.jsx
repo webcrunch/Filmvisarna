@@ -1,5 +1,7 @@
 import { useStates } from "../utilities/states";
 import { calculatingTime } from "../utilities/length-calculating";
+import { Link } from 'react-router-dom';
+
 export default function Movies() {
     let {movies, screening} = useStates('main');
     return <div className="movieList">
@@ -9,7 +11,7 @@ export default function Movies() {
         {movies.map(movie => <>
             <div className="imagelistdiv">
                 {/* <hr className="movieshr"></hr> */}
-                <img className="imagesmovies" src={"../" + movie.images} alt={"Poster av filmen " + movie.title} />
+                 <Link to={"/movie/" + movie.title}><img className="imagesmovies" src={"../" + movie.images} alt={"Poster av filmen " + movie.title} /></Link>
                 <div className="tidochsalong">
                     <h2 className="movietitlefilmer">{movie.title}</h2>
                     <h3 className="tidochsalongtitle">17:30, Salong 1</h3>
