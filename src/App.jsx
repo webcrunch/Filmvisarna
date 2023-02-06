@@ -1,9 +1,11 @@
 import { useStates } from './utilities/states.js';
 import { useEffect } from 'react';
+
 import {
   BrowserRouter,
   Routes,
-  Route
+  Route,
+  useLocation  
 } from 'react-router-dom';
 
 import Navbar from './Navbar';
@@ -19,6 +21,18 @@ import DetailedInfo from './detailedInfo.jsx';
 export default function App() {
 
   /* State variables */
+
+  function ScrollToTop( { children } ) {
+    let location = useLocation();
+
+    useEffect( () => {
+        window.scrollTo(0, 0);
+    }, [ location ] );
+
+    return children
+}
+
+
 
   let s = useStates('main',{
     movies: [],
@@ -52,13 +66,14 @@ export default function App() {
 
   // Return som jsx (HTML-like code with expressions inside arrow brackets)
   return <BrowserRouter>
+    <ScrollToTop>
     <Navbar />
     <main> 
       <Routes>
          {s.menu.map(({ path, Component }) => <Route path={path} element={<Component />} />)}
                 </Routes> 
     </main> 
-    
-    <Footer />
+      <Footer />
+      </ScrollToTop>
   </BrowserRouter>;
 }
