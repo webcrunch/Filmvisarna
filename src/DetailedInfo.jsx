@@ -51,39 +51,44 @@ export default function DetailedInfo() {
         ]
     }
     return <>
-        <div className="movie-page">
-            <img className="detailedImages" src={movie.images} />
+        <div className="detailedPageContainer">
+            <div className="leftContainerImgTrailer">
+                <img className="detailedImages" src={movie.images} />
+                <iframe className="detailedTrailer" src="https://www.youtube.com/embed/Z9AYPxH5NTM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+
             <h1 className="detailedTitle">{movie.title}</h1>
-            <div className="movie-info">
-                <p className="detailedDesc">{movie.description}</p>
-                <p className="detailedLength">Length: {movie.length}</p>
-                <p className="detailedGenre">Genre: {movie.genre}</p>
-                <p className="detailedReleaseDate">Released: {movie.productionYear}</p>
-                <p className="detailedActors">Actors:</p>
-                <ul>
-                    {movie.actors.map(actor => 
-                    <li>{actor}</li>
-                )}
-                </ul>                
-                <p className="detailedDirector">Director: {movie.director}</p>
-                <div className="detailedRatingOverwiev">
-                        <p>Rating: {movie.reviews.map(rate => 
+            <div className="rightContainerText">
+                <div className="rightDesc">
+                    <p className="detailedDesc">{movie.description}</p> <div />
+                </div>
+                <div className="detailedInfo">
+                    <p className="detailedLength">Length: {movie.length}</p>
+                    <p className="detailedGenre">Genre: {movie.genre}</p>
+                    <p className="detailedReleaseDate">Released: {movie.productionYear}</p>
+                    <p className="detailedDirector">Director: {movie.director}</p>
+                    <p className="detailedActors">Actors:</p>
+                    <ul>
+                        {movie.actors.map(actor =>
+                            <li>{actor}</li>
+                        )}
+                    </ul>
+                </div>
+            </div>
+
+            <div className="detailedRatingOverwiev">
+                <p>Rating: {movie.reviews.map(rate =>
                     <div className="detailedRating">
                         <p>{rate.source}</p>
                         <p>{rate.quote}</p>
                         <p>{rate.stars}</p>      
                     </div>
                 )}</p>
-                </div>
-                
             </div>
-            <div>
-                <h2>Trailer</h2>
-                    {movie.youtubeTrailers}
-            </div>
-
             <button onClick={() => alert('Booking coming soon')}>Book Now</button>
+
         </div>
+
     </>
 }
 
