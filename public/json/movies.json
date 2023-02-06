@@ -222,5 +222,49 @@
         "max": 4
       }
     ]
+  },
+  {
+    "title": "Top Gun : Marverick",
+    "productionCountries": [
+      "USA"
+    ],
+    "productionYear": 2022,
+    "length": 130,
+    "genre": "Action,Äventyr",
+    "distributor": "Paramount Pictures",
+    "language": "engelska",
+    "subtitles": "svenska",
+    "director": "Joseph Kosinski ",
+    "actors": [
+      "Tom Cruise",
+      "Jennifer Connelly",
+      "Miles Teller"
+    ],
+    "description": "<p>Efter mer än 30 års tjänstgöring som en av US Navy's bästa piloter, är Pete ”Maverick” Mitchell där han hör hemma - en modig testpilot som ständigt tänjer på gränserna och undviker den befordran som skulle komma att hålla honom nere på marken istället för uppe i luften. När han tränar en grupp avgångselever från Top Gun för ett specialuppdrag som ingen pilot någonsin utfört tidigare, träffar Maverick löjtnant Bradley Bradshaw, även kallad ”Rooster” - sonen till Mavericks bortgångne vän, radar-officeren löjtnant Nick Bradshaw, även känd som ”Goose”. Med en osäker framtid framför sig, och hemsökt av spöken från det förflutna tvingas Maverick att konfrontera sina största fasor, vilket kulminerar i ett uppdrag som kräver den ultimata uppoffringen av de som blir utvalda till att utföra det.”</p>",
+    "images": "/images/topgun.jpg",
+    "youtubeTrailers": [
+      "qSqVVswa420"
+    ],
+    "trailer": "https://www.youtube.com/watch?v=qSqVVswa420",
+    "reviews": [
+      {
+        "source": "imdb",
+        "quote": "Feel the need... The need for speed",
+        "stars": 5,
+        "max": 5
+      },
+      {
+        "source": "Svenska Dagbladet",
+        "quote": "Top Gun är en klassiker, Saabs bilar är borta - vem trodde det?.",
+        "stars": 4,
+        "max": 5
+      },
+      {
+        "source": "Moviezine",
+        "quote": "Det är inte planet, det är piloten.",
+        "stars": 4,
+        "max": 5
+      }
+    ]
   }
 ]
