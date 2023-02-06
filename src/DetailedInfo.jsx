@@ -1,6 +1,6 @@
 import { useStates } from './utilities/states';
-import { useParams } from 'react-router-dom';
-import { calculatingTime } from "../utilities/length-calculating";
+import { useParams,Link } from 'react-router-dom';
+import { calculatingTime } from './utilities/length-calculating';
 
 export default function DetailedInfo() {
         const { moviePath } = useParams();
