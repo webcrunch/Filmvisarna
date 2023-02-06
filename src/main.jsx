@@ -7,6 +7,7 @@ import DetailedInfo from './detailedInfo';
 
 ReactDOM.createRoot(document.querySelector('#root')).render(
   <React.StrictMode>
-    <DetailedInfo />
+    <App />
   </React.StrictMode>
-);
+
+);    
