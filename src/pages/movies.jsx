@@ -1,5 +1,5 @@
 import { useStates } from "../utilities/states";
-
+import { calculatingTime } from "../utilities/length-calculating";
 export default function Movies() {
     let {movies, screening} = useStates('main');
     return <div className="movieList">
