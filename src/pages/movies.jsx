@@ -16,7 +16,7 @@ export default function Movies() {
         {screening.map(display => <>
             <div className="imagelistdiv">
                 {/* <hr className="movieshr"></hr> */}
-                 <Link to={"/movie/" + movie.title}><img className="imagesmovies" src={"../" + movie.images} alt={"Poster av filmen " + movie.title} /></Link>
+                 <Link to={"/movie/" + movie.path}><img className="imagesmovies" src={"../" + movie.images} alt={"Poster av filmen " + movie.title} /></Link>
                 <div className="tidochsalong">
                     <h2 className="movietitlefilmer">{display.film}</h2>
                     <h4 className="tidochsalongtitle">Sal: {display.auditorium}. Dag: {display.date} </h4>
