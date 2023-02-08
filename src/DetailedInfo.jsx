@@ -47,7 +47,13 @@ export default function DetailedInfo() {
                                         <div className="detailedRating">
                                             <p>{rate.source}</p>
                                             <p>{rate.quote}</p>
-                                            <p>{rate.stars}</p>
+                                            <p>
+                                                {Array.from({ length: 5 }, (_, i) => {
+                                                    return i < rate.stars
+                                                        ? <span role="img" aria-label="full-color star">⭐</span>
+                                                        : <span role="img" aria-label="hollow star">☆</span>;
+                                                })}
+                                            </p>
                                         </div>
                                     )}
                                 </div>
