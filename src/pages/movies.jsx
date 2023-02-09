@@ -6,11 +6,10 @@ import { Link } from 'react-router-dom';
 
 export default function Movies() {
     let s = useStates('main');
-    
     const l = useStates({
     startDate: '',
     chosenCategory: 'Choose a category',
-    possibleSorts: ['Sort by name (A-Z)','Sort by name (Z-A)'], //, 'Sort by length (A-Z)', 'Sort by length (Z-A)'
+    possibleSorts: [null,'Sort by name (A-Z)','Sort by name (Z-A)', 'Sort by length (A-Z)'], //, 'Sort by length (A-Z)', 'Sort by length (Z-A)'
     chosenSort: '',
     sortDone: '',
     // note: copying the movies array from main
@@ -21,9 +20,10 @@ export default function Movies() {
     // (which we otherwise would happen if changing
     // a higer level state variable),
     movies: s.movies.slice(),
-    categories: [],
+        categories: [],
     screenings: s.screenings.slice()
   });
+    
     
     function createCategories() {
         // let categories = [];
@@ -31,8 +31,6 @@ export default function Movies() {
             l.categories = [...l.categories, ...movie.genre.split(",")];
         }
     }
-
-
 
     // createCategories();
     // l.movies.forEach(cat => {
@@ -52,24 +50,34 @@ export default function Movies() {
     // to avoid endless loop
         if (l.chosenSort === l.sortDone) {return; }
     // sort according to choice
+        if (l.chosenSort === null) { l.screenings = s.screenings; }
         if (l.chosenSort === 'Sort by name (A-Z)') { sortByName(0); }
         if (l.chosenSort === 'Sort by name (Z-A)') { sortByName(1); }
-        // if (l.chosenSort === 'Sort by length (A-Z)') { sortByLength(0); }
+        if (l.chosenSort === 'Sort by length (A-Z)') { sortByLength(0); }
         // if (l.chosenSort === 'Sort by length (Z-A)') { sortByLength(1); }
     l.sortDone = l.chosenSort;
   }, [l.chosenSort]);
 
 //     function sortByLength(order) {
 //         l.movies.sort((a, b) => {
-//             if (order) {
-//                 console.log(a.length < b.length);
-//                 return a.length < b.length ? 1 : -1;
-//             } else {
-//                 console.log(a.length > b.length, a.length,b.length, b.title, a.title);
-//                 return a.length > b.length ? 1 : -1;
-//             }
+//             return a.length < b.length ? 1 : -1;
+//             // if (order) {
+//             //     console.log(a.length < b.length);
+//             //     return a.length < b.length ? 1 : -1;
+//             // } else {
+//             //     console.log(a.length > b.length, a.length,b.length, b.title, a.title);
+//             //     return a.length > b.length ? 1 : -1;
+//             // }
 //     });
 //   }
+
+    function sortByLength(order) {
+        console.log(order);
+    let a = l.movies.sort((a, b) => {
+      return a.length > b.length ? 1 : -1;
+    });
+    }
+
 
     function clearFilter() {
         l.startDate = '';
@@ -133,6 +141,7 @@ export default function Movies() {
         {/* <input onChange={(e) => handleDateChange(e.target.value)}  type="time" id="appt" name="appt"
        min="09:00" max="18:00"></input> */}
         </div>
+        
         {/* Sort by Name/length */}
          <select {...l.bind('chosenSort')}>
           {l.possibleSorts.map(x => <option>
