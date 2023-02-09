@@ -8,6 +8,7 @@ export default function Movies() {
     let s = useStates('main');
     
     const l = useStates({
+    startDate: '',
     chosenCategory: 'Choose a category',
     possibleSorts: ['Sort by name (A-Z)','Sort by name (Z-A)'], //, 'Sort by length (A-Z)', 'Sort by length (Z-A)'
     chosenSort: '',
@@ -70,6 +71,16 @@ export default function Movies() {
 //     });
 //   }
 
+    function clearFilter() {
+        l.startDate = '';
+        l.screenings = l.screenings;
+    }
+
+    function handleDateChange(dayOrTime) {
+        l.startDate = dayOrTime;
+        l.screenings = s.screenings.filter(movie => movie.date === dayOrTime);
+    }
+
     function sortByName(order) {
       l.screenings.sort((a, b) => {
         //   console.log(a.film.toLowerCase().replace(/ /g, '').replace(/^the/, '').charAt(0), ' ' , b.film.toLowerCase().replace(/ /g, '').replace(/^the/, '').charAt(0));
@@ -121,6 +132,12 @@ export default function Movies() {
             <option >Stora Salongen</option>
             <option >Lilla Salongen</option>
         </select>          
+        <div>
+            <input value={l.startDate} onChange={(e) => handleDateChange(e.target.value)} type="date" />
+            <button onClick={() => clearFilter()} type="button">Clear date</button>
+        {/* <input onChange={(e) => handleDateChange(e.target.value)}  type="time" id="appt" name="appt"
+       min="09:00" max="18:00"></input> */}
+        </div>
         {/* Sort by Name/length */}
          <select {...l.bind('chosenSort')}>
           {l.possibleSorts.map(x => <option>
