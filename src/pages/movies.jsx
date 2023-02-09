@@ -4,18 +4,17 @@ export default function Movies() {
     let { movies, screening } = useStates('main');
     
     function getMovies(name) {
-        let { images,length } = movies.find(movie => movie.title === name);
+        let { images,length } = s.movies.find(movie => movie.title === name);
         return [images,length];
     }
     
     return <div className="movieList">
    <h1>Movie List</h1>
         {/*</>p>filter</p> */}
-        {screening.map(display => <>
+        {l.screenings.map(display => <>
             <div className="imagelistdiv">
                 {/* <hr className="movieshr"></hr> */}
-                <img className="imagesmovies" src={"../" + getMovies(display.film)[0]} alt={"Poster av filmen " + display.film} />
-                 
+                <img className="imagesmovies" src={"../" + getMovies(display.film)[0]} alt={"Poster av filmen " + display.film} />                 
                 <div className="tidochsalong">
                     <h2 className="movietitlefilmer">{display.film}</h2>
                     <h4 className="tidochsalongtitle">Sal: {display.auditorium}. Dag: {display.date} </h4>
