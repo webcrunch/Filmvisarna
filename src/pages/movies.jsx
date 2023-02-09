@@ -7,7 +7,7 @@ export default function Movies() {
     
     const l = useStates({
     chosenCategory: 'Choose a category',
-    possibleSorts: ['Sort by name (A-Z)','Sort by name (Z-A)', 'Sort by length (A-Z)', 'Sort by length (Z-A)'],
+    possibleSorts: ['Sort by name (A-Z)','Sort by name (Z-A)'], //, 'Sort by length (A-Z)', 'Sort by length (Z-A)'
     chosenSort: '',
     sortDone: '',
     // note: copying the movies array from main
@@ -16,11 +16,34 @@ export default function Movies() {
     // of this compoenent, and this does not
     // trigger a re-mount of the component
     // (which we otherwise would happen if changing
-    // a higer level state variable)
-    category: [],
+    // a higer level state variable),
     movies: s.movies.slice(),
+    categories: [],
     screenings: s.screenings.slice()
   });
+    
+    function createCategories() {
+        // let categories = [];
+        for (let movie of l.movies) {
+            l.categories = [...l.categories, ...movie.genre.split(",")];
+        }
+    }
+
+
+
+    // createCategories();
+    // l.movies.forEach(cat => {
+    //     let checkLength = cat.genre.split(",").length;
+        
+    //     if (checkLength > 1) {
+    //         // let divideArray = ;
+    //         cat.genre.split(",").forEach(arr => !l.category.includes(arr) ? l.category = arr : null) // !l.category.includes(arr) ? l.category.push(cat.genre) : null
+    //     }   
+    //     else {
+    //         null;
+    //     //!l.category.includes(cat.genre) ? l.category.push(cat.genre) : null;    
+    //     }
+    // })
     
     useEffect(() => { // Runs when l.chosenSort changes
     // to avoid endless loop
@@ -28,23 +51,22 @@ export default function Movies() {
     // sort according to choice
         if (l.chosenSort === 'Sort by name (A-Z)') { sortByName(0); }
         if (l.chosenSort === 'Sort by name (Z-A)') { sortByName(1); }
-        if (l.chosenSort === 'Sort by length (A-Z)') { sortByLength(0); }
-        if (l.chosenSort === 'Sort by length (Z-A)') { sortByLength(1); }
+        // if (l.chosenSort === 'Sort by length (A-Z)') { sortByLength(0); }
+        // if (l.chosenSort === 'Sort by length (Z-A)') { sortByLength(1); }
     l.sortDone = l.chosenSort;
   }, [l.chosenSort]);
 
-    function sortByLength(order) {
-        l.movies.sort((a, b) => {
-            if (order) {
-                console.log("Desc");
-            //     return a.length < b.length ? 1 : -1;
-            } else {
-                console.log("Asc");
-            //     return a.length > b.length ? 1 : -1;
-            }
-            // console.log(order, a.length, b.length);
-    });
-  }
+//     function sortByLength(order) {
+//         l.movies.sort((a, b) => {
+//             if (order) {
+//                 console.log(a.length < b.length);
+//                 return a.length < b.length ? 1 : -1;
+//             } else {
+//                 console.log(a.length > b.length, a.length,b.length, b.title, a.title);
+//                 return a.length > b.length ? 1 : -1;
+//             }
+//     });
+//   }
 
     function sortByName(order) {
       l.screenings.sort((a, b) => {
@@ -75,8 +97,8 @@ export default function Movies() {
         l.screenings =  auditorium.includes("Båda") ? s.screenings : s.screenings.filter(movie => movie.auditorium === auditorium);
     }   
     
-    return <div className="movieList">
-   <h1>Movie List</h1>
+    return <div className="movieList">  
+        <h1>Movie List</h1>
         {/*</>p>filter</p> */}
         {/* Filter by Name */}
         <select name="selectListName" onChange={e => filterMovies(e.target.value)} id="selectListName">
@@ -84,6 +106,12 @@ export default function Movies() {
                 l.movies.map(movie => <option>{movie.title}</option>)
             }
         </select>   
+        {/* Filter by Category */}
+        {/* <select name="selectListCategory" onChange={e => filterMovies(e.target.value)} id="selectListCategory">
+            {
+                l.categories.map(cat => <option>{cat}</option>)
+            }
+        </select>    */}
         {/* Filter by Saloons */}
          <select name="selectList" onChange={e => filterSaloons(e.target.value)} id="selectList">
             <option>Båda Salongerna</option>
@@ -105,7 +133,7 @@ export default function Movies() {
                     <h4 className="tidochsalongtitle">Sal: {display.auditorium}. Dag: {display.date} </h4>
                     <h4 className="tidochsalongtitle">Tid: {display.time}. Längd: {calculatingTime(getMovies(display.film)[1])}</h4>
                 </div>
-                <button className="moviebtnsitplatser" type="submit" value="Submit">Välj sittplatser</button>
+                {/* <button className="moviebtnsitplatser" type="submit" value="Submit">Välj sittplatser</button> */}
             </div>
         </>)}
     </div >
