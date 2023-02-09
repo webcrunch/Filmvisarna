@@ -27,7 +27,7 @@ export default function App() {
       { label: 'OM OSS ', path: '/about', Component: About}, //, Component:
       { label: 'KONTAKT', path: '/contact', Component: Contact },
     ],
-    screening: [],
+    screenings: [],
     sallons: []
   });
 
@@ -38,7 +38,7 @@ export default function App() {
       s.movies = await (
         await fetch('/json/movies.json')
       ).json();
-      s.screening = await (
+      s.screenings = await (
         await fetch('/json/screening.json')
       ).json();
       s.sallons = await (
