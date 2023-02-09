@@ -35,16 +35,9 @@ export default function App() {
   useEffect(() => {
     // Load animal data from /json/niceAnimals.json
     (async () => {
-      s.movies = await (
-        await fetch('/json/movies.json')
-      ).json();
-      s.screenings = await (
-        await fetch('/json/screening.json')
-      ).json();
-      s.sallons = await (
-        await fetch('/json/saloons.json')
-      )
-    })();
+      s.movies = await (await fetch('/json/movies.json')).json();
+      s.screenings = await (await fetch('/json/screening.json')).json();
+      s.sallons = await (await fetch('/json/saloons.json')).json()})();
   }, []);
 
 
