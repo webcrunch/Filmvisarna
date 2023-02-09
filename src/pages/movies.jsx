@@ -7,6 +7,11 @@ export default function Movies() {
         let { images,length } = s.movies.find(movie => movie.title === name);
         return [images,length];
     }
+
+    function filterMovies(film) {
+        l.screenings = s.screenings.filter(movie => movie.film === film);
+    }
+
     function filterSaloons(auditorium) {
         l.screenings =  auditorium.includes("Båda") ? s.screenings : s.screenings.filter(movie => movie.auditorium === auditorium);
     }   
@@ -14,6 +19,12 @@ export default function Movies() {
     return <div className="movieList">
    <h1>Movie List</h1>
         {/*</>p>filter</p> */}
+        {/* Filter by Name */}
+        <select name="selectListName" onChange={e => filterMovies(e.target.value)} id="selectListName">
+            {
+                l.movies.map(movie => <option>{movie.title}</option>)
+            }
+        </select>   
         {/* Filter by Saloons */}
          <select name="selectList" onChange={e => filterSaloons(e.target.value)} id="selectList">
             <option>Båda Salongerna</option>
