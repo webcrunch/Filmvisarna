@@ -1,7 +1,66 @@
 import { useStates } from "../utilities/states";
+import { useEffect } from "react";
 import { calculatingTime } from "../utilities/length-calculating";
+import { useState } from "react";
 export default function Movies() {
-    let { movies, screening } = useStates('main');
+    let s = useStates('main');
+    
+    const l = useStates({
+    chosenCategory: 'Choose a category',
+    possibleSorts: ['Sort by name (A-Z)','Sort by name (Z-A)', 'Sort by length (A-Z)', 'Sort by length (Z-A)'],
+    chosenSort: '',
+    sortDone: '',
+    // note: copying the movies array from main
+    // - slice() copies an array
+    // this means when we sort the copy in the local state
+    // of this compoenent, and this does not
+    // trigger a re-mount of the component
+    // (which we otherwise would happen if changing
+    // a higer level state variable)
+    category: [],
+    movies: s.movies.slice(),
+    screenings: s.screenings.slice()
+  });
+    
+    useEffect(() => { // Runs when l.chosenSort changes
+    // to avoid endless loop
+    if (l.chosenSort === l.sortDone) { return; }
+    // sort according to choice
+        if (l.chosenSort === 'Sort by name (A-Z)') { sortByName(0); }
+        if (l.chosenSort === 'Sort by name (Z-A)') { sortByName(1); }
+        if (l.chosenSort === 'Sort by length (A-Z)') { sortByLength(0); }
+        if (l.chosenSort === 'Sort by length (Z-A)') { sortByLength(1); }
+    l.sortDone = l.chosenSort;
+  }, [l.chosenSort]);
+
+    function sortByLength(order) {
+        l.movies.sort((a, b) => {
+            if (order) {
+                console.log("Desc");
+            //     return a.length < b.length ? 1 : -1;
+            } else {
+                console.log("Asc");
+            //     return a.length > b.length ? 1 : -1;
+            }
+            // console.log(order, a.length, b.length);
+    });
+  }
+
+    function sortByName(order) {
+      l.screenings.sort((a, b) => {
+        //   console.log(a.film.toLowerCase().replace(/ /g, '').replace(/^the/, '').charAt(0), ' ' , b.film.toLowerCase().replace(/ /g, '').replace(/^the/, '').charAt(0));
+        // compare case-insensitive 
+        // + omit beginning 'The' in comparison and omit spaces
+        if(order){
+                   return a.film.toLowerCase().replace(/ /g, '').replace(/^the/, '')
+            < b.film.toLowerCase().replace(/ /g, '').replace(/^the/, '') ? 1 : -1;           
+          }
+        else {
+        return a.film.toLowerCase().replace(/ /g, '').replace(/^the/, '')
+            > b.film.toLowerCase().replace(/ /g, '').replace(/^the/, '') ? 1 : -1;    
+          }
+      });
+    }
     
     function getMovies(name) {
         let { images,length } = s.movies.find(movie => movie.title === name);
@@ -31,6 +90,12 @@ export default function Movies() {
             <option >Stora Salongen</option>
             <option >Lilla Salongen</option>
         </select>          
+        {/* Sort by Name/length */}
+         <select {...l.bind('chosenSort')}>
+          {l.possibleSorts.map(x => <option>
+            {x}
+          </option>)}
+        </select>
         {l.screenings.map(display => <>
             <div className="imagelistdiv">
                 {/* <hr className="movieshr"></hr> */}
