@@ -82,20 +82,15 @@ export default function Movies() {
     }
 
     function sortByName(order) {
-      l.screenings.sort((a, b) => {
-        //   console.log(a.film.toLowerCase().replace(/ /g, '').replace(/^the/, '').charAt(0), ' ' , b.film.toLowerCase().replace(/ /g, '').replace(/^the/, '').charAt(0));
-        // compare case-insensitive 
-        // + omit beginning 'The' in comparison and omit spaces
-        if(order){
-                   return a.film.toLowerCase().replace(/ /g, '').replace(/^the/, '')
-            < b.film.toLowerCase().replace(/ /g, '').replace(/^the/, '') ? 1 : -1;           
-          }
-        else {
-        return a.film.toLowerCase().replace(/ /g, '').replace(/^the/, '')
-            > b.film.toLowerCase().replace(/ /g, '').replace(/^the/, '') ? 1 : -1;    
-          }
-      });
-    }
+     l.screenings.sort((a, b) => {
+      // compare case-insensitive 
+      // + omit beginning 'The' in comparison and omit spaces
+      return order ? a.film.toLowerCase().replace(/ /g, '').replace(/^the/, '')
+          < b.film.toLowerCase().replace(/ /g, '').replace(/^the/, '') ? 1 : -1 : 
+        a.film.toLowerCase().replace(/ /g, '').replace(/^the/, '')
+        > b.film.toLowerCase().replace(/ /g, '').replace(/^the/, '') ? 1 : -1;
+    });
+  }
     
     function getMovies(name) {
         let { images,length } = s.movies.find(movie => movie.title === name);
