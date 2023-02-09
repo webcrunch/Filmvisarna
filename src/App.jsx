@@ -1,6 +1,6 @@
 import { useStates } from './utilities/states.js';
 import { useEffect } from 'react';
-
+import { kebabify } from './utilities/kebabify';
 import {
   BrowserRouter,
   Routes,
@@ -51,9 +51,13 @@ export default function App() {
   useEffect(() => {
     // Load animal data from /json/niceAnimals.json
     (async () => {
-      s.movies = await (
-        await fetch('/json/movies.json')
-      ).json();
+       (async () => {
+      let movies = await (await fetch('/json/movies.json')).json();
+      for (let movie of movies) {
+        movie.path = kebabify(movie.title)
+      }
+      s.movies = movies;
+    })();
       s.screening = await (
         await fetch('/json/screening.json')
       ).json();
