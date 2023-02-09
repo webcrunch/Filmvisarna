@@ -49,7 +49,7 @@ export default function Movies() {
     
     useEffect(() => { // Runs when l.chosenSort changes
     // to avoid endless loop
-    if (l.chosenSort === l.sortDone) { return; }
+        if (l.chosenSort === l.sortDone) {return; }
     // sort according to choice
         if (l.chosenSort === 'Sort by name (A-Z)') { sortByName(0); }
         if (l.chosenSort === 'Sort by name (Z-A)') { sortByName(1); }
@@ -92,7 +92,7 @@ export default function Movies() {
     }
 
     function filterMovies(film) {
-        l.screenings = s.screenings.filter(movie => movie.film === film);
+         l.screenings = film.includes("Alla") ? s.screenings : s.screenings.filter(movie => movie.film === film);
     }
 
     function filterSaloons(auditorium) {
@@ -104,6 +104,7 @@ export default function Movies() {
         {/*</>p>filter</p> */}
         {/* Filter by Name */}
         <select name="selectListName" onChange={e => filterMovies(e.target.value)} id="selectListName">
+            <option>Alla filmerna</option>
             {
                 l.movies.map(movie => <option>{movie.title}</option>)
             }
