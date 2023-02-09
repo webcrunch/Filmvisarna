@@ -5,8 +5,8 @@ import { calculatingTime } from './utilities/length-calculating';
 export default function DetailedInfo() {
         const { moviePath } = useParams();
     
-        const s = useStates('main');
-    const movie = s.movies.find(movie => movie.title == moviePath);
+    const s = useStates('main');
+    const movie = s.movies.find(movie => movie.path == moviePath);
      
      return <>
         {
