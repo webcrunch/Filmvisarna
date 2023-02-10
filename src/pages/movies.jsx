@@ -9,7 +9,7 @@ export default function Movies() {
     const l = useStates({
     startDate: '',
     chosenCategory: 'Choose a category',
-    possibleSorts: [null,'Sort by name (A-Z)','Sort by name (Z-A)', 'Sort by length (A-Z)', 'Sort by length (Z-A)'], 
+    possibleSorts: ['Ingen sortering','Sort by name (↓ A-Ö)','Sort by name (↑ Ö-A)', 'Sort by length (↓ A-Ö)', 'Sort by length (↑ Ö-A)'], 
     chosenSort: '',
     sortDone: '',
     // note: copying the movies array from main
@@ -20,46 +20,40 @@ export default function Movies() {
     // (which we otherwise would happen if changing
     // a higer level state variable),
     movies: s.movies.slice(),
-        categories: [],
+    categories: [],
     screenings: s.screenings.slice()
   });
     
     function createCategories() {
-        // let categories = [];
+        let categories = ['Alla Kategorier'];
         for (let movie of l.movies) {
-            l.categories = [...l.categories, ...movie.genre.split(",")];
+            categories = [...categories, ...movie.genre.split(",")];
         }
+        l.categories = [...new Set(categories)];
     }
 
-    // createCategories();
-    // l.movies.forEach(cat => {
-    //     let checkLength = cat.genre.split(",").length;
+    useEffect(() => {
+        createCategories();
+    }, []);
         
-    //     if (checkLength > 1) {
-    //         // let divideArray = ;
-    //         cat.genre.split(",").forEach(arr => !l.category.includes(arr) ? l.category = arr : null) // !l.category.includes(arr) ? l.category.push(cat.genre) : null
-    //     }   
-    //     else {
-    //         null;
-    //     //!l.category.includes(cat.genre) ? l.category.push(cat.genre) : null;    
-    //     }
-    // })
-    
     useEffect(() => { // Runs when l.chosenSort changes
     // to avoid endless loop
         if (l.chosenSort === l.sortDone) {return; }
     // sort according to choice
-        if (l.chosenSort === null) { l.screenings = s.screenings; }
-        if (l.chosenSort === 'Sort by name (A-Z)') { sortByName(0); }
-        if (l.chosenSort === 'Sort by name (Z-A)') { sortByName(1); }
-        if (l.chosenSort === 'Sort by length (A-Z)') { sortByLength(0); }
-        if (l.chosenSort === 'Sort by length (Z-A)') { sortByLength(1); }
+        console.log(l.chosenSort)
+        if (l.chosenSort === 'Ingen sortering') { l.screenings = s.screenings; }
+        if (l.chosenSort === 'Sort by name (↓ A-Ö)') { sortByName(0); }
+        if (l.chosenSort === 'Sort by name (↑ Ö-A)') { sortByName(1); }
+        if (l.chosenSort === 'Sort by length (↓ A-Ö)') { sortByLength(0); }
+        if (l.chosenSort === 'Sort by length (↑ Ö-A)') { sortByLength(1); }
     l.sortDone = l.chosenSort;
   }, [l.chosenSort]);
 
-      function sortByLength(order) {
+    function sortByLength(order) {
           l.screenings.sort((a, b) => {
-             return order > 0 ? getMovies(a.film)[1] < getMovies(b.film)[1] ? 1 : -1 : getMovies(a.film)[1] > getMovies(b.film)[1] ? 1 : -1; 
+              return order > 0 ?
+                  getMovies(a.film, 'length') < getMovies(b.film, 'images') ? 1 : -1 :
+                  getMovies(a.film, 'images') > getMovies(b.film, 'images') ? 1 : -1; 
     });
   }
 
@@ -82,11 +76,15 @@ export default function Movies() {
         a.film.toLowerCase().replace(/ /g, '').replace(/^the/, '')
         > b.film.toLowerCase().replace(/ /g, '').replace(/^the/, '') ? 1 : -1;
     });
+  }
+  
+       function getMovies(name, property) {
+         return s.movies.find(movie => movie.title === name)[property];
+        
     }
-    
-       function getMovies(name) {
-        let { images,length } = s.movies.find(movie => movie.title === name);
-        return [images,length];
+
+    function filterCategories(genre) {
+        l.screenings = genre.includes("Alla") ? s.screenings : s.screenings.filter(movie => getMovies(movie.film, 'genre').includes(genre));
     }
 
     function filterMovies(film) {
@@ -111,11 +109,11 @@ export default function Movies() {
             }
         </select>   
         {/* Filter by Category */}
-        {/* <select name="selectListCategory" onChange={e => filterMovies(e.target.value)} id="selectListCategory">
+        <select name="selectListCategory" onChange={e => filterCategories(e.target.value)} id="selectListCategory">
             {
                 l.categories.map(cat => <option>{cat}</option>)
             }
-        </select>    */}
+        </select>   
         {/* Filter by Saloons */}
          <select name="selectList" onChange={e => filterSaloons(e.target.value)} id="selectList">
             <option>Båda Salongerna</option>
@@ -138,11 +136,11 @@ export default function Movies() {
         {l.screenings.map(display => <>
             <div className="imagelistdiv">
                 {/* <hr className="movieshr"></hr> */}
-                 <Link to={"/movie/" + display.film}><img className="imagesmovies" src={"../" + getMovies(display.film)[0]} alt={"Poster av filmen " + display.film} /></Link>
+                <Link to={"/movie/" + display.film}><img className="imagesmovies" src={"../" + getMovies(display.film, 'images')} alt={"Poster av filmen " + display.film} /></Link>
                 <div className="tidochsalong">
                     <h2 className="movietitlefilmer">{display.film}</h2>
                     <h4 className="tidochsalongtitle">Sal: {display.auditorium}. Dag: {display.date} </h4>
-                    <h4 className="tidochsalongtitle">Tid: {display.time}. Längd: {calculatingTime(getMovies(display.film)[1])}</h4>
+                    <h4 className="tidochsalongtitle">Tid: {display.time}. Längd: {calculatingTime(getMovies(display.film,'length'))}</h4>
                 </div>
                 <button className="moviebtnsitplatser" type="submit" value="Submit">Välj sittplatser</button>
             </div>
