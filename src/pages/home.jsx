@@ -2,7 +2,7 @@ import { useStates } from "../utilities/states"
 import { Link } from 'react-router-dom';
 export default function Home() {
     
-        let {movies} = useStates('main');
+  let { movies } = useStates('main');
 
   return <>
 
@@ -13,7 +13,7 @@ export default function Home() {
               <div className="topcontainerimagediv">
                 <div className="topcontainerimagedivv">
 
-                <Link to={"/movie/" + movie.title}> <img className="topcontainerimages" src={movie.images}
+                <Link to={"/movie/" + movie.path}> <img className="topcontainerimages" src={movie.images}
                   ></img></Link><p>{movie.title}</p>
                 </div>      
             </div>
