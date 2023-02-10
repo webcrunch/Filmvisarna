@@ -2,47 +2,48 @@ import { useStates } from './utilities/states';
 import { useParams, Link } from 'react-router-dom';
 import { calculatingTime } from './utilities/length-calculating';
 import React, { useState } from 'react';
-
+// import Trailer from ''
 export default function DetailedInfo() {
     const { moviePath } = useParams();
 
     const s = useStates('main');
     const movie = s.movies.find(movie => movie.title == moviePath);
-    const [isOpen, setIsOpen] = useState(false);
+    const [isOpen, setIsOpen] = useState(true);
     const trailer = movie && movie.youtubeTrailer;
 
     return <>
         {
             movie != undefined ?
                 <div className="detailedPageContainer">
-                    <div className="leftContainerImgTrailer">
+                    <div className='detailedLeftContainer'>
                         <img className="detailedImages" src={movie.images} />
-                        <iframe width="560" height="315" src={`https://www.youtube.com/embed/${movie.youtubeTrailer}`} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+                        {/* <Trailer className="someting" embedId="xjDjIWPwcPU" /> */}
+                        <iframe className="movieTrailer" width="350px" height="315px" src={"https://www.youtube.com/embed/" + movie.youtubeTrailer} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                     </div>
-                    <h1 className="detailedTitle">{movie.title}</h1>
-                    <div className="rightContainerText">
-                        <div className="rightDesc">
-                            <p className="detailedDesc">{movie.description}</p> <div />
-                        </div>
+                    {/* <h1 className="detailedTitle">{movie.title}</h1> */}
+                    <div className="detailedRightContainer">
+                        <h1 className="detailedTitle">{movie.title}</h1>
                         <div className="detailedInfo">
-                            <p className="detailedLength">Length: <br /> {calculatingTime(movie.length)}</p>
-                            <p className="detailedGenre">Genre: <br /> {movie.genre}</p>
-                            <p className="detailedReleaseDate">Released: <br /> {movie.productionYear}</p>
-                            <p className="detailedDirector">Director: <br /> {movie.director}</p>
-                            <p className="detailedActors">Actors: <br /> </p>
-                            <ul>
-                                {movie.actors.map(actor =>
-                                    <li>{actor}</li>
-                                )}
-                            </ul>
-
-                        </div>
-                    </div>
-                    <div className="detailedRatingOverwiev">
-                        <p>Rating:
-                            <div style={{ padding: '100px 100px', cursor: 'pointer' }} onClick={() => setIsOpen(!isOpen)}>
-                                <button name='btnRatings' className='buttonRatings'>Show Ratings </button>
+                            <p className="detailedDesc">{movie.description}</p>
+                            <p className="detailedLength infoPart">Length: <br /> {calculatingTime(movie.length)}</p>
+                            <p className="detailedGenre infoPart">Genre: <br /> {movie.genre}</p>
+                            <div className="clearBoth"></div>
+                            <p className="detailedReleaseDate infoPart">Released: <br /> {movie.productionYear}</p>
+                            <p className="detailedDirector infoPart">Director: <br /> {movie.director}</p>
+                            <div className="clearBoth"></div>
+                            <div className='allActorsList'>
+                                <p className="detailedActors">Actors: <br /> </p>
+                                <ul>
+                                    {movie.actors.map(actor =>
+                                        <li>{actor}</li>
+                                    )}
+                                </ul>
                             </div>
+                        </div>
+
+                        <div className="buttonsUnderText">
+                            <button name='btnRatings' className='buttonRatings' onClick={() => setIsOpen(!isOpen)}>Show Ratings </button>
+                            <button name='screenings' className="buttonScreenings" onClick={() => alert('Screening coming soon')}>View Screenings</button>
                             {isOpen && (
                                 <div className="detailedRatingDropdown">
                                     {movie.reviews.map(rate =>
@@ -60,9 +61,10 @@ export default function DetailedInfo() {
                                     )}
                                 </div>
                             )}
-                        </p>
+
+                        </div>
+
                     </div>
-                    <button name='screenings' className="buttonScreenings" onClick={() => alert('Screening coming soon')}>View Screenings</button>
                 </div>
                 : null}
     </>
