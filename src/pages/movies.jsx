@@ -9,7 +9,7 @@ export default function Movies() {
     const l = useStates({
     startDate: '',
     chosenCategory: 'Choose a category',
-    possibleSorts: [null,'Sort by name (A-Z)','Sort by name (Z-A)', 'Sort by length (A-Z)'], //, 'Sort by length (A-Z)', 'Sort by length (Z-A)'
+    possibleSorts: [null,'Sort by name (A-Z)','Sort by name (Z-A)', 'Sort by length (A-Z)', 'Sort by length (Z-A)'], 
     chosenSort: '',
     sortDone: '',
     // note: copying the movies array from main
@@ -53,30 +53,15 @@ export default function Movies() {
         if (l.chosenSort === 'Sort by name (A-Z)') { sortByName(0); }
         if (l.chosenSort === 'Sort by name (Z-A)') { sortByName(1); }
         if (l.chosenSort === 'Sort by length (A-Z)') { sortByLength(0); }
-        // if (l.chosenSort === 'Sort by length (Z-A)') { sortByLength(1); }
+        if (l.chosenSort === 'Sort by length (Z-A)') { sortByLength(1); }
     l.sortDone = l.chosenSort;
   }, [l.chosenSort]);
 
-//     function sortByLength(order) {
-//         l.movies.sort((a, b) => {
-//             return a.length < b.length ? 1 : -1;
-//             // if (order) {
-//             //     console.log(a.length < b.length);
-//             //     return a.length < b.length ? 1 : -1;
-//             // } else {
-//             //     console.log(a.length > b.length, a.length,b.length, b.title, a.title);
-//             //     return a.length > b.length ? 1 : -1;
-//             // }
-//     });
-//   }
-
-    function sortByLength(order) {
-        console.log(order);
-    let a = l.movies.sort((a, b) => {
-      return a.length > b.length ? 1 : -1;
+      function sortByLength(order) {
+          l.screenings.sort((a, b) => {
+             return order > 0 ? getMovies(a.film)[1] < getMovies(b.film)[1] ? 1 : -1 : getMovies(a.film)[1] > getMovies(b.film)[1] ? 1 : -1; 
     });
-    }
-
+  }
 
     function clearFilter() {
         l.startDate = '';
@@ -97,7 +82,7 @@ export default function Movies() {
         a.film.toLowerCase().replace(/ /g, '').replace(/^the/, '')
         > b.film.toLowerCase().replace(/ /g, '').replace(/^the/, '') ? 1 : -1;
     });
-  }
+    }
     
        function getMovies(name) {
         let { images,length } = s.movies.find(movie => movie.title === name);
