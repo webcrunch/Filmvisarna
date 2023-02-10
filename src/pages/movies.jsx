@@ -9,7 +9,7 @@ export default function Movies() {
     const l = useStates({
     startDate: '',
     chosenCategory: 'Choose a category',
-    possibleSorts: ['Ingen sortering','Sort by name (↓ A-Ö)','Sort by name (↑ Ö-A)', 'Sort by length (↓ A-Ö)', 'Sort by length (↑ Ö-A)'], 
+    possibleSorts: ['Ingen sortering','Sortering efter namn (↓ A-Ö)','Sortering efter namn (↑ Ö-A)', 'Sortering efter längd (↓ A-Ö)', 'Sortering efter längd (↑ Ö-A)'], 
     chosenSort: '',
     sortDone: '',
     // note: copying the movies array from main
@@ -42,10 +42,10 @@ export default function Movies() {
     // sort according to choice
         console.log(l.chosenSort)
         if (l.chosenSort === 'Ingen sortering') { l.screenings = s.screenings; }
-        if (l.chosenSort === 'Sort by name (↓ A-Ö)') { sortByName(0); }
-        if (l.chosenSort === 'Sort by name (↑ Ö-A)') { sortByName(1); }
-        if (l.chosenSort === 'Sort by length (↓ A-Ö)') { sortByLength(0); }
-        if (l.chosenSort === 'Sort by length (↑ Ö-A)') { sortByLength(1); }
+        if (l.chosenSort === 'Sortering efter namn (↓ A-Ö)') { sortByName(0); }
+        if (l.chosenSort === 'Sortering efter namn (↑ Ö-A)') { sortByName(1); }
+        if (l.chosenSort === 'Sortering efter längd (↓ A-Ö)') { sortByLength(0); }
+        if (l.chosenSort === 'Sortering efter längd (↑ Ö-A)') { sortByLength(1); }
     l.sortDone = l.chosenSort;
   }, [l.chosenSort]);
 
