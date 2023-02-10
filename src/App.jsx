@@ -46,7 +46,7 @@ export default function App() {
        {path: '/ticket/:moviePath', Component: TicketPage}
     ],
     screenings: [],
-    sallons: []
+    saloons: []
   });
 
   /* Runs when the component App loads */
@@ -54,15 +54,13 @@ export default function App() {
     // Load animal data from /json/niceAnimals.json
     (async () => {
       s.screenings = await (await fetch('/json/screening.json')).json();
-      s.sallons = await (await fetch('/json/saloons.json')).json()})();
-       (async () => {
+      s.sallons = await (await fetch('/json/saloons.json')).json();
       let movies = await (await fetch('/json/movies.json')).json();
       for (let movie of movies) {
         movie.path = kebabify(movie.title)
       }
       s.movies = movies;
     })();
-
   }, []);
 
 
