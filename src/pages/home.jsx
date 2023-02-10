@@ -21,13 +21,18 @@ export default function Home() {
           )}
     </div>
 
-<div className='flexppp>'>
-<h1 className='flexp'>Hetaste just nu</h1><p className='felxpp'>Avatar: The Way of water</p>
+<div className='undertopcontainer>'>
+<p className='undertext'>Förutom våra vanliga filmvisningar har vi också en fullt licensierad bar och försäljningsstånd
+ där du kan njuta av en dryck eller en måltid före eller efter filmen. 
+Vi har också en rymlig lobby och gott om parkeringsplatser, vilket gör det enkelt att komma till vårt bio.
+
+Oavsett om du är en filmentusiast eller bara letar efter en rolig kväll ute, så har vi något för alla. </p>
 </div>
 
 
-    <div className="hottestrelease">
-      <img className="hottestreleasemovie" src="/images/avatarbig2.jpg"></img>
+    <div className="snack-container">
+    <img className="snackimage1" src="/images/cinemasnack1.png"></img>
+      <img className="snackimage2" src="/images/cinemasnack2.png"></img>
     </div>
 
 
