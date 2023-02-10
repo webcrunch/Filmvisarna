@@ -24,7 +24,6 @@ export default function Movies() {
     screenings: s.screenings.slice()
   });
     
-    
     function createCategories() {
         // let categories = [];
         for (let movie of l.movies) {
@@ -100,7 +99,7 @@ export default function Movies() {
     });
   }
     
-    function getMovies(name) {
+       function getMovies(name) {
         let { images,length } = s.movies.find(movie => movie.title === name);
         return [images,length];
     }
@@ -113,8 +112,11 @@ export default function Movies() {
         l.screenings =  auditorium.includes("Båda") ? s.screenings : s.screenings.filter(movie => movie.auditorium === auditorium);
     }   
     
-    return <div className="movieList">  
-        <h1>Movie List</h1>
+    return <div className="movieList">
+        {
+            s.movies[0] !== undefined ?
+                <>
+                <h1>Movie List</h1>
         {/*</>p>filter</p> */}
         {/* Filter by Name */}
         <select name="selectListName" onChange={e => filterMovies(e.target.value)} id="selectListName">
@@ -147,11 +149,11 @@ export default function Movies() {
           {l.possibleSorts.map(x => <option>
             {x}
           </option>)}
-        </select>
+                    </select>
         {l.screenings.map(display => <>
             <div className="imagelistdiv">
                 {/* <hr className="movieshr"></hr> */}
-                 <Link to={"/movie/" + display.film}><img className="imagesmovies" src={"../" + getMovies(display.film)[0]} alt={"Poster av filmen " + display.title} /></Link>
+                 <Link to={"/movie/" + display.film}><img className="imagesmovies" src={"../" + getMovies(display.film)[0]} alt={"Poster av filmen " + display.film} /></Link>
                 <div className="tidochsalong">
                     <h2 className="movietitlefilmer">{display.film}</h2>
                     <h4 className="tidochsalongtitle">Sal: {display.auditorium}. Dag: {display.date} </h4>
@@ -159,6 +161,8 @@ export default function Movies() {
                 </div>
                 <button className="moviebtnsitplatser" type="submit" value="Submit">Välj sittplatser</button>
             </div>
-        </>)}
-    </div >
+        </>)}            
+                </>: null
+       }
+    </div>
 }
