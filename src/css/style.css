@@ -83,6 +83,7 @@ nav ul {
 }
 
 nav img {
+  filter: invert(100%);
   display: block;
   float: right;
   height: 30%;
