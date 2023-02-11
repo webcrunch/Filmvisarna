@@ -394,3 +394,47 @@ body {
   word-wrap: break-word;
 
 }
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
+
+.img {
+  max-width: 100%;
+  position: relative;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.image {
+  flex-basis: 70%;
+  order: 2;
+}
+
+.doneA {
+  color: white;
+  font-size: 20px;
+  padding-left: 20px;
+  position: left;
+}
+
+/*.poster {
+  /*margin: 0 auto;
+  padding: 10px 2px;
+  /*background-image: url(/images/bookingpage.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  max-width: 100%;
+  font-size: 20px;
+  padding-left: 20px;
+  flex-basis: 70%;
+  order: 2;*/
+
+
+
+/*body p {
+  background-color: #Add8E6
+}*/
