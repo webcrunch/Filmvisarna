@@ -28,8 +28,6 @@ footer {
   position: relative;
 }
 
-
-
 .footerleft,
 .footercenter,
 .footerright {
@@ -56,14 +54,14 @@ nav {
   width: 100%;
   display: flex;
   justify-content: center;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .navlinks {
   color: white;
   font-size: 1.2em;
   font-weight: bold;
-  padding: 20px;
+  padding: 30px;
   text-decoration: none;
 }
 
@@ -82,6 +80,16 @@ nav ul {
   justify-content: space-between;
   align-items: center;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+nav img {
+  display: block;
+  float: right;
+  height: 30%;
+}
+
+nav img:hover {
+  cursor: pointer;
 }
 
 body {
@@ -130,11 +138,10 @@ body {
   gap: 20px;
   row-gap: 0px;
   margin-top: -15px;
-  
 }
 
 .flex-container a {
-  background-color: #1A1A1A;
+  background-color: #1a1a1a;
   width: 275px;
   height: 300px;
   text-align: center;
@@ -178,21 +185,18 @@ body {
   transition: ease-out 0.4s;
 }
 
-.topcontainerimagediv{
+.topcontainerimagediv {
   height: auto;
   width: auto;
-  
 }
 .topcontainerimagedivv {
   height: 100%;
   width: 100%;
-  
 }
 
-.flex-container>div:hover{
+.flex-container > div:hover {
   box-shadow: inset 500px 0 0 0 #722e2e;
 }
-
 
 .topcontainerimages {
   width: 100%;
@@ -204,7 +208,6 @@ body {
   aspect-ratio: 11/16;
 }
 
-
 @media screen and (max-width: 767px) {
   .flexp {
     padding: 0;
@@ -214,8 +217,6 @@ body {
     margin-bottom: 10px;
     font-size: 20px;
     margin-left: 4%;
-    
-    
   }
 }
 
@@ -230,27 +231,24 @@ body {
   }
 }
 @media screen and (max-width: 767px) {
-   .flex-container > div img  {
-    
+  .flex-container > div img {
     margin-left: 0;
     margin-right: 0;
     height: 200px;
     width: 110px;
-    
   }
 }
 
-
 /*TOP HOMEPAGE END*/
 
-.snack-container{
+.snack-container {
   width: 100%;
   height: auto;
   display: inline-block;
   padding: 5px;
 }
 
-.snackimage1{
+.snackimage1 {
   cursor: pointer;
   width: auto;
   height: auto;
@@ -263,7 +261,7 @@ body {
   box-shadow: inset 0 0 0 0 #ffffff28; /*very important */
   transition: ease-in 0.9s;
 }
-.snackimage2{
+.snackimage2 {
   cursor: pointer;
   width: auto;
   height: auto;
@@ -277,7 +275,7 @@ body {
   transition: ease-in 0.9s;
 }
 
-.snackimage1:hover{
+.snackimage1:hover {
   cursor: pointer;
   width: auto;
   height: auto;
@@ -292,7 +290,7 @@ body {
   transition: ease-in 0.4s;
 }
 
-.snackimage2:hover{
+.snackimage2:hover {
   cursor: pointer;
   width: auto;
   height: auto;
@@ -307,15 +305,13 @@ body {
   transition: ease-in-out 0.4s;
 }
 
-.snacklink:after{
+.snacklink:after {
   height: auto;
   width: 900px;
-  
+
   border-radius: 50%;
   box-shadow: inset 0 0 0 0 #ffffff28;
 }
-
-
 
 .flexp p {
   color: rgba(94, 94, 94, 0.471);
@@ -323,11 +319,11 @@ body {
   width: 100%;
   margin-left: 20%;
 }
-.undertext{
+.undertext {
   color: white;
   font-weight: normal;
-  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
- 
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+
   font-size: 22px;
   word-wrap: break-word;
   text-align: center;
@@ -343,14 +339,11 @@ body {
   width: 100%;
 }
 
-.undertopcontainer h3{
+.undertopcontainer h3 {
   margin: 20px;
   color: white;
 }
 /*------                FILTER homepage                ----------- */
-
-
-
 
 /*------------------------------------------------------------------------- */
 
