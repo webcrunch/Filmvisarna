@@ -10,7 +10,7 @@ export default function Navbar() {
                 {s.menu.map(({ label, path }) =>
                     label ? <NavLink className="navlinks" to={path}>{label}</NavLink> : null
             )}
-            <img onClick={() => alert("hello")} src="/images/icon-login.png" alt="Login" />
+            <img onClick={() => alert("hello")} src="/images/icon-login.svg" alt="Login" />
             {/* <p>Välkommen tillbaka ....</p> */}            
         </nav>
         

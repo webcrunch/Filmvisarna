@@ -63,11 +63,18 @@ nav {
   font-weight: bold;
   padding: 30px;
   text-decoration: none;
+  opacity: 0.7;
+}
+
+.navlinks.active {
+  opacity: 1;
+  text-decoration: underline;
 }
 
 .navlinks:hover {
   background-color: #333333;
   color: #f5f5f5;
+  opacity: 0.9;
   border-radius: 10px;
 }
 
@@ -86,6 +93,7 @@ nav img {
   filter: invert(100%);
   display: block;
   float: right;
+  padding-top: 25px;
   height: 30%;
 }
 
