@@ -1,7 +1,7 @@
 export default function About() {
     return <>
         <div className="OmOss">
-            <h2>Om Oss</h2>
+            <h2>Om oss</h2>
             <img src="images/Om.jpg" alt="Here will be a image" />
             <p>Vårt varumärkeslöfte, <b>We Make Movies Better</b>, innebär att vi alltid strävar efter att erbjuda de mest minnesvärda och omvälvande  upplevelserna i biografer i världsklass.</p>
 
