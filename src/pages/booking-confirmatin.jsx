@@ -32,31 +32,33 @@ export default function Booked() {
 
     return <>{ l.movie && l.screning ? 
         < div className = "doneA" >
-
         <div className="container">
             <div className="image">
                 <img src="/images/bookingpage.jpg" alt="En bild över popcorn och andra roliga saker" />
             </div>
         </div>
+            
+            <div className="finished">
+                <div>
+                    <h2>Tack för din bokning till:</h2>
+                    <h2>{l.movie.title}!</h2>
+                <h3>Viktig information</h3>
+                <h4>{l.movie.title}</h4>
+                <p>{l.screning.auditorium}</p>
+                <p>{l.screning.date}</p>
+                <p>{l.screning.time}</p>
+                <p>{of.totalPris }kr</p>
+                <ul>
+                    <li>Barn biljetter: {of.numberOfChildren} st</li>
+                    <li>Vuxen biljetter: { of.numberOfAdults } st</li>
+                    <li>pensionär biljetter: { of.numberOfSeniors } st</li>
+                </ul>
+                <p>Total antal platser/biljetter: {of.calculateAll()}</p>
 
-
-        <h2>Thank you for your order!</h2>
-
-        <h3>Information</h3>
-        <h4>Film: {l.movie.title}</h4>
-        <p>Salong: {l.screning.auditorium}</p>
-        <p>Datum: {l.screning.date}</p>
-        <p>Tid: {l.screning.time}</p>
-    {/* <p>Email:<br />{of.email}</p> */ }
-        <p>telefonnummer:<br />{of.phoneNumber}</p>
-        <p>Antal barn biljetter:<br />{of.numberOfChildren}</p>
-        <p>Antal vuxen biljetter:<br />{of.numberOfAdults}</p>
-        <p>Antal pensionär biljetter:<br />{of.numberOfSeniors}</p>
-        <p>Total antal biljetter: {of.calculateAll()}</p>
-        <p>Pris: {of.totalPris }kr</p>
-        <h3>Boknings information</h3>
-        <p>Glöm inte att ta med bokningsnummret till biografen:</p>
-        <p>{of.confirmationNumber}</p>
-        <button type="button" onClick={()=> copyContent(of.confirmationNumber)}>Kopiera bokningsnummret</button>
+                <h3>Boknings information</h3>
+                <p>Glöm inte att ta med bokningsnummret till biografen: <b>{of.confirmationNumber}</b> <button type="button" onClick={() => copyContent(of.confirmationNumber)}>Kopiera bokningsnummret</button></p>           
+                </div>
+                <div><img src={"../" + l.movie.images} alt="" /></div>
+            </div>        
     </div > : null }</>
 }
