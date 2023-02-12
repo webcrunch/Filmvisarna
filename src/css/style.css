@@ -52,6 +52,7 @@ nav {
   background-color: #1a1a1a;
   text-decoration: none;
   width: 100%;
+  /* padding: 0 200px; */
   display: flex;
   justify-content: center;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -59,6 +60,9 @@ nav {
 
 .navlinks {
   color: white;
+  /* margin: auto; */
+  /* padding: -2px; */
+  /* text-align: center; */
   font-size: 1.2em;
   font-weight: bold;
   padding: 30px;
@@ -90,9 +94,9 @@ nav ul {
 }
 
 nav img {
+  /* margin-left: auto; */
   filter: invert(100%);
-  display: block;
-  float: right;
+  /* display: block; */
   padding-top: 25px;
   height: 30%;
 }
@@ -525,6 +529,15 @@ body {
   margin: 10px 0;
   bottom: 10px;
 }
+/* 
+@media (prefers-color-scheme: dark) {
+  .favicon-smiley {
+    fill: #ffff00;
+  }
+  .notification-background {
+    fill: #ffc300;
+  }
+} */
 
 /* .detailedPageContainer {
   display: flex;
