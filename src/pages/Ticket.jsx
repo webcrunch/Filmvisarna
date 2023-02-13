@@ -106,7 +106,7 @@ totalPrice: 0
       </div>
 
       <div className="ticket-option2">
-        <h3 className="vuxen-title">Barn</h3>
+        <h3 className="barn-title">Barn</h3>
         <p className="price-tag-name">Pris: {clickerss.priceChildren}Kr</p>
         <button className="add-ticket" onClick={() => {
           clickerss.numberofChildren++;
@@ -121,7 +121,7 @@ totalPrice: 0
       </div>
 
       <div className="ticket-option3">
-        <h3 className="vuxen-title">Pensionär</h3>
+        <h3 className="senior-title">Pensionär</h3>
         <p className="price-tag-name">Pris: {clickerss.priceSenior}Kr</p>
         <button className="add-ticket" onClick={() => {
           clickerss.numberofSenior++;

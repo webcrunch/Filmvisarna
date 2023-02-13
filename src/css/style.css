@@ -438,17 +438,7 @@ body.ticketPage {
   cursor: pointer;
 }
 
-.vuxen-title {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: aliceblue;
-}
-
-.barn-title {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: aliceblue;
-}
-
-.pensionar-title {
+.vuxen-title, .barn-title, .senior-title{
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: aliceblue;
 }
