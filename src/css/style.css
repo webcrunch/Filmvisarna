@@ -30,8 +30,6 @@ footer {
   position: relative;
 }
 
-
-
 .footerleft,
 .footercenter,
 .footerright {
@@ -58,7 +56,7 @@ nav {
   width: 100%;
   display: flex;
   justify-content: center;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .navlinks {
@@ -135,11 +133,10 @@ body.ticketPage {
   gap: 20px;
   row-gap: 0px;
   margin-top: -15px;
-
 }
 
 .flex-container a {
-  background-color: #1A1A1A;
+  background-color: #1a1a1a;
   width: 275px;
   height: 300px;
   text-align: center;
@@ -186,7 +183,6 @@ body.ticketPage {
 .topcontainerimagediv {
   height: auto;
   width: auto;
-
 }
 
 .topcontainerimagedivv {
@@ -199,7 +195,6 @@ body.ticketPage {
   box-shadow: inset 500px 0 0 0 #722e2e;
 }
 
-
 .topcontainerimages {
   width: 100%;
   height: 80%;
@@ -209,7 +204,6 @@ body.ticketPage {
   box-shadow: 200px 20px 590px 75px #000000;
   aspect-ratio: 11/16;
 }
-
 
 @media screen and (max-width: 767px) {
   .flexp {
@@ -243,10 +237,8 @@ body.ticketPage {
     margin-right: 0;
     height: 200px;
     width: 110px;
-
   }
 }
-
 
 /*TOP HOMEPAGE END*/
 
@@ -326,8 +318,6 @@ body.ticketPage {
   border-radius: 50%;
   box-shadow: inset 0 0 0 0 #ffffff28;
 }
-
-
 
 .flexp p {
   color: rgba(94, 94, 94, 0.471);
@@ -553,12 +543,8 @@ body.ticketPage {
 }
 
 .contact a {
-  color: gray;
+  color: rgb(11, 197, 42);
 }
-
-/* b{
-  color:green;
-} */
 
 .contact a:hover {
   cursor: pointer;
@@ -587,6 +573,48 @@ body.ticketPage {
   text-align: start;
   word-wrap: break-word;
 }
+
+/*.poster {
+  /*margin: 0 auto;
+  padding: 10px 2px;
+  /*background-image: url(/images/bookingpage.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  max-width: 100%;
+  font-size: 20px;
+  padding-left: 20px;
+  flex-basis: 70%;
+  order: 2;*/
+
+/* Booking done page start */
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.img {
+  max-width: 100%;
+  position: relative;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.image {
+  flex-basis: 70%;
+  order: 2;
+}
+
+.doneA {
+  color: white;
+  font-size: 20px;
+  padding-left: 20px;
+  position: left;
+}
+
+/* __________________________________  */
 
 /* Detail page css start */
 .detailedPageContainer {
