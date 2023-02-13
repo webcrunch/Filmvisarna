@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Arima:wght@400;700&display=swap");
 @import "normalize.css";
 @import url("star.css");
+
 * {
   box-sizing: border-box;
 }
@@ -24,7 +25,8 @@ footer {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: white;
   padding: 20px;
-  margin-top: 10%;
+  margin-top: 0%;
+  /*changed from 10% to 0. */
   position: relative;
 }
 
@@ -85,8 +87,12 @@ nav ul {
 }
 
 body {
-  
+
   margin: 0;
+}
+
+body.ticketPage {
+  background-color: rgb(23, 23, 23);
 }
 
 .movieshr {
@@ -130,7 +136,7 @@ body {
   gap: 20px;
   row-gap: 0px;
   margin-top: -15px;
-  
+
 }
 
 .flex-container a {
@@ -162,7 +168,7 @@ body {
   margin-bottom: -1%;
 }
 
-.flex-container > div {
+.flex-container>div {
   background-color: #1a1a1a;
   width: 100%;
   padding: 1px;
@@ -178,18 +184,19 @@ body {
   transition: ease-out 0.4s;
 }
 
-.topcontainerimagediv{
+.topcontainerimagediv {
   height: auto;
   width: auto;
-  
+
 }
+
 .topcontainerimagedivv {
   height: 100%;
   width: 100%;
-  
+
 }
 
-.flex-container>div:hover{
+.flex-container>div:hover {
   box-shadow: inset 500px 0 0 0 #722e2e;
 }
 
@@ -214,43 +221,44 @@ body {
     margin-bottom: 10px;
     font-size: 20px;
     margin-left: 4%;
-    
-    
+
+
   }
 }
 
 /*TOP HOMEPAGE MEDIA QUERIES */
 
 @media screen and (max-width: 767px) {
-  .flex-container > div {
+  .flex-container>div {
     padding: 0;
     padding-bottom: 0%;
     width: 35%;
     height: 270px;
   }
 }
+
 @media screen and (max-width: 767px) {
-   .flex-container > div img  {
-    
+  .flex-container>div img {
+
     margin-left: 0;
     margin-right: 0;
     height: 200px;
     width: 110px;
-    
+
   }
 }
 
 
 /*TOP HOMEPAGE END*/
 
-.snack-container{
+.snack-container {
   width: 100%;
   height: auto;
   display: inline-block;
   padding: 5px;
 }
 
-.snackimage1{
+.snackimage1 {
   cursor: pointer;
   width: auto;
   height: auto;
@@ -260,24 +268,27 @@ body {
   width: 50%;
   box-shadow: 200px 200px 590px 480px #000000;
   margin-top: 1%;
-  box-shadow: inset 0 0 0 0 #ffffff28; /*very important */
-  transition: ease-in 0.9s;
-}
-.snackimage2{
-  cursor: pointer;
-  width: auto;
-  height: auto;
-  display: inline-block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-  box-shadow: 200px 200px 590px 480px #000000;
-  margin-top: 1%;
-  box-shadow: inset 0 0 0 0 #ffffff28; /*very important */
+  box-shadow: inset 0 0 0 0 #ffffff28;
+  /*very important */
   transition: ease-in 0.9s;
 }
 
-.snackimage1:hover{
+.snackimage2 {
+  cursor: pointer;
+  width: auto;
+  height: auto;
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  box-shadow: 200px 200px 590px 480px #000000;
+  margin-top: 1%;
+  box-shadow: inset 0 0 0 0 #ffffff28;
+  /*very important */
+  transition: ease-in 0.9s;
+}
+
+.snackimage1:hover {
   cursor: pointer;
   width: auto;
   height: auto;
@@ -288,11 +299,12 @@ body {
   width: 50%;
   box-shadow: 200px 200px 590px 480px #000000;
   margin-top: 1%;
-  box-shadow: inset 0 0 0 0 #ffffff28; /*very important */
+  box-shadow: inset 0 0 0 0 #ffffff28;
+  /*very important */
   transition: ease-in 0.4s;
 }
 
-.snackimage2:hover{
+.snackimage2:hover {
   cursor: pointer;
   width: auto;
   height: auto;
@@ -303,14 +315,15 @@ body {
   width: 50%;
   box-shadow: 200px 200px 590px 480px #000000;
   margin-top: 1%;
-  box-shadow: inset 0 0 0 0 #ffffff28; /*very important */
+  box-shadow: inset 0 0 0 0 #ffffff28;
+  /*very important */
   transition: ease-in-out 0.4s;
 }
 
-.snacklink:after{
+.snacklink:after {
   height: auto;
   width: 900px;
-  
+
   border-radius: 50%;
   box-shadow: inset 0 0 0 0 #ffffff28;
 }
@@ -323,11 +336,12 @@ body {
   width: 100%;
   margin-left: 20%;
 }
-.undertext{
+
+.undertext {
   color: white;
   font-weight: normal;
-  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
- 
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
   font-size: 22px;
   word-wrap: break-word;
   text-align: center;
@@ -343,10 +357,11 @@ body {
   width: 100%;
 }
 
-.undertopcontainer h3{
+.undertopcontainer h3 {
   margin: 20px;
   color: white;
 }
+
 /*------                FILTER homepage                ----------- */
 
 
@@ -355,7 +370,10 @@ body {
 /*---------------------HOMEPAGE ENDS HERE---------------------------------------------------- */
 
 /*-----------------TICKET PAGE STARTS HERE----------------------------------------------------*/
-#ticket-pricing{
+
+
+
+#ticket-pricing {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -364,27 +382,27 @@ body {
   margin: 0 auto;
 }
 
-.ticket-option1{
+.ticket-option1 {
 
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 30%;
   padding: 20px;
-  border-left:  1px solid ;
+  border-left: 1px solid;
   border-bottom-left-radius: 20px rgb(38, 38, 38);
   border-top-left-radius: 20px;
 }
 
-.ticket-option2{
+.ticket-option2 {
   display: flex;
-  flex-direction:column;
+  flex-direction: column;
   align-items: center;
   width: 30%;
   padding: 20px;
 }
 
-.ticket-option3{
+.ticket-option3 {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -393,23 +411,13 @@ body {
   border-right: 1px solid rgb(38, 38, 38);
 }
 
-.quantity{
+.quantity {
   width: 40px;
   text-align: center;
   margin: 10px 0;
 }
 
-.add-ticket{
-  width: 50px;
-  height: 30px;
-  margin: 10px;
-  border-radius: 10px;
-  border: none;
-  background-color: rgb(187, 41, 58);
-  color: white;
-  cursor: pointer;
-}
-.remove-ticket{
+.add-ticket {
   width: 50px;
   height: 30px;
   margin: 10px;
@@ -420,27 +428,38 @@ body {
   cursor: pointer;
 }
 
-.vuxen-title{
+.remove-ticket {
+  width: 50px;
+  height: 30px;
+  margin: 10px;
+  border-radius: 10px;
+  border: none;
+  background-color: rgb(187, 41, 58);
+  color: white;
+  cursor: pointer;
+}
+
+.vuxen-title {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: aliceblue;
 }
 
-.barn-title{
+.barn-title {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: aliceblue;
 }
 
-.pensionar-title{
+.pensionar-title {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: aliceblue;
 }
 
-.price-tag-name{
+.price-tag-name {
   color: white;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.total-price-css{
+.total-price-css {
   color: rgb(255, 255, 255);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-weight: bold;
@@ -451,7 +470,7 @@ body {
   margin-left: 100px
 }
 
-.quantity{
+.quantity {
   color: rgb(0, 0, 0);
   background-color: rgb(255, 255, 255);
   border-radius: 2px;
@@ -459,15 +478,16 @@ body {
   font-weight: bold;
 }
 
-.ticket-container{
+.ticket-container {
 
   box-shadow: 0px 0px 100px 0px #000000;
   border-radius: 20px;
   border-bottom: 1px solid rgb(38, 38, 38);
 }
 
-.full-ticket-page{
+.full-ticket-page {
   background-color: rgb(23, 23, 23);
+  height: 100%;
 }
 
 /*---------------------TICKET PAGE ENDS HERE---------------------------------------------------- */

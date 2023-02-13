@@ -1,7 +1,7 @@
 import { useStates } from '../utilities/states';
 import { useParams, Link } from 'react-router-dom';
 import { calculatingTime } from '../utilities/length-calculating';
-
+import { useEffect } from "react";
 
 export default function TicketPage() {
   const { moviePath } = useParams();
@@ -14,6 +14,16 @@ export default function TicketPage() {
     priceSenior: 75,
     totalPrice: 0
   })
+
+  useEffect(() => {
+    // add the class ticketPage to the body element
+    // when the page shows / the component mounts
+    document.body.classList.add("ticketPage");
+    // remove the class ticketPage when the page
+    // unmounts..
+    return () => document.body.classList.remove("ticketPage");
+  }, []);
+
 
   // updatePrice(){
   //   let childrenPrice = numberOfChildren * priceChildren;
