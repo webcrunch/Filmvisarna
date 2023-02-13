@@ -408,6 +408,7 @@ body.ticketPage {
   width: 30%;
   padding: 20px;
   border-right: 1px solid rgb(38, 38, 38);
+  
 }
 
 .quantity {
@@ -455,8 +456,8 @@ body.ticketPage {
   font-size: 30px;
   position: relative;
   width: 100%;
-  margin-top: 100px;
-  margin-left: 100px
+  text-align: center;
+  word-wrap: break-word;
 }
 
 .quantity {
@@ -468,7 +469,7 @@ body.ticketPage {
 }
 
 .ticket-container {
-  
+  justify-content: center;
   box-shadow: 0px 0px 35px 0px #000000;
   border-radius: 20px;
   border-bottom: 1px solid rgb(38, 38, 38);
@@ -476,6 +477,8 @@ body.ticketPage {
 
 .full-ticket-page {
   height: 100%;
+  width: auto;
+  aspect-ratio: 11/16;
 }
 
 /*---------------------TICKET PAGE ENDS HERE---------------------------------------------------- */
