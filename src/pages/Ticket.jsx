@@ -8,7 +8,6 @@ export default function TicketPage() {
     const { moviePath } = useParams();
       const location = useLocation()
 
-    console.log(location); 
         const s = useStates('main');
     const movie = s.movies.find(movie => movie.title == moviePath);
     
