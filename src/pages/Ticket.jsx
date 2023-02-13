@@ -116,7 +116,7 @@ totalPrice: 0
         <button className="remove-ticket" onClick={() => {
           if (clickerss.numberofChildren <= 0) { return; }
           clickerss.numberofChildren--;
-          clickerss.totalPrice -= clickerss.priceAdults;
+          clickerss.totalPrice -= clickerss.priceChildren;
         }}>-</button>
       </div>
 
