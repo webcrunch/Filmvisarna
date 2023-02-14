@@ -5,7 +5,7 @@ import {
   BrowserRouter,
   Routes,
   Route,
-  useLocation  
+  useLocation
 } from 'react-router-dom';
 
 import Navbar from './Navbar';
@@ -14,6 +14,7 @@ import Home from './pages/home.jsx';
 import Contact from './pages/contact.jsx';
 import About from './pages/about.jsx';
 import Movies from './pages/movies.jsx';
+import Booked from './pages/booking-confirmatin.jsx';
 import DetailedInfo from './detailedInfo.jsx';
 import TicketPage from './pages/Ticket.jsx';
 // A React component is a function
@@ -23,31 +24,32 @@ export default function App() {
 
   /* State variables */
 
-  function ScrollToTop( { children } ) {
+  function ScrollToTop({ children }) {
     let location = useLocation();
 
-    useEffect( () => {
-        window.scrollTo(0, 0);
-    }, [ location ] );
+    useEffect(() => {
+      window.scrollTo(0, 0);
+    }, [location]);
 
     return children
-}
+  }
 
 
-  let user = useStates('user', {
+  useStates('user', {
      isOpened: false,
     loggedin:false
   })
 
-  let s = useStates('main',{
+  let s = useStates('main', {
     movies: [],
     menu: [
       { label: 'HEM', path: '/', Component: Home },
-      { label: 'FILMER', path: '/movies', Component: Movies },  
-      { label: 'OM OSS ', path: '/about', Component: About}, //, Component:
+      { label: 'FILMER', path: '/movies', Component: Movies },
+      { label: 'OM OSS ', path: '/about', Component: About }, //, Component:
       { label: 'KONTAKT', path: '/contact', Component: Contact },
       { path: '/movie/:moviePath', Component: DetailedInfo },
-       {path: '/ticket/:moviePath', Component: TicketPage}
+      { path: '/ticket/:moviePath', Component: TicketPage },
+      { path: '/done/:bookingId', Component: Booked }
     ],
     screenings: [],
     saloons: []
@@ -71,13 +73,13 @@ export default function App() {
   // Return som jsx (HTML-like code with expressions inside arrow brackets)
   return <BrowserRouter>
     <ScrollToTop>
-    <Navbar />
-      <main>  
-      <Routes>
-         {s.menu.map(({ path, Component }) => <Route path={path} element={<Component />} />)}
-                </Routes> 
-    </main> 
+      <Navbar />
+      <main>
+        <Routes>
+          {s.menu.map(({ path, Component }) => <Route path={path} element={<Component />} />)}
+        </Routes>
+      </main>
       <Footer />
-      </ScrollToTop>
+    </ScrollToTop>
   </BrowserRouter>;
 }
