@@ -1,10 +1,11 @@
+import generate from "../utilities/random-order-confirmation"
 export default function Booked() {
     let of = {
         phoneNumber: 333333,
         numberOfChildren: 0,
         numberOfAdults: 4,
         numberOfSeniors: 2,
-        confirmationNumber: "1213344554",
+        confirmationNumber: generate(),
         calculateAll() {
             return this.numberOfAdults + this.numberOfChildren + this.numberOfSeniors
         }
