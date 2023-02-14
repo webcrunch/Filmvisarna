@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Arima:wght@400;700&display=swap");
 @import "normalize.css";
 @import url("star.css");
+
 * {
   box-sizing: border-box;
 }
@@ -179,6 +180,7 @@ body {
   height: auto;
   width: auto;
 }
+
 .topcontainerimagedivv {
   height: 100%;
   width: 100%;
@@ -220,6 +222,7 @@ body {
     height: 270px;
   }
 }
+
 @media screen and (max-width: 767px) {
   .flex-container > div img {
     margin-left: 0;
@@ -248,9 +251,11 @@ body {
   width: 50%;
   box-shadow: 200px 200px 590px 480px #000000;
   margin-top: 1%;
-  box-shadow: inset 0 0 0 0 #ffffff28; /*very important */
+  box-shadow: inset 0 0 0 0 #ffffff28;
+  /*very important */
   transition: ease-in 0.9s;
 }
+
 .snackimage2 {
   cursor: pointer;
   width: auto;
@@ -261,7 +266,8 @@ body {
   width: 50%;
   box-shadow: 200px 200px 590px 480px #000000;
   margin-top: 1%;
-  box-shadow: inset 0 0 0 0 #ffffff28; /*very important */
+  box-shadow: inset 0 0 0 0 #ffffff28;
+  /*very important */
   transition: ease-in 0.9s;
 }
 
@@ -276,7 +282,8 @@ body {
   width: 50%;
   box-shadow: 200px 200px 590px 480px #000000;
   margin-top: 1%;
-  box-shadow: inset 0 0 0 0 #ffffff28; /*very important */
+  box-shadow: inset 0 0 0 0 #ffffff28;
+  /*very important */
   transition: ease-in 0.4s;
 }
 
@@ -291,7 +298,8 @@ body {
   width: 50%;
   box-shadow: 200px 200px 590px 480px #000000;
   margin-top: 1%;
-  box-shadow: inset 0 0 0 0 #ffffff28; /*very important */
+  box-shadow: inset 0 0 0 0 #ffffff28;
+  /*very important */
   transition: ease-in-out 0.4s;
 }
 
@@ -309,6 +317,7 @@ body {
   width: 100%;
   margin-left: 20%;
 }
+
 .undertext {
   color: white;
   font-weight: normal;
@@ -333,6 +342,7 @@ body {
   margin: 20px;
   color: white;
 }
+
 /*------                FILTER homepage                ----------- */
 
 /*------------------------------------------------------------------------- */
@@ -438,6 +448,29 @@ body {
   word-wrap: break-word;
 }
 
+/* Booking confirmed page */
+
+.doneA {
+  color: white;
+  font-size: 20px;
+  padding-left: 20px;
+}
+
+.doneA img,
+.doneA .information {
+  float: left;
+}
+
+.doneA .information {
+  width: 30%;
+}
+
+.doneA img {
+  display: block;
+  width: 70%;
+  padding: 5px;
+}
+
 /*.poster {
   /*margin: 0 auto;
   padding: 10px 2px;
@@ -452,16 +485,22 @@ body {
   order: 2;*/
 
 /* Booking done page start */
-
+/*
 .container {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
+.information {
+  color: rgb(224, 216, 222);
+  padding: 20px 20px;
+  margin-right: 40px;
+}
+
 .img {
-  max-width: 100%;
-  position: relative;
+  max-width: 80%;
+  position: left;
   padding-right: 20px;
   padding-left: 20px;
 }
@@ -469,16 +508,15 @@ body {
 .image {
   flex-basis: 70%;
   order: 2;
-}
+}*/
 
-.doneA {
+/* .doneA {
   color: white;
   font-size: 20px;
   padding-left: 20px;
   position: left;
-}
-
-/* __________________________________  */
+} */
+/* ?? __________________________________ ?? */
 
 /* Detail page css start */
 .detailedPageContainer {
