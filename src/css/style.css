@@ -149,6 +149,7 @@ nav img:hover {
 
 .boxContent a {
   color: black;
+  padding-left: 10px;
   text-decoration: none;
 }
 
