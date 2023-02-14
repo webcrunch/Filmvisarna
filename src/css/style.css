@@ -95,7 +95,7 @@ nav ul {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-nav img {
+nav .img {
   /* margin-left: auto; */
   filter: invert(100%);
   /* display: block; */
@@ -108,17 +108,49 @@ nav img:hover {
 }
 
 .boxContent {
-  color: white;
-  border: #ffffff solid;
+  /* color: white; */
+  background-color: #575757;
+  border: #525252 solid;
   width: 20%;
   /* border-radius: 10%; */
   text-decoration: none;
-  padding: 20px;
+  /* padding-left: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px; */
+  /* padding: 10px 15px 5px 10px; */
+  /* margin-top: 5px; */
+  margin-bottom: 5px;
+  margin-left: 5px;
+  /* margin: 10px; */
+  animation: showme 4s forwards;
+}
+
+.notShowMe {
+  animation: hideMe 4s backwards;
+}
+
+@keyframes showme {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes hideMe {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 .boxContent a {
+  color: black;
   text-decoration: none;
 }
+
 .boxContent img {
   filter: invert(100%);
 }
