@@ -36,8 +36,8 @@ export default function App() {
 
 
   useStates('user', {
-     isOpened: false,
-    loggedin:false
+    isOpened: false,
+    loggedin: false
   })
 
   let s = useStates('main', {
@@ -48,6 +48,7 @@ export default function App() {
       { label: 'OM OSS ', path: '/about', Component: About }, //, Component:
       { label: 'KONTAKT', path: '/contact', Component: Contact },
       { path: '/movie/:moviePath', Component: DetailedInfo },
+      // { path: '/authentication/, Component: DetailedInfo },
       { path: '/ticket/:moviePath', Component: TicketPage },
       { path: '/done/:bookingId', Component: Booked }
     ],
