@@ -48,6 +48,8 @@ footer {
   margin-left: 4%;
 }
 
+/* Navbar page start */
+
 nav {
   background-color: #1a1a1a;
   text-decoration: none;
@@ -104,6 +106,24 @@ nav img {
 nav img:hover {
   cursor: pointer;
 }
+
+.boxContent {
+  color: white;
+  border: #ffffff solid;
+  width: 20%;
+  /* border-radius: 10%; */
+  text-decoration: none;
+  padding: 20px;
+}
+
+.boxContent a {
+  text-decoration: none;
+}
+.boxContent img {
+  filter: invert(100%);
+}
+
+/* __________________________ */
 
 body {
   background-color: rgb(0, 0, 0);

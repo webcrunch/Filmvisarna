@@ -34,6 +34,10 @@ export default function App() {
 }
 
 
+  let user = useStates('user', {
+     isOpened: false,
+    loggedin:false
+  })
 
   let s = useStates('main',{
     movies: [],
@@ -68,7 +72,7 @@ export default function App() {
   return <BrowserRouter>
     <ScrollToTop>
     <Navbar />
-    <main> 
+      <main>  
       <Routes>
          {s.menu.map(({ path, Component }) => <Route path={path} element={<Component />} />)}
                 </Routes> 
