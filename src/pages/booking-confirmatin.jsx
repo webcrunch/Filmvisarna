@@ -4,6 +4,7 @@ import { calculatingTime } from '../utilities/length-calculating';
 import { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 
+import generate from "../utilities/random-order-confirmation"
 export default function Booked() {
     const { bookingId } = useParams();
     const { movies, screenings } = useStates('main');
@@ -24,26 +25,19 @@ export default function Booked() {
         numberOfAdults: 4,
         numberOfSeniors: 2,
         totalPris: 140,
-        confirmationNumber: "1213344554",
+        confirmationNumber: generate(),
         calculateAll() {
             return this.numberOfAdults + this.numberOfChildren + this.numberOfSeniors
         }
     }
 
     return <>{ l.movie && l.screning ? 
-        < div className = "doneA" >
-        <div className="container">
-            <div className="image">
-                <img src="/images/bookingpage.jpg" alt="En bild över popcorn och andra roliga saker" />
-            </div>
-        </div>
-            
-            <div className="finished">
-                <div>
-                    <h2>Tack för din bokning till:</h2>
-                    <h2>{l.movie.title}!</h2>
-                <h3>Viktig information</h3>
-                <h4>{l.movie.title}</h4>
+        < div className="doneA" >
+            <div className="information">
+                <h2>Tack för din bokning:</h2>
+                <h2>Viktig information:</h2>
+                    <h3>{l.movie.title}!</h3>
+                
                 <p>{l.screning.auditorium}</p>
                 <p>{l.screning.date}</p>
                 <p>{l.screning.time}</p>
@@ -53,12 +47,12 @@ export default function Booked() {
                     <li>Vuxen biljetter: { of.numberOfAdults } st</li>
                     <li>pensionär biljetter: { of.numberOfSeniors } st</li>
                 </ul>
-                <p>Total antal platser/biljetter: {of.calculateAll()}</p>
+                <p>Total antal platser/biljetter: {of.calculateAll()} st</p>
 
-                <h3>Boknings information</h3>
+                <h3>Boknings information:</h3>
                 <p>Glöm inte att ta med bokningsnummret till biografen: <b>{of.confirmationNumber}</b> <button type="button" onClick={() => copyContent(of.confirmationNumber)}>Kopiera bokningsnummret</button></p>           
-                </div>
-                <div><img src={"../" + l.movie.images} alt="" /></div>
-            </div>        
+             </div>
+            <img src="/images/bookingpage.jpg" alt="Here will be a image" />
     </div > : null }</>
 }
+
