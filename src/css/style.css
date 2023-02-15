@@ -50,10 +50,13 @@ footer {
   margin-left: 4%;
 }
 
+/* Navbar page start */
+
 nav {
   background-color: #1a1a1a;
   text-decoration: none;
   width: 100%;
+  /* padding: 0 200px; */
   display: flex;
   justify-content: center;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -61,15 +64,25 @@ nav {
 
 .navlinks {
   color: white;
+  /* margin: auto; */
+  /* padding: -2px; */
+  /* text-align: center; */
   font-size: 1.2em;
   font-weight: bold;
-  padding: 20px;
+  padding: 30px;
   text-decoration: none;
+  opacity: 0.7;
+}
+
+.navlinks.active {
+  opacity: 1;
+  text-decoration: underline;
 }
 
 .navlinks:hover {
   background-color: #333333;
   color: #f5f5f5;
+  opacity: 0.9;
   border-radius: 10px;
 }
 
@@ -83,6 +96,75 @@ nav ul {
   align-items: center;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
+
+nav .img {
+  /* margin-left: auto; */
+  filter: invert(100%);
+  /* display: block; */
+  padding-top: 25px;
+  height: 30%;
+}
+
+nav img:hover {
+  cursor: pointer;
+}
+
+.boxContent {
+  /* color: white; */
+  background-color: #575757;
+  border: #525252 solid;
+  width: 20%;
+  /* border-radius: 10%; */
+  text-decoration: none;
+  /* padding-left: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px; */
+  /* padding: 10px 15px 5px 10px; */
+  /* margin-top: 5px; */
+  margin-bottom: 5px;
+  margin-left: 5px;
+  /* margin: 10px; */
+  animation: showme 4s forwards;
+}
+
+.notShowMe {
+  animation: hideMe 4s backwards;
+}
+
+@keyframes showme {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes hideMe {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.boxContent a {
+  color: black;
+  padding-left: 10px;
+  text-decoration: none;
+}
+
+.boxContent img {
+  filter: invert(100%);
+}
+
+/* @media screen and (max-width: 767px) {
+  nav {
+    background-color: #f5f5f5;
+  }
+} */
+
+/* __________________________ */
 
 body {
   margin: 0;
@@ -574,6 +656,29 @@ body.ticketPage {
   word-wrap: break-word;
 }
 
+/* Booking confirmed page */
+
+.doneA {
+  color: white;
+  font-size: 20px;
+  padding-left: 20px;
+}
+
+.doneA img,
+.doneA .information {
+  float: left;
+}
+
+.doneA .information {
+  width: 30%;
+}
+
+.doneA img {
+  display: block;
+  width: 70%;
+  padding: 5px;
+}
+
 /*.poster {
   /*margin: 0 auto;
   padding: 10px 2px;
@@ -588,16 +693,22 @@ body.ticketPage {
   order: 2;*/
 
 /* Booking done page start */
-
+/*
 .container {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
+.information {
+  color: rgb(224, 216, 222);
+  padding: 20px 20px;
+  margin-right: 40px;
+}
+
 .img {
-  max-width: 100%;
-  position: relative;
+  max-width: 80%;
+  position: left;
   padding-right: 20px;
   padding-left: 20px;
 }
@@ -605,16 +716,15 @@ body.ticketPage {
 .image {
   flex-basis: 70%;
   order: 2;
-}
+}*/
 
-.doneA {
+/* .doneA {
   color: white;
   font-size: 20px;
   padding-left: 20px;
   position: left;
-}
-
-/* __________________________________  */
+} */
+/* ?? __________________________________ ?? */
 
 /* Detail page css start */
 .detailedPageContainer {
@@ -680,6 +790,15 @@ body.ticketPage {
   margin: 10px 0;
   bottom: 10px;
 }
+/* 
+@media (prefers-color-scheme: dark) {
+  .favicon-smiley {
+    fill: #ffff00;
+  }
+  .notification-background {
+    fill: #ffc300;
+  }
+} */
 
 /* .detailedPageContainer {
   display: flex;

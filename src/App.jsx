@@ -5,7 +5,7 @@ import {
   BrowserRouter,
   Routes,
   Route,
-  useLocation  
+  useLocation
 } from 'react-router-dom';
 
 import Navbar from './Navbar';
@@ -24,17 +24,23 @@ export default function App() {
 
   /* State variables */
 
-  function ScrollToTop( { children } ) {
+  function ScrollToTop({ children }) {
     let location = useLocation();
 
-    useEffect( () => {
-        window.scrollTo(0, 0);
-    }, [ location ] );
+    useEffect(() => {
+      window.scrollTo(0, 0);
+    }, [location]);
 
     return children
-}
+  }
 
-  let s = useStates('main',{
+
+  useStates('user', {
+    isOpened: false,
+    loggedin: false
+  })
+
+  let s = useStates('main', {
     movies: [],
     menu: [
       { label: 'HEM', path: '/', Component: Home },
@@ -42,6 +48,7 @@ export default function App() {
       { label: 'OM OSS ', path: '/about', Component: About }, //, Component:
       { label: 'KONTAKT', path: '/contact', Component: Contact },
       { path: '/movie/:moviePath', Component: DetailedInfo },
+      // { path: '/authentication/, Component: DetailedInfo },
       { path: '/ticket/:moviePath', Component: TicketPage },
       { path: '/done/:bookingId', Component: Booked }
     ],
@@ -67,13 +74,13 @@ export default function App() {
   // Return som jsx (HTML-like code with expressions inside arrow brackets)
   return <BrowserRouter>
     <ScrollToTop>
-    <Navbar />
-    <main>
-      <Routes>
-         {s.menu.map(({ path, Component }) => <Route path={path} element={<Component />} />)}
-                </Routes> 
-    </main> 
+      <Navbar />
+      <main>
+        <Routes>
+          {s.menu.map(({ path, Component }) => <Route path={path} element={<Component />} />)}
+        </Routes>
+      </main>
       <Footer />
-      </ScrollToTop>
+    </ScrollToTop>
   </BrowserRouter>;
 }
