@@ -40,7 +40,6 @@ export default function Movies() {
     // to avoid endless loop
         if (l.chosenSort === l.sortDone) {return; }
     // sort according to choice
-        console.log(l.chosenSort)
         if (l.chosenSort === 'Ingen sortering') { l.screenings = s.screenings; }
         if (l.chosenSort === 'Sortering efter namn (↓ A-Ö)') { sortByName(0); }
         if (l.chosenSort === 'Sortering efter namn (↑ Ö-A)') { sortByName(1); }
