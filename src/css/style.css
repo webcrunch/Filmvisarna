@@ -566,6 +566,7 @@ body.ticketPage {
 }
 
 .tidochsalong {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   display: inline-block;
   padding-bottom: 1%;
   width: 196px;
@@ -584,6 +585,7 @@ body.ticketPage {
 
 .moviebtnsitplatser {
   color: black;
+  font-size: 90%;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-weight: bold;
   width: 250px;
@@ -801,51 +803,6 @@ body.ticketPage {
   padding: 5px;
 }
 
-/*.poster {
-  /*margin: 0 auto;
-  padding: 10px 2px;
-  /*background-image: url(/images/bookingpage.jpg);
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  max-width: 100%;
-  font-size: 20px;
-  padding-left: 20px;
-  flex-basis: 70%;
-  order: 2;*/
-
-/* Booking done page start */
-/*
-.container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.information {
-  color: rgb(224, 216, 222);
-  padding: 20px 20px;
-  margin-right: 40px;
-}
-
-.img {
-  max-width: 80%;
-  position: left;
-  padding-right: 20px;
-  padding-left: 20px;
-}
-
-.image {
-  flex-basis: 70%;
-  order: 2;
-}*/
-
-/* .doneA {
-  color: white;
-  font-size: 20px;
-  padding-left: 20px;
-  position: left;
-} */
 /* ?? __________________________________ ?? */
 
 /* Detail page css start */
