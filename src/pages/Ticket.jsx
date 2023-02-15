@@ -250,6 +250,10 @@ export default function TicketPage() {
                      <div className="seat"></div>
                      <div className="seat"></div>
                 </div>
+
+                <p className="total-seats">
+                    Du har valt <span id="count">0</span> platser.
+                </p>
           </div>
     </div>
 }
