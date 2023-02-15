@@ -212,5 +212,30 @@ totalPrice: 0
         <div className="seat"></div>
         <div className="seat"></div>
     </div>
+    
+    <div className="row">
+        <div className="seat"></div>
+        <div className="seat"></div>
+        <div className="seat-sold"></div>
+        <div className="seat"></div>
+        <div className="seat"></div>
+        <div className="seat"></div>
+    </div>
+    <div className="row">
+        <div className="seat"></div>
+        <div className="seat"></div>
+        <div className="seat-sold"></div>
+        <div className="seat"></div>
+        <div className="seat"></div>
+        <div className="seat"></div>
+    </div>
+    <div className="row">
+        <div className="seat"></div>
+        <div className="seat"></div>
+        <div className="seat-sold"></div>
+        <div className="seat"></div>
+        <div className="seat"></div>
+        <div className="seat"></div>
+    </div>
 </div>
 }
