@@ -1,6 +1,5 @@
 export default function Contact() {
-    return <>
-    <div className="contact">
+    return <div className="contact">
         <h2 className="contact_header">Kontakta oss</h2>
         <img src="images/kontakt.jpg" alt="Here will be a image" />
         <p>För information om biljettköp och -bokning till Filmvisarna.</p>
@@ -16,6 +15,4 @@ export default function Contact() {
         <p className="E-post">E-post: <a href="info@filmvisarna.com">thomas@filmvisarna.com</a></p>
         <p className="Hemsida">Hemsida: <a href="www.filmvisarna.com">www.filmvisarna.com</a></p>
         </div>
-       
-    </>
 }
