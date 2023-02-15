@@ -24,24 +24,6 @@ export default function Movies() {
     screenings: s.screenings.slice()
   });
     
-    const l = useStates({
-        startDate: '',
-        chosenCategory: 'Choose a category',
-        possibleSorts: [null, 'Sort by name (A-Z)', 'Sort by name (Z-A)', 'Sort by length (A-Z)'], //, 'Sort by length (A-Z)', 'Sort by length (Z-A)'
-        chosenSort: '',
-        sortDone: '',
-        // note: copying the movies array from main
-        // - slice() copies an array
-        // this means when we sort the copy in the local state
-        // of this compoenent, and this does not
-        // trigger a re-mount of the component
-        // (which we otherwise would happen if changing
-        // a higer level state variable),
-        movies: s.movies.slice(),
-        categories: [],
-        screenings: s.screenings.slice()
-    });
-
     function createCategories() {
         let categories = ['Alla Kategorier'];
         for (let movie of l.movies) {
@@ -58,7 +40,6 @@ export default function Movies() {
     // to avoid endless loop
         if (l.chosenSort === l.sortDone) {return; }
     // sort according to choice
-        console.log(l.chosenSort)
         if (l.chosenSort === 'Ingen sortering') { l.screenings = s.screenings; }
         if (l.chosenSort === 'Sortering efter namn (↓ A-Ö)') { sortByName(0); }
         if (l.chosenSort === 'Sortering efter namn (↑ Ö-A)') { sortByName(1); }
