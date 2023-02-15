@@ -88,57 +88,105 @@ totalPrice: 0
 
 
 
-    <div className="ticket-container" id="ticket-pricing">
-      <div className="ticket-option1">
-        <h3 className="vuxen-title">Vuxen</h3>
-        <p className="price-tag-name">Pris: {clickerss.priceAdults}Kr</p>
-        <button className="add-ticket" onClick={() => {
-          clickerss.numberofAdults++;
-          clickerss.totalPrice += clickerss.priceAdults;
-        }}>+</button>
-        <input className="quantity" type="text" value={clickerss.numberofAdults} disabled></input>
+        <div className="ticket-container" id="ticket-pricing">
+            <div className="ticket-option1">
+            <h3 className="vuxen-title">Vuxen</h3>
+            <p className="price-tag-name">Pris: {clickerss.priceAdults}Kr</p>
+            <button className="add-ticket" onClick={() => {
+            clickerss.numberofAdults++;
+            clickerss.totalPrice += clickerss.priceAdults;
+            }}>+</button>
+            <input className="quantity" type="text" value={clickerss.numberofAdults} disabled></input>
 
-        <button className="remove-ticket" onClick={() => {
-          if (clickerss.numberofAdults <= 0) { return; }
-          clickerss.numberofAdults--;
-          clickerss.totalPrice -= clickerss.priceAdults;
-        }}>-</button>
-      </div>
+            <button className="remove-ticket" onClick={() => {
+            if (clickerss.numberofAdults <= 0) { return; }
+            clickerss.numberofAdults--;
+            clickerss.totalPrice -= clickerss.priceAdults;
+            }}>-</button>
+        </div>
 
-      <div className="ticket-option2">
-        <h3 className="barn-title">Barn</h3>
-        <p className="price-tag-name">Pris: {clickerss.priceChildren}Kr</p>
-        <button className="add-ticket" onClick={() => {
-          clickerss.numberofChildren++;
-          clickerss.totalPrice += clickerss.priceChildren;
-        }}>+</button>
-        <input className="quantity" type="text" value={clickerss.numberofChildren} disabled></input>
-        <button className="remove-ticket" onClick={() => {
-          if (clickerss.numberofChildren <= 0) { return; }
-          clickerss.numberofChildren--;
-          clickerss.totalPrice -= clickerss.priceChildren;
-        }}>-</button>
-      </div>
+        <div className="ticket-option2">
+            <h3 className="barn-title">Barn</h3>
+            <p className="price-tag-name">Pris: {clickerss.priceChildren}Kr</p>
+            <button className="add-ticket" onClick={() => {
+            clickerss.numberofChildren++;
+            clickerss.totalPrice += clickerss.priceChildren;
+            }}>+</button>
+            <input className="quantity" type="text" value={clickerss.numberofChildren} disabled></input>
+            <button className="remove-ticket" onClick={() => {
+            if (clickerss.numberofChildren <= 0) { return; }
+            clickerss.numberofChildren--;
+            clickerss.totalPrice -= clickerss.priceChildren;
+            }}>-</button>
+        </div>
 
-      <div className="ticket-option3">
-        <h3 className="senior-title">Pensionär</h3>
-        <p className="price-tag-name">Pris: {clickerss.priceSenior}Kr</p>
-        <button className="add-ticket" onClick={() => {
-          clickerss.numberofSenior++;
-          clickerss.totalPrice += clickerss.priceSenior;
-        }}>+</button>
-        <input className="quantity" type="text" value={clickerss.numberofSenior} disabled></input>
-        <button className="remove-ticket" onClick={() => {
-          if (clickerss.numberofSenior <= 0) { return; }
-          clickerss.numberofSenior--;
-          clickerss.totalPrice -= clickerss.priceSenior;
-        }}>-</button>
-      </div>
+        <div className="ticket-option3">
+            <h3 className="senior-title">Pensionär</h3>
+            <p className="price-tag-name">Pris: {clickerss.priceSenior}Kr</p>
+            <button className="add-ticket" onClick={() => {
+            clickerss.numberofSenior++;
+            clickerss.totalPrice += clickerss.priceSenior;
+            }}>+</button>
+            <input className="quantity" type="text" value={clickerss.numberofSenior} disabled></input>
+            <button className="remove-ticket" onClick={() => {
+            if (clickerss.numberofSenior <= 0) { return; }
+            clickerss.numberofSenior--;
+            clickerss.totalPrice -= clickerss.priceSenior;
+            }}>-</button>
+        </div>
       <p className="total-price-css" id="total-price">Total Pris: {clickerss.totalPrice}Kr</p>
     </div>
 
-  </div>
+    <ul>
+        <li>
+            <div className="seat-available"></div>
+            <p className="seat-available-text">Lediga</p>
+        </li>
+        <li>
+            <div className="seat-selected"></div>
+            <p className="seat-selected-text">Vald</p>
+        </li>
+        <li>
+            <div className="seat-sold"></div>
+            <p className="seat-sold-text">Såld</p>
+        </li>
+    </ul>
+    <div className="tv-screen-container">
+        <div className="tv-screen"></div>
+    </div>
+    <div className="row">
+        <div className="seat"></div>
+        <div className="seat"></div>
+        <div className="seat"></div>
+        <div className="seat-sold"></div>
+        <div className="seat-sold"></div>
+        <div className="seat"></div>
+    </div>
+    <div className="row">
+        <div className="seat"></div>
+        <div className="seat"></div>
+        <div className="seat"></div>
+        <div className="seat-sold"></div>
+        <div className="seat-sold"></div>
+        <div className="seat"></div>
+    </div>
+    <div className="row">
+        <div className="seat"></div>
+        <div className="seat"></div>
+        <div className="seat-sold"></div>
+        <div className="seat"></div>
+        <div className="seat"></div>
+        <div className="seat"></div>
+    </div>
 
-
-
+    <div className="row">
+        <div className="seat"></div>
+        <div className="seat"></div>
+        <div className="seat-sold"></div>
+        <div className="seat"></div>
+        <div className="seat"></div>
+        <div className="seat"></div>
+    </div>
+    
+</div>
 }
