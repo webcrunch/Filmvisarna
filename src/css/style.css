@@ -170,10 +170,6 @@ body {
   margin: 0;
 }
 
-body.ticketPage {
-  background-color: rgb(23, 23, 23);
-}
-
 .movieshr {
   width: 100%;
 }
@@ -442,7 +438,9 @@ body.ticketPage {
 
 /*-----------------TICKET PAGE STARTS HERE----------------------------------------------------*/
 
-
+body.ticketPage {
+  background-color: rgb(23, 23, 23);
+}
 
 #ticket-pricing {
   display: flex;
@@ -451,6 +449,19 @@ body.ticketPage {
   align-items: center;
   width: 50%;
   margin: 0 auto;
+}
+
+.ticket-container {
+  justify-content: center;
+  box-shadow: 0px 0px 35px 0px #000000;
+  border-radius: 20px;
+  border-bottom: 1px solid rgb(38, 38, 38);
+}
+
+.full-ticket-page {
+  height: 100%;
+  width: auto;
+  aspect-ratio: 11/16;
 }
 
 .ticket-option1 {
@@ -540,17 +551,44 @@ body.ticketPage {
   font-weight: bold;
 }
 
-.ticket-container {
+.ul-seat{
+  box-sizing: border-box;
+  color: white;
   justify-content: center;
-  box-shadow: 0px 0px 35px 0px #000000;
-  border-radius: 20px;
-  border-bottom: 1px solid rgb(38, 38, 38);
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  padding-left: 33.3333%;
+  padding-right: 33.3333%;
+
+
 }
 
-.full-ticket-page {
-  height: 100%;
-  width: auto;
-  aspect-ratio: 11/16;
+.li-avaliable{
+  box-sizing: border-box;
+  border: 1px solid rgb(0, 0, 0);
+  width: 20%;
+  border-radius: 10px;
+}
+
+.li-selected{
+  box-sizing: border-box;
+  border: 1px solid rgb(0, 0, 0);
+  width: 20%;
+  border-radius: 10px;
+  word-break: keep-all;
+}
+
+.li-sold{
+  box-sizing: border-box;
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 10px;
+  width: 20%;
+}
+
+.seat-option-container{
+  background-color: rgb(130, 130, 130);
+  
 }
 
 /*---------------------TICKET PAGE ENDS HERE---------------------------------------------------- */

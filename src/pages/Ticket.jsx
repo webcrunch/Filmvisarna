@@ -148,17 +148,17 @@ export default function TicketPage() {
         </div>
       <p className="total-price-css" id="total-price">Total Pris: {clickerss.totalPrice}Kr</p>
     </div>
-
-    <ul>
-        <li>
+    <div className="seat-option-container">
+    <ul className="ul-seat">
+        <li className="li-avaliable">
             <div className="seat-available"></div>
             <p className="seat-available-text">Lediga</p>
         </li>
-        <li>
+        <li className="li-selected">
             <div className="seat-selected"></div>
             <p className="seat-selected-text">Vald</p>
         </li>
-        <li>
+        <li className="li-sold">
             <div className="seat-sold"></div>
             <p className="seat-sold-text">Såld</p>
         </li>
@@ -249,5 +249,6 @@ export default function TicketPage() {
         <div className="seat"></div>
         <div className="seat"></div>
     </div>
-</div>
+          </div>
+    </div>
 }
