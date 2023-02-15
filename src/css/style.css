@@ -604,6 +604,15 @@ body.ticketPage {
   display: -ms-inline-grid;
 }
 
+.tv-screen-container{
+  width: 400px;
+  height: 250px;
+  background-color: #ffffff;
+  align-content: center;
+  align-items: center;
+  
+}
+
 /*---------------------TICKET PAGE ENDS HERE---------------------------------------------------- */
 
 .imagesmovies {
