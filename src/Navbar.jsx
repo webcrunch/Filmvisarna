@@ -22,7 +22,7 @@ export default function Navbar() {
             <p>{open.loggedin ? <Link onClick={() => logout()}  to={"#"}><img src={"./images/icons8-log-out-25.png"} alt={""} />Log out</Link> : <Link to={"#"}><img  src={"./images/icons8-log-in-25.png"} alt={""} />Log in</Link>}</p>
             <p><Link  to={"#"}><img  src={"./images/icons8-add-user-male-24.png"} alt={""} />  Registrera sig </Link></p>
             </div>
-        </div> :<div className="notShowMe"></div>}
+        </div> : <div className="notShowMe"></div>}
         </nav>
     </>
 }
