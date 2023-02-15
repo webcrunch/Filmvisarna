@@ -596,6 +596,14 @@ body.ticketPage {
   color: white;
 }
 
+.seat{
+  background-color: rgb(255, 255, 255);
+  width: 2%;
+  height: 30px;
+  margin: 5px;
+  display: -ms-inline-grid;
+}
+
 /*---------------------TICKET PAGE ENDS HERE---------------------------------------------------- */
 
 .imagesmovies {
