@@ -32,6 +32,7 @@ export default function Movies() {
         date: l.startDate
     });
     
+
     function createCategories() {
         let categories = ['Alla Kategorier'];
         for (let movie of l.movies) {
