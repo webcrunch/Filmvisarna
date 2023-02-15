@@ -17,6 +17,7 @@ import Movies from './pages/movies.jsx';
 import Booked from './pages/booking-confirmatin.jsx';
 import DetailedInfo from './detailedInfo.jsx';
 import TicketPage from './pages/Ticket.jsx';
+import LoginPage from './pages/login.jsx';
 // A React component is a function
 // it will run every time a state variable changes
 // thus rerendering the content you see in your Browser
@@ -43,7 +44,8 @@ export default function App() {
       { label: 'KONTAKT', path: '/contact', Component: Contact },
       { path: '/movie/:moviePath', Component: DetailedInfo },
       { path: '/ticket/:moviePath', Component: TicketPage },
-      { path: '/done/:bookingId', Component: Booked }
+      { path: '/done/:bookingId', Component: Booked },
+      { path: '/' }
     ],
     screenings: [],
     saloons: []
