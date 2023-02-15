@@ -149,106 +149,107 @@ export default function TicketPage() {
       <p className="total-price-css" id="total-price">Total Pris: {clickerss.totalPrice}Kr</p>
     </div>
     <div className="seat-option-container">
-    <ul className="ul-seat">
-        <li className="li-avaliable">
+        <ul className="ul-seat">
+            <li className="li-avaliable">
             <div className="seat-available"></div>
             <p className="seat-available-text">Lediga</p>
-        </li>
-        <li className="li-selected">
+            </li>
+            <li className="li-selected">
             <div className="seat-selected"></div>
             <p className="seat-selected-text">Vald</p>
-        </li>
-        <li className="li-sold">
+            </li>
+            <li className="li-sold">
             <div className="seat-sold"></div>
             <p className="seat-sold-text">Såld</p>
-        </li>
-    </ul>
-    <div className="tv-screen-container">
-        <div className="tv-screen"></div>
-    </div>
-    <div className="row">
-        <div className="seat"></div>
-        <div className="seat"></div>
-        <div className="seat"></div>
-        <div className="seat-sold"></div>
-        <div className="seat-sold"></div>
-        <div className="seat"></div>
-    </div>
-    <div className="row">
-        <div className="seat"></div>
-        <div className="seat"></div>
-        <div className="seat"></div>
-        <div className="seat-sold"></div>
-        <div className="seat-sold"></div>
-        <div className="seat"></div>
-    </div>
-    <div className="row">
-        <div className="seat"></div>
-        <div className="seat"></div>
-        <div className="seat-sold"></div>
-        <div className="seat"></div>
-        <div className="seat"></div>
-        <div className="seat"></div>
-    </div>
+            </li>
+        </ul>
+              <div className="tv-screen-container">
+              <div className="tv-screen"></div>
 
-    <div className="row">
-        <div className="seat"></div>
-        <div className="seat"></div>
-        <div className="seat-sold"></div>
-        <div className="seat"></div>
-        <div className="seat"></div>
-        <div className="seat"></div>
-    </div>
+              </div>
+              <div className="row">
+                    <div className="seat"></div>
+                    <div className="seat"></div>
+                    <div className="seat"></div>
+                    <div className="seat-sold"></div>
+                    <div className="seat-sold"></div>
+                    <div className="seat"></div>
+              </div>
+              <div className="row">
+                    <div className="seat"></div>
+                    <div className="seat"></div>
+                    <div className="seat"></div>
+                    <div className="seat-sold"></div>
+                    <div className="seat-sold"></div>
+                    <div className="seat"></div>
+              </div>
+              <div className="row">
+                    <div className="seat"></div>
+                    <div className="seat"></div>
+                    <div className="seat-sold"></div>
+                    <div className="seat"></div>
+                    <div className="seat"></div>
+                    <div className="seat"></div>
+              </div>
 
-    <div className="row">
-        <div className="seat"></div>
-        <div className="seat"></div>
-        <div className="seat-sold"></div>
-        <div className="seat"></div>
-        <div className="seat"></div>
-        <div className="seat"></div>
-    </div>
-    <div className="row">
-        <div className="seat"></div>
-        <div className="seat"></div>
-        <div className="seat-sold"></div>
-        <div className="seat"></div>
-        <div className="seat"></div>
-        <div className="seat"></div>
-    </div>
-    <div className="row">
-        <div className="seat"></div>
-        <div className="seat"></div>
-        <div className="seat-sold"></div>
-        <div className="seat"></div>
-        <div className="seat"></div>
-        <div className="seat"></div>
-    </div>
+              <div className="row">
+                    <div className="seat"></div>
+                    <div className="seat"></div>
+                    <div className="seat-sold"></div>
+                    <div className="seat"></div>
+                    <div className="seat"></div>
+                    <div className="seat"></div>
+              </div>
+
+              <div className="row">
+                    <div className="seat"></div>
+                    <div className="seat"></div>
+                    <div className="seat-sold"></div>
+                    <div className="seat"></div>
+                    <div className="seat"></div>
+                    <div className="seat"></div>
+              </div>
+              <div className="row">
+                    <div className="seat"></div>
+                    <div className="seat"></div>
+                    <div className="seat-sold"></div>
+                    <div className="seat"></div>
+                    <div className="seat"></div>
+                    <div className="seat"></div>
+              </div>
+              <div className="row">
+                    <div className="seat"></div>
+                    <div className="seat"></div>
+                    <div className="seat-sold"></div>
+                    <div className="seat"></div>
+                    <div className="seat"></div>
+                    <div className="seat"></div>
+              </div>
     
-    <div className="row">
-        <div className="seat"></div>
-        <div className="seat"></div>
-        <div className="seat-sold"></div>
-        <div className="seat"></div>
-        <div className="seat"></div>
-        <div className="seat"></div>
-    </div>
-    <div className="row">
-        <div className="seat"></div>
-        <div className="seat"></div>
-        <div className="seat-sold"></div>
-        <div className="seat"></div>
-        <div className="seat"></div>
-        <div className="seat"></div>
-    </div>
-    <div className="row">
-        <div className="seat"></div>
-        <div className="seat"></div>
-        <div className="seat-sold"></div>
-        <div className="seat"></div>
-        <div className="seat"></div>
-        <div className="seat"></div>
-    </div>
+              <div className="row">
+                    <div className="seat"></div>
+                    <div className="seat"></div>
+                    <div className="seat-sold"></div>
+                    <div className="seat"></div>
+                    <div className="seat"></div>
+                    <div className="seat"></div>
+              </div>
+              <div className="row">
+                    <div className="seat"></div>
+                    <div className="seat"></div>
+                    <div className="seat-sold"></div>
+                    <div className="seat"></div>
+                    <div className="seat"></div>
+                    <div className="seat"></div>
+               </div>
+                <div className="row">
+                     <div className="seat"></div>
+                     <div className="seat"></div>
+                     <div className="seat-sold"></div>
+                     <div className="seat"></div>
+                     <div className="seat"></div>
+                     <div className="seat"></div>
+                </div>
           </div>
     </div>
 }
