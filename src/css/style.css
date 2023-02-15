@@ -25,7 +25,8 @@ footer {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: white;
   padding: 20px;
-  margin-top: 10%;
+  margin-top: 0%;
+  /*changed from 10% to 0. */
   position: relative;
 }
 
@@ -166,8 +167,11 @@ nav img:hover {
 /* __________________________ */
 
 body {
-  background-color: rgb(0, 0, 0);
   margin: 0;
+}
+
+body.ticketPage {
+  background-color: rgb(23, 23, 23);
 }
 
 .movieshr {
@@ -242,7 +246,7 @@ body {
   margin-bottom: -1%;
 }
 
-.flex-container > div {
+.flex-container>div {
   background-color: #1a1a1a;
   width: 100%;
   padding: 1px;
@@ -266,9 +270,10 @@ body {
 .topcontainerimagedivv {
   height: 100%;
   width: 100%;
+
 }
 
-.flex-container > div:hover {
+.flex-container>div:hover {
   box-shadow: inset 500px 0 0 0 #722e2e;
 }
 
@@ -291,13 +296,15 @@ body {
     margin-bottom: 10px;
     font-size: 20px;
     margin-left: 4%;
+
+
   }
 }
 
 /*TOP HOMEPAGE MEDIA QUERIES */
 
 @media screen and (max-width: 767px) {
-  .flex-container > div {
+  .flex-container>div {
     padding: 0;
     padding-bottom: 0%;
     width: 35%;
@@ -306,7 +313,8 @@ body {
 }
 
 @media screen and (max-width: 767px) {
-  .flex-container > div img {
+  .flex-container>div img {
+
     margin-left: 0;
     margin-right: 0;
     height: 200px;
@@ -399,10 +407,11 @@ body {
   width: 100%;
   margin-left: 20%;
 }
+
 .undertext {
   color: white;
   font-weight: normal;
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 
   font-size: 22px;
   word-wrap: break-word;
@@ -426,7 +435,125 @@ body {
 
 /*------                FILTER homepage                ----------- */
 
-/*------------------------------------------------------------------------- */
+
+
+
+/*---------------------HOMEPAGE ENDS HERE---------------------------------------------------- */
+
+/*-----------------TICKET PAGE STARTS HERE----------------------------------------------------*/
+
+
+
+#ticket-pricing {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.ticket-option1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 30%;
+  padding: 20px;
+  border-left: 1px solid;
+  border-bottom-left-radius: 20px rgb(38, 38, 38);
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+.ticket-option2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 30%;
+  padding: 20px;
+}
+
+.ticket-option3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 30%;
+  padding: 20px;
+  border-right: 1px solid rgb(38, 38, 38);
+  
+}
+
+.quantity {
+  width: 40px;
+  text-align: center;
+  margin: 10px 0;
+}
+
+.add-ticket {
+  width: 50px;
+  height: 30px;
+  margin: 10px;
+  border-radius: 10px;
+  border: none;
+  background-color: rgb(187, 41, 58);
+  color: white;
+  cursor: pointer;
+}
+
+.remove-ticket {
+  width: 50px;
+  height: 30px;
+  margin: 10px;
+  border-radius: 10px;
+  border: none;
+  background-color: rgb(187, 41, 58);
+  color: white;
+  cursor: pointer;
+}
+
+.vuxen-title, .barn-title, .senior-title{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: aliceblue;
+}
+
+.price-tag-name {
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.total-price-css {
+  color: rgb(255, 255, 255);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bold;
+  font-size: 30px;
+  position: relative;
+  width: 100%;
+  text-align: center;
+  word-wrap: break-word;
+}
+
+.quantity {
+  color: rgb(0, 0, 0);
+  background-color: rgb(255, 255, 255);
+  border-radius: 2px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bold;
+}
+
+.ticket-container {
+  justify-content: center;
+  box-shadow: 0px 0px 35px 0px #000000;
+  border-radius: 20px;
+  border-bottom: 1px solid rgb(38, 38, 38);
+}
+
+.full-ticket-page {
+  height: 100%;
+  width: auto;
+  aspect-ratio: 11/16;
+}
+
+/*---------------------TICKET PAGE ENDS HERE---------------------------------------------------- */
 
 .imagesmovies {
   width: 140px;
