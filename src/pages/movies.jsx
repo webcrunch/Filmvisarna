@@ -160,7 +160,7 @@ export default function Movies() {
                     <h4 className="tidochsalongtitle">Sal: {display.auditorium}. Dag: {display.date} </h4>
                     <h4 className="tidochsalongtitle">Tid: {display.time}. Längd: {calculatingTime(getMovies(display.film,'length'))}</h4>
                 </div>
-                <button className="moviebtnsitplatser" type="submit" value="Submit">Välj sittplatser</button>
+                <Link to={"/ticket/" + display.film} state={{ from: "occupation" }}><button className="moviebtnsitplatser">Välj sittplatser</button></Link>
             </div>
         </>)}            
                 </>: null
