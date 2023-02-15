@@ -591,6 +591,11 @@ body.ticketPage {
   
 }
 
+.total-seats{
+  text-align: center;
+  color: white;
+}
+
 /*---------------------TICKET PAGE ENDS HERE---------------------------------------------------- */
 
 .imagesmovies {
