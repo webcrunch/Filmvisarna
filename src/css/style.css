@@ -298,8 +298,7 @@ body {
 
 /*TOP HOMEPAGE MEDIA QUERIES */
 
-@media screen and (max-width: 767px) {
-  .flex-container > div {
+
 @media (max-width: 767px) {
   .flex-container>div {
     padding: 0;
@@ -309,8 +308,6 @@ body {
   }
 }
 
-@media screen and (max-width: 767px) {
-  .flex-container > div img {
 @media (max-width: 767px) {
   .flex-container>div img {
     margin-left: 0;

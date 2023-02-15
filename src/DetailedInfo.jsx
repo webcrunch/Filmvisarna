@@ -11,13 +11,15 @@ export default function DetailedInfo() {
     const [showRatings, setShowRatings] = useState(false);
     const [showScreenings, setShowScreenings] = useState(false);
     const trailer = movie && movie.youtubeTrailer;
-    const screenings = s.screening.filter(screen => screen.film == movie.title); 
-    const testBlock = screenings.filter((screen,index) => {
-        if(index < 4) return screen;
-    })
+
+    const screenings = movie != undefined ? s.screenings.filter(screen => screen.film  === movie.title) : null; 
+    const dateArray = movie != undefined ? s.screenings.map(screen => screen.date) : null;
+    // const testBlock = screenings.filter((screen,index) => {
+    //     if(index < 4) return screen;
+    // })
 
     useEffect(() => {
-        console.log('check the context of s ', screenings);
+        console.log('check the context of s ', dateArray);
     },[])
 
     return <>
@@ -27,7 +29,7 @@ export default function DetailedInfo() {
                     <div className='detailedLeftContainer'>
                         <img className="detailedImages" src={movie.images} />
                         {/* <Trailer className="someting" embedId="xjDjIWPwcPU" /> */}
-                        <iframe className="movieTrailer" width="350px" height="315px" src={"https://www.youtube.com/embed/" + movie.youtubeTrailer} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        {/* <iframe className="movieTrailer" width="350px" height="315px" src={"https://www.youtube.com/embed/" + movie.youtubeTrailer} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> */}
                     </div>
                     <div className="detailedRightContainer">
                         <h1 className="detailedTitle">{movie.title}</h1>
@@ -70,11 +72,12 @@ export default function DetailedInfo() {
                                 </div>
                             )}
                             {showScreenings && (
-                                 <div className="screeningsDropdown">
                                 <div className="detailedScreeningsDropdown">
-                                    {screenings}
+                                    <div className="detailedScreening">
+                                        {screenings}
+                                    </div>
                                 </div>
-                                )}
+                            )}
                         </div>
                         
                     </div>
