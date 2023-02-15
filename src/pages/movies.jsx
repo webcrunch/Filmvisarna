@@ -24,6 +24,7 @@ export default function Movies() {
     screenings: s.screenings.slice()
   });
     
+
     function createCategories() {
         let categories = ['Alla Kategorier'];
         for (let movie of l.movies) {

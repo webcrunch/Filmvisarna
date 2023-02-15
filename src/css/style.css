@@ -60,6 +60,7 @@ nav {
   display: flex;
   justify-content: center;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  position: relative;
 }
 
 .navlinks {
@@ -98,11 +99,11 @@ nav ul {
 }
 
 nav .img {
-  /* margin-left: auto; */
   filter: invert(100%);
-  /* display: block; */
-  padding-top: 25px;
-  height: 30%;
+  display: block;
+  position: absolute;
+  top: 28px;
+  right: 30px;
 }
 
 nav img:hover {
@@ -110,10 +111,12 @@ nav img:hover {
 }
 
 .boxContent {
-  /* color: white; */
   background-color: #575757;
   border: #525252 solid;
   width: 20%;
+  position: absolute;
+  right: 33px;
+  top: 60px;
   /* border-radius: 10%; */
   text-decoration: none;
   /* padding-left: 20px;
@@ -124,28 +127,16 @@ nav img:hover {
   margin-bottom: 5px;
   margin-left: 5px;
   /* margin: 10px; */
-  animation: showme 4s forwards;
 }
 
-.notShowMe {
-  animation: hideMe 4s backwards;
+.boxContent.shown {
+  opacity: 1;
+  transition: opacity 2s;
 }
 
-@keyframes showme {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes hideMe {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
+.boxContent.hidden {
+  opacity: 0;
+  transition: opacity 2s;
 }
 
 .boxContent a {
@@ -158,11 +149,14 @@ nav img:hover {
   filter: invert(100%);
 }
 
-/* @media screen and (max-width: 767px) {
-  nav {
-    background-color: #f5f5f5;
+@media screen and (max-width: 767px) {
+  .navlinks {
+    display: none;
   }
-} */
+  nav img {
+    display: none;
+  }
+}
 
 /* __________________________ */
 
