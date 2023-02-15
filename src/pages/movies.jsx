@@ -24,10 +24,11 @@ export default function Movies() {
     categories: [],
     screenings: s.screenings.slice()
     });
-    const filter = useStates({
-        movie: null,
-        category: null,
-        saloons: null,
+
+    const filterVars = useStates({
+        movie: 'null',
+        category: 'null',
+        auditorium: 'null',
         date: l.startDate
     });
     
@@ -80,51 +81,15 @@ export default function Movies() {
     }
 
 
-    // TODO: create a generic function for the three filtering
+    
+    const filterByCategory = screening => filterVars.category === 'null' || getMovies(screening.film, 'genre').split(',').includes(filterVars.category);
+    const filterByMovie = screening => filterVars.movie === 'null' || screening.film === filterVars.movie;
+    const filterByAuditorium = screening => filterVars.auditorium === 'null' || screening.auditorium === filterVars.auditorium;
+    const filterByDate = screening => filterVars.date === '' || screening.date === filterVars.date;
+    const filterByAll = s => filterByCategory(s) && filterByMovie(s) && filterByAuditorium(s) && filterByDate(s);
 
-    function filters(filting, filterTitle) {
-        switch(filterTitle) {
-            case 'movies':
-                console.log(filters.category, filters.saloons);
-                filting.includes("Alla") ? filter.movie = null : filter.movie = filting;
-                l.screenings = filting.includes("Alla") ? s.screenings :  s.screenings.filter(movie => movie.film === filting);
-                break;
-            case 'category':
-                console.log(filters.movie, filters.saloons, filter.category);
-                filting.includes("Alla") ? filter.category = null : filter.category = filting;
-                l.screenings = filting.includes("Alla") ? s.screenings : s.screenings.filter(movie => getMovies(movie.film, 'genre').includes(filting));
-                break;
-            case 'saloons':
-                console.log(filter.saloons);
-                 filting.includes("Båda") ? filter.saloons = null : filter.saloons = filting;
-                l.screenings = filting.includes("Båda") ? s.screenings : s.screenings.filter(movie => movie.auditorium === filting);
-                break;
-            default:
-                return null;
-    // code block
-}
-        
-    }
 
-    // function filterCategories(genre) {
-    //     genre.includes("Alla") ? filter.category = null : filter.category = genre;
-    //     l.screenings = genre.includes("Alla") ? s.screenings :  s.screenings.filter(movie => getMovies(movie.film, 'genre').includes(genre));
-    // }
-
-    // function filterMovies(film) {
-    //     film.includes("Alla") ? filter.movie = null : filter.movie = film;
-    //      l.screenings = film.includes("Alla") ? s.screenings : s.screenings.filter(movie => movie.film === film);
-    // }
-
-    // function filterSaloons(auditorium) {
-    //     auditorium.includes("Båda") ? filter.saloons = null : filter.saloons = auditorium;
-    //     l.screenings =  auditorium.includes("Båda") ? s.screenings : s.screenings.filter(movie => movie.auditorium === auditorium);// && movie.film  === filter.movie
-    // }   
-
-        function clearFilter() {
-        l.startDate = '';
-        l.screenings = l.screenings;
-    }
+    const clearDate = () => filterVars.date = '';
 
     function handleDateChange(dayOrTime) {
         l.startDate = dayOrTime;
@@ -138,27 +103,27 @@ export default function Movies() {
                 <h1>Movie List</h1>
         {/*</>p>filter</p> */}
         {/* Filter by Name */}
-        <select name="selectListName" onChange={e => filters(e.target.value, 'movies')} id="selectListName">
-            <option>Alla filmerna</option>
+        <select name="selectListName" {...filterVars.bind("movie")} id="selectListName">
+            <option value="null">Alla filmerna</option>
             {
                 l.movies.map(movie => <option>{movie.title}</option>)
             }
         </select>   
         {/* Filter by Category */}
-        <select name="selectListCategory" onChange={e => filters(e.target.value, 'category')} id="selectListCategory">
+        <select name="selectListCategory" {...filterVars.bind("category")} id="selectListCategory">
             {
-                l.categories.map(cat => <option>{cat}</option>)
+                l.categories.map((cat,i) => i === 0 ?  <option value="null">{cat}</option> : <option>{cat}</option>)
             }
         </select>   
         {/* Filter by Saloons */}
-         <select name="selectList" onChange={e => filters(e.target.value, 'saloons')} id="selectList">
-            <option>Båda Salongerna</option>
+         <select name="selectList" {...filterVars.bind("auditorium")} id="selectList">
+            <option value="null">Båda Salongerna</option>
             <option >Stora Salongen</option>
             <option >Lilla Salongen</option>
         </select>          
         <div>
-            <input value={l.startDate} onChange={(e) => handleDateChange(e.target.value)} type="date" />
-            <button onClick={() => clearFilter()} type="button">Clear date</button>
+            <input {...filterVars.bind("date")} type="date" />
+            <button onClick={() => clearDate()} type="button">Clear date</button>
         {/* <input onChange={(e) => handleDateChange(e.target.value)}  type="time" id="appt" name="appt"
        min="09:00" max="18:00"></input> */}
         </div>
@@ -169,7 +134,7 @@ export default function Movies() {
             {x}
           </option>)}
                     </select>
-        {l.screenings.map(display => <>
+        {l.screenings.filter(filterByAll).map(display => <>
             <div className="imagelistdiv">
                 {/* <hr className="movieshr"></hr> */}
                 <Link to={"/movie/" + display.film}><img className="imagesmovies" src={"../" + getMovies(display.film, 'images')} alt={"Poster av filmen " + display.film} /></Link>
