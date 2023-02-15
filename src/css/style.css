@@ -160,7 +160,7 @@ body {
   margin-bottom: -1%;
 }
 
-.flex-container > div {
+.flex-container>div {
   background-color: #1a1a1a;
   width: 100%;
   padding: 1px;
@@ -186,7 +186,7 @@ body {
   width: 100%;
 }
 
-.flex-container > div:hover {
+.flex-container>div:hover {
   box-shadow: inset 500px 0 0 0 #722e2e;
 }
 
@@ -215,7 +215,7 @@ body {
 /*TOP HOMEPAGE MEDIA QUERIES */
 
 @media screen and (max-width: 767px) {
-  .flex-container > div {
+  .flex-container>div {
     padding: 0;
     padding-bottom: 0%;
     width: 35%;
@@ -224,7 +224,7 @@ body {
 }
 
 @media screen and (max-width: 767px) {
-  .flex-container > div img {
+  .flex-container>div img {
     margin-left: 0;
     margin-right: 0;
     height: 200px;
@@ -436,11 +436,139 @@ body {
   color: white;
   padding: 20px;
   position: relative;
+  padding-top: 0;
+  padding-bottom: 0;
   padding-right: 20px;
   padding-left: 20px;
 }
 
 .OmOss p {
+  margin: 0 auto;
+  padding: 10px 2px;
+  width: 50%;
+  text-align: start;
+  word-wrap: break-word;
+}
+
+.varumarkeslofte {
+  text-align: center;
+  justify-content: space-between;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+  padding: 20px;
+  position: relative;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.varumarkeslofte p {
+  margin: 0 auto;
+  padding: 10px 2px;
+  width: 50%;
+  text-align: start;
+  word-wrap: break-word;
+}
+
+.bioInfo {
+  text-align: center;
+  justify-content: space-between;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+  padding: 20px;
+  position: relative;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.bioInfo p {
+  margin: 0 auto;
+  padding: 10px 2px;
+  width: 50%;
+  text-align: start;
+  word-wrap: break-word;
+}
+
+.karriarmojligheter {
+  text-align: center;
+  justify-content: space-between;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+  padding: 20px;
+  position: relative;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.karriarmojligheter p {
+  margin: 0 auto;
+  padding: 10px 2px;
+  width: 50%;
+  text-align: start;
+  word-wrap: break-word;
+}
+
+.telefon {
+  text-align: center;
+  justify-content: space-between;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+  padding: 20px;
+  position: relative;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.telefon p {
+  margin: 0 auto;
+  padding: 10px 2px;
+  width: 50%;
+  text-align: start;
+  word-wrap: break-word;
+}
+
+.midsommar {
+  text-align: center;
+  justify-content: space-between;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+  padding: 20px;
+  position: relative;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.midsommar p {
+  margin: 0 auto;
+  padding: 10px 2px;
+  width: 50%;
+  text-align: start;
+  word-wrap: break-word;
+}
+
+.regler {
+  text-align: center;
+  justify-content: space-between;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+  padding: 20px;
+  position: relative;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.regler p {
   margin: 0 auto;
   padding: 10px 2px;
   width: 50%;
