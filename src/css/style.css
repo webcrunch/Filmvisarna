@@ -560,7 +560,7 @@ body.ticketPage {
   justify-content: space-around;
   padding-left: 33.3333%;
   padding-right: 33.3333%;
-
+  
 
 }
 
@@ -597,11 +597,13 @@ body.ticketPage {
 }
 
 .seat{
-  background-color: rgb(255, 255, 255);
-  width: 2%;
-  height: 30px;
-  margin: 5px;
+  background-color: #ffffff;
+  width: 27px;
+  height: 24px;
+  margin: 9px;
   display: -ms-inline-grid;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 
 .tv-screen-container{
@@ -610,7 +612,6 @@ body.ticketPage {
   background-color: #ffffff;
   align-content: center;
   align-items: center;
-  
 }
 
 /*---------------------TICKET PAGE ENDS HERE---------------------------------------------------- */
