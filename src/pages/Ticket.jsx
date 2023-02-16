@@ -159,7 +159,7 @@ export default function TicketPage() {
             <p className="seat-selected-text">Vald</p>
             </li>
             <li className="li-sold">
-            <div className="seat-sold"></div>
+            <div className="seat-sold-display"></div>
             <p className="seat-sold-text">Såld</p>
             </li>
         </ul>

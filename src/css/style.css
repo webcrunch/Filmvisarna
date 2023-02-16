@@ -635,14 +635,13 @@ body.ticketPage {
 }
 
 .seat-sold{
-  color: #525252;
-  background-color: #afafaf;
-  width: 27px;
-  height: 24px;
-  margin: auto;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  transform: rotate3d(184,102,1,45deg);
+background-color: #afafaf; 
+ width: 27px;
+ height: 24px;
+ margin: auto;
+ border-top-left-radius: 10px;
+ border-top-right-radius: 10px;
+ transform: rotate3d(184,102,1,45deg); 
 }
 
 .total-seats{
