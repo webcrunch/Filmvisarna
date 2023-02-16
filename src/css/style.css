@@ -594,40 +594,6 @@ body.ticketPage {
   margin-bottom:30px; */
 }
 
-.seat-selector-container{
-  align-items: center;
-  justify-content: center;
-  display: flex;
-  height: 400px;
-  
-}
-
-.total-seats{
-  text-align: center;
-  color: white;
-}
-
-.seat{
-  background-color: #ffffff;
-  width: 27px;
-  height: 24px;
-  margin: auto;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  transform: rotate3d(184,102,1,45deg);
-}
-
-.seat-sold{
-  color: #525252;
-  background-color: #ffffff;
-  width: 27px;
-  height: 24px;
-  margin: auto;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  transform: rotate3d(184,102,1,45deg);
-}
-
 .tv-screen-container{
   width: 100%;
   height: 250px;
@@ -648,6 +614,42 @@ body.ticketPage {
   
   
 }
+
+.seat-selector-container{
+  align-items: center;
+  justify-content: center;
+  display: -moz-inline-grid;
+  display: -ms-inline-grid;
+  height: 400px;
+  
+}
+
+.seat{
+  background-color: #ffffff;
+  width: 27px;
+  height: 24px;
+  margin: auto;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  transform: rotate3d(184,102,1,45deg);
+}
+
+.seat-sold{
+  color: #525252;
+  background-color: #afafaf;
+  width: 27px;
+  height: 24px;
+  margin: auto;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  transform: rotate3d(184,102,1,45deg);
+}
+
+.total-seats{
+  text-align: center;
+  color: white;
+}
+
 
 .li-selected{
   background-color: rgb(2, 159, 2);
