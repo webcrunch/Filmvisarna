@@ -171,7 +171,7 @@ export default function TicketPage() {
             <div className="seat-selector-container">
               <div className="row1">
                     <div className="seat"></div>
-                    <div className="seat"></div>
+                    <div className="seat-sold"></div>
                     <div className="seat"></div>
                     <div className="seat-sold"></div>
                     <div className="seat-sold"></div>
