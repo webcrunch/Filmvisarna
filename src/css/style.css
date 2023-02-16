@@ -605,12 +605,13 @@ body.ticketPage {
   display: flex;
   justify-content: space-around;
   position: relative;
+  transform: rotate3d(394,1,6,35deg);
 }
 .tv-screen{
-  width: 400px;
-  height: 220px;
+  width: 370px;
+  height: 210px;
   background-color: white;
-  transform: rotate3d(394,92,-5,35deg);
+  transform: rotate3d(394,92,25,35deg);
   position: absolute;
 }
 
@@ -620,7 +621,7 @@ body.ticketPage {
   display: -moz-inline-grid;
   display: -ms-inline-grid;
   height: 400px;
-  
+  transform: rotate3d(394,1,40,35deg);
 }
 
 .row1{
