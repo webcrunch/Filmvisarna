@@ -61,6 +61,7 @@ nav {
   display: flex;
   justify-content: center;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  position: relative;
 }
 
 .navlinks {
@@ -99,11 +100,11 @@ nav ul {
 }
 
 nav .img {
-  /* margin-left: auto; */
   filter: invert(100%);
-  /* display: block; */
-  padding-top: 25px;
-  height: 30%;
+  display: block;
+  position: absolute;
+  top: 28px;
+  right: 30px;
 }
 
 nav img:hover {
@@ -111,10 +112,12 @@ nav img:hover {
 }
 
 .boxContent {
-  /* color: white; */
   background-color: #575757;
   border: #525252 solid;
   width: 20%;
+  position: absolute;
+  right: 33px;
+  top: 60px;
   /* border-radius: 10%; */
   text-decoration: none;
   /* padding-left: 20px;
@@ -125,28 +128,16 @@ nav img:hover {
   margin-bottom: 5px;
   margin-left: 5px;
   /* margin: 10px; */
-  animation: showme 4s forwards;
 }
 
-.notShowMe {
-  animation: hideMe 4s backwards;
+.boxContent.shown {
+  opacity: 1;
+  transition: opacity 2s;
 }
 
-@keyframes showme {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes hideMe {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
+.boxContent.hidden {
+  opacity: 0;
+  transition: opacity 2s;
 }
 
 .boxContent a {
@@ -159,11 +150,14 @@ nav img:hover {
   filter: invert(100%);
 }
 
-/* @media screen and (max-width: 767px) {
-  nav {
-    background-color: #f5f5f5;
+@media screen and (max-width: 767px) {
+  .navlinks {
+    display: none;
   }
-} */
+  nav img {
+    display: none;
+  }
+}
 
 /* __________________________ */
 
@@ -238,7 +232,7 @@ body.ticketPage {
   margin-bottom: -1%;
 }
 
-.flex-container>div {
+.flex-container > div {
   background-color: #1a1a1a;
   width: 100%;
   padding: 1px;
@@ -262,10 +256,9 @@ body.ticketPage {
 .topcontainerimagedivv {
   height: 100%;
   width: 100%;
-
 }
 
-.flex-container>div:hover {
+.flex-container > div:hover {
   box-shadow: inset 500px 0 0 0 #722e2e;
 }
 
@@ -288,15 +281,13 @@ body.ticketPage {
     margin-bottom: 10px;
     font-size: 20px;
     margin-left: 4%;
-
-
   }
 }
 
 /*TOP HOMEPAGE MEDIA QUERIES */
 
 @media screen and (max-width: 767px) {
-  .flex-container>div {
+  .flex-container > div {
     padding: 0;
     padding-bottom: 0%;
     width: 35%;
@@ -305,8 +296,7 @@ body.ticketPage {
 }
 
 @media screen and (max-width: 767px) {
-  .flex-container>div img {
-
+  .flex-container > div img {
     margin-left: 0;
     margin-right: 0;
     height: 200px;
@@ -403,7 +393,7 @@ body.ticketPage {
 .undertext {
   color: white;
   font-weight: normal;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 
   font-size: 22px;
   word-wrap: break-word;
@@ -427,14 +417,9 @@ body.ticketPage {
 
 /*------                FILTER homepage                ----------- */
 
-
-
-
 /*---------------------HOMEPAGE ENDS HERE---------------------------------------------------- */
 
 /*-----------------TICKET PAGE STARTS HERE----------------------------------------------------*/
-
-
 
 #ticket-pricing {
   display: flex;
@@ -472,7 +457,6 @@ body.ticketPage {
   width: 30%;
   padding: 20px;
   border-right: 1px solid rgb(38, 38, 38);
-  
 }
 
 .quantity {
@@ -503,19 +487,21 @@ body.ticketPage {
   cursor: pointer;
 }
 
-.vuxen-title, .barn-title, .senior-title{
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+.vuxen-title,
+.barn-title,
+.senior-title {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: aliceblue;
 }
 
 .price-tag-name {
   color: white;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .total-price-css {
   color: rgb(255, 255, 255);
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-weight: bold;
   font-size: 30px;
   position: relative;
@@ -528,7 +514,7 @@ body.ticketPage {
   color: rgb(0, 0, 0);
   background-color: rgb(255, 255, 255);
   border-radius: 2px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-weight: bold;
 }
 
@@ -741,51 +727,6 @@ body.ticketPage {
   padding: 5px;
 }
 
-/*.poster {
-  /*margin: 0 auto;
-  padding: 10px 2px;
-  /*background-image: url(/images/bookingpage.jpg);
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  max-width: 100%;
-  font-size: 20px;
-  padding-left: 20px;
-  flex-basis: 70%;
-  order: 2;*/
-
-/* Booking done page start */
-/*
-.container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.information {
-  color: rgb(224, 216, 222);
-  padding: 20px 20px;
-  margin-right: 40px;
-}
-
-.img {
-  max-width: 80%;
-  position: left;
-  padding-right: 20px;
-  padding-left: 20px;
-}
-
-.image {
-  flex-basis: 70%;
-  order: 2;
-}*/
-
-/* .doneA {
-  color: white;
-  font-size: 20px;
-  padding-left: 20px;
-  position: left;
-} */
 /* ?? __________________________________ ?? */
 
 /* Detail page css start */
