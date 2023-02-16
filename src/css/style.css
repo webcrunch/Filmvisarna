@@ -232,7 +232,7 @@ body.ticketPage {
   margin-bottom: -1%;
 }
 
-.flex-container > div {
+.flex-container>div {
   background-color: #1a1a1a;
   width: 100%;
   padding: 1px;
@@ -258,7 +258,7 @@ body.ticketPage {
   width: 100%;
 }
 
-.flex-container > div:hover {
+.flex-container>div:hover {
   box-shadow: inset 500px 0 0 0 #722e2e;
 }
 
@@ -287,7 +287,7 @@ body.ticketPage {
 /*TOP HOMEPAGE MEDIA QUERIES */
 
 @media screen and (max-width: 767px) {
-  .flex-container > div {
+  .flex-container>div {
     padding: 0;
     padding-bottom: 0%;
     width: 35%;
@@ -793,7 +793,7 @@ body.ticketPage {
   margin: 10px 0;
   bottom: 10px;
 }
-/* 
+/*
 @media (prefers-color-scheme: dark) {
   .favicon-smiley {
     fill: #ffff00;
@@ -898,5 +898,5 @@ h1 {
   margin: 10px 0;
 }
 
-Detail page css end here 
+Detail page css end here
 */
