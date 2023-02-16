@@ -36,7 +36,6 @@ export default function App() {
 
 
   useStates('user', {
-    isOpened: false,
     loggedin: false
   })
 
