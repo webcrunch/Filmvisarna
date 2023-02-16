@@ -2,6 +2,7 @@
 @import "normalize.css";
 @import url("star.css");
 @import url("movie-list.css");
+@import url("movie-list.css");
 
 * {
   box-sizing: border-box;
