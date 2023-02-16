@@ -1,11 +1,14 @@
-import { useStates } from '../utilities/states';
-import { useParams, Link } from 'react-router-dom';
-import { useLocation } from 'react-router-dom'
-import { calculatingTime } from '../utilities/length-calculating';
+import { useStates } from "../utilities/states";
+import { useParams, Link } from "react-router-dom";
+import { useLocation } from "react-router-dom";
+import { calculatingTime } from "../utilities/length-calculating";
 import { useEffect } from "react";
 
 export default function TicketPage() {
   const { moviePath } = useParams();
+  const location = useLocation();
+  console.log(location);
+
   const clickerss = useStates({
     numberofChildren: 0,
     priceChildren: 65,
@@ -13,8 +16,8 @@ export default function TicketPage() {
     priceAdults: 85,
     numberofSenior: 0,
     priceSenior: 75,
-    totalPrice: 0
-  })
+    totalPrice: 0,
+  });
 
   useEffect(() => {
     // add the class ticketPage to the body element
@@ -25,13 +28,10 @@ export default function TicketPage() {
     return () => document.body.classList.remove("ticketPage");
   }, []);
 
-
   // updatePrice(){
   //   let childrenPrice = numberOfChildren * priceChildren;
   //   let adultPrice = number
   // }
-
-
 
   /*
     const ticketOptions = document.querySelectorAll(".ticket-option1,.ticket-option2, .ticket-option3");
@@ -78,9 +78,9 @@ priceSenior: 75,
 totalPrice: 0
 */
 
-  return <div className="full-ticket-page">
-
-    {/*  {
+  return (
+    <div className="full-ticket-page">
+      {/*  {
 export default function TicketPage() { 
     const { moviePath } = useParams();
       const location = useLocation()
@@ -97,195 +97,246 @@ export default function TicketPage() {
             </div>: null    
     } */}
 
+      <div className="ticket-container" id="ticket-pricing">
+        <div className="ticket-option1">
+          <h3 className="vuxen-title">Vuxen</h3>
+          <p className="price-tag-name">Pris: {clickerss.priceAdults}Kr</p>
+          <button
+            className="add-ticket"
+            onClick={() => {
+              clickerss.numberofAdults++;
+              clickerss.totalPrice += clickerss.priceAdults;
+            }}
+          >
+            +
+          </button>
+          <input
+            className="quantity"
+            type="text"
+            value={clickerss.numberofAdults}
+            disabled
+          ></input>
 
-
-
-        <div className="ticket-container" id="ticket-pricing">
-            <div className="ticket-option1">
-            <h3 className="vuxen-title">Vuxen</h3>
-            <p className="price-tag-name">Pris: {clickerss.priceAdults}Kr</p>
-            <button className="add-ticket" onClick={() => {
-            clickerss.numberofAdults++;
-            clickerss.totalPrice += clickerss.priceAdults;
-            }}>+</button>
-            <input className="quantity" type="text" value={clickerss.numberofAdults} disabled></input>
-
-            <button className="remove-ticket" onClick={() => {
-            if (clickerss.numberofAdults <= 0) { return; }
-            clickerss.numberofAdults--;
-            clickerss.totalPrice -= clickerss.priceAdults;
-            }}>-</button>
+          <button
+            className="remove-ticket"
+            onClick={() => {
+              if (clickerss.numberofAdults <= 0) {
+                return;
+              }
+              clickerss.numberofAdults--;
+              clickerss.totalPrice -= clickerss.priceAdults;
+            }}
+          >
+            -
+          </button>
         </div>
 
         <div className="ticket-option2">
-            <h3 className="barn-title">Barn</h3>
-            <p className="price-tag-name">Pris: {clickerss.priceChildren}Kr</p>
-            <button className="add-ticket" onClick={() => {
-            clickerss.numberofChildren++;
-            clickerss.totalPrice += clickerss.priceChildren;
-            }}>+</button>
-            <input className="quantity" type="text" value={clickerss.numberofChildren} disabled></input>
-            <button className="remove-ticket" onClick={() => {
-            if (clickerss.numberofChildren <= 0) { return; }
-            clickerss.numberofChildren--;
-            clickerss.totalPrice -= clickerss.priceChildren;
-            }}>-</button>
+          <h3 className="barn-title">Barn</h3>
+          <p className="price-tag-name">Pris: {clickerss.priceChildren}Kr</p>
+          <button
+            className="add-ticket"
+            onClick={() => {
+              clickerss.numberofChildren++;
+              clickerss.totalPrice += clickerss.priceChildren;
+            }}
+          >
+            +
+          </button>
+          <input
+            className="quantity"
+            type="text"
+            value={clickerss.numberofChildren}
+            disabled
+          ></input>
+          <button
+            className="remove-ticket"
+            onClick={() => {
+              if (clickerss.numberofChildren <= 0) {
+                return;
+              }
+              clickerss.numberofChildren--;
+              clickerss.totalPrice -= clickerss.priceChildren;
+            }}
+          >
+            -
+          </button>
         </div>
 
         <div className="ticket-option3">
-            <h3 className="senior-title">Pensionär</h3>
-            <p className="price-tag-name">Pris: {clickerss.priceSenior}Kr</p>
-            <button className="add-ticket" onClick={() => {
-            clickerss.numberofSenior++;
-            clickerss.totalPrice += clickerss.priceSenior;
-            }}>+</button>
-            <input className="quantity" type="text" value={clickerss.numberofSenior} disabled></input>
-            <button className="remove-ticket" onClick={() => {
-            if (clickerss.numberofSenior <= 0) { return; }
-            clickerss.numberofSenior--;
-            clickerss.totalPrice -= clickerss.priceSenior;
-            }}>-</button>
+          <h3 className="senior-title">Pensionär</h3>
+          <p className="price-tag-name">Pris: {clickerss.priceSenior}Kr</p>
+          <button
+            className="add-ticket"
+            onClick={() => {
+              clickerss.numberofSenior++;
+              clickerss.totalPrice += clickerss.priceSenior;
+            }}
+          >
+            +
+          </button>
+          <input
+            className="quantity"
+            type="text"
+            value={clickerss.numberofSenior}
+            disabled
+          ></input>
+          <button
+            className="remove-ticket"
+            onClick={() => {
+              if (clickerss.numberofSenior <= 0) {
+                return;
+              }
+              clickerss.numberofSenior--;
+              clickerss.totalPrice -= clickerss.priceSenior;
+            }}
+          >
+            -
+          </button>
         </div>
-      <p className="total-price-css" id="total-price">Total Pris: {clickerss.totalPrice}Kr</p>
-    </div>
-    <div className="seat-option-container">
+        <p className="total-price-css" id="total-price">
+          Total Pris: {clickerss.totalPrice}Kr
+        </p>
+      </div>
+      <div className="seat-option-container">
         <ul className="ul-seat">
-            <li className="li-avaliable">
+          <li className="li-avaliable">
             <div className="seat-available"></div>
             <p className="seat-available-text">Lediga</p>
-            </li>
-            <li className="li-selected">
+          </li>
+          <li className="li-selected">
             <div className="seat-selected"></div>
             <p className="seat-selected-text">Vald</p>
-            </li>
-            <li className="li-sold">
+          </li>
+          <li className="li-sold">
             <div className="seat-sold-display"></div>
             <p className="seat-sold-text">Såld</p>
-            </li>
+          </li>
         </ul>
+      </div>
+      <div className="tv-screen-container">
+        <div className="tv-screen"></div>
+      </div>
+
+      <div className="seat-selector-container">
+        <div className="row1">
+          <div className="seat"></div>
+          <div className="seat-sold"></div>
+          <div className="seat"></div>
+          <div className="seat-sold"></div>
+          <div className="seat-sold"></div>
+          <div className="seat"></div>
+          <div className="seat"></div>
+          <div className="seat"></div>
+          <div className="seat"></div>
         </div>
-              <div className="tv-screen-container">
-                    <div className="tv-screen"></div>
-              </div>
+        <div className="row2">
+          <div className="seat"></div>
+          <div className="seat"></div>
+          <div className="seat"></div>
+          <div className="seat"></div>
+          <div className="seat"></div>
+          <div className="seat"></div>
+          <div className="seat-sold"></div>
+          <div className="seat-sold"></div>
+          <div className="seat"></div>
+        </div>
+        <div className="row3">
+          <div className="seat"></div>
+          <div className="seat"></div>
+          <div className="seat-sold"></div>
+          <div className="seat"></div>
+          <div className="seat"></div>
+          <div className="seat-sold"></div>
+          <div className="seat"></div>
+          <div className="seat"></div>
+          <div className="seat"></div>
+        </div>
 
-            <div className="seat-selector-container">
-              <div className="row1">
-                    <div className="seat"></div>
-                    <div className="seat-sold"></div>
-                    <div className="seat"></div>
-                    <div className="seat-sold"></div>
-                    <div className="seat-sold"></div>
-                    <div className="seat"></div>
-                    <div className="seat"></div>
-                    <div className="seat"></div>
-                    <div className="seat"></div>
-              </div>
-              <div className="row2">
-                    <div className="seat"></div>
-                    <div className="seat"></div>
-                    <div className="seat"></div>
-                    <div className="seat"></div>
-                    <div className="seat"></div>
-                    <div className="seat"></div>
-                    <div className="seat-sold"></div>
-                    <div className="seat-sold"></div>
-                    <div className="seat"></div>
-              </div>
-              <div className="row3">
-                    <div className="seat"></div>
-                    <div className="seat"></div>
-                    <div className="seat-sold"></div>
-                    <div className="seat"></div>
-                    <div className="seat"></div>
-                    <div className="seat-sold"></div>
-                    <div className="seat"></div>
-                    <div className="seat"></div>
-                    <div className="seat"></div>
-              </div>
+        <div className="row4">
+          <div className="seat-sold"></div>
+          <div className="seat"></div>
+          <div className="seat"></div>
+          <div className="seat"></div>
+          <div className="seat"></div>
+          <div className="seat-sold"></div>
+          <div className="seat"></div>
+          <div className="seat"></div>
+          <div className="seat"></div>
+        </div>
 
-              <div className="row4">
-                    <div className="seat-sold"></div>
-                    <div className="seat"></div>
-                    <div className="seat"></div>
-                    <div className="seat"></div>
-                    <div className="seat"></div>
-                    <div className="seat-sold"></div>
-                    <div className="seat"></div>
-                    <div className="seat"></div>
-                    <div className="seat"></div>
-              </div>
+        <div className="row5">
+          <div className="seat"></div>
+          <div className="seat"></div>
+          <div className="seat-sold"></div>
+          <div className="seat"></div>
+          <div className="seat"></div>
+          <div className="seat"></div>
+          <div className="seat"></div>
+          <div className="seat"></div>
+          <div className="seat"></div>
+        </div>
+        <div className="row6">
+          <div className="seat-sold"></div>
+          <div className="seat-sold"></div>
+          <div className="seat-sold"></div>
+          <div className="seat"></div>
+          <div className="seat"></div>
+          <div className="seat-sold"></div>
+          <div className="seat"></div>
+          <div className="seat"></div>
+          <div className="seat"></div>
+        </div>
+        <div className="row7">
+          <div className="seat"></div>
+          <div className="seat"></div>
+          <div className="seat-sold"></div>
+          <div className="seat"></div>
+          <div className="seat-sold"></div>
+          <div className="seat"></div>
+          <div className="seat"></div>
+          <div className="seat-sold"></div>
+          <div className="seat-sold"></div>
+        </div>
 
-              <div className="row5">
-                    <div className="seat"></div>
-                    <div className="seat"></div>
-                    <div className="seat-sold"></div>
-                    <div className="seat"></div>
-                    <div className="seat"></div>
-                    <div className="seat"></div>
-                    <div className="seat"></div>
-                    <div className="seat"></div>
-                    <div className="seat"></div>
-              </div>
-              <div className="row6">
-              <div className="seat-sold"></div>
-              <div className="seat-sold"></div>
-              <div className="seat-sold"></div>
-                    <div className="seat"></div>
-                    <div className="seat"></div>
-                    <div className="seat-sold"></div>
-                    <div className="seat"></div>
-                    <div className="seat"></div>
-                    <div className="seat"></div>
-              </div>
-              <div className="row7">
-                    <div className="seat"></div>
-                    <div className="seat"></div>
-                    <div className="seat-sold"></div>
-                    <div className="seat"></div>
-                    <div className="seat-sold"></div>
-                    <div className="seat"></div>
-                    <div className="seat"></div>
-                    <div className="seat-sold"></div>
-                    <div className="seat-sold"></div>
-              </div>
-    
-              <div className="row8">
-                    <div className="seat-sold"></div>
-                    <div className="seat"></div>
-                    <div className="seat"></div>
-                    <div className="seat-sold"></div>
-                    <div className="seat-sold"></div>
-                    <div className="seat-sold"></div>
-                    <div className="seat"></div>
-                    <div className="seat"></div>
-                    <div className="seat"></div>
-              </div>
-              <div className="row9">
-                    <div className="seat"></div>
-                    <div className="seat-sold"></div>
-                    <div className="seat"></div>
-                    <div className="seat-sold"></div>
-                    <div className="seat"></div>
-                    <div className="seat"></div>
-                    <div className="seat-sold"></div>
-                    <div className="seat-sold"></div>
-                    <div className="seat"></div>
-               </div>
-                <div className="row10">
-                     <div className="seat"></div>
-                     <div className="seat"></div>
-                     <div className="seat-sold"></div>
-                     <div className="seat"></div>
-                     <div className="seat"></div>
-                     <div className="seat"></div>
-                     <div className="seat-sold"></div>
-                     <div className="seat-sold"></div>
-                     <div className="seat"></div>
-                </div>
+        <div className="row8">
+          <div className="seat-sold"></div>
+          <div className="seat"></div>
+          <div className="seat"></div>
+          <div className="seat-sold"></div>
+          <div className="seat-sold"></div>
+          <div className="seat-sold"></div>
+          <div className="seat"></div>
+          <div className="seat"></div>
+          <div className="seat"></div>
+        </div>
+        <div className="row9">
+          <div className="seat"></div>
+          <div className="seat-sold"></div>
+          <div className="seat"></div>
+          <div className="seat-sold"></div>
+          <div className="seat"></div>
+          <div className="seat"></div>
+          <div className="seat-sold"></div>
+          <div className="seat-sold"></div>
+          <div className="seat"></div>
+        </div>
+        <div className="row10">
+          <div className="seat"></div>
+          <div className="seat"></div>
+          <div className="seat-sold"></div>
+          <div className="seat"></div>
+          <div className="seat"></div>
+          <div className="seat"></div>
+          <div className="seat-sold"></div>
+          <div className="seat-sold"></div>
+          <div className="seat"></div>
+        </div>
 
-                <p className="total-seats">
-                    Du har valt <span id="count">0</span> platser.
-                </p>
-          </div>
+        <p className="total-seats">
+          Du har valt <span id="count">0</span> platser.
+        </p>
+      </div>
     </div>
+  );
 }
