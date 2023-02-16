@@ -163,10 +163,12 @@ export default function TicketPage() {
             <p className="seat-sold-text">Såld</p>
             </li>
         </ul>
+        </div>
               <div className="tv-screen-container">
-              <div className="tv-screen"></div>
-
+                    <div className="tv-screen"></div>
               </div>
+
+            <div className="seat-selector-container">
               <div className="row">
                     <div className="seat"></div>
                     <div className="seat"></div>
