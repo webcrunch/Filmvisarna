@@ -1,31 +1,35 @@
+import { useState } from "react";
+import { useStates } from '../utilities/states';
 export default LoginPage;
 
 function LoginPage() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-
+    const form = useStates({
+        email: '',
+        password: ''
+    })
     // send email and password to server for authentication 
 
-    const handleSubmit = (e) => {
+    function handleSubmit(e) {
         e.preventDefault();
-
+        console.log(form.email, form.password);
     }
 
-    return (
-        <div className="login-page">
-            <form onSubmit={handleSubmit}>
-                <label>
-                    Email:
-                    <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
-                </label>
-                <label>
-                    Password:
-                    <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
-                </label>
-                <button type="submit">Log In</button>
-            </form>
-        </div>
-    );
+    return <>
+
+        <div className="login">
+            <div className="login_form">
+                <form onSubmit={handleSubmit}>
+                    <label className="label">Username</label>
+                    <input className="username" type="text" id="username"  {...form.bind('email')}></input>
+                    <label className="label">Password</label>
+                    <input className="username" type="password" id="username"  {...form.bind('password')}></input>
+                    <button type="submit">Complete your booking</button>
+                </form >
+            </div >
+        </div >
+
+    </>
+
 }
-
-

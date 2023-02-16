@@ -14,7 +14,7 @@ import Home from './pages/home.jsx';
 import Contact from './pages/contact.jsx';
 import About from './pages/about.jsx';
 import Movies from './pages/movies.jsx';
-import Booked from './pages/booking-confirmatin.jsx';
+import Booked from './pages/booking-confirmation.jsx';
 import DetailedInfo from './detailedInfo.jsx';
 import TicketPage from './pages/Ticket.jsx';
 import LoginPage from './pages/login.jsx';
@@ -49,10 +49,9 @@ export default function App() {
       { label: 'OM OSS ', path: '/about', Component: About }, //, Component:
       { label: 'KONTAKT', path: '/contact', Component: Contact },
       { path: '/movie/:moviePath', Component: DetailedInfo },
-      // { path: '/authentication/, Component: DetailedInfo },
+      { path: '/authentication/', Component: LoginPage },
       { path: '/ticket/:moviePath', Component: TicketPage },
-      { path: '/done/:bookingId', Component: Booked },
-      { path: '/' }
+      { path: '/done/:bookingId', Component: Booked }
     ],
     screenings: [],
     saloons: []
