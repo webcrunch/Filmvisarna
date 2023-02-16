@@ -566,14 +566,15 @@ body.ticketPage {
 
 .li-avaliable{
   box-sizing: border-box;
-  border: 1px solid rgb(0, 0, 0);
+  background-color: #474747;
+  border: 1px solid rgb(147, 147, 147);
   width: 30%;
   border-radius: 10px;
 }
 
 .li-selected{
   box-sizing: border-box;
-  border: 1px solid rgb(0, 0, 0);
+  
   width: 30%;
   border-radius: 10px;
   word-break: keep-all;
@@ -581,13 +582,12 @@ body.ticketPage {
 
 .li-sold{
   box-sizing: border-box;
-  border: 1px solid rgb(0, 0, 0);
   border-radius: 10px;
   width: 30%;
 }
 
 .seat-option-container{
-  background-color: rgb(130, 130, 130);
+  border-style: none;
   justify-content: center;
   align-items: center;
  /*  perspective: 500px;
