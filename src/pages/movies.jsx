@@ -92,61 +92,74 @@ export default function Movies() {
 
     const clearDate = () => filterVars.date = '';
 
-    function handleDateChange(dayOrTime) {
-        l.startDate = dayOrTime;
-        l.screenings = s.screenings.filter(movie => movie.date === dayOrTime);
-    }
-    
-    return <div className="movieList">
-        {
-            s.movies[0] !== undefined ?
-                <>
-                <h1>Movie List</h1>
-        {/*</>p>filter</p> */}
-        {/* Filter by Name */}
-        <select name="selectListName" {...filterVars.bind("movie")} id="selectListName">
-            <option value="null">Alla filmerna</option>
-            {
-                l.movies.map(movie => <option>{movie.title}</option>)
-            }
-        </select>   
-        {/* Filter by Category */}
-        <select name="selectListCategory" {...filterVars.bind("category")} id="selectListCategory">
-            {
-                l.categories.map((cat,i) => i === 0 ?  <option value="null">{cat}</option> : <option>{cat}</option>)
-            }
-        </select>   
-        {/* Filter by Saloons */}
-         <select name="selectList" {...filterVars.bind("auditorium")} id="selectList">
-            <option value="null">Båda Salongerna</option>
-            <option >Stora Salongen</option>
-            <option >Lilla Salongen</option>
-        </select>          
-        <div>
-            <input {...filterVars.bind("date")} type="date" />
-            <button onClick={() => clearDate()} type="button">Clear date</button>
-        {/* <input onChange={(e) => handleDateChange(e.target.value)}  type="time" id="appt" name="appt"
-       min="09:00" max="18:00"></input> */}
-        </div>
-        
-        {/* Sort by Name/length */}
-         <select {...l.bind('chosenSort')}>
-          {l.possibleSorts.map(x => <option>
-            {x}
-          </option>)}
-                    </select>
-        {l.screenings.filter(filterByAll).map(display => <>
-            <div className="imagelistdiv">
+          {l.screenings.filter(filterByAll).map((display) => (
+            <>
+              <div className="imagelistdiv">
                 {/* <hr className="movieshr"></hr> */}
-                <Link to={"/movie/" + display.film}><img className="imagesmovies" src={"../" + getMovies(display.film, 'images')} alt={"Poster av filmen " + display.film} /></Link>
+                <Link to={"/movie/" + display.film}>
+                  <img
+                    className="imagesmovies"
+                    src={"../" + getMovies(display.film, "images")}
+                    alt={"Poster av filmen " + display.film}
+                  />
+                </Link>
                 <div className="tidochsalong">
-                    <h2 className="movietitlefilmer">{display.film}</h2>
-                    <h4 className="tidochsalongtitle">Sal: {display.auditorium}. Dag: {display.date} </h4>
-                    <h4 className="tidochsalongtitle">Tid: {display.time}. Längd: {calculatingTime(getMovies(display.film,'length'))}</h4>
+                  <h2 className="movietitlefilmer">{display.film}</h2>
+                  <h4 className="tidochsalongtitle">
+                    Sal: {display.auditorium}. Dag: {display.date}{" "}
+                  </h4>
+                  <h4 className="tidochsalongtitle">
+                    Tid: {display.time}. Längd:{" "}
+                    {calculatingTime(getMovies(display.film, "length"))}
+                  </h4>
                 </div>
-                <Link to={"/ticket/" + display.film} state={{ from: "occupation" }}><button className="moviebtnsitplatser">Välj sittplatser</button></Link>            </div>
-        </>)}            
-                </>: null
-       }
+                <Link
+                  to={"/ticket/" + display.film}
+                  state={{ from: "occupation" }}
+                >
+                  <button className="moviebtnsitplatser">
+                    Välj sittplatser
+                  </button>
+                </Link>
+              </div>
+
+              <div className="card">
+                <Link to={"/movie/" + getMovies(display.film, "path")}>
+                  <img
+                    src={"../" + getMovies(display.film, "images")}
+                    alt={"Poster av filmen " + display.film}
+                  />
+                </Link>
+                <div className="container">
+                  <h2 className="movietitlefilmer">{display.film}</h2>
+                  <div className="tidochsalong ">
+                    <h4 className="tidochsalongtitle">
+                      Sal: {display.auditorium} <br /> Längd:{" "}
+                      {calculatingTime(getMovies(display.film, "length"))}
+                    </h4>
+                    <h4 className="tidochsalongtitle">
+                      {" "}
+                      Dag: {display.date} <br />
+                      Tid: {display.time}
+                    </h4>
+                  </div>
+                  <h4 className="tidochsalongtitle">
+                    Genre: {getMovies(display.film, "genre")}
+                  </h4>
+                  <Link
+                    to={"/ticket/" + getMovies(display.film, "path")}
+                    state={{ from: "occupation" }}
+                  >
+                    <button className="moviebtnsitplatser_small tidochsalongtitle">
+                      Välj sittplatser
+                    </button>
+                  </Link>
+                </div>
+              </div>
+            </>
+          ))}
+        </>
+      ) : null}
     </div>
+  );
 }
