@@ -567,14 +567,14 @@ body.ticketPage {
 .li-avaliable{
   box-sizing: border-box;
   border: 1px solid rgb(0, 0, 0);
-  width: 20%;
+  width: 30%;
   border-radius: 10px;
 }
 
 .li-selected{
   box-sizing: border-box;
   border: 1px solid rgb(0, 0, 0);
-  width: 20%;
+  width: 30%;
   border-radius: 10px;
   word-break: keep-all;
 }
@@ -583,7 +583,7 @@ body.ticketPage {
   box-sizing: border-box;
   border: 1px solid rgb(0, 0, 0);
   border-radius: 10px;
-  width: 20%;
+  width: 30%;
 }
 
 .seat-option-container{
@@ -610,7 +610,7 @@ body.ticketPage {
 .tv-screen{
   width: 370px;
   height: 210px;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.891);
   transform: rotate3d(394,92,25,35deg);
   position: absolute;
 }
