@@ -1,27 +1,28 @@
-import { useStates } from './utilities/states';
+import { useStates } from '../utilities/states';
 import { useParams, Link } from 'react-router-dom';
-import { calculatingTime } from './utilities/length-calculating';
+import { calculatingTime } from '../utilities/length-calculating';
 import React, { useEffect, useState } from 'react';
+import { useLocation } from 'react-router-dom'
+
 // import Trailer from ''
 export default function DetailedInfo() {
     const { moviePath } = useParams();
 
     const s = useStates('main');
-    const movie = s.movies.find(movie => movie.title == moviePath);
+    const movie = s.movies.find(movie => movie.path == moviePath);
     const [showRatings, setShowRatings] = useState(false);
     const [showScreenings, setShowScreenings] = useState(false);
     const trailer = movie && movie.youtubeTrailer;
 
-    const screenings = movie != undefined ? s.screenings.filter(screen => screen.film  === movie.title) : null; 
+    const screenings = movie != undefined ? s.screenings.filter(screen => screen.film === movie.title) : null;
     const dateArray = movie != undefined ? s.screenings.map(screen => screen.date) : null;
     // const testBlock = screenings.filter((screen,index) => {
     //     if(index < 4) return screen;
     // })
-
     useEffect(() => {
-        console.log('check the context of s ', dateArray);
-    },[])
-
+        document.body.classList.add("ticketPage");
+        return () => document.body.classList.remove("ticketPage");
+    }, []);
     return <>
         {
             movie != undefined ?
@@ -52,7 +53,7 @@ export default function DetailedInfo() {
                         </div>
 
                         <div className="buttonsUnderText">
-                        <button name="btnRatings" className="buttonRatings" onClick={() => setShowRatings(!showRatings)}>Show Ratings</button>
+                            <button name="btnRatings" className="buttonRatings" onClick={() => setShowRatings(!showRatings)}>Show Ratings</button>
                             <button name="btnScreenings" className="buttonScreenings" onClick={() => setShowScreenings(!showScreenings)}>View Screenings</button>
                             {showRatings && (
                                 <div className="detailedRatingDropdown">
@@ -79,7 +80,7 @@ export default function DetailedInfo() {
                                 </div>
                             )}
                         </div>
-                        
+
                     </div>
                 </div>
                 : null}
