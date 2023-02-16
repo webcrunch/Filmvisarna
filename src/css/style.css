@@ -628,25 +628,33 @@ body.ticketPage {
   align-content: center;
   align-self: center;
   width: 100%;
+  position: relative;
+  left: 41%;
 }
 .row2{
   align-items: center;
   align-content: center;
   align-self: center;
-margin-bottom: 10px;
-width: 100%;
+  margin-bottom: 10px;
+  width: 100%;
+  position: relative;
+  left: 41%;
 }
 .row3{
   align-items: center;
   align-content: center;
   align-self: center;
   width: 100%;
+  position: relative;
+  left: 41%;
 }
 .row4{
   align-items: center;
   align-content: center;
   align-self: center;
   width: 100%;
+  position: relative;
+  left: 41%;
 }
 .row5{
   align-items: center;
@@ -654,6 +662,8 @@ width: 100%;
   align-self: center;
   margin-bottom: 10px;
   width: 100%;
+  position: relative;
+  left: 41%;
 }
 
 .row6{
@@ -661,6 +671,8 @@ width: 100%;
   align-content: center;
   align-self: center;
   width: 100%;
+  position: relative;
+  left: 41%;
 }
 
 .row7{
@@ -668,6 +680,8 @@ width: 100%;
   align-content: center;
   align-self: center;
   width: 100%;
+  position: relative;
+  left: 41%;
 }
 
 .row8{
@@ -675,6 +689,8 @@ width: 100%;
   align-content: center;
   align-self: center;
   width: 100%;
+  left: 41%;
+  position: relative;
 }
 
 .row9{
@@ -682,6 +698,8 @@ width: 100%;
   align-content: center;
   align-self: center;
   width: 100%;
+  position: relative;
+  left: 41%;
 }
 
 .row10{
@@ -690,15 +708,15 @@ width: 100%;
   align-self: center;
   width: 100%;
   position: relative;
-  left: 50%;
+  left: 41%;
 }
 
 .seat{
   position:relative;
   display: inline-block;
   background-color: #ffffff;
-  width: 27px;
-  height: 24px;
+  width: 30px;
+  height: 27px;
   margin: auto;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
@@ -712,12 +730,15 @@ width: 100%;
   position: relative;
   display: inline-block;
 background-color: #afafaf; 
- width: 27px;
- height: 24px;
- margin: auto;
- border-top-left-radius: 10px;
- border-top-right-radius: 10px;
- transform: rotate3d(184,102,1,45deg); 
+width: 30px;
+height: 27px;
+margin: auto;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+transform: rotate3d(184,102,1,45deg);
+align-items: center;
+align-content: center;
+align-self: center;
 }
 
 .total-seats{
