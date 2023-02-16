@@ -604,15 +604,14 @@ body.ticketPage {
   color: white;
   display: flex;
   justify-content: space-around;
-  
+  position: relative;
 }
 .tv-screen{
   width: 400px;
   height: 220px;
   background-color: white;
   transform: rotate3d(394,92,-5,35deg);
-  
-  
+  position: absolute;
 }
 
 .seat-selector-container{
@@ -690,9 +689,12 @@ width: 100%;
   align-content: center;
   align-self: center;
   width: 100%;
+  position: relative;
+  left: 50%;
 }
 
 .seat{
+  position:relative;
   display: inline-block;
   background-color: #ffffff;
   width: 27px;
@@ -707,6 +709,7 @@ width: 100%;
 }
 
 .seat-sold{
+  position: relative;
   display: inline-block;
 background-color: #afafaf; 
  width: 27px;
