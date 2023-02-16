@@ -131,7 +131,7 @@ export default function Movies() {
       {s.movies[0] !== undefined ? (
         <>
           <button className="filterButton" onClick={() => (l.open = !l.open)}>
-            {(l.open ? "stäng" : "öppna") + " filtrering/sortering"}
+            {(l.open ? "Stäng" : "Öppna") + " filtrering/sortering"}
           </button>
           <div className={"filterBoxes_" + (l.open ? "show" : "hide")}>
             {/* Filter by Name */}
