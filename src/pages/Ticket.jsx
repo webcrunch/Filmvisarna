@@ -169,7 +169,21 @@ export default function TicketPage() {
               </div>
 
             <div className="seat-selector-container">
-              <div className="row">
+              <div className="row1">
+                    <div className="seat"></div>
+                    <div className="seat"></div>
+                    <div className="seat"></div>
+                    <div className="seat-sold"></div>
+                    <div className="seat-sold"></div>
+                    <div className="seat"></div>
+                    <div className="seat"></div>
+                    <div className="seat"></div>
+                    <div className="seat"></div>
+              </div>
+              <div className="row2">
+                    <div className="seat"></div>
+                    <div className="seat"></div>
+                    <div className="seat"></div>
                     <div className="seat"></div>
                     <div className="seat"></div>
                     <div className="seat"></div>
@@ -177,15 +191,10 @@ export default function TicketPage() {
                     <div className="seat-sold"></div>
                     <div className="seat"></div>
               </div>
-              <div className="row">
-                    <div className="seat"></div>
+              <div className="row3">
                     <div className="seat"></div>
                     <div className="seat"></div>
                     <div className="seat-sold"></div>
-                    <div className="seat-sold"></div>
-                    <div className="seat"></div>
-              </div>
-              <div className="row">
                     <div className="seat"></div>
                     <div className="seat"></div>
                     <div className="seat-sold"></div>
@@ -194,7 +203,10 @@ export default function TicketPage() {
                     <div className="seat"></div>
               </div>
 
-              <div className="row">
+              <div className="row4">
+                    <div className="seat-sold"></div>
+                    <div className="seat"></div>
+                    <div className="seat"></div>
                     <div className="seat"></div>
                     <div className="seat"></div>
                     <div className="seat-sold"></div>
@@ -203,7 +215,21 @@ export default function TicketPage() {
                     <div className="seat"></div>
               </div>
 
-              <div className="row">
+              <div className="row5">
+                    <div className="seat"></div>
+                    <div className="seat"></div>
+                    <div className="seat-sold"></div>
+                    <div className="seat"></div>
+                    <div className="seat"></div>
+                    <div className="seat"></div>
+                    <div className="seat"></div>
+                    <div className="seat"></div>
+                    <div className="seat"></div>
+              </div>
+              <div className="row6">
+              <div className="seat-sold"></div>
+              <div className="seat-sold"></div>
+              <div className="seat-sold"></div>
                     <div className="seat"></div>
                     <div className="seat"></div>
                     <div className="seat-sold"></div>
@@ -211,45 +237,49 @@ export default function TicketPage() {
                     <div className="seat"></div>
                     <div className="seat"></div>
               </div>
-              <div className="row">
+              <div className="row7">
                     <div className="seat"></div>
                     <div className="seat"></div>
                     <div className="seat-sold"></div>
                     <div className="seat"></div>
-                    <div className="seat"></div>
-                    <div className="seat"></div>
-              </div>
-              <div className="row">
-                    <div className="seat"></div>
-                    <div className="seat"></div>
                     <div className="seat-sold"></div>
                     <div className="seat"></div>
                     <div className="seat"></div>
-                    <div className="seat"></div>
+                    <div className="seat-sold"></div>
+                    <div className="seat-sold"></div>
               </div>
     
-              <div className="row">
+              <div className="row8">
+                    <div className="seat-sold"></div>
                     <div className="seat"></div>
                     <div className="seat"></div>
+                    <div className="seat-sold"></div>
+                    <div className="seat-sold"></div>
                     <div className="seat-sold"></div>
                     <div className="seat"></div>
                     <div className="seat"></div>
                     <div className="seat"></div>
               </div>
-              <div className="row">
+              <div className="row9">
                     <div className="seat"></div>
+                    <div className="seat-sold"></div>
                     <div className="seat"></div>
                     <div className="seat-sold"></div>
                     <div className="seat"></div>
                     <div className="seat"></div>
+                    <div className="seat-sold"></div>
+                    <div className="seat-sold"></div>
                     <div className="seat"></div>
                </div>
-                <div className="row">
+                <div className="row10">
                      <div className="seat"></div>
                      <div className="seat"></div>
                      <div className="seat-sold"></div>
                      <div className="seat"></div>
                      <div className="seat"></div>
+                     <div className="seat"></div>
+                     <div className="seat-sold"></div>
+                     <div className="seat-sold"></div>
                      <div className="seat"></div>
                 </div>
 
