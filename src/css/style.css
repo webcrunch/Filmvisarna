@@ -624,15 +624,72 @@ body.ticketPage {
   
 }
 
+.row1{
+  align-items: center;
+  align-content: center;
+  align-self: center;
+margin-left: 41%;
+}
 .row2{
   align-items: center;
   align-content: center;
   align-self: center;
 margin-bottom: 10px;
+margin-left: 41%;
+}
+.row3{
+  align-items: center;
+  align-content: center;
+  align-self: center;
+margin-left: 41%;
+}
+.row4{
+  align-items: center;
+  align-content: center;
+  align-self: center;
+margin-left: 41%;
+}
+.row5{
+  align-items: center;
+  align-content: center;
+  align-self: center;
+  margin-bottom: 10px;
+margin-left: 41%;
 }
 
-.row5{
-  margin-bottom: 10px;
+.row6{
+  align-items: center;
+  align-content: center;
+  align-self: center;
+margin-left: 41%;
+}
+
+.row7{
+  align-items: center;
+  align-content: center;
+  align-self: center;
+margin-left: 41%;
+}
+
+.row8{
+  align-items: center;
+  align-content: center;
+  align-self: center;
+margin-left: 41%;
+}
+
+.row9{
+  align-items: center;
+  align-content: center;
+  align-self: center;
+margin-left: 41%;
+}
+
+.row10{
+  align-items: center;
+  align-content: center;
+  align-self: center;
+margin-left: 41%;
 }
 
 .seat{
