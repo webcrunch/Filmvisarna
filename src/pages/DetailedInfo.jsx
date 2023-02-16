@@ -13,9 +13,10 @@ export default function DetailedInfo() {
     const [showRatings, setShowRatings] = useState(false);
     const [showScreenings, setShowScreenings] = useState(false);
     const trailer = movie && movie.youtubeTrailer;
+    const screening = useStates({ screenings: "null", categories: "null" })
 
     const screenings = movie != undefined ? s.screenings.filter(screen => screen.film === movie.title) : null;
-    const dateArray = movie != undefined ? s.screenings.map(screen => screen.date) : null;
+    let dateArray = movie != undefined ? s.screenings.map(screen => screen.date) : null;
     // const testBlock = screenings.filter((screen,index) => {
     //     if(index < 4) return screen;
     // })
@@ -23,6 +24,7 @@ export default function DetailedInfo() {
         document.body.classList.add("ticketPage");
         return () => document.body.classList.remove("ticketPage");
     }, []);
+    const filterByDate = (s) => screening.categories === "null" || s.date === screening.categories;
     return <>
         {
             movie != undefined ?
@@ -75,7 +77,8 @@ export default function DetailedInfo() {
                             {showScreenings && (
                                 <div className="detailedScreeningsDropdown">
                                     <div className="detailedScreening">
-                                        {screenings}
+                                        <select name=""{...screening.bind("categories")} id="">{dateArray.map(cat => <option>{cat}</option>)}</select>
+                                        {screenings.filter(filterByDate).map(screen => <p>{screen.film}{screen.date}</p>)}
                                     </div>
                                 </div>
                             )}
