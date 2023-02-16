@@ -165,10 +165,6 @@ body {
   margin: 0;
 }
 
-body.ticketPage {
-  background-color: rgb(23, 23, 23);
-}
-
 .movieshr {
   width: 100%;
 }
@@ -421,6 +417,10 @@ body.ticketPage {
 
 /*-----------------TICKET PAGE STARTS HERE----------------------------------------------------*/
 
+body.ticketPage {
+  background-color: rgb(23, 23, 23);
+}
+
 #ticket-pricing {
   display: flex;
   flex-direction: row;
@@ -428,6 +428,19 @@ body.ticketPage {
   align-items: center;
   width: 50%;
   margin: 0 auto;
+}
+
+.ticket-container {
+  justify-content: center;
+  box-shadow: 0px 0px 35px 0px #000000;
+  border-radius: 20px;
+  border-bottom: 1px solid rgb(38, 38, 38);
+}
+
+.full-ticket-page {
+  height: 100%;
+  width: auto;
+  aspect-ratio: 11/16;
 }
 
 .ticket-option1 {
@@ -518,18 +531,215 @@ body.ticketPage {
   font-weight: bold;
 }
 
-.ticket-container {
+.ul-seat{
+  box-sizing: border-box;
+  color: white;
   justify-content: center;
-  box-shadow: 0px 0px 35px 0px #000000;
-  border-radius: 20px;
-  border-bottom: 1px solid rgb(38, 38, 38);
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  padding-left: 33.3333%;
+  padding-right: 33.3333%;
+  
+
 }
 
-.full-ticket-page {
-  height: 100%;
-  width: auto;
-  aspect-ratio: 11/16;
+.li-avaliable{
+  box-sizing: border-box;
+  background-color: #474747;
+  box-shadow: 0px 0px 35px 0px #000000;
+  border: 1px solid rgb(147, 147, 147);
+  width: 30%;
+  border-radius: 10px;
 }
+
+.li-selected{
+  box-sizing: border-box;
+  box-shadow: 0px 0px 35px 0px #000000;
+  width: 30%;
+  border-radius: 10px;
+  word-break: keep-all;
+}
+
+.li-sold{
+  box-sizing: border-box;
+  box-shadow: 0px 0px 35px 0px #000000;
+  border-radius: 10px;
+  width: 30%;
+}
+
+.seat-option-container{
+  border-style: none;
+  justify-content: center;
+  align-items: center;
+ /*  perspective: 500px;
+  margin-bottom:30px; */
+}
+
+.tv-screen-container{
+  width: 100%;
+  height: 250px;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+  transform: rotate3d(394,1,6,35deg);
+}
+.tv-screen{
+  width: 370px;
+  height: 210px;
+  background-color: rgba(255, 255, 255, 0.891);
+  transform: rotate3d(394,92,25,35deg);
+  position: absolute;
+  box-shadow: 0px 10px 85px 20px #000000;
+}
+
+.seat-selector-container{
+  align-items: center;
+  justify-content: center;
+  display: -moz-inline-grid;
+  display: -ms-inline-grid;
+  height: 400px;
+  transform: rotate3d(394,1,40,35deg);
+}
+
+.row1{
+  align-items: center;
+  align-content: center;
+  align-self: center;
+  width: 100%;
+  position: relative;
+  left: 41%;
+}
+.row2{
+  align-items: center;
+  align-content: center;
+  align-self: center;
+  margin-bottom: 10px;
+  width: 100%;
+  position: relative;
+  left: 41%;
+}
+.row3{
+  align-items: center;
+  align-content: center;
+  align-self: center;
+  width: 100%;
+  position: relative;
+  left: 41%;
+}
+.row4{
+  align-items: center;
+  align-content: center;
+  align-self: center;
+  width: 100%;
+  position: relative;
+  left: 41%;
+}
+.row5{
+  align-items: center;
+  align-content: center;
+  align-self: center;
+  margin-bottom: 10px;
+  width: 100%;
+  position: relative;
+  left: 41%;
+}
+
+.row6{
+  align-items: center;
+  align-content: center;
+  align-self: center;
+  width: 100%;
+  position: relative;
+  left: 41%;
+}
+
+.row7{
+  align-items: center;
+  align-content: center;
+  align-self: center;
+  width: 100%;
+  position: relative;
+  left: 41%;
+}
+
+.row8{
+  align-items: center;
+  align-content: center;
+  align-self: center;
+  width: 100%;
+  left: 41%;
+  position: relative;
+}
+
+.row9{
+  align-items: center;
+  align-content: center;
+  align-self: center;
+  width: 100%;
+  position: relative;
+  left: 41%;
+}
+
+.row10{
+  align-items: center;
+  align-content: center;
+  align-self: center;
+  width: 100%;
+  position: relative;
+  left: 41%;
+}
+
+.seat{
+  position:relative;
+  display: inline-block;
+  background-color: #ffffff;
+  width: 30px;
+  height: 27px;
+  margin: auto;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  transform: rotate3d(184,102,1,45deg);
+  align-items: center;
+  align-content: center;
+  align-self: center;
+}
+
+.seat-sold{
+  position: relative;
+  display: inline-block;
+background-color: #afafaf; 
+width: 30px;
+height: 27px;
+margin: auto;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+transform: rotate3d(184,102,1,45deg);
+align-items: center;
+align-content: center;
+align-self: center;
+}
+
+.total-seats{
+  text-align: center;
+  color: white;
+}
+
+
+.li-selected{
+  background-color: rgb(2, 159, 2);
+}
+
+.li-sold{
+  background-color:white;
+  color: black;
+}
+
 
 /*---------------------TICKET PAGE ENDS HERE---------------------------------------------------- */
 
