@@ -6,6 +6,8 @@ import { useEffect } from "react";
 
 export default function TicketPage() {
   const { moviePath } = useParams();
+  const location = useLocation();
+  console.log(location);
   const clickerss = useStates({
     numberofChildren: 0,
     priceChildren: 65,
