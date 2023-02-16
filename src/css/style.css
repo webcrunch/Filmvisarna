@@ -611,9 +611,21 @@ body.ticketPage {
   background-color: #ffffff;
   width: 27px;
   height: 24px;
-  margin: 9px;
+  margin: auto;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
+  transform: rotate3d(184,102,1,45deg);
+}
+
+.seat-sold{
+  color: #525252;
+  background-color: #ffffff;
+  width: 27px;
+  height: 24px;
+  margin: auto;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  transform: rotate3d(184,102,1,45deg);
 }
 
 .tv-screen-container{
@@ -632,7 +644,8 @@ body.ticketPage {
   width: 400px;
   height: 220px;
   background-color: white;
-  perspective: 500px;
+  transform: rotate3d(394,92,-5,35deg);
+  
   
 }
 
