@@ -567,6 +567,7 @@ body.ticketPage {
 .li-avaliable{
   box-sizing: border-box;
   background-color: #474747;
+  box-shadow: 0px 0px 35px 0px #000000;
   border: 1px solid rgb(147, 147, 147);
   width: 30%;
   border-radius: 10px;
@@ -574,7 +575,7 @@ body.ticketPage {
 
 .li-selected{
   box-sizing: border-box;
-  
+  box-shadow: 0px 0px 35px 0px #000000;
   width: 30%;
   border-radius: 10px;
   word-break: keep-all;
@@ -582,6 +583,7 @@ body.ticketPage {
 
 .li-sold{
   box-sizing: border-box;
+  box-shadow: 0px 0px 35px 0px #000000;
   border-radius: 10px;
   width: 30%;
 }
@@ -613,6 +615,7 @@ body.ticketPage {
   background-color: rgba(255, 255, 255, 0.891);
   transform: rotate3d(394,92,25,35deg);
   position: absolute;
+  box-shadow: 0px 10px 85px 20px #000000;
 }
 
 .seat-selector-container{
