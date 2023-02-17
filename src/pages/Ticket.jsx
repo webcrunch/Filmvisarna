@@ -237,13 +237,15 @@ export default function TicketPage() {
       </div>
 
       <div className="tv-section">
-           <div className="tv-outer-red">
-                <div className="tv-inner-red">
-                    <div className="tv-screen-container">
-                        <div className="tv-screen"></div>
-                     </div>
+            <div className="tv-outer-red">
+                <div className="tv-middle-red">
+                      <div className="tv-inner-red">
+                          <div className="tv-screen-container">
+                               <div className="tv-screen"></div>
+                          </div>
+                      </div>
                 </div>
-           </div>
+            </div>
       </div>
 
 

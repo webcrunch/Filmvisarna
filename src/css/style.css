@@ -587,7 +587,6 @@ body.ticketPage {
   align-items: center; 
   justify-content: center;
   box-sizing: border-box;
-  background-color: white;
   display: flex;
   justify-content: space-around;
   position: relative;
@@ -598,12 +597,26 @@ body.ticketPage {
   align-items: center;
   justify-content: center;
   width: 420px;
-  height: 200px;
-  background-color: rgb(55, 0, 0);
+  height: 208px;
+  background-color: rgb(115, 0, 0);
+  border-top-right-radius: 40px;
+  border-top-left-radius: 40px;
 }
+
+.tv-middle-red{
+  border-top-right-radius: 1px;
+  border-top-left-radius: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 410px;
+  height: 204px;
+  background-color: rgb(146, 2, 2);
+}
+
 .tv-inner-red{
-  width: 340px;
-  height: 200px;
+  width: 388px;
+  height: 208px;
   background-color: rgb(180, 0, 0);
   display: flex;
   align-items: center;
@@ -625,7 +638,7 @@ body.ticketPage {
 }
 .tv-screen{
   width: 370px;
-  height: 210px;
+  height: 208px;
   background-color: rgb(255, 255, 255);
   position: absolute;
   box-shadow: 0px 10px 85px 20px #953333;
