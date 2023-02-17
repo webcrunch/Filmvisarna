@@ -587,15 +587,19 @@ body.ticketPage {
   display: flex;
   justify-content: space-around;
   position: relative;
-  transform: rotate3d(394,1,6,35deg);
+  
 }
 .tv-screen{
   width: 370px;
   height: 210px;
-  background-color: rgba(255, 255, 255, 0.891);
-  transform: rotate3d(394,92,25,35deg);
+  background-color: rgb(0, 0, 0);
+  
   position: absolute;
-  box-shadow: 0px 10px 85px 20px #000000;
+  box-shadow: 0px 10px 85px 20px #953333;
+  border-top: solid rgb(137, 12, 12) 5px;
+  border-left: solid  rgba(137, 12, 12, 0.39) 25px;
+  border-right: solid  rgb(137, 12, 12) 25px;
+  border-width: 10px, 10px, 10px, 10px;
 }
 
 .seat-selector-container{
@@ -604,7 +608,8 @@ body.ticketPage {
   display: -moz-inline-grid;
   display: -ms-inline-grid;
   height: 400px;
-  transform: rotate3d(394,1,40,35deg);
+  margin-right: 20px;
+  
 }
 
 .row1{
@@ -699,12 +704,13 @@ body.ticketPage {
   position:relative;
   display: inline-block;
   background-color: #ffffff;
+  box-shadow: rgb(0, 0, 0) 100px,100px,900px,90px;
   width: 30px;
   height: 27px;
   margin: auto;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
-  transform: rotate3d(184,102,1,45deg);
+  margin: 5px;
   align-items: center;
   align-content: center;
   align-self: center;
@@ -714,12 +720,12 @@ body.ticketPage {
   position: relative;
   display: inline-block;
 background-color: #afafaf; 
+margin: 5px;
 width: 30px;
 height: 27px;
-margin: auto;
+box-shadow: rgb(0, 0, 0) 100px,100px,900px,90px;
 border-top-left-radius: 10px;
 border-top-right-radius: 10px;
-transform: rotate3d(184,102,1,45deg);
 align-items: center;
 align-content: center;
 align-self: center;
