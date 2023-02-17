@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Arima:wght@400;700&display=swap");
 @import "normalize.css";
 @import url("star.css");
+@import url("navbar.css");
 
 * {
   box-sizing: border-box;
@@ -49,116 +50,6 @@ footer {
 .crfooter {
   margin-left: 4%;
 }
-
-/* Navbar page start */
-
-nav {
-  background-color: #1a1a1a;
-  text-decoration: none;
-  width: 100%;
-  /* padding: 0 200px; */
-  display: flex;
-  justify-content: center;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  position: relative;
-}
-
-.navlinks {
-  color: white;
-  /* margin: auto; */
-  /* padding: -2px; */
-  /* text-align: center; */
-  font-size: 1.2em;
-  font-weight: bold;
-  padding: 30px;
-  text-decoration: none;
-  opacity: 0.7;
-}
-
-.navlinks.active {
-  opacity: 1;
-  text-decoration: underline;
-}
-
-.navlinks:hover {
-  background-color: #333333;
-  color: #f5f5f5;
-  opacity: 0.9;
-  border-radius: 10px;
-}
-
-ul {
-  list-style-type: none;
-}
-
-nav ul {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-}
-
-nav .img {
-  filter: invert(100%);
-  display: block;
-  position: absolute;
-  top: 28px;
-  right: 30px;
-}
-
-nav img:hover {
-  cursor: pointer;
-}
-
-.boxContent {
-  background-color: #575757;
-  border: #525252 solid;
-  width: 20%;
-  position: absolute;
-  right: 33px;
-  top: 60px;
-  /* border-radius: 10%; */
-  text-decoration: none;
-  /* padding-left: 20px;
-  padding-top: 5px;
-  padding-bottom: 5px; */
-  /* padding: 10px 15px 5px 10px; */
-  /* margin-top: 5px; */
-  margin-bottom: 5px;
-  margin-left: 5px;
-  /* margin: 10px; */
-}
-
-.boxContent.shown {
-  opacity: 1;
-  transition: opacity 2s;
-}
-
-.boxContent.hidden {
-  opacity: 0;
-  transition: opacity 2s;
-}
-
-.boxContent a {
-  color: black;
-  padding-left: 10px;
-  text-decoration: none;
-}
-
-.boxContent img {
-  filter: invert(100%);
-}
-
-@media screen and (max-width: 767px) {
-  .navlinks {
-    display: none;
-  }
-  nav img {
-    display: none;
-  }
-}
-
-/* __________________________ */
 
 body {
   margin: 0;
@@ -264,7 +155,6 @@ body.ticketPage {
 .topcontainerimagedivv {
   height: 100%;
   width: 100%;
-
 }
 
 .flex-container>div:hover {
@@ -290,8 +180,6 @@ body.ticketPage {
     margin-bottom: 10px;
     font-size: 20px;
     margin-left: 4%;
-
-
   }
 }
 
@@ -308,7 +196,6 @@ body.ticketPage {
 
 @media screen and (max-width: 767px) {
   .flex-container>div img {
-
     margin-left: 0;
     margin-right: 0;
     height: 200px;
@@ -429,14 +316,9 @@ body.ticketPage {
 
 /*------                FILTER homepage                ----------- */
 
-
-
-
 /*---------------------HOMEPAGE ENDS HERE---------------------------------------------------- */
 
 /*-----------------TICKET PAGE STARTS HERE----------------------------------------------------*/
-
-
 
 #ticket-pricing {
   display: flex;
@@ -474,7 +356,6 @@ body.ticketPage {
   width: 30%;
   padding: 20px;
   border-right: 1px solid rgb(38, 38, 38);
-  
 }
 
 .quantity {
