@@ -941,6 +941,28 @@ body.ticketPage {
 
 .doneA {
   color: white;
+  font-size: 20px;
+  padding-left: 20px;
+}
+
+.doneA img,
+.doneA .information {
+  float: left;
+}
+
+.doneA .information {
+  width: 30%;
+}
+
+.doneA img {
+  display: block;
+  width: 70%;
+  padding: 5px;
+}
+
+/* Booking confirmed page end */
+.doneA {
+  color: white;
   padding: 20px;
   position: relative;
   padding-top: 0;
