@@ -1,6 +1,7 @@
 import { useStates } from './utilities/states.js';
 import { useEffect } from 'react';
 import { kebabify } from './utilities/kebabify';
+
 import {
   BrowserRouter,
   Routes,
@@ -17,6 +18,7 @@ import Movies from './pages/movies.jsx';
 import Booked from './pages/booking-confirmatin.jsx';
 import DetailedInfo from './pages/DetailedInfo.jsx';
 import TicketPage from './pages/Ticket.jsx';
+import RegisterPage from './pages/register.jsx';
 // A React component is a function
 // it will run every time a state variable changes
 // thus rerendering the content you see in your Browser
@@ -47,7 +49,7 @@ export default function App() {
       { label: 'OM OSS ', path: '/about', Component: About }, //, Component:
       { label: 'KONTAKT', path: '/contact', Component: Contact },
       { path: '/movie/:moviePath', Component: DetailedInfo },
-      // { path: '/authentication/, Component: DetailedInfo },
+      { path: '/auth', Component: RegisterPage},
       { path: '/ticket/:moviePath', Component: TicketPage },
       { path: '/done/:bookingId', Component: Booked }
     ],
