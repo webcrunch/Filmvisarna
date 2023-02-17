@@ -57,6 +57,7 @@ nav {
   background-color: #1a1a1a;
   text-decoration: none;
   width: 100%;
+  height:70px;
   /* padding: 0 200px; */
   display: flex;
   justify-content: center;
@@ -438,6 +439,7 @@ body.ticketPage {
 }
 
 .full-ticket-page {
+  margin-top: 15px;
   height: 100%;
   width: auto;
   aspect-ratio: 11/16;
@@ -607,6 +609,15 @@ body.ticketPage {
   transform: rotate3d(394,1,40,35deg);
 }
 
+.row{
+  align-items: center;
+  align-content: center;
+  align-self: center;
+  text-align: center;
+  width: 100%;
+  position: relative;
+}
+
 .row1{
   align-items: center;
   align-content: center;
@@ -708,6 +719,22 @@ body.ticketPage {
   align-items: center;
   align-content: center;
   align-self: center;
+}
+
+.seat-disapeared{
+  position: relative;
+  display: inline-block;
+background-color: #ff0000; 
+width: 30px;
+height: 27px;
+margin: auto;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+transform: rotate3d(184,102,1,45deg);
+align-items: center;
+align-content: center;
+align-self: center;
+/* visibility: hidden; */
 }
 
 .seat-sold{
