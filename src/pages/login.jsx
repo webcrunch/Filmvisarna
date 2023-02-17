@@ -1,15 +1,22 @@
-import { useState } from "react";
+import { useEffect } from "react";
 import { useStates } from '../utilities/states';
 export default LoginPage;
 
 function LoginPage() {
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
     const form = useStates({
         email: '',
         password: ''
     })
-    // send email and password to server for authentication 
+    // send email and password to server for authentication
+
+    useEffect(() => {
+    // add the class ticketPage to the body element
+    // when the page shows / the component mounts
+    document.body.classList.add("ticketPage");
+    // remove the class ticketPage when the page
+    // unmounts..
+    return () => document.body.classList.remove("ticketPage");
+  }, []);
 
     function handleSubmit(e) {
         e.preventDefault();

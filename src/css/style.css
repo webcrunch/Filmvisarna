@@ -2,7 +2,6 @@
 @import "normalize.css";
 @import url("star.css");
 @import url("movie-list.css");
-@import url("movie-list.css");
 
 * {
   box-sizing: border-box;
@@ -136,24 +135,9 @@ nav img:hover {
   transition: opacity 2s;
 }
 
-@keyframes showme {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes hideMe {
-  0% {
-    opacity: 1;
-  }
-
-  100% {
-    opacity: 0;
-  }
+.boxContent.hidden {
+  opacity: 0;
+  transition: opacity 2s;
 }
 
 .boxContent a {
@@ -170,7 +154,6 @@ nav img:hover {
   .navlinks {
     display: none;
   }
-
   nav img {
     display: none;
   }
@@ -407,7 +390,6 @@ body.ticketPage {
   margin-left: 20%;
 }
 
-
 .undertext {
   color: white;
   font-weight: normal;
@@ -439,6 +421,10 @@ body.ticketPage {
 
 /*-----------------TICKET PAGE STARTS HERE----------------------------------------------------*/
 
+body.ticketPage {
+  background-color: rgb(23, 23, 23);
+}
+
 #ticket-pricing {
   display: flex;
   flex-direction: row;
@@ -446,6 +432,19 @@ body.ticketPage {
   align-items: center;
   width: 50%;
   margin: 0 auto;
+}
+
+.ticket-container {
+  justify-content: center;
+  box-shadow: 0px 0px 35px 0px #000000;
+  border-radius: 20px;
+  border-bottom: 1px solid rgb(38, 38, 38);
+}
+
+.full-ticket-page {
+  height: 100%;
+  width: auto;
+  aspect-ratio: 11/16;
 }
 
 .ticket-option1 {
@@ -549,6 +548,216 @@ body.ticketPage {
   aspect-ratio: 11/16;
 }
 
+.ul-seat{
+  box-sizing: border-box;
+  color: white;
+  justify-content: center;
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  padding-left: 33.3333%;
+  padding-right: 33.3333%;
+  
+
+}
+
+.li-avaliable{
+  box-sizing: border-box;
+  background-color: #474747;
+  box-shadow: 0px 0px 35px 0px #000000;
+  border: 1px solid rgb(147, 147, 147);
+  width: 30%;
+  border-radius: 10px;
+}
+
+.li-selected{
+  box-sizing: border-box;
+  box-shadow: 0px 0px 35px 0px #000000;
+  width: 30%;
+  border-radius: 10px;
+  word-break: keep-all;
+}
+
+.li-sold{
+  box-sizing: border-box;
+  box-shadow: 0px 0px 35px 0px #000000;
+  border-radius: 10px;
+  width: 30%;
+}
+
+.seat-option-container{
+  border-style: none;
+  justify-content: center;
+  align-items: center;
+ /*  perspective: 500px;
+  margin-bottom:30px; */
+}
+
+.tv-screen-container{
+  width: 100%;
+  height: 250px;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+  transform: rotate3d(394,1,6,35deg);
+}
+.tv-screen{
+  width: 370px;
+  height: 210px;
+  background-color: rgba(255, 255, 255, 0.891);
+  transform: rotate3d(394,92,25,35deg);
+  position: absolute;
+  box-shadow: 0px 10px 85px 20px #000000;
+}
+
+.seat-selector-container{
+  align-items: center;
+  justify-content: center;
+  display: -moz-inline-grid;
+  display: -ms-inline-grid;
+  height: 400px;
+  transform: rotate3d(394,1,40,35deg);
+}
+
+.row1{
+  align-items: center;
+  align-content: center;
+  align-self: center;
+  width: 100%;
+  position: relative;
+  left: 41%;
+}
+.row2{
+  align-items: center;
+  align-content: center;
+  align-self: center;
+  margin-bottom: 10px;
+  width: 100%;
+  position: relative;
+  left: 41%;
+}
+.row3{
+  align-items: center;
+  align-content: center;
+  align-self: center;
+  width: 100%;
+  position: relative;
+  left: 41%;
+}
+.row4{
+  align-items: center;
+  align-content: center;
+  align-self: center;
+  width: 100%;
+  position: relative;
+  left: 41%;
+}
+.row5{
+  align-items: center;
+  align-content: center;
+  align-self: center;
+  margin-bottom: 10px;
+  width: 100%;
+  position: relative;
+  left: 41%;
+}
+
+.row6{
+  align-items: center;
+  align-content: center;
+  align-self: center;
+  width: 100%;
+  position: relative;
+  left: 41%;
+}
+
+.row7{
+  align-items: center;
+  align-content: center;
+  align-self: center;
+  width: 100%;
+  position: relative;
+  left: 41%;
+}
+
+.row8{
+  align-items: center;
+  align-content: center;
+  align-self: center;
+  width: 100%;
+  left: 41%;
+  position: relative;
+}
+
+.row9{
+  align-items: center;
+  align-content: center;
+  align-self: center;
+  width: 100%;
+  position: relative;
+  left: 41%;
+}
+
+.row10{
+  align-items: center;
+  align-content: center;
+  align-self: center;
+  width: 100%;
+  position: relative;
+  left: 41%;
+}
+
+.seat{
+  position:relative;
+  display: inline-block;
+  background-color: #ffffff;
+  width: 30px;
+  height: 27px;
+  margin: auto;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  transform: rotate3d(184,102,1,45deg);
+  align-items: center;
+  align-content: center;
+  align-self: center;
+}
+
+.seat-sold{
+  position: relative;
+  display: inline-block;
+background-color: #afafaf; 
+width: 30px;
+height: 27px;
+margin: auto;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+transform: rotate3d(184,102,1,45deg);
+align-items: center;
+align-content: center;
+align-self: center;
+}
+
+.total-seats{
+  text-align: center;
+  color: white;
+}
+
+
+.li-selected{
+  background-color: rgb(2, 159, 2);
+}
+
+.li-sold{
+  background-color:white;
+  color: black;
+}
+
+
 /*---------------------TICKET PAGE ENDS HERE---------------------------------------------------- */
 
 .contact {
@@ -597,9 +806,9 @@ body.ticketPage {
 }
 
 .varumarkeslofte {
-  -------text-align: center;
+  text-align: center;
   justify-content: space-between;
-  font-family: "Segoe starts here UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: white;
   padding: 20px;
   position: relative;
@@ -638,51 +847,131 @@ body.ticketPage {
   word-wrap: break-word;
 }
 
-/*.poster {
-  /*margin: 0 auto;
-  padding: 10px 2px;
-  /*background-image: url(/images/bookingpage.jpg);
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  max-width: 100%;
-  font-size: 20px;
-  padding-left: 20px;
-  flex-basis: 70%;
-  order: 2;*/
-
-/* Booking done page start */
-/*
-.container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.information {
-  color: rgb(224, 216, 222);
-  padding: 20px 20px;
-  margin-right: 40px;
-}
-
-.img {
-  max-width: 80%;
-  position: left;
+.karriarmojligheter {
+  text-align: center;
+  justify-content: space-between;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+  padding: 20px;
+  position: relative;
+  padding-top: 0;
+  padding-bottom: 0;
   padding-right: 20px;
   padding-left: 20px;
 }
 
-.image {
-  flex-basis: 70%;
-  order: 2;
-}*/
+.karriarmojligheter p {
+  margin: 0 auto;
+  padding: 10px 2px;
+  width: 50%;
+  text-align: start;
+  word-wrap: break-word;
+}
 
-/* .doneA {
+.telefon {
+  text-align: center;
+  justify-content: space-between;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: white;
-  font-size: 20px;
+  padding: 20px;
+  position: relative;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-right: 20px;
   padding-left: 20px;
-  position: left;
-} */
+}
+
+.telefon p {
+  margin: 0 auto;
+  padding: 10px 2px;
+  width: 50%;
+  text-align: start;
+  word-wrap: break-word;
+}
+
+.midsommar {
+  text-align: center;
+  justify-content: space-between;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+  padding: 20px;
+  position: relative;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.midsommar p {
+  margin: 0 auto;
+  padding: 10px 2px;
+  width: 50%;
+  text-align: start;
+  word-wrap: break-word;
+}
+
+.regler {
+  text-align: center;
+  justify-content: space-between;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+  padding: 20px;
+  position: relative;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.regler p {
+  margin: 0 auto;
+  padding: 10px 2px;
+  width: 50%;
+  text-align: start;
+  word-wrap: break-word;
+}
+
+/* Booking confirmed page */
+
+.doneA {
+  color: white;
+  padding: 20px;
+  position: relative;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.varumarkeslofte p {
+  margin: 0 auto;
+  padding: 10px 2px;
+  width: 50%;
+  text-align: start;
+  word-wrap: break-word;
+}
+
+.bioInfo {
+  text-align: center;
+  justify-content: space-between;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+  padding: 20px;
+  position: relative;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.bioInfo p {
+  margin: 0 auto;
+  padding: 10px 2px;
+  width: 50%;
+  text-align: start;
+  word-wrap: break-word;
+}
+
 /* ?? __________________________________ ?? */
 
 /* Detail page css start */
@@ -749,7 +1038,6 @@ body.ticketPage {
   margin: 10px 0;
   bottom: 10px;
 }
-
 /*
 @media (prefers-color-scheme: dark) {
   .favicon-smiley {
@@ -872,7 +1160,7 @@ Detail page css end here
 
 }
 
-.login_form {
+.login .login_form {
   display: flex;
   margin: auto;
   background-color: rgb(122, 119, 226);
@@ -897,8 +1185,8 @@ Detail page css end here
 
 
 
-label,
-input {
+.login label,
+.login input {
   display: block;
   margin-bottom: 2px;
   font-weight: bold;
@@ -906,30 +1194,30 @@ input {
 
 }
 
-label {
-  margin-bottom: 20px;
+.login label {
+  margin-bottom: 5px;
   margin-top: 20px;
 }
 
-input {
+.login input {
   width: 50%;
 }
 
-input[type="email"] {
+.login input[type="email"] {
   width: 30%;
   text-align: center;
   display: inline-block;
   margin-top: 40px;
 }
 
-input[type="password"] {
+.login input[type="password"] {
   width: 50%;
   text-align: center;
   display: inline-block;
 
 }
 
-button {
+.login button {
   width: 100%;
   height: 30px;
   display: block;
