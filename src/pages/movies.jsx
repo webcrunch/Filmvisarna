@@ -212,8 +212,15 @@ export default function Movies() {
                   </h4>
                 </div>
                 <Link
-                  to={"/ticket/" + display.film}
-                  state={{ from: "occupation" }}
+                  to={"/ticket/" + getMovies(display.film, "path")}
+                  state={{
+                    from: [
+                      display.auditorium,
+                      display.film,
+                      display.date,
+                      display.time,
+                    ],
+                  }}
                 >
                   <button className="moviebtnsitplatser">
                     Välj sittplatser
@@ -246,7 +253,14 @@ export default function Movies() {
                   </h4>
                   <Link
                     to={"/ticket/" + getMovies(display.film, "path")}
-                    state={{ from: "occupation" }}
+                    state={{
+                      from: [
+                        display.auditorium,
+                        display.film,
+                        display.date,
+                        display.time,
+                      ],
+                    }}
                   >
                     <button className="moviebtnsitplatser_small tidochsalongtitle">
                       Välj sittplatser
