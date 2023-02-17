@@ -10,7 +10,6 @@ export default function TicketPage() {
   let largest = 0;
   const s = useStates('main');
   const saloonData = s.saloons.find(saloon => saloon.name == location.state.from[0]);
-  saloonData.seatsPerRow.forEach(e => e > largest ? largest = e : null);
 
   const clickerss = useStates({
     numberofChildren: 0,
@@ -23,7 +22,7 @@ export default function TicketPage() {
   });
 
   useEffect(() => {
-    console.log(location);
+    console.log(s.saloons);
     // add the class ticketPage to the body element
     // when the page shows / the component mounts
     document.body.classList.add("ticketPage");
@@ -40,11 +39,16 @@ export default function TicketPage() {
 
       }  
       else {
-      list.push(<div className="seat-sold"></div>)  
+      list.push(<div key={i} onClick={()=> something(i)} className="seat-sold"></div>)  
       }
     }
     return  list;
   }
+
+  function something(i) {
+    alert(i);
+  }
+
   // updatePrice(){
   //   let childrenPrice = numberOfChildren * priceChildren;
   //   let adultPrice = number
