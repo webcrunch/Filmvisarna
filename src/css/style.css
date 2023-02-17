@@ -154,6 +154,7 @@ nav img:hover {
   .navlinks {
     display: none;
   }
+
   nav img {
     display: none;
   }
@@ -548,7 +549,7 @@ body.ticketPage {
   aspect-ratio: 11/16;
 }
 
-.ul-seat{
+.ul-seat {
   box-sizing: border-box;
   color: white;
   justify-content: center;
@@ -557,11 +558,11 @@ body.ticketPage {
   justify-content: space-around;
   padding-left: 33.3333%;
   padding-right: 33.3333%;
-  
+
 
 }
 
-.li-avaliable{
+.li-avaliable {
   box-sizing: border-box;
   background-color: #474747;
   box-shadow: 0px 0px 35px 0px #000000;
@@ -570,7 +571,7 @@ body.ticketPage {
   border-radius: 10px;
 }
 
-.li-selected{
+.li-selected {
   box-sizing: border-box;
   box-shadow: 0px 0px 35px 0px #000000;
   width: 30%;
@@ -578,22 +579,22 @@ body.ticketPage {
   word-break: keep-all;
 }
 
-.li-sold{
+.li-sold {
   box-sizing: border-box;
   box-shadow: 0px 0px 35px 0px #000000;
   border-radius: 10px;
   width: 30%;
 }
 
-.seat-option-container{
+.seat-option-container {
   border-style: none;
   justify-content: center;
   align-items: center;
- /*  perspective: 500px;
+  /*  perspective: 500px;
   margin-bottom:30px; */
 }
 
-.tv-screen-container{
+.tv-screen-container {
   width: 100%;
   height: 250px;
   align-content: center;
@@ -604,27 +605,28 @@ body.ticketPage {
   display: flex;
   justify-content: space-around;
   position: relative;
-  transform: rotate3d(394,1,6,35deg);
+  transform: rotate3d(394, 1, 6, 35deg);
 }
-.tv-screen{
+
+.tv-screen {
   width: 370px;
   height: 210px;
   background-color: rgba(255, 255, 255, 0.891);
-  transform: rotate3d(394,92,25,35deg);
+  transform: rotate3d(394, 92, 25, 35deg);
   position: absolute;
   box-shadow: 0px 10px 85px 20px #000000;
 }
 
-.seat-selector-container{
+.seat-selector-container {
   align-items: center;
   justify-content: center;
   display: -moz-inline-grid;
   display: -ms-inline-grid;
   height: 400px;
-  transform: rotate3d(394,1,40,35deg);
+  transform: rotate3d(394, 1, 40, 35deg);
 }
 
-.row1{
+.row1 {
   align-items: center;
   align-content: center;
   align-self: center;
@@ -632,32 +634,8 @@ body.ticketPage {
   position: relative;
   left: 41%;
 }
-.row2{
-  align-items: center;
-  align-content: center;
-  align-self: center;
-  margin-bottom: 10px;
-  width: 100%;
-  position: relative;
-  left: 41%;
-}
-.row3{
-  align-items: center;
-  align-content: center;
-  align-self: center;
-  width: 100%;
-  position: relative;
-  left: 41%;
-}
-.row4{
-  align-items: center;
-  align-content: center;
-  align-self: center;
-  width: 100%;
-  position: relative;
-  left: 41%;
-}
-.row5{
+
+.row2 {
   align-items: center;
   align-content: center;
   align-self: center;
@@ -667,7 +645,7 @@ body.ticketPage {
   left: 41%;
 }
 
-.row6{
+.row3 {
   align-items: center;
   align-content: center;
   align-self: center;
@@ -676,7 +654,7 @@ body.ticketPage {
   left: 41%;
 }
 
-.row7{
+.row4 {
   align-items: center;
   align-content: center;
   align-self: center;
@@ -685,25 +663,17 @@ body.ticketPage {
   left: 41%;
 }
 
-.row8{
+.row5 {
   align-items: center;
   align-content: center;
   align-self: center;
-  width: 100%;
-  left: 41%;
-  position: relative;
-}
-
-.row9{
-  align-items: center;
-  align-content: center;
-  align-self: center;
+  margin-bottom: 10px;
   width: 100%;
   position: relative;
   left: 41%;
 }
 
-.row10{
+.row6 {
   align-items: center;
   align-content: center;
   align-self: center;
@@ -712,8 +682,44 @@ body.ticketPage {
   left: 41%;
 }
 
-.seat{
-  position:relative;
+.row7 {
+  align-items: center;
+  align-content: center;
+  align-self: center;
+  width: 100%;
+  position: relative;
+  left: 41%;
+}
+
+.row8 {
+  align-items: center;
+  align-content: center;
+  align-self: center;
+  width: 100%;
+  left: 41%;
+  position: relative;
+}
+
+.row9 {
+  align-items: center;
+  align-content: center;
+  align-self: center;
+  width: 100%;
+  position: relative;
+  left: 41%;
+}
+
+.row10 {
+  align-items: center;
+  align-content: center;
+  align-self: center;
+  width: 100%;
+  position: relative;
+  left: 41%;
+}
+
+.seat {
+  position: relative;
   display: inline-block;
   background-color: #ffffff;
   width: 30px;
@@ -721,39 +727,39 @@ body.ticketPage {
   margin: auto;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
-  transform: rotate3d(184,102,1,45deg);
+  transform: rotate3d(184, 102, 1, 45deg);
   align-items: center;
   align-content: center;
   align-self: center;
 }
 
-.seat-sold{
+.seat-sold {
   position: relative;
   display: inline-block;
-background-color: #afafaf; 
-width: 30px;
-height: 27px;
-margin: auto;
-border-top-left-radius: 10px;
-border-top-right-radius: 10px;
-transform: rotate3d(184,102,1,45deg);
-align-items: center;
-align-content: center;
-align-self: center;
+  background-color: #afafaf;
+  width: 30px;
+  height: 27px;
+  margin: auto;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  transform: rotate3d(184, 102, 1, 45deg);
+  align-items: center;
+  align-content: center;
+  align-self: center;
 }
 
-.total-seats{
+.total-seats {
   text-align: center;
   color: white;
 }
 
 
-.li-selected{
+.li-selected {
   background-color: rgb(2, 159, 2);
 }
 
-.li-sold{
-  background-color:white;
+.li-sold {
+  background-color: white;
   color: black;
 }
 
@@ -1038,6 +1044,7 @@ align-self: center;
   margin: 10px 0;
   bottom: 10px;
 }
+
 /*
 @media (prefers-color-scheme: dark) {
   .favicon-smiley {
