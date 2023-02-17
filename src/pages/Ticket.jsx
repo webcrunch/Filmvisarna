@@ -5,9 +5,12 @@ import { calculatingTime } from "../utilities/length-calculating";
 import { useEffect } from "react";
 
 export default function TicketPage() {
-  const { moviePath } = useParams();
+  const { moviePath,id } = useParams();
   const location = useLocation();
-  console.log(location);
+  let largest = 0;
+  const s = useStates('main');
+  const saloonData = s.saloons.find(saloon => saloon.name == location.state.from[0]);
+  saloonData.seatsPerRow.forEach(e => e > largest ? largest = e : null);
 
   const clickerss = useStates({
     numberofChildren: 0,
@@ -20,6 +23,7 @@ export default function TicketPage() {
   });
 
   useEffect(() => {
+    console.log(location);
     // add the class ticketPage to the body element
     // when the page shows / the component mounts
     document.body.classList.add("ticketPage");
@@ -28,6 +32,19 @@ export default function TicketPage() {
     return () => document.body.classList.remove("ticketPage");
   }, []);
 
+
+  const getSeats = numberOfSeats => {
+    const list = [];
+    for (let i = 0; i < numberOfSeats; i++){
+      if (numberOfSeats < i) {
+
+      }  
+      else {
+      list.push(<div className="seat-sold"></div>)  
+      }
+    }
+    return  list;
+  }
   // updatePrice(){
   //   let childrenPrice = numberOfChildren * priceChildren;
   //   let adultPrice = number
@@ -217,7 +234,12 @@ export default function TicketPage() {
       <div className="tv-screen-container">
         <div className="tv-screen"></div>
       </div>
-
+      <div className="seat-selector-container">
+      {!saloonData ? null : saloonData.seatsPerRow.map(s => 
+        <div className="row">
+            {getSeats(s)}
+        </div>)}
+               </div>
       <div className="seat-selector-container">
         <div className="row1">
           <div className="seat"></div>
