@@ -15,10 +15,11 @@ import Home from './pages/home.jsx';
 import Contact from './pages/contact.jsx';
 import About from './pages/about.jsx';
 import Movies from './pages/movies.jsx';
-import Booked from './pages/booking-confirmatin.jsx';
+import Booked from './pages/booking-confirmation.jsx';
 import DetailedInfo from './detailedInfo.jsx';
 import TicketPage from './pages/Ticket.jsx';
 import RegisterPage from './pages/register.jsx';
+import LoginPage from './pages/login.jsx';
 // A React component is a function
 // it will run every time a state variable changes
 // thus rerendering the content you see in your Browser
@@ -49,7 +50,8 @@ export default function App() {
       { label: 'OM OSS ', path: '/about', Component: About }, //, Component:
       { label: 'KONTAKT', path: '/contact', Component: Contact },
       { path: '/movie/:moviePath', Component: DetailedInfo },
-      { path: '/auth', Component: RegisterPage},
+      { path: '/auth', Component: RegisterPage },
+      { path: '/authentication', Component: LoginPage },
       { path: '/ticket/:moviePath', Component: TicketPage },
       { path: '/done/:bookingId', Component: Booked }
     ],
