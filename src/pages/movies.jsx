@@ -219,6 +219,7 @@ export default function Movies() {
                       display.film,
                       display.date,
                       display.time,
+                      display.occupiedSeats
                     ],
                   }}
                 >

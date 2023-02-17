@@ -48,8 +48,9 @@ export default function App() {
       { label: 'FILMER', path: '/movies', Component: Movies },
       { label: 'OM OSS ', path: '/about', Component: About }, //, Component:
       { label: 'KONTAKT', path: '/contact', Component: Contact },
-      { path: '/movie/:moviePath', Component: DetailedInfo },
-      { path: '/auth', Component: RegisterPage},
+      { path: '/movie/:moviePath/:id', Component: DetailedInfo },
+      { path: '/auth', Component: RegisterPage },
+      // { path: '/authentication/, Component: DetailedInfo },
       { path: '/ticket/:moviePath', Component: TicketPage },
       { path: '/done/:bookingId', Component: Booked }
     ],
