@@ -1110,119 +1110,6 @@ h1 {
 
 Detail page css end here
 */
-/* login css starts here 
-
-.login{
-  background-color: rgb(37,37,37);
-  width:450px;
-  height:400px;
-  position:relative;
-  border-radius:7%;
-  margin:auto;
-  border-top-left-radius: 0%;
-}
-
-.login_form{
-  display: flex;
-  margin: auto;
-  background-color:rgb(0,171,190);
-  justify-content: center;
-  width: 400px;
-  height: 350px;
-  align-items:center;
-  padding:20px;
-  border-radius:7%;
-  position:absolute;
-  
-  top: 15px;
-  right: 14px;
-  border-top-left-radius:0%;
-  background:linear-gradient(to bottom, #00ABBE,#2057A9,#0A2E52,rgb(60,59,74));
-  box-shadow:0px 60px 300px 35px #000000;
-}
-
-.label{
-  display: block;
-  margin-bottom:2px;
-
-  font-family: sans-serif;
-  font-size: auto ;
-  font-weight:bold;
-  color:rgb(91,91,91);
-  text-transform:uppercase;
-}
-
-.label.label::after{
-  content:"";
-  color:red;
-}
-
-.username{
-  display:block;
-  font-family:sans-serif;
-  font-size:16px;
-  color:rgba(251,251,251,0.82);
-  border-radius:3px;
-  border-style:none;
-  background-color:rgb(41,41,41);
-}
-
-.password{
-  display:block;
-
-  font-family: sans-serif;
-  font-size:16px;
-  color:rgba(251,251,251,0.82);
-  font-style:bold;
-  border-radius:3px;
-  border-style:none;
-  background-color:rgb(41,41,41);
-
-}
-
-.remember{
-  padding:1px;
-  font-size:13px;
-  background-color:lightgray;
-  border-radius:5px;
-  box-shadow:2px 2px 2px rgba(0,0,0,0.1);
-}
-
-.remember:hover,
-.remember:active{
-  background-color: rgb(129,255,205);
-}
-
-.button{
-  width:70px;
-  height:25px;
-  position:relative;
-  display:block;
-  margin-top:24%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom:60%;
-  padding:auto;
-  color:white;
-  background-color:#0A2E52;
-  border-radius:10px;
-  border-style:none;
-  box-sizing: content-box;
-  background: linear-gradient(to right, rgb(0,145,255), rgb(26,0,156));
-}
-
-.button:hover,
-.button:active{
-  background: linear-gradient(to left,rgb(255,255,255),rgb(218,218,218),rgb(197,197,197),rgb(146,146,146));
-  box-shadow:0px 5px 100px 10px #ffffff;
-}
-
-.registerlink{
-  position:absolute;
-  margin-top:20px;
-  color:blue;
-}
-
 /* css register starts */
 
 .register{
@@ -1318,8 +1205,8 @@ Detail page css end here
 
 .loginlink{
   position:absolute;
-  margin-top: 20px;
-  color:blue;
+  margin-top: 35px;
+  color:rgb(22, 137, 101);
   float:left;
 }
 
