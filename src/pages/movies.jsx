@@ -216,10 +216,10 @@ export default function Movies() {
                   state={{
                     from: [
                       display.auditorium,
-                      display.film,
-                      display.date,
-                      display.time,
-                      display.occupiedSeats
+                        display.film,
+                        display.date,
+                        display.time,
+                      display.id
                     ],
                   }}
                 >
@@ -240,7 +240,7 @@ export default function Movies() {
                   <h2 className="movietitlefilmer">{display.film}</h2>
                   <div className="tidochsalong ">
                     <h4 className="tidochsalongtitle">
-                      Sal: {display.auditorium} <br /> Längd:{" "}
+                      Sal: {display.auditorium} <br /> Längd:
                       {calculatingTime(getMovies(display.film, "length"))}
                     </h4>
                     <h4 className="tidochsalongtitle">
@@ -253,13 +253,14 @@ export default function Movies() {
                     Genre: {getMovies(display.film, "genre")}
                   </h4>
                   <Link
-                    to={"/ticket/" + getMovies(display.film, "path")}
+                    to={"/ticket/" + getMovies(display.film, "path") }
                     state={{
                       from: [
                         display.auditorium,
                         display.film,
                         display.date,
                         display.time,
+                        display.id,
                       ],
                     }}
                   >
