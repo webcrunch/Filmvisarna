@@ -189,6 +189,11 @@ body {
 }
 
 /*---------------home page start under here------------------*/
+
+body.homePage{
+  background-color: #000000;
+}
+
 .flex-container {
   display: grid;
   grid-template-columns: auto auto auto auto;
@@ -271,6 +276,10 @@ body {
   aspect-ratio: 11/16;
 }
 
+
+/*TOP HOMEPAGE MEDIA QUERIES */
+
+
 @media screen and (max-width: 767px) {
   .flexp {
     padding: 0;
@@ -282,8 +291,6 @@ body {
     margin-left: 4%;
   }
 }
-
-/*TOP HOMEPAGE MEDIA QUERIES */
 
 @media screen and (max-width: 767px) {
   .flex-container>div {
