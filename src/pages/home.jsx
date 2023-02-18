@@ -1,8 +1,19 @@
 import { useStates } from "../utilities/states"
 import { Link } from 'react-router-dom';
+import { useEffect } from "react";
 export default function Home() {
     
   let { movies } = useStates('main');
+
+  useEffect(() => {
+
+    // add the class ticketPage to the body element
+    // when the page shows / the component mounts
+    document.body.classList.add("homePage");
+    // remove the class ticketPage when the page
+    // unmounts..
+    return () => document.body.classList.remove("homePage");
+  }, []);
 
   return <>
 
