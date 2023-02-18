@@ -287,9 +287,22 @@ body.homePage{
   width: 400px;
 }
 /*TOP HOMEPAGE MEDIA QUERIES */
+@media screen and (min-width:300px) and (max-width: 689px) {
+  .flex-container>div {
+    padding: 0;
+    padding-bottom: 0%;
+    width: 125px;
+    margin: 2px;
+    margin-bottom: 30px;
+    height: 250px;
+  }
 
+  .topcontainerimagedivv p {
+    font-size: 11px;
+  }
+}
 
-@media screen and (min-width: 0px) and (max-width: 767px) {
+@media screen and (min-width: 690px) and (max-width: 767px) {
   .flexp {
     padding: 0;
     padding-bottom: 0%;
@@ -300,6 +313,13 @@ body.homePage{
     margin-left: 4%;
   }
 
+  .full-ticket-page{
+    overflow: hidden;
+  }
+
+  .topcontainerimagedivv p {
+    font-size: 13px;
+  }
   .flex-container>div {
     padding: 0;
     padding-bottom: 0%;
@@ -316,10 +336,6 @@ body.homePage{
     align-items: center;
   }
 
-}
-
-@media screen and (max-width: 767px) {
-  
 }
 
 @media screen and (max-width: 767px) {
