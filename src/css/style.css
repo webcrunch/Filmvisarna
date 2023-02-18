@@ -1189,7 +1189,7 @@ Detail page css end here
 
 }
 
-.login .login_form {
+.login_form {
   display: flex;
   margin: auto;
   background-color: rgb(122, 119, 226);
