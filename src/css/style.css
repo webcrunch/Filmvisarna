@@ -287,7 +287,49 @@ body.homePage{
   width: 400px;
 }
 /*TOP HOMEPAGE MEDIA QUERIES */
-@media screen and (min-width:300px) and (max-width: 689px) {
+
+@media screen and (min-width:400px) and (max-width: 688){
+  
+  .flexp{
+    font-size: 8px;
+  }
+
+  .flex-container>div {
+    padding: 0;
+    padding-bottom: 0%;
+    width: 80px;
+    margin: 2px;
+    margin-bottom: 30px;
+    height: 200px;
+  }
+
+  .topcontainerimagedivv p {
+    font-size: 6px;
+  }
+}
+
+@media screen and (min-width:530px) and (max-width: 540px) {
+  .flexp{
+    font-size: 20px;
+    margin-bottom: 13px;
+    
+  }
+  
+  .flex-container>div {
+    padding: 0;
+    padding-bottom: 0%;
+    width: 105px;
+    margin: 2px;
+    margin-bottom: 30px;
+    height: 190px;
+  }
+
+  .topcontainerimagedivv p {
+    font-size: 9px;
+  }
+
+}
+@media screen and (min-width:614px) and (max-width: 689px){
   
   
   .flex-container>div {
@@ -296,15 +338,14 @@ body.homePage{
     width: 125px;
     margin: 2px;
     margin-bottom: 30px;
-    height: 250px;
+    height: 190px;
   }
 
   .topcontainerimagedivv p {
-    font-size: 11px;
+    font-size: 10px;
+    text-align: center;
   }
-
 }
-
 @media screen and (min-width: 690px) and (max-width: 767px) {
   .flexp {
     padding: 0;
@@ -326,10 +367,10 @@ body.homePage{
   .flex-container>div {
     padding: 0;
     padding-bottom: 0%;
-    width: 145px;
+    width: 150px;
     margin: 2px;
     margin-bottom: 30px;
-    height: 300px;
+    height: 270px;
   }
 
   .undertopcontainer,.undertopcontainer p{
