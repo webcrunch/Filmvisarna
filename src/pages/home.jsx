@@ -15,7 +15,7 @@ export default function Home() {
     return () => document.body.classList.remove("homePage");
   }, []);
 
-  return <>
+  return <div className="home-page-container">
 
     <h1 className='flexp'>Aktuella filmer på bio</h1>
       <div className="flex-container">
@@ -32,6 +32,7 @@ export default function Home() {
           )}
     </div>
 
+    <div className="under-home-container">   
     <div className='undertopcontainer>'>
         <p className='undertext'>
             Förutom våra vanliga filmvisningar har vi också en fullt licensierad bar och försäljningsstånd
@@ -50,9 +51,9 @@ export default function Home() {
             <img className="snackimage2" src="/images/cinemasnack2.png"></img>
        </a>
     </div>
+    </div>  
 
-
-  </>
+  </div>
   function myFunction() {
     document.getElementById("myDropdown").classList.toggle("show");
   }

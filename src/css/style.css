@@ -276,7 +276,16 @@ body.homePage{
   aspect-ratio: 11/16;
 }
 
+.under-home-container{
+  
+  margin-top: 100px;
+  width: 668px;
+  height: auto;
+}
 
+.undertext{
+  width: 400px;
+}
 /*TOP HOMEPAGE MEDIA QUERIES */
 
 
@@ -294,11 +303,19 @@ body.homePage{
   .flex-container>div {
     padding: 0;
     padding-bottom: 0%;
-    width: 175px;
-    margin: 12px;
+    width: 145px;
+    margin: 2px;
     margin-bottom: 30px;
-    height: auto;
+    height: 300px;
   }
+
+  .undertopcontainer,.undertopcontainer p{
+    display: flex;
+    margin: 400px;
+    text-align: center;
+    align-items: center;
+  }
+
 }
 
 @media screen and (max-width: 767px) {
