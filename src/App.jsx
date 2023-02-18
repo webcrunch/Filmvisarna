@@ -1,6 +1,7 @@
 import { useStates } from './utilities/states.js';
 import { useEffect } from 'react';
 import { kebabify } from './utilities/kebabify';
+
 import {
   BrowserRouter,
   Routes,
@@ -17,7 +18,9 @@ import Movies from './pages/movies.jsx';
 import Booked from './pages/booking-confirmation.jsx';
 import DetailedInfo from './detailedInfo.jsx';
 import TicketPage from './pages/Ticket.jsx';
-import LoginPage from './pages/login.jsx';
+import RegisterPage from './pages/register.jsx';
+import LoginPage from './pages/login.jsx'
+
 // A React component is a function
 // it will run every time a state variable changes
 // thus rerendering the content you see in your Browser
@@ -48,7 +51,8 @@ export default function App() {
       { label: 'OM OSS ', path: '/about', Component: About }, //, Component:
       { label: 'KONTAKT', path: '/contact', Component: Contact },
       { path: '/movie/:moviePath', Component: DetailedInfo },
-      { path: '/authentication/', Component: LoginPage },
+      { path: '/auth', Component: RegisterPage },
+      { path: '/authentication', Component: LoginPage },
       { path: '/ticket/:moviePath', Component: TicketPage },
       { path: '/done/:bookingId', Component: Booked }
     ],
@@ -61,7 +65,7 @@ export default function App() {
     // Load animal data from /json/niceAnimals.json
     (async () => {
       s.screenings = await (await fetch('/json/screening.json')).json();
-      s.sallons = await (await fetch('/json/saloons.json')).json();
+      s.saloons = await (await fetch('/json/saloons.json')).json();
       let movies = await (await fetch('/json/movies.json')).json();
       for (let movie of movies) {
         movie.path = kebabify(movie.title)

@@ -10,13 +10,13 @@ function LoginPage() {
     // send email and password to server for authentication
 
     useEffect(() => {
-    // add the class ticketPage to the body element
-    // when the page shows / the component mounts
-    document.body.classList.add("ticketPage");
-    // remove the class ticketPage when the page
-    // unmounts..
-    return () => document.body.classList.remove("ticketPage");
-  }, []);
+        // add the class ticketPage to the body element
+        // when the page shows / the component mounts
+        document.body.classList.add("ticketPage");
+        // remove the class ticketPage when the page
+        // unmounts..
+        return () => document.body.classList.remove("ticketPage");
+    }, []);
 
     function handleSubmit(e) {
         e.preventDefault();
