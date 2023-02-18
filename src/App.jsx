@@ -16,7 +16,7 @@ import Contact from './pages/contact.jsx';
 import About from './pages/about.jsx';
 import Movies from './pages/movies.jsx';
 import Booked from './pages/booking-confirmation.jsx';
-import DetailedInfo from './detailedInfo.jsx';
+import DetailedInfo from './pages/DetailedInfo.jsx';
 import TicketPage from './pages/Ticket.jsx';
 import RegisterPage from './pages/register.jsx';
 import LoginPage from './pages/login.jsx';
