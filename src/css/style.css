@@ -580,10 +580,53 @@ body.ticketPage {
   margin-bottom:30px; */
 }
 
-.tv-screen-container{
+.tv-section{
   width: 100%;
-  height: 250px;
-  align-content: center;
+  height: 260px;
+  display: flex;
+  align-items: center; 
+  justify-content: center;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+}
+
+.tv-outer-red{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 420px;
+  height: 208px;
+  background-color: rgb(115, 0, 0);
+  border-top-right-radius: 40px;
+  border-top-left-radius: 40px;
+}
+
+.tv-middle-red{
+  border-top-right-radius: 1px;
+  border-top-left-radius: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 410px;
+  height: 204px;
+  background-color: rgb(146, 2, 2);
+}
+
+.tv-inner-red{
+  width: 388px;
+  height: 208px;
+  background-color: rgb(180, 0, 0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ }
+
+.tv-screen-container{
+  width: 300px;
+  height: 200px;
+  display: flex;
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
@@ -591,15 +634,17 @@ body.ticketPage {
   display: flex;
   justify-content: space-around;
   position: relative;
-  transform: rotate3d(394,1,6,35deg);
+  
 }
 .tv-screen{
   width: 370px;
-  height: 210px;
-  background-color: rgba(255, 255, 255, 0.891);
-  transform: rotate3d(394,92,25,35deg);
+  height: 208px;
+  background-color: rgb(255, 255, 255);
   position: absolute;
-  box-shadow: 0px 10px 85px 20px #000000;
+  box-shadow: 0px 10px 85px 20px #953333;
+  border-left: solid  rgb(137, 12, 12) 15px;
+  border-right: solid  rgb(137, 12, 12) 15px;
+  border-width: 10px, 10px, 10px, 10px;
 }
 
 .seat-selector-container{
@@ -608,7 +653,8 @@ body.ticketPage {
   display: -moz-inline-grid;
   display: -ms-inline-grid;
   height: 400px;
-  transform: rotate3d(394,1,40,35deg);
+  margin-right: 20px;
+  
 }
 
 .row{
@@ -712,12 +758,13 @@ body.ticketPage {
   position:relative;
   display: inline-block;
   background-color: #ffffff;
+  box-shadow: rgb(0, 0, 0) 100px,100px,900px,90px;
   width: 30px;
   height: 27px;
   margin: auto;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
-  transform: rotate3d(184,102,1,45deg);
+  margin: 5px;
   align-items: center;
   align-content: center;
   align-self: center;
@@ -743,12 +790,12 @@ align-self: center;
   position: relative;
   display: inline-block;
 background-color: #afafaf; 
+margin: 5px;
 width: 30px;
 height: 27px;
-margin: auto;
+box-shadow: rgb(0, 0, 0) 100px,100px,900px,90px;
 border-top-left-radius: 10px;
 border-top-right-radius: 10px;
-transform: rotate3d(184,102,1,45deg);
 align-items: center;
 align-content: center;
 align-self: center;
