@@ -257,6 +257,11 @@ body.homePage{
   width: auto;
 }
 
+.topcontainerimagedivv p{
+  font-size: 20px;
+  margin-top: 40px;
+}
+
 .topcontainerimagedivv {
   height: 100%;
   width: 100%;
