@@ -280,7 +280,7 @@ body.homePage{
 /*TOP HOMEPAGE MEDIA QUERIES */
 
 
-@media screen and (max-width: 767px) {
+@media screen and (min-width: 0px) and (max-width: 767px) {
   .flexp {
     padding: 0;
     padding-bottom: 0%;
@@ -290,24 +290,23 @@ body.homePage{
     font-size: 20px;
     margin-left: 4%;
   }
-}
 
-@media screen and (max-width: 767px) {
   .flex-container>div {
     padding: 0;
     padding-bottom: 0%;
-    width: 35%;
-    height: 270px;
+    width: 175px;
+    margin: 12px;
+    margin-bottom: 30px;
+    height: auto;
   }
 }
 
 @media screen and (max-width: 767px) {
-  .flex-container>div img {
-    margin-left: 0;
-    margin-right: 0;
-    height: 200px;
-    width: 110px;
-  }
+  
+}
+
+@media screen and (max-width: 767px) {
+  
 }
 
     /*TOPHOMEPAGEEND*/
