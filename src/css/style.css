@@ -288,27 +288,194 @@ body.homePage{
 }
 /*TOP HOMEPAGE MEDIA QUERIES */
 
-@media screen and (min-width:400px) and (max-width: 688){
-  
+@media screen and (min-width: 230px) and (max-width: 279px){
+
   .flexp{
-    font-size: 8px;
+    font-size: 13px;
+    width: 80%;
+    margin-bottom: 20px;
   }
 
   .flex-container>div {
     padding: 0;
     padding-bottom: 0%;
-    width: 80px;
-    margin: 2px;
-    margin-bottom: 30px;
-    height: 200px;
-  }
+    width: 49px;
+    margin: 0px;
+    margin-bottom: 20px;
+    height: 100px;
+  } 
 
+  
   .topcontainerimagedivv p {
-    font-size: 6px;
+    font-size: 5px;
+    text-align: center;
+    margin-top: -1px;
   }
 }
 
-@media screen and (min-width:530px) and (max-width: 540px) {
+
+
+@media screen and (min-width: 280px) and (max-width: 313px){
+
+  .flexp{
+    font-size: 13px;
+    margin-bottom: 20px;
+  }
+
+  .flex-container>div {
+    padding: 0;
+    padding-bottom: 0%;
+    width: 50px;
+    margin: 0px;
+    margin-bottom: 20px;
+    height: 120px;
+  } 
+
+  .topcontainerimagedivv p {
+    font-size: 6px;
+    text-align: center;
+    margin-top: -1px;
+  }
+}
+
+@media screen and (min-width: 314px) and (max-width: 363px){
+
+  .flexp{
+    font-size: 17px;
+    margin-bottom: 15px;
+  }
+
+  .flex-container>div {
+    padding: 0;
+    padding-bottom: 0%;
+    width: 60px;
+    margin: 0px;
+    margin-bottom: 20px;
+    height: 120px;
+  } 
+
+  .topcontainerimagedivv p {
+    font-size: 6px;
+    text-align: center;
+    margin-top: -1px;
+  }
+}
+
+@media screen and (min-width: 364px) and (max-width: 379px){
+
+  .flexp{
+    font-size: 17px;
+    margin-bottom: 15px;
+  }
+
+  .flex-container>div {
+    padding: 0;
+    padding-bottom: 0%;
+    width: 70px;
+    margin: 0;
+    margin-bottom: 30px;
+    height: 120px;
+  } 
+
+  .topcontainerimagedivv p {
+    font-size: 6px;
+    text-align: center;
+    margin-top: -1px;
+  }
+}
+
+@media screen and (min-width: 380px) and (max-width: 417px){
+
+  .flexp{
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+
+  .flex-container>div {
+    padding: 0;
+    padding-bottom: 0%;
+    width: 75px;
+    margin: 0;
+    margin-bottom: 30px;
+    height: 125px;
+  } 
+
+  .topcontainerimagedivv p {
+    font-size: 7px;
+    text-align: center;
+    margin-top: -2px;
+  }
+}
+
+@media screen and (min-width: 418px) and (max-width: 524px){
+  
+  .flexp{
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+
+  .flex-container>div {
+    padding: 0;
+    padding-bottom: 0%;
+    width: 85px;
+    margin: 0;
+    margin-bottom: 30px;
+    height: 120px;
+  } 
+
+  .topcontainerimagedivv p {
+    font-size: 8px;
+    text-align: center;
+    margin-top: -2px;
+  }
+}
+
+@media screen and (min-width:488px) and (max-width: 525px){
+ 
+  .flexp{
+    font-size: 21px;
+    margin-bottom: 12px;
+  }
+  
+  .flex-container>div {
+    padding: 0;
+    padding-bottom: 0%;
+    width: 100px;
+    margin: 0;
+    margin-bottom: 30px;
+    height: 140px;
+  }
+
+  .topcontainerimagedivv p {
+    font-size: 9px;
+    text-align: center;
+    margin-top: -2px;
+  }
+}
+
+@media screen and (min-width:526px) and (max-width: 538px){
+  
+  .flexp{
+    font-size: 20px;
+  }
+
+  .flex-container>div {
+    padding: 0;
+    padding-bottom: 0%;
+    width: 110px;
+    margin: 0;
+    margin-bottom: 30px;
+    height: 140px;
+  }
+
+  .topcontainerimagedivv p {
+    font-size: 8px;
+    text-align: center;
+    margin-top: -2px;
+  }
+}
+
+@media screen and (min-width:539px) and (max-width: 613px) {
   .flexp{
     font-size: 20px;
     margin-bottom: 13px;
@@ -318,7 +485,7 @@ body.homePage{
   .flex-container>div {
     padding: 0;
     padding-bottom: 0%;
-    width: 105px;
+    width: 108px;
     margin: 2px;
     margin-bottom: 30px;
     height: 190px;
@@ -331,6 +498,10 @@ body.homePage{
 }
 @media screen and (min-width:614px) and (max-width: 689px){
   
+  .flexp{
+    font-size: 25px;
+    margin-bottom: 10px;
+  }
   
   .flex-container>div {
     padding: 0;
@@ -380,10 +551,6 @@ body.homePage{
     align-items: center;
   }
 
-}
-
-@media screen and (max-width: 767px) {
-  
 }
 
     /*TOPHOMEPAGEEND*/
