@@ -35,33 +35,35 @@ export default function TicketPage() {
     let test = false;
     
     screeningsData.occupiedSeats.forEach(s => {
-      
       let a = s.split(",");
-      // start with check the index 
-      if (row == a[0]) {
-        console.log(a[1]);
-      }
-      // console.log(chair, a[1]);
-      // if (a[0] == row, a[1] == chair) console.log("change", row, chair);
-      // test = row == a[0] && chair == a[1]  ? true : false;
+      let row = Number(a[0]);
+      console.log(row);
+    //   
+    //   // start with check the index 
+    //   if (row == a[0]) {
+    //     console.log(a[1]);
+    //   }
+    //   // console.log(chair, a[1]);
+    //   // if (a[0] == row, a[1] == chair) console.log("change", row, chair);
+    //   // test = row == a[0] && chair == a[1]  ? true : false;
     })
     return test;
   }
   
   const getSeats = (numberOfSeatsPerRow,index) => {
     const list = [];
-    console.log("______________",index);
+    console.log("______________",index, numberOfSeatsPerRow);
     for (let i = 1; i <= numberOfSeatsPerRow; i++){
-      let test = screeningsData.occupiedSeats.find(seat => {
-        console.log(seat)
-        return false;
-      });
-      // console.log(test);
-      // console.log("inside the loop", "index:", index, "seat:", i);
-      let check_occupied_seat = false;
-      // occupied(index, i);
-      // console.log(check_occupied_seat, i, index);
+      occupied(index, i);
+      let check_occupied_seat = true;
       list.push(<div key={i} onClick={() => something(i)} className={ check_occupied_seat ? "seat-sold" : "seat"}></div>)
+    //   
+    //   // console.log(test);
+    //   // console.log("inside the loop", "index:", index, "seat:", i);
+    //   let check_occupied_seat = false;
+    //   // occupied(index, i);
+    //   // console.log(check_occupied_seat, i, index);
+    //   list.push(<div key={i} onClick={() => something(i)} className={ check_occupied_seat ? "seat-sold" : "seat"}></div>)
     }
     console.log("______________");
     return  list;
