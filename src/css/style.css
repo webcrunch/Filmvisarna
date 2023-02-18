@@ -435,7 +435,98 @@ body.ticketPage {
 }
 
 /*---------ticket page MEDIA QUERIES--*/
-@media screen and  (max-width: 405px) {
+
+/*small screen (iphone) */
+@media only screen and (min-width: 280px) and (max-width: 401px) {
+  #ticket-pricing {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0px 0px 35px 0px #000000;
+    border-radius: 20px;
+    
+    padding: 20px;
+  }
+
+  .ticket-option1, .ticket-option2, .ticket-option3 {
+    width: 30%;
+    border-radius: 20px;
+    border: none;
+    border-style: none;
+    
+    margin-right: 5px 5px;
+  }
+
+  .ticket-option1 {
+    
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 20px;
+  }
+
+  .ticket-option3 {
+    
+    border-top-right-radius: 20px;
+  }
+
+  .quantity {
+    width: 40px;
+    text-align: center;
+    margin: 10px 0;
+  }
+
+  .add-ticket,
+  .remove-ticket {
+    width: 30px;
+    height: 25px;
+    margin: 5px;
+    border-radius: 5px;
+    font-size: 12px;
+  }
+
+  .vuxen-title,
+  .barn-title,
+  .senior-title {
+    font-size: 12px;
+  }
+
+  .price-tag-name {
+    font-size: 14px;
+  }
+
+  .seat-option-container p{
+    font-size: 13px;
+    
+  }
+  .seat-option-container li{
+    width: 70px;
+    margin: 2px;
+    margin-bottom: -5px;
+  }
+
+  #total-price {
+    display:flex ;
+    align-items: center;
+    position: relative;
+    font-size: 10px;
+    word-break: break-all;
+    height: 220px;
+    padding: 15px;
+  }
+
+}@media screen and  (min-width: 402px) and (max-width: 499px){
+  #total-price {
+    display:flex ;
+    align-items: center;
+    position: relative;
+    font-size: 12px;
+    word-break: break-all;
+    height: 220px;
+    padding: 15px;
+  }
+}
+
+@media screen and  (min-width: 500px) and (max-width: 670px) {
   .tv-screen-container{
    display: flex;
    flex-direction: column;
@@ -515,94 +606,25 @@ body.ticketPage {
     font-size: 14px;
   }
 
-  #total-price {
-    font-size: 14px;
-    padding: 20px;
-    word-break:keep-all;
-  }
-
-
-}
-/*small screen (iphone) */
-@media only screen and (min-width: 280px) and (max-width: 401px) {
-  #ticket-pricing {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    box-shadow: 0px 0px 35px 0px #000000;
-    border-radius: 20px;
-    
-    padding: 20px;
-  }
-
-  .ticket-option1, .ticket-option2, .ticket-option3 {
-    width: 30%;
-    border-radius: 20px;
-    border: none;
-    border-style: none;
-    
-    margin-right: 5px 5px;
-  }
-
-  .ticket-option1 {
-    
-    border-bottom-left-radius: 0;
-    border-top-left-radius: 20px;
-  }
-
-  .ticket-option3 {
-    
-    border-top-right-radius: 20px;
-  }
-
-  .quantity {
-    width: 40px;
-    text-align: center;
-    margin: 10px 0;
-  }
-
-  .add-ticket,
-  .remove-ticket {
-    width: 30px;
-    height: 25px;
-    margin: 5px;
-    border-radius: 5px;
-    font-size: 12px;
-  }
-
-  .vuxen-title,
-  .barn-title,
-  .senior-title {
-    font-size: 12px;
-  }
-
-  .price-tag-name {
-    font-size: 14px;
-  }
-
-  .seat-option-container p{
-    font-size: 13px;
-    
-  }
-  .seat-option-container li{
-    width: 70px;
-    margin: 2px;
-    margin-bottom: -5px;
-  }
-
-  #total-price {
-    display:flex ;
-    align-items: center;
-    position: relative;
-    font-size: 10px;
-    word-break: break-all;
-    margin-right: 10px;
+    #total-price {
+      display:flex ;
+      align-items: center;
+      position: relative;
+      font-size: 16px;
+      word-break: break-all;
+      height: 220px;
+      padding: 15px;
   }
 
 }
 
-
+@media screen and (min-width: 648px) and (max-width: 900px){
+  #total-price {
+    font-size: 19px;
+    padding: 20px;
+   word-break:keep-all;
+  }
+}
 
 .ticket-container {
   justify-content: center;
