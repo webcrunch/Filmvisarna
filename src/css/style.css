@@ -288,6 +288,8 @@ body.homePage{
 }
 /*TOP HOMEPAGE MEDIA QUERIES */
 @media screen and (min-width:300px) and (max-width: 689px) {
+  
+  
   .flex-container>div {
     padding: 0;
     padding-bottom: 0%;
@@ -300,6 +302,7 @@ body.homePage{
   .topcontainerimagedivv p {
     font-size: 11px;
   }
+
 }
 
 @media screen and (min-width: 690px) and (max-width: 767px) {
@@ -309,7 +312,7 @@ body.homePage{
     margin-top: 5%;
     width: 50%;
     margin-bottom: 10px;
-    font-size: 20px;
+    font-size: 27px;
     margin-left: 4%;
   }
 
