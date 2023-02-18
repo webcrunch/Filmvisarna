@@ -57,7 +57,7 @@ nav {
   background-color: #1a1a1a;
   text-decoration: none;
   width: 100%;
-  height:70px;
+  height: 70px;
   /* padding: 0 200px; */
   display: flex;
   justify-content: center;
@@ -155,6 +155,7 @@ nav img:hover {
   .navlinks {
     display: none;
   }
+
   nav img {
     display: none;
   }
@@ -293,7 +294,7 @@ body {
 }
 
 @media screen and (max-width: 767px) {
-  .flex-container > div img {
+  .flex-container>div img {
     margin-left: 0;
     margin-right: 0;
     height: 200px;
@@ -533,7 +534,7 @@ body.ticketPage {
   font-weight: bold;
 }
 
-.ul-seat{
+.ul-seat {
   box-sizing: border-box;
   color: white;
   justify-content: center;
@@ -542,11 +543,11 @@ body.ticketPage {
   justify-content: space-around;
   padding-left: 33.3333%;
   padding-right: 33.3333%;
-  
+
 
 }
 
-.li-avaliable{
+.li-avaliable {
   box-sizing: border-box;
   background-color: #474747;
   box-shadow: 0px 0px 35px 0px #000000;
@@ -555,7 +556,7 @@ body.ticketPage {
   border-radius: 10px;
 }
 
-.li-selected{
+.li-selected {
   box-sizing: border-box;
   box-shadow: 0px 0px 35px 0px #000000;
   width: 30%;
@@ -563,22 +564,22 @@ body.ticketPage {
   word-break: keep-all;
 }
 
-.li-sold{
+.li-sold {
   box-sizing: border-box;
   box-shadow: 0px 0px 35px 0px #000000;
   border-radius: 10px;
   width: 30%;
 }
 
-.seat-option-container{
+.seat-option-container {
   border-style: none;
   justify-content: center;
   align-items: center;
- /*  perspective: 500px;
+  /*  perspective: 500px;
   margin-bottom:30px; */
 }
 
-.tv-screen-container{
+.tv-screen-container {
   width: 100%;
   height: 250px;
   align-content: center;
@@ -589,27 +590,28 @@ body.ticketPage {
   display: flex;
   justify-content: space-around;
   position: relative;
-  transform: rotate3d(394,1,6,35deg);
+  transform: rotate3d(394, 1, 6, 35deg);
 }
-.tv-screen{
+
+.tv-screen {
   width: 370px;
   height: 210px;
   background-color: rgba(255, 255, 255, 0.891);
-  transform: rotate3d(394,92,25,35deg);
+  transform: rotate3d(394, 92, 25, 35deg);
   position: absolute;
   box-shadow: 0px 10px 85px 20px #000000;
 }
 
-.seat-selector-container{
+.seat-selector-container {
   align-items: center;
   justify-content: center;
   display: -moz-inline-grid;
   display: -ms-inline-grid;
   height: 400px;
-  transform: rotate3d(394,1,40,35deg);
+  transform: rotate3d(394, 1, 40, 35deg);
 }
 
-.row{
+.row {
   align-items: center;
   align-content: center;
   align-self: center;
@@ -618,7 +620,7 @@ body.ticketPage {
   position: relative;
 }
 
-.row1{
+.row1 {
   align-items: center;
   align-content: center;
   align-self: center;
@@ -626,32 +628,8 @@ body.ticketPage {
   position: relative;
   left: 41%;
 }
-.row2{
-  align-items: center;
-  align-content: center;
-  align-self: center;
-  margin-bottom: 10px;
-  width: 100%;
-  position: relative;
-  left: 41%;
-}
-.row3{
-  align-items: center;
-  align-content: center;
-  align-self: center;
-  width: 100%;
-  position: relative;
-  left: 41%;
-}
-.row4{
-  align-items: center;
-  align-content: center;
-  align-self: center;
-  width: 100%;
-  position: relative;
-  left: 41%;
-}
-.row5{
+
+.row2 {
   align-items: center;
   align-content: center;
   align-self: center;
@@ -661,7 +639,7 @@ body.ticketPage {
   left: 41%;
 }
 
-.row6{
+.row3 {
   align-items: center;
   align-content: center;
   align-self: center;
@@ -670,7 +648,7 @@ body.ticketPage {
   left: 41%;
 }
 
-.row7{
+.row4 {
   align-items: center;
   align-content: center;
   align-self: center;
@@ -679,25 +657,17 @@ body.ticketPage {
   left: 41%;
 }
 
-.row8{
+.row5 {
   align-items: center;
   align-content: center;
   align-self: center;
-  width: 100%;
-  left: 41%;
-  position: relative;
-}
-
-.row9{
-  align-items: center;
-  align-content: center;
-  align-self: center;
+  margin-bottom: 10px;
   width: 100%;
   position: relative;
   left: 41%;
 }
 
-.row10{
+.row6 {
   align-items: center;
   align-content: center;
   align-self: center;
@@ -706,8 +676,44 @@ body.ticketPage {
   left: 41%;
 }
 
-.seat{
-  position:relative;
+.row7 {
+  align-items: center;
+  align-content: center;
+  align-self: center;
+  width: 100%;
+  position: relative;
+  left: 41%;
+}
+
+.row8 {
+  align-items: center;
+  align-content: center;
+  align-self: center;
+  width: 100%;
+  left: 41%;
+  position: relative;
+}
+
+.row9 {
+  align-items: center;
+  align-content: center;
+  align-self: center;
+  width: 100%;
+  position: relative;
+  left: 41%;
+}
+
+.row10 {
+  align-items: center;
+  align-content: center;
+  align-self: center;
+  width: 100%;
+  position: relative;
+  left: 41%;
+}
+
+.seat {
+  position: relative;
   display: inline-block;
   background-color: #ffffff;
   width: 30px;
@@ -715,55 +721,55 @@ body.ticketPage {
   margin: auto;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
-  transform: rotate3d(184,102,1,45deg);
+  transform: rotate3d(184, 102, 1, 45deg);
   align-items: center;
   align-content: center;
   align-self: center;
 }
 
-.seat-disapeared{
+.seat-disapeared {
   position: relative;
   display: inline-block;
-background-color: #ff0000; 
-width: 30px;
-height: 27px;
-margin: auto;
-border-top-left-radius: 10px;
-border-top-right-radius: 10px;
-transform: rotate3d(184,102,1,45deg);
-align-items: center;
-align-content: center;
-align-self: center;
-/* visibility: hidden; */
+  background-color: #ff0000;
+  width: 30px;
+  height: 27px;
+  margin: auto;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  transform: rotate3d(184, 102, 1, 45deg);
+  align-items: center;
+  align-content: center;
+  align-self: center;
+  /* visibility: hidden; */
 }
 
-.seat-sold{
+.seat-sold {
   position: relative;
   display: inline-block;
-background-color: #afafaf; 
-width: 30px;
-height: 27px;
-margin: auto;
-border-top-left-radius: 10px;
-border-top-right-radius: 10px;
-transform: rotate3d(184,102,1,45deg);
-align-items: center;
-align-content: center;
-align-self: center;
+  background: #afafaf linear-gradient(to right bottom, transparent 47.75%, currentColor 49.5%, currentColor 50.5%, transparent 52.25%);
+  width: 30px;
+  height: 27px;
+  margin: auto;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  transform: rotate3d(184, 102, 1, 45deg);
+  align-items: center;
+  align-content: center;
+  align-self: center;
 }
 
-.total-seats{
+.total-seats {
   text-align: center;
   color: white;
 }
 
 
-.li-selected{
+.li-selected {
   background-color: rgb(2, 159, 2);
 }
 
-.li-sold{
-  background-color:white;
+.li-sold {
+  background-color: white;
   color: black;
 }
 
@@ -1030,6 +1036,7 @@ align-self: center;
   margin: 10px 0;
   bottom: 10px;
 }
+
 /*
 @media (prefers-color-scheme: dark) {
   .favicon-smiley {
@@ -1252,82 +1259,85 @@ Detail page css end here
 
 /* css register starts */
 
-.register{
-  background-color: rgb(37,37,37);
-  width:450px;
-  height:400px;
-  position:relative;
-  border-radius:7%;
-  margin:auto;
+.register {
+  background-color: rgb(37, 37, 37);
+  width: 450px;
+  height: 400px;
+  position: relative;
+  border-radius: 7%;
+  margin: auto;
   border-top-left-radius: 0%;
 }
 
-.register_form{
-  display:flex;
-  margin:auto;
-  background-color: rgb(0,171,190);
-  justify-content:center;
-  width:400px;
-  height:350px;
-  align-items:center;
-  padding:20px;
-  border-radius:7%;
-  position:absolute;
+.register_form {
+  display: flex;
+  margin: auto;
+  background-color: rgb(0, 171, 190);
+  justify-content: center;
+  width: 400px;
+  height: 350px;
+  align-items: center;
+  padding: 20px;
+  border-radius: 7%;
+  position: absolute;
   top: 15px;
-  right:14px;
+  right: 14px;
   border: top left radius 0%;
-  background: linear-gradient(to bottom,#00ABBE, #2057A9, #0A2E52, rgb(60, 59, 74));
-  box-shadow:0px 60px 300px 35px #000000;
+  background: linear-gradient(to bottom, #00ABBE, #2057A9, #0A2E52, rgb(60, 59, 74));
+  box-shadow: 0px 60px 300px 35px #000000;
 }
 
-.label{
-  display:block;
-  margin-bottom:2px;
-  font-family:sans-serif;
-  font-size:auto;
-  font-weight:bold;
-  color:rgb(91,91,91);
-  text-transform:uppercase;
+.label {
+  display: block;
+  margin-bottom: 2px;
+  font-family: sans-serif;
+  font-size: auto;
+  font-weight: bold;
+  color: rgb(91, 91, 91);
+  text-transform: uppercase;
 }
 
-.label.label::after{
-  content:"";
-  color:red;
+.label.label::after {
+  content: "";
+  color: red;
 }
 
-.username,.password,.firstname,
-.lastname{
-  display:block;
-  font-family:sans-serif;
-  font-size:16px;
-  color:rgba(251,251,251,0.82);
-  border-radius:3px;
-  border-style:none;
-  background-color: rgb(41,41,41);
+.username,
+.password,
+.firstname,
+.lastname {
+  display: block;
+  font-family: sans-serif;
+  font-size: 16px;
+  color: rgba(251, 251, 251, 0.82);
+  border-radius: 3px;
+  border-style: none;
+  background-color: rgb(41, 41, 41);
 
 }
-.remember{
+
+.remember {
   padding: 1px;
-  font-size:13px;
+  font-size: 13px;
   background-color: lightgray;
-  border-radius:5px;
-  box-shadow:2px 2px 2px rgba(0,0,0,0.1);
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
 }
 
 .remember:hover,
-.remember:active{
-  background-color: rgb(129,255,205);
+.remember:active {
+  background-color: rgb(129, 255, 205);
 }
 
-.register_button{
-  width:70px;
-  height:25px;
-  position:relative;
-  display:block;
+.register_button {
+  width: 70px;
+  height: 25px;
+  position: relative;
+  display: block;
   margin-top: 31%;
   margin-left: auto;
   margin-bottom: 0%;
-  padding:auto;
+  padding: auto;
   color: white;
   background-color: #0A2E52;
   border-radius: 10px;
@@ -1338,20 +1348,21 @@ Detail page css end here
 }
 
 .button:hover,
-.button:active{
+.button:active {
   background: linear-gradient(to left, rgb(255, 255, 255), rgb(218, 218, 218), rgb(197, 197, 197), rgb(146, 146, 146));
-  box-shadow: 0px 5px 100px 10px #ffffff;;
+  box-shadow: 0px 5px 100px 10px #ffffff;
+  ;
 }
 
-.loginlink{
-  position:absolute;
+.loginlink {
+  position: absolute;
   margin-top: 20px;
-  color:blue;
-  float:left;
+  color: blue;
+  float: left;
 }
 
 .register_button:hover,
-.register_button:active{
+.register_button:active {
   background: linear-gradient(to left, rgb(255, 255, 255), rgb(218, 218, 218), rgb(197, 197, 197), rgb(146, 146, 146));
   box-shadow: 0px 5px 100px 10px #ffffff;
 }
