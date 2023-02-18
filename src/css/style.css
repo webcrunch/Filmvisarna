@@ -283,15 +283,37 @@ body.homePage{
   aspect-ratio: 11/16;
 }
 
-.under-home-container{
-  
-  margin-top: 100px;
-  width: 668px;
+.under-home-container {
+  margin-top: 30px;
+  width: 100%;
   height: auto;
+  text-align: center;
 }
 
-.undertext{
-  width: 400px;
+.under-home-container p{
+  font-size: 36px;
+  font-family: fantasy;
+  text-align: center;
+}
+
+.snack-click{
+  text-align: center;
+  color: white;
+  font-size: 24px;
+  width: 100%;
+  height: 50px;
+  margin-top: 90px;
+  margin-bottom: -20px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.undertext {
+  font-size: 90px;
+  width: 90%;
+}
+
+.snack-container{
+  width: 100%;
 }
 /*TOP HOMEPAGE MEDIA QUERIES */
 

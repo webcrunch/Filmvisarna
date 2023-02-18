@@ -38,7 +38,7 @@ export default function Home() {
             Förutom våra vanliga filmvisningar har vi också en fullt licensierad bar och försäljningsstånd
             där du kan njuta av en dryck eller en måltid före, under eller efter filmen. 
         </p>
-        <h3>
+        <h3 className="snack-click">
             Klicka på någon utav bilderna för att ta dig vidare
         </h3>
     </div>
