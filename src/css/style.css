@@ -317,149 +317,228 @@ body.homePage{
 }
 /*TOP HOMEPAGE MEDIA QUERIES */
 
-@media screen and (min-width: 230px) and (max-width: 279px){
-
-  .flexp{
-    font-size: 13px;
-    width: 80%;
-    margin-bottom: 20px;
-  }
-
-  .flex-container>div {
-    padding: 0;
-    padding-bottom: 0%;
-    width: 49px;
-    margin: 0px;
-    margin-bottom: 20px;
-    height: 100px;
-  } 
+@media screen and (min-width: 0px) and (max-width: 339px){
 
   
-  .topcontainerimagedivv p {
-    font-size: 5px;
-    text-align: center;
-    margin-top: -1px;
-  }
-}
-
-
-
-@media screen and (min-width: 280px) and (max-width: 313px){
-
   .flexp{
-    font-size: 13px;
-    margin-bottom: 20px;
+    font-size: 21px;
+    margin-bottom: 12px;
   }
-
+  
   .flex-container>div {
     padding: 0;
     padding-bottom: 0%;
-    width: 50px;
-    margin: 0px;
-    margin-bottom: 20px;
-    height: 120px;
-  } 
-
-  .topcontainerimagedivv p {
-    font-size: 6px;
-    text-align: center;
-    margin-top: -1px;
-  }
-}
-
-@media screen and (min-width: 314px) and (max-width: 363px){
-
-  .flexp{
-    font-size: 17px;
-    margin-bottom: 15px;
-  }
-
-  .flex-container>div {
-    padding: 0;
-    padding-bottom: 0%;
-    width: 60px;
-    margin: 0px;
-    margin-bottom: 20px;
-    height: 120px;
-  } 
-
-  .topcontainerimagedivv p {
-    font-size: 6px;
-    text-align: center;
-    margin-top: -1px;
-  }
-}
-
-@media screen and (min-width: 364px) and (max-width: 379px){
-
-  .flexp{
-    font-size: 17px;
-    margin-bottom: 15px;
-  }
-
-  .flex-container>div {
-    padding: 0;
-    padding-bottom: 0%;
-    width: 70px;
+    width: 72px;
     margin: 0;
-    margin-bottom: 30px;
-    height: 120px;
-  } 
-
-  .topcontainerimagedivv p {
-    font-size: 6px;
-    text-align: center;
-    margin-top: -1px;
-  }
-}
-
-@media screen and (min-width: 380px) and (max-width: 417px){
-
-  .flexp{
-    font-size: 20px;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
+    margin-left: -14px;
+    height: 165px;
   }
 
-  .flex-container>div {
-    padding: 0;
-    padding-bottom: 0%;
-    width: 75px;
-    margin: 0;
-    margin-bottom: 30px;
-    height: 125px;
-  } 
-
   .topcontainerimagedivv p {
-    font-size: 7px;
+    font-size: 7.5px;
     text-align: center;
     margin-top: -2px;
   }
 }
 
-@media screen and (min-width: 418px) and (max-width: 524px){
-  
-  .flexp{
-    font-size: 20px;
-    margin-bottom: 15px;
-  }
 
+
+@media screen and (min-width: 340px) and (max-width: 373px){
+
+  .flexp{
+    font-size: 21px;
+    margin-bottom: 12px;
+  }
+  
   .flex-container>div {
     padding: 0;
     padding-bottom: 0%;
-    width: 85px;
+    width: 80px;
     margin: 0;
-    margin-bottom: 30px;
-    height: 120px;
-  } 
+    margin-bottom: 10px;
+    margin-left: -14px;
+    height: 175px;
+  }
 
   .topcontainerimagedivv p {
-    font-size: 8px;
+    font-size: 9.5px;
     text-align: center;
     margin-top: -2px;
   }
 }
 
-@media screen and (min-width:488px) and (max-width: 525px){
+@media screen and (min-width: 374px) and (max-width: 403px){
+  .flexp{
+    font-size: 21px;
+    margin-bottom: 12px;
+  }
+  
+  .flex-container>div {
+    padding: 0;
+    padding-bottom: 0%;
+    width: 88.5px;
+    margin: 0;
+    margin-bottom: 10px;
+    margin-left: -14px;
+    height: 195px;
+  }
+
+  .topcontainerimagedivv p {
+    font-size: 10.5px;
+    text-align: center;
+    margin-top: -2px;
+  }
+}
+
+@media screen and (min-width: 404px) and (max-width: 437px){
+  
+  .flexp{
+    font-size: 21px;
+    margin-bottom: 12px;
+  }
+  
+  .flex-container>div {
+    padding: 0;
+    padding-bottom: 0%;
+    width: 101px;
+    margin: 0;
+    margin-bottom: 10px;
+    margin-left: -15px;
+    height: 200px;
+  }
+
+  .topcontainerimagedivv p {
+    font-size: 10.5px;
+    text-align: center;
+    margin-top: -2px;
+  }
+}
+
+@media screen and (min-width: 438px) and (max-width: 451px){
+
+  
+  .flexp{
+    font-size: 21px;
+    margin-bottom: 12px;
+  }
+  
+  .flex-container>div {
+    padding: 0;
+    padding-bottom: 0%;
+    width: 106px;
+    margin: 0;
+    margin-bottom: 10px;
+    margin-left: -15px;
+    height: 197px;
+  }
+
+  .topcontainerimagedivv p {
+    font-size: 10.5px;
+    text-align: center;
+    margin-top: -2px;
+  }
+}
+
+/***/
+@media screen and (min-width: 452px) and (max-width: 465px){
+  
+  .flexp{
+    font-size: 21px;
+    margin-bottom: 12px;
+  }
+  
+  .flex-container>div {
+    padding: 0;
+    padding-bottom: 0%;
+    width: 109px;
+    margin: 0;
+    margin-bottom: 10px;
+    
+    margin-left: -15px;
+    height: 197px;
+  }
+
+  .topcontainerimagedivv p {
+    font-size: 10.5px;
+    text-align: center;
+    margin-top: -2px;
+  }
+}
+@media screen and (min-width: 466px) and (max-width: 479px){
+  
+  .flexp{
+    font-size: 21px;
+    margin-bottom: 12px;
+  }
+  
+  .flex-container>div {
+    padding: 0;
+    padding-bottom: 0%;
+    width: 112px;
+    margin: 0;
+    margin-bottom: 10px;
+    
+    margin-left: -15px;
+    height: 187px;
+  }
+
+  .topcontainerimagedivv p {
+    font-size: 10.5px;
+    text-align: center;
+    margin-top: -2px;
+  }
+}
+
+@media screen and (min-width:480px) and (max-width: 500px){
+  .flexp{
+    font-size: 21px;
+    margin-bottom: 12px;
+  }
+  
+  .flex-container>div {
+    padding: 0;
+    padding-bottom: 0%;
+    width: 114px;
+    margin: 0;
+    margin-bottom: 10px;
+    
+    margin-left: -15px;
+    height: 180px;
+  }
+
+  .topcontainerimagedivv p {
+    font-size: 10.5px;
+    text-align: center;
+    margin-top: -2px;
+  }
+}
+
+@media screen and (min-width:480px) and (max-width: 501px){
+  .flexp{
+    font-size: 21px;
+    margin-bottom: 12px;
+  }
+  
+  .flex-container>div {
+    padding: 0;
+    padding-bottom: 0%;
+    width: 114px;
+    margin: 0;
+    margin-bottom: 10px;
+    
+    margin-left: -15px;
+    height: 180px;
+  }
+
+  .topcontainerimagedivv p {
+    font-size: 10.5px;
+    text-align: center;
+    margin-top: -2px;
+  }
+}
+
+@media screen and (min-width:502px) and (max-width: 518px){
  
   .flexp{
     font-size: 21px;
@@ -469,16 +548,54 @@ body.homePage{
   .flex-container>div {
     padding: 0;
     padding-bottom: 0%;
-    width: 100px;
+    width: 122px;
     margin: 0;
-    margin-bottom: 30px;
-    height: 140px;
+    margin-bottom: 10px;
+    
+    margin-left: -16px;
+    height: 180px;
   }
 
   .topcontainerimagedivv p {
-    font-size: 9px;
+    font-size: 10.5px;
     text-align: center;
     margin-top: -2px;
+  }
+}
+
+
+@media screen and (min-width:519px) and (max-width: 525px){
+ 
+  .flexp{
+    font-size: 20px;
+    margin-bottom: 25px;
+  }
+
+  .flex-container{
+    padding: 0px;
+    height: 600px;
+
+  }
+
+  .flex-container>div {
+    padding: 0;
+    padding-bottom: 0%;
+    width: 115px;
+    margin: 0;
+    margin-bottom: 10px;
+    margin-right: 0px;
+    margin-left: -8px;
+    height: 180px;
+  }
+
+  
+  .topcontainerimagedivv p {
+    font-size: 10.4px;
+    width: 100%;
+    text-align: center;
+    margin-top: -1px;
+    padding: 5px;
+    
   }
 }
 
@@ -486,25 +603,30 @@ body.homePage{
   
   .flexp{
     font-size: 20px;
+    margin-bottom: 25px;
   }
 
   .flex-container>div {
-    padding: 0;
+    padding: 0px;
     padding-bottom: 0%;
-    width: 110px;
-    margin: 0;
-    margin-bottom: 30px;
-    height: 140px;
+    width: 127px;
+    margin-right: 0px;
+    margin-left: -16px;
+    margin-bottom: 5px;
+    height: 210px;
   }
 
+  
   .topcontainerimagedivv p {
-    font-size: 8px;
+    font-size: 11px;
     text-align: center;
-    margin-top: -2px;
+    margin-top: 2px;
+    padding: 3px;
+    
   }
 }
 
-@media screen and (min-width:539px) and (max-width: 613px) {
+/* @media screen and (min-width:539px) and (max-width: 613px) {
   .flexp{
     font-size: 20px;
     margin-bottom: 13px;
@@ -514,18 +636,108 @@ body.homePage{
   .flex-container>div {
     padding: 0;
     padding-bottom: 0%;
-    width: 108px;
-    margin: 2px;
+    width: 139px;
+    margin: 0 0 0 -10px;
     margin-bottom: 30px;
     height: 190px;
   }
 
   .topcontainerimagedivv p {
-    font-size: 9px;
+    font-size: 12px;
+    margin-top: 3px;
   }
 
+} */
+
+@media screen and (min-width:539px) and (max-width: 565px){
+  .flexp{
+    font-size: 25px;
+    margin-bottom: 10px;
+  }
+  
+  .flex-container>div {
+    padding: 0;
+    padding-bottom: 0%;
+    width: 132px;
+    margin: 0 0 0 -12px;
+    margin-bottom: 25px;
+    height: 215px;
+  }
+
+  .topcontainerimagedivv p {
+    font-size: 12px;
+    text-align: center;
+    margin-top: 6px ;
+  }
 }
-@media screen and (min-width:614px) and (max-width: 689px){
+
+@media screen and (min-width:566px) and (max-width: 599px){
+  .flexp{
+    font-size: 25px;
+    margin-bottom: 10px;
+  }
+  
+  .flex-container>div {
+    padding: 0;
+    padding-bottom: 0%;
+    width: 142px;
+    margin: 0 2px 0 -18px;
+    margin-bottom: 25px;
+    height: 215px;
+  }
+
+  .topcontainerimagedivv p {
+    font-size: 12px;
+    text-align: center;
+    margin-top: 6px ;
+  }
+}
+
+@media screen and (min-width:600px) and (max-width: 629px){
+  .flexp{
+    font-size: 25px;
+    margin-bottom: 10px;
+  }
+  
+  .flex-container>div {
+    padding: 0;
+    padding-bottom: 0%;
+    width: 148px;
+    margin: 0 6px 0 -20px;
+    margin-bottom: 25px;
+    height: 250px;
+  }
+
+  .topcontainerimagedivv p {
+    font-size: 13.2px;
+    text-align: center;
+    margin-top: 6px ;
+  }
+}
+
+@media screen and (min-width:630px) and (max-width: 665px){
+  .flexp{
+    font-size: 25px;
+    margin-bottom: 10px;
+  }
+  
+  .flex-container>div {
+    padding: 0;
+    padding-bottom: 0%;
+    width: 156px;
+    margin: 0 6px 0 -20px;
+    margin-bottom: 25px;
+    height: 227px;
+  }
+
+  .topcontainerimagedivv p {
+    font-size: 14px;
+    text-align: center;
+    margin-top: 6px ;
+  }
+}
+
+@media screen and (min-width:666px) and (max-width: 689px){
   
   .flexp{
     font-size: 25px;
@@ -535,15 +747,16 @@ body.homePage{
   .flex-container>div {
     padding: 0;
     padding-bottom: 0%;
-    width: 125px;
-    margin: 2px;
-    margin-bottom: 30px;
-    height: 190px;
+    width: 157px;
+    margin: 0 0 0 -12px;
+    margin-bottom: 25px;
+    height: 215px;
   }
 
   .topcontainerimagedivv p {
-    font-size: 10px;
+    font-size: 12px;
     text-align: center;
+    margin-top: 3px ;
   }
 }
 @media screen and (min-width: 690px) and (max-width: 767px) {
