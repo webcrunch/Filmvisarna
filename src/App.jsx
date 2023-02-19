@@ -86,7 +86,7 @@ src="https://www.youtube.com/embed/Z9AYPxH5NTM">
     </p>
     <p>
       {/* Show the cat image if s.catImageVisible is true */}
-      {s.catImageVisible && <img src="/images/cat.jpg" />}
+      {s.catImageVisible && <img src="./images/cat.jpg" />}
     </p>
     </main>
     <footer>
