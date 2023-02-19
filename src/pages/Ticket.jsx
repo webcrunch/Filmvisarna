@@ -230,9 +230,20 @@ export default function TicketPage() {
           </li>
         </ul>
       </div>
-      <div className="tv-screen-container">
-        <div className="tv-screen"></div>
+
+      <div className="tv-section">
+            <div className="tv-outer-red">
+                <div className="tv-middle-red">
+                      <div className="tv-inner-red">
+                          <div className="tv-screen-container">
+                               <div className="tv-screen"></div>
+                          </div>
+                      </div>
+                </div>
+            </div>
       </div>
+
+
       <div className="seat-selector-container">
       {!saloonData ? null : saloonData.seatsPerRow.map((s,i) => 
         <div className="row">
