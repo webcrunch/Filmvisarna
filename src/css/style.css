@@ -1527,7 +1527,7 @@ body.ticketPage {
 .seat-sold {
   position: relative;
   display: inline-block;
-  background-color: #afafaf;
+  background: #afafaf linear-gradient(to right bottom, transparent 47.75%, currentColor 49.5%, currentColor 50.5%, transparent 52.25%);
   margin: 5px;
   width: 30px;
   height: 27px;
@@ -1537,6 +1537,7 @@ body.ticketPage {
   align-items: center;
   align-content: center;
   align-self: center;
+  cursor: not-allowed;
 }
 
 .total-seats {
