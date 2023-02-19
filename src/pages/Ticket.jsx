@@ -30,42 +30,12 @@ export default function TicketPage() {
     return () => document.body.classList.remove("ticketPage");
   }, []);
 
-
-  const occupied = (row, chair) => {
-    let test = false;
-    
-    screeningsData.occupiedSeats.forEach(s => {
-      let a = s.split(",");
-      let row = Number(a[0]);
-      console.log(row);
-    //   
-    //   // start with check the index 
-    //   if (row == a[0]) {
-    //     console.log(a[1]);
-    //   }
-    //   // console.log(chair, a[1]);
-    //   // if (a[0] == row, a[1] == chair) console.log("change", row, chair);
-    //   // test = row == a[0] && chair == a[1]  ? true : false;
-    })
-    return test;
-  }
-  
   const getSeats = (numberOfSeatsPerRow,index) => {
     const list = [];
-    console.log("______________",index, numberOfSeatsPerRow);
     for (let i = 1; i <= numberOfSeatsPerRow; i++){
-      occupied(index, i);
-      let check_occupied_seat = true;
-      list.push(<div key={i} onClick={() => something(i)} className={ check_occupied_seat ? "seat-sold" : "seat"}></div>)
-    //   
-    //   // console.log(test);
-    //   // console.log("inside the loop", "index:", index, "seat:", i);
-    //   let check_occupied_seat = false;
-    //   // occupied(index, i);
-    //   // console.log(check_occupied_seat, i, index);
-    //   list.push(<div key={i} onClick={() => something(i)} className={ check_occupied_seat ? "seat-sold" : "seat"}></div>)
+      let check_occupied_seat = screeningsData.occupiedSeats[index].find(element => element === i );
+      list.push(<div key={i} onClick={() => something([index,i])} className={check_occupied_seat !== undefined ? "seat-sold" : "seat"}></div>);
     }
-    console.log("______________");
     return  list;
   }
 
@@ -266,7 +236,7 @@ export default function TicketPage() {
       <div className="seat-selector-container">
       {!saloonData ? null : saloonData.seatsPerRow.map((s,i) => 
         <div className="row">
-            {getSeats(s,i+1)}
+            {getSeats(s,i)}
         </div>)}
          <p className="total-seats">
           Du har valt <span id="count">0</span> platser.
