@@ -49,8 +49,8 @@ export default function Movies() {
 
   useEffect(() => {
     createCategories();
-    document.body.classList.add("ticketPage");
-    return () => document.body.classList.remove("ticketPage");
+    document.body.classList.add("moviePage");
+    return () => document.body.classList.remove("moviePage");
   }, []);
 
   useEffect(() => {
