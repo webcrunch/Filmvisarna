@@ -1,14 +1,15 @@
 # Filmvisarna
 
-"start"
+## start
+
 to build the react the first time use
 
-´´´javascript
+```js
 npm run init
-´´´
+```
 
 to build it if you have already installed all the dependeces then you use
 
-´´´javascript
+```js
 npm run dev
-´´´
+```
