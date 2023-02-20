@@ -2399,6 +2399,10 @@ body.ticketPage {
 Detail page css end here */
 /* ....................login page scc start here...................*/
 
+body.loginPage {
+  background-color: rgb(23, 23, 23);
+}
+
 .login {
   background-color: rgb(46, 11, 102);
   width: 450px;
