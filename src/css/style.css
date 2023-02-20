@@ -2322,6 +2322,10 @@ body.aboutPage {
 
 /* Booking confirmed page */
 
+body.bookingPage {
+  background-color: #000000;
+}
+
 .doneA {
   color: white;
   font-size: 20px;
@@ -2343,7 +2347,7 @@ body.aboutPage {
   padding: 5px;
 }
 
-/* ?? __________________________________ ?? */
+/*----------------------Booking confirmation page end.............. */
 
 /* @media (prefers-color-scheme: dark) {
   .favicon-smiley {
@@ -2607,7 +2611,7 @@ body.loginPage {
   top: 15px;
   right: 14px;
   border-top-left-radius: 0%;
-  background: linear-gradient(to bottom, #00ABBE, #2057A9, #0A2E52, rgb(6059, 74));
+  background: linear-gradient(to bottom, #00ABBE, #2057A9, #0A2E52, rgb(60, 59, 74));
   box-shadow: 0px 60px 300px 35px #000000;
 }
 
