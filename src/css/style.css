@@ -1975,26 +1975,48 @@ body.ticketPage {
 
 /*---------------------TICKET PAGE ENDS HERE---------------------------------------------------- */
 
-.contact {
-  text-align: justify;
+
+/*-------------------- kontakt PAGE STARTS HERE------------------------------------------------- */
+body.contactPage {
+  background-color: #000000;
+}
+
+contact {
+  text-align: center;
   justify-content: space-between;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: white;
   padding: 20px;
   position: relative;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-right: 20px;
+  padding-left: 20px;
   margin: auto;
-  /* width: 45%; */
+  width: 45%;
+}
+
+.contact p{
+  margin:0 auto;
+  padding: 10px 2px;
+  width: 50%;
+  text-align: start;
+  word-wrap: break-word;
 }
 
 .contact a {
-  color: #808080;
+  color: #047d32;
 }
 
 .contact a:hover {
   cursor: pointer;
-  color: #add8e6;
+  color: #034d2b;
 }
 
+ .contactPerson{
+  color:rgba(59, 6, 183, 0.895);
+} 
+/*----------------------------- kontakt PAGE ENDS HERE-----------------------------*/
 /* b{
   color:green;
 } */
@@ -2303,42 +2325,48 @@ body.aboutPage {
 
 /* css register starts */
 
-.register {
-  background-color: rgb(37, 37, 37);
-  width: 450px;
-  height: 400px;
-  position: relative;
-  border-radius: 7%;
-  margin: auto;
-  border-top-left-radius: 0%;
+body.registerPage {
+  background-color: rgb(23, 23, 23);
 }
 
-.register_form {
-  display: flex;
-  margin: auto;
-  background-color: rgb(0, 171, 190);
-  justify-content: center;
-  width: 400px;
-  height: 350px;
-  align-items: center;
-  padding: 20px;
-  border-radius: 7%;
-  position: absolute;
+
+.register{
+  background-color: rgb(11, 10, 14);
+  width:450px;
+  height:400px;
+  position:relative;
+  border-radius:0%;
+  margin:auto;
+  border-top-left-radius: 0%;
+  margin-top:30px ;
+}
+
+.register_form{
+  display:flex;
+  margin:auto;
+  background-color: rgb(122,119,226);
+  justify-content:center;
+  width:400px;
+  height:350px;
+  align-items:center;
+  padding:20px;
+  border-radius:7%;
+  position:absolute;
   top: 15px;
   right: 14px;
   border: top left radius 0%;
-  background: linear-gradient(to bottom, #00ABBE, #2057A9, #0A2E52, rgb(60, 59, 74));
-  box-shadow: 0px 60px 300px 35px #000000;
+  background: linear-gradient(to bottom,#00ABBE, #2057A9, #0A2E52, rgb(60, 59, 74));
+  box-shadow:0px 60px 300px 35px #0a0912;
 }
 
-.label {
-  display: block;
-  margin-bottom: 2px;
-  font-family: sans-serif;
-  font-size: auto;
-  font-weight: bold;
-  color: rgb(91, 91, 91);
-  text-transform: uppercase;
+.label{
+  display:block;
+  margin-bottom:2px;
+  font-family:sans-serif;
+  font-size:auto;
+  font-weight:bold;
+  color:rgb(79, 7, 7);
+  text-transform:uppercase;
 }
 
 .label.label::after {
@@ -2346,17 +2374,15 @@ body.aboutPage {
   color: red;
 }
 
-.username,
-.password,
-.firstname,
-.lastname {
-  display: block;
-  font-family: sans-serif;
-  font-size: 16px;
-  color: rgba(251, 251, 251, 0.82);
-  border-radius: 3px;
-  border-style: none;
-  background-color: rgb(41, 41, 41);
+.username,.password,.firstname,
+.lastname{
+  display:block;
+  font-family:sans-serif;
+  font-size:16px;
+  color:rgba(143, 11, 86, 0.82);
+  border-radius:3px;
+  border-style:none;
+  background-color: rgb(41,41,41);
 
 }
 
