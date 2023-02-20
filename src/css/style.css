@@ -819,30 +819,48 @@ align-self: center;
 
 /*---------------------TICKET PAGE ENDS HERE---------------------------------------------------- */
 
-.contact {
-  text-align: justify;
+
+/*-------------------- kontakt PAGE STARTS HERE------------------------------------------------- */
+body.contactPage {
+  background-color: #000000;
+}
+
+contact {
+  text-align: center;
   justify-content: space-between;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: white;
   padding: 20px;
   position: relative;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-right: 20px;
+  padding-left: 20px;
   margin: auto;
-  /* width: 45%; */
+  width: 45%;
+}
+
+.contact p{
+  margin:0 auto;
+  padding: 10px 2px;
+  width: 50%;
+  text-align: start;
+  word-wrap: break-word;
 }
 
 .contact a {
-  color: #808080;
+  color: #047d32;
 }
 
 .contact a:hover {
   cursor: pointer;
-  color: #add8e6;
+  color: #034d2b;
 }
 
-/* b{
-  color:green;
-} */
-
+ b{
+  color:rgba(59, 6, 183, 0.895);
+} 
+/*----------------------------- kontakt PAGE ENDS HERE-----------------------------*/
 .OmOss {
   text-align: center;
   justify-content: space-between;
@@ -1134,20 +1152,26 @@ align-self: center;
 
 /* css register starts */
 
+body.registerPage {
+  background-color: rgb(23, 23, 23);
+}
+
+
 .register{
-  background-color: rgb(37,37,37);
+  background-color: rgb(11, 10, 14);
   width:450px;
   height:400px;
   position:relative;
-  border-radius:7%;
+  border-radius:0%;
   margin:auto;
   border-top-left-radius: 0%;
+  margin-top:30px ;
 }
 
 .register_form{
   display:flex;
   margin:auto;
-  background-color: rgb(0,171,190);
+  background-color: rgb(122,119,226);
   justify-content:center;
   width:400px;
   height:350px;
@@ -1159,7 +1183,7 @@ align-self: center;
   right:14px;
   border: top left radius 0%;
   background: linear-gradient(to bottom,#00ABBE, #2057A9, #0A2E52, rgb(60, 59, 74));
-  box-shadow:0px 60px 300px 35px #000000;
+  box-shadow:0px 60px 300px 35px #0a0912;
 }
 
 .label{
@@ -1168,7 +1192,7 @@ align-self: center;
   font-family:sans-serif;
   font-size:auto;
   font-weight:bold;
-  color:rgb(91,91,91);
+  color:rgb(79, 7, 7);
   text-transform:uppercase;
 }
 
@@ -1182,7 +1206,7 @@ align-self: center;
   display:block;
   font-family:sans-serif;
   font-size:16px;
-  color:rgba(251,251,251,0.82);
+  color:rgba(143, 11, 86, 0.82);
   border-radius:3px;
   border-style:none;
   background-color: rgb(41,41,41);
@@ -1228,7 +1252,7 @@ align-self: center;
 .loginlink{
   position:absolute;
   margin-top: 35px;
-  color:rgb(22, 137, 101);
+  color:rgba(15, 156, 15, 0.676);
   float:left;
 }
 
