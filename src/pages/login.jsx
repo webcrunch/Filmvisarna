@@ -12,10 +12,10 @@ function LoginPage() {
     useEffect(() => {
         // add the class ticketPage to the body element
         // when the page shows / the component mounts
-        document.body.classList.add("ticketPage");
+        document.body.classList.add("loginPage");
         // remove the class ticketPage when the page
         // unmounts..
-        return () => document.body.classList.remove("ticketPage");
+        return () => document.body.classList.remove("loginPage");
     }, []);
 
     function handleSubmit(e) {
