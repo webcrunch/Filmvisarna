@@ -1,4 +1,4 @@
-
+import { useEffect } from 'react';
 import { useStates } from '../utilities/states';
 export default RegisterPage;
 
