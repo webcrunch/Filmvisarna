@@ -52,7 +52,7 @@ export default function App() {
       { path: '/movie/:moviePath', Component: DetailedInfo },
       { path: '/auth', Component: RegisterPage },
       { path: '/authentication', Component: LoginPage },
-      { path: '/ticket/:moviePath', Component: TicketPage },
+      { path: '/ticket/:screeningInfo', Component: TicketPage },
       { path: '/done/:bookingInfo', Component: Booked }
     ],
     screenings: [],
