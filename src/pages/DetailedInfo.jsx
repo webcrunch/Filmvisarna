@@ -16,8 +16,8 @@ export default function DetailedInfo() {
     const screening = useStates({ screenings: "null", categories: "null" })
 
     const screenings = movie != undefined ? s.screenings.filter(screen => screen.film === movie.title) : null;
-    let dateArray =[];
-    // let dateArray = movie != undefined ? s.screenings.map(screen => screen.date) : null;
+    // let dateArray =[];
+    let dateArray = movie != undefined ? s.screenings.map(screen => screen.date) : null;
     // const testBlock = screenings.filter((screen,index) => {
     //     if(index < 4) return screen;
     // })
@@ -44,7 +44,7 @@ export default function DetailedInfo() {
                 <div className="detailedPageContainer">
                     <div className='detailedLeftContainer'>
                         <img className="detailedImages" src={movie.images} />
-                        <Trailer embedId={trailer} />
+                        <Trailer className="detailedTrailer" embedId={trailer} />
                         {/* <iframe className="movieTrailer" width="350px" height="315px" src={"https://www.youtube.com/embed/" + movie.youtubeTrailer} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> */}
                     </div>
                     <div className="detailedRightContainer">
@@ -88,20 +88,29 @@ export default function DetailedInfo() {
                                 </div>
                             )}
                             {showScreenings && (
-                                <div className="detailedScreeningsDropdown">
-                                    <div className="detailedScreening">
-                                        <select name=""{...screening.bind("categories")} id="">{dateArray.map(cat => <option>{cat}</option>)}</select>
-                                        {screenings.filter(filterByDate).map(screen => <Link to={"/ticket/" + movie.path} state={{
-                      from: [
-                        screen.auditorium,
-                        screen.film,
-                        screen.date,
-                        screen.time,
-                      ],
-                    }}> <p>{screen.date} {screen.time}</p> </Link>)}
-                                    </div>
-                                </div>
-                            )}
+  <div className="detailedScreeningsDropdown">
+    <div className="detailedScreening">
+      <select name="" {...screening.bind("categories")} id="">
+        {dateArray.map(cat => <option>{cat}</option>)}
+      </select>
+      {screenings.filter(filterByDate).map(screen => (
+        <Link to={"/ticket/" + movie.path} state={{
+          from: [
+            screen.auditorium,
+            screen.film,
+            screen.date,
+            screen.time,
+          ],
+        }}>
+          <p>
+          {screen.film} - {screen.date} - {screen.time} - in {screen.auditorium}
+          </p>
+        </Link>
+      ))}
+    </div>
+  </div>
+)}
+
                         </div>
 
                     </div>
