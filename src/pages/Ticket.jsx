@@ -1,16 +1,19 @@
 import { useStates } from "../utilities/states";
 import { useParams, Link, useNavigate } from "react-router-dom";
-import { useLocation } from "react-router-dom";
-import { calculatingTime } from "../utilities/length-calculating";
+// import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
 
 export default function TicketPage() {
-  const { moviePath, id } = useParams();
-  const location = useLocation();
+  let { screeningInfo } = useParams();
+  screeningInfo = JSON.parse(decodeURIComponent(screeningInfo));
+  // const location = useLocation();
+  // const saloonData = s.saloons.find(saloon => saloon.name == location.state.from[0]);
+  // const screeningsData = s.screenings.find(screen => screen.id === location.state.from[4]);
   const s = useStates('main');
-  const movie = s.movies != undefined ? s.movies.find(movie => movie.path == moviePath) : null;
-  const saloonData = s.saloons.find(saloon => saloon.name == location.state.from[0]);
-  const screeningsData = s.screenings.find(screen => screen.id === location.state.from[4]);
+  const movie = s.movies != undefined ? s.movies.find(movie => movie.path == screeningInfo.moviePath) : null;
+  const saloonData = s.saloons.find(saloon => saloon.name == screeningInfo.auditorium);
+  const screeningsData = s.screenings.find(screen => screen.id === screeningInfo.id);
+  console.log(screeningsData);
   const clickerss = useStates({
     numberofChildren: 0,
     priceChildren: 65,
@@ -45,7 +48,7 @@ export default function TicketPage() {
   const getSeats = (numberOfSeatsPerRow, index) => {
     const list = [];
     for (let i = 1; i <= numberOfSeatsPerRow; i++) {
-      let check_occupied_seat = screeningsData.occupiedSeats[index].find(element => element === i);
+      let check_occupied_seat = screeningsData.occupiedSeats[index] !== undefined ? screeningsData.occupiedSeats[index].find(element => element === i) : undefined ;
       list.push(<div key={i} onClick={() => !check_occupied_seat && clickOnSeat([index + 1, i])} className={
         (check_occupied_seat !== undefined ? "seat-sold" : "seat")
         + (seats.markedChairs[(index + 1) + ' ' + i] ? "  seat-marked" : "")
