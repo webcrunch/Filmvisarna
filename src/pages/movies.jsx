@@ -197,7 +197,7 @@ export default function Movies() {
                 <Link to={"/movie/" + display.film}>
                   <img
                     className="imagesmovies"
-                    src={"../" + getMovies(display.film, "images")}
+                    src={"Filmvisarna/" + getMovies(display.film, "images")}
                     alt={"Poster av filmen " + display.film}
                   />
                 </Link>

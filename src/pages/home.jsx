@@ -24,7 +24,7 @@ export default function Home() {
               <div className="topcontainerimagediv">
                 <div className="topcontainerimagedivv">
 
-                <Link to={"/movie/" + movie.path}> <img className="topcontainerimages" src={movie.images}
+                <Link to={"/movie/" + movie.path}> <img className="topcontainerimages" src={"Filmvisarna/" + movie.images}
                   ></img></Link><p>{movie.title}</p>
                 </div>      
             </div>

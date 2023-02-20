@@ -12,7 +12,7 @@ export default function About() {
     return <>
         <div className="OmOss">
             <h2>Om Oss</h2>
-            <img src={"images/Om.jpg"} alt="Here will be a image" />
+            <img src={"Filmvisarna/images/Om.jpg"} alt="Here will be a image" />
         </div>
 
         <div className="varumarkeslofte">
