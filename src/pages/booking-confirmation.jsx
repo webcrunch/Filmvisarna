@@ -10,11 +10,16 @@ export default function Booked() {
     let movie = null;
     bookingInfo = JSON.parse(decodeURIComponent(bookingInfo));
     useEffect(() => {
+
         movie = movies.find(movie => movie.path === bookingInfo.movie);
+
+        document.body.classList.add("bookingPage");
+        return () => document.body.classList.remove("bookingPage");
     }, []);
     let confirmationNumber = generate();
 
     return bookingInfo && (
+    <div className="confirmation-container">
         < div className="doneA" >
             <div className="information">
                 <h2>Tack för din bokning:</h2>
@@ -34,6 +39,12 @@ export default function Booked() {
                 <p>Glöm inte att ta med bokningsnummret till biografen: <b>{confirmationNumber}</b> <button type="button" onClick={() => copyContent(confirmationNumber)}>Kopiera bokningsnummret</button></p>           
             </div>
             <img src="/images/bookingpage.jpg" alt="Here will be a image" />
-        </div > )
+            </div >
+                    </div > 
+)
+
+       
+    
+
 }
 
