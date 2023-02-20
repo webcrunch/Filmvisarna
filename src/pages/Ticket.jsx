@@ -13,7 +13,6 @@ export default function TicketPage() {
   const movie = s.movies != undefined ? s.movies.find(movie => movie.path == screeningInfo.moviePath) : null;
   const saloonData = s.saloons.find(saloon => saloon.name == screeningInfo.auditorium);
   const screeningsData = s.screenings.find(screen => screen.id === screeningInfo.id);
-  console.log(screeningsData);
   const clickerss = useStates({
     numberofChildren: 0,
     priceChildren: 65,
