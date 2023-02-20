@@ -1999,6 +1999,13 @@ body.ticketPage {
   color:green;
 } */
 
+
+/*-----------------------------Om Oss PAGE STARTS HERE---------------------------------------- */
+
+body.aboutPage {
+  background-color: #000000;
+}
+
 .OmOss {
   text-align: center;
   justify-content: space-between;
@@ -2019,6 +2026,8 @@ body.ticketPage {
   text-align: start;
   word-wrap: break-word;
 }
+
+/*-----------------------------Om Oss PAGE ENDS HERE---------------------------------------- */
 
 .varumarkeslofte {
   text-align: center;

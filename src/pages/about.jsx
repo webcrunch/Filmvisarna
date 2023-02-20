@@ -1,4 +1,14 @@
+import { useEffect } from "react";
+
 export default function About() {
+
+    useEffect(() => {
+        document.body.classList.add("aboutPage");
+        return () => document.body.classList.remove("aboutPage");
+    }, []);
+
+
+
     return <>
         <div className="OmOss">
             <h2>Om Oss</h2>
