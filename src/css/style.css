@@ -20,6 +20,12 @@ main {
   flex: 1;
 }
 
+main:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 footer {
   display: flex;
   justify-content: space-between;
@@ -996,7 +1002,6 @@ body.detailedInfo {
 }
 
 .detailedRightContainer {
-  height: 400px;
   width: 50%;
   float: left;
   margin-left: 150px;
