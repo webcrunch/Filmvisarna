@@ -243,9 +243,9 @@ body.homePage {
 
 .flex-container>div {
   background-color: #1a1a1a;
-  width: 100%;
+  width: 290px;
   padding: 1px;
-  height: 80%;
+  height: 450px;
   text-align: center;
   position: relative;
   border-radius: 10px;
@@ -253,6 +253,7 @@ body.homePage {
   border-bottom-right-radius: 0px;
   border-bottom: #575757 solid;
   margin-top: 1%;
+  margin: 0 15px 40px -55px;
   box-shadow: inset 0 0 0 0 #ffffff28;
   transition: ease-out 0.4s;
   cursor: pointer;
@@ -264,9 +265,9 @@ body.homePage {
   width: auto;
 }
 
-.topcontainerimagedivv p {
-  font-size: 20px;
-  margin-top: 40px;
+.topcontainerimagedivv p{
+  font-size: 24px;
+  margin-top: 25px;
 }
 
 .topcontainerimagedivv {
@@ -296,10 +297,11 @@ body.homePage {
   text-align: center;
 }
 
-.under-home-container p {
-  font-size: 36px;
+.under-home-container p{
+  font-size: 35px;
   font-family: fantasy;
   text-align: center;
+  width: 80%;
 }
 
 .snack-click {
@@ -345,8 +347,23 @@ body.homePage {
   .topcontainerimagedivv p {
     font-size: 7.5px;
     text-align: center;
-    margin-top: -2px;
+    margin-top: 1px;
   }
+
+  .under-home-container p {
+    margin-top: 5px;
+      font-size: 12px;
+      font-family: fantasy;
+      text-align: center;
+      width: 80%;
+      height: 50px;
+    }
+  
+  .snack-click{
+    margin-top: 50px;
+    font-size: 12px;
+  }
+  
 }
 
 
@@ -373,6 +390,22 @@ body.homePage {
     text-align: center;
     margin-top: -2px;
   }
+
+  
+
+  .under-home-container p {
+      margin-top: -20px;
+      font-size: 13px;
+      font-family: fantasy;
+      text-align: center;
+      width: 75%;
+      height: 50px;
+    }
+  
+    .snack-click {
+      margin-top: 50px;
+      font-size: 12px;
+    }
 }
 
 @media screen and (min-width: 374px) and (max-width: 403px) {
@@ -396,6 +429,21 @@ body.homePage {
     text-align: center;
     margin-top: -2px;
   }
+
+    .under-home-container p {
+      margin-top: -20px;
+      font-size: 14px;
+      font-family: fantasy;
+      text-align: center;
+      width: 75%;
+      height: 50px;
+    }
+  
+    .snack-click {
+      margin-top: 70px;
+      font-size: 12px;
+    }
+
 }
 
 @media screen and (min-width: 404px) and (max-width: 437px) {
@@ -420,6 +468,20 @@ body.homePage {
     text-align: center;
     margin-top: -2px;
   }
+
+    .under-home-container p {
+      margin-top: -20px;
+      font-size: 16px;
+      font-family: fantasy;
+      text-align: center;
+      width: 75%;
+      height: 50px;
+    }
+  
+    .snack-click {
+      margin-top: 75px;
+      font-size: 13px;
+    }
 }
 
 @media screen and (min-width: 438px) and (max-width: 451px) {
@@ -441,10 +503,24 @@ body.homePage {
   }
 
   .topcontainerimagedivv p {
-    font-size: 10.5px;
-    text-align: center;
-    margin-top: -2px;
+      font-size: 10.5px;
+      text-align: center;
+      margin-top: -2px;
   }
+
+  .under-home-container p {
+       margin-top: -17px;
+       font-size: 17px;
+       font-family: fantasy;
+       text-align: center;
+       width: 75%;
+       height: 55px;
+     }
+  
+  .snack-click {
+      margin-top: 75px;
+      font-size: 13px;
+     }
 }
 
 /***/
@@ -471,6 +547,20 @@ body.homePage {
     text-align: center;
     margin-top: -2px;
   }
+
+  .under-home-container p {
+      margin-top: -17px;
+      font-size: 17px;
+      font-family: fantasy;
+      text-align: center;
+      width: 75%;
+      height: 55px;
+  }
+  
+  .snack-click {
+      margin-top: 75px;
+      font-size: 13px;
+  }
 }
 
 @media screen and (min-width: 466px) and (max-width: 479px) {
@@ -496,6 +586,20 @@ body.homePage {
     text-align: center;
     margin-top: -2px;
   }
+
+  .under-home-container p {
+       margin-top: -10px;
+       font-size: 16px;
+       font-family: fantasy;
+       text-align: center;
+       width: 75%;
+       height: 55px;
+     }
+  
+  .snack-click {
+    margin-top: 70px;
+    font-size: 13px;
+     }
 }
 
 @media screen and (min-width:480px) and (max-width: 500px) {
@@ -520,6 +624,20 @@ body.homePage {
     text-align: center;
     margin-top: -2px;
   }
+
+  .under-home-container p {
+      margin-top: -10px;
+      font-size: 16px;
+      font-family: fantasy;
+      text-align: center;
+      width: 75%;
+      height: 55px;
+    }
+  
+  .snack-click {
+      margin-top: 70px;
+      font-size: 14px;
+    }
 }
 
 @media screen and (min-width:480px) and (max-width: 501px) {
@@ -569,6 +687,20 @@ body.homePage {
     text-align: center;
     margin-top: -2px;
   }
+
+    .under-home-container p {
+      margin-top: -10px;
+      font-size: 18px;
+      font-family: fantasy;
+      text-align: center;
+      width: 75%;
+      height: 55px;
+    }
+  
+    .snack-click {
+      margin-top: 70px;
+      font-size: 15px;
+    }
 }
 
 
@@ -605,6 +737,21 @@ body.homePage {
     padding: 5px;
 
   }
+
+
+    .under-home-container p {
+       margin-top: -10px;
+       font-size: 18px;
+       font-family: fantasy;
+       text-align: center;
+       width: 75%;
+       height: 55px;
+     }
+  
+     .snack-click {
+       margin-top: 70px;
+       font-size: 15px;
+     }
 }
 
 @media screen and (min-width:526px) and (max-width: 538px) {
@@ -1287,7 +1434,7 @@ body.homePage {
     padding: 0;
     padding-bottom: 0%;
     width: 308px;
-    margin: 0 28px 0 -36px;
+    margin: 0 30px 0 -45px;
     margin-bottom: 25px;
     height: 445px;
   }
@@ -1975,26 +2122,48 @@ body.ticketPage {
 
 /*---------------------TICKET PAGE ENDS HERE---------------------------------------------------- */
 
-.contact {
-  text-align: justify;
+
+/*-------------------- kontakt PAGE STARTS HERE------------------------------------------------- */
+body.contactPage {
+  background-color: #000000;
+}
+
+contact {
+  text-align: center;
   justify-content: space-between;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: white;
   padding: 20px;
   position: relative;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-right: 20px;
+  padding-left: 20px;
   margin: auto;
-  /* width: 45%; */
+  width: 45%;
+}
+
+.contact p{
+  margin:0 auto;
+  padding: 10px 2px;
+  width: 50%;
+  text-align: start;
+  word-wrap: break-word;
 }
 
 .contact a {
-  color: #808080;
+  color: #047d32;
 }
 
 .contact a:hover {
   cursor: pointer;
-  color: #add8e6;
+  color: #034d2b;
 }
 
+ .contactPerson{
+  color:rgba(59, 6, 183, 0.895);
+} 
+/*----------------------------- kontakt PAGE ENDS HERE-----------------------------*/
 /* b{
   color:green;
 } */
@@ -2307,42 +2476,48 @@ body.bookingPage {
 
 /* css register starts */
 
-.register {
-  background-color: rgb(37, 37, 37);
-  width: 450px;
-  height: 400px;
-  position: relative;
-  border-radius: 7%;
-  margin: auto;
-  border-top-left-radius: 0%;
+body.registerPage {
+  background-color: rgb(23, 23, 23);
 }
 
-.register_form {
-  display: flex;
-  margin: auto;
-  background-color: rgb(0, 171, 190);
-  justify-content: center;
-  width: 400px;
-  height: 350px;
-  align-items: center;
-  padding: 20px;
-  border-radius: 7%;
-  position: absolute;
+
+.register{
+  background-color: rgb(11, 10, 14);
+  width:450px;
+  height:400px;
+  position:relative;
+  border-radius:0%;
+  margin:auto;
+  border-top-left-radius: 0%;
+  margin-top:30px ;
+}
+
+.register_form{
+  display:flex;
+  margin:auto;
+  background-color: rgb(122,119,226);
+  justify-content:center;
+  width:400px;
+  height:350px;
+  align-items:center;
+  padding:20px;
+  border-radius:7%;
+  position:absolute;
   top: 15px;
   right: 14px;
   border: top left radius 0%;
-  background: linear-gradient(to bottom, #00ABBE, #2057A9, #0A2E52, rgb(60, 59, 74));
-  box-shadow: 0px 60px 300px 35px #000000;
+  background: linear-gradient(to bottom,#00ABBE, #2057A9, #0A2E52, rgb(60, 59, 74));
+  box-shadow:0px 60px 300px 35px #0a0912;
 }
 
-.label {
-  display: block;
-  margin-bottom: 2px;
-  font-family: sans-serif;
-  font-size: auto;
-  font-weight: bold;
-  color: rgb(91, 91, 91);
-  text-transform: uppercase;
+.label{
+  display:block;
+  margin-bottom:2px;
+  font-family:sans-serif;
+  font-size:auto;
+  font-weight:bold;
+  color:rgb(79, 7, 7);
+  text-transform:uppercase;
 }
 
 .label.label::after {
@@ -2350,17 +2525,15 @@ body.bookingPage {
   color: red;
 }
 
-.username,
-.password,
-.firstname,
-.lastname {
-  display: block;
-  font-family: sans-serif;
-  font-size: 16px;
-  color: rgba(251, 251, 251, 0.82);
-  border-radius: 3px;
-  border-style: none;
-  background-color: rgb(41, 41, 41);
+.username,.password,.firstname,
+.lastname{
+  display:block;
+  font-family:sans-serif;
+  font-size:16px;
+  color:rgba(143, 11, 86, 0.82);
+  border-radius:3px;
+  border-style:none;
+  background-color: rgb(41,41,41);
 
 }
 
