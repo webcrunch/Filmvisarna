@@ -14,9 +14,6 @@ export default function Booked() {
     }, []);
     let confirmationNumber = generate();
 
-
-
-
     return bookingInfo && (
         < div className="doneA" >
             <div className="information">
