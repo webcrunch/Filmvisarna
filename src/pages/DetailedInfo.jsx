@@ -3,7 +3,7 @@ import { useParams, Link } from 'react-router-dom';
 import { calculatingTime } from '../utilities/length-calculating';
 import React, { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom'
-
+import Trailer from './trailer';
 // import Trailer from ''
 export default function DetailedInfo() {
     const { moviePath } = useParams();
@@ -16,13 +16,26 @@ export default function DetailedInfo() {
     const screening = useStates({ screenings: "null", categories: "null" })
 
     const screenings = movie != undefined ? s.screenings.filter(screen => screen.film === movie.title) : null;
-    let dateArray = movie != undefined ? s.screenings.map(screen => screen.date) : null;
+    let dateArray =[];
+    // let dateArray = movie != undefined ? s.screenings.map(screen => screen.date) : null;
     // const testBlock = screenings.filter((screen,index) => {
     //     if(index < 4) return screen;
     // })
+
+    function createDates() {
+        // let categories = [];
+        for (let screen of screenings) {
+            console.log(screen);
+        //   categories = [...categories, ...movie.genre.split(",")];
+        }
+        // l.categories = [...new Set(categories)];
+      }
+
+
     useEffect(() => {
-        document.body.classList.add("ticketPage");
-        return () => document.body.classList.remove("ticketPage");
+        createDates();
+        document.body.classList.add("detailedInfo");
+        return () => document.body.classList.remove("detailedInfo");
     }, []);
     const filterByDate = (s) => screening.categories === "null" || s.date === screening.categories;
     return <>
@@ -31,7 +44,7 @@ export default function DetailedInfo() {
                 <div className="detailedPageContainer">
                     <div className='detailedLeftContainer'>
                         <img className="detailedImages" src={movie.images} />
-                        {/* <Trailer className="someting" embedId="xjDjIWPwcPU" /> */}
+                        <Trailer embedId={trailer} />
                         {/* <iframe className="movieTrailer" width="350px" height="315px" src={"https://www.youtube.com/embed/" + movie.youtubeTrailer} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> */}
                     </div>
                     <div className="detailedRightContainer">
@@ -78,7 +91,14 @@ export default function DetailedInfo() {
                                 <div className="detailedScreeningsDropdown">
                                     <div className="detailedScreening">
                                         <select name=""{...screening.bind("categories")} id="">{dateArray.map(cat => <option>{cat}</option>)}</select>
-                                        {screenings.filter(filterByDate).map(screen => <p>{screen.film}{screen.date}</p>)}
+                                        {screenings.filter(filterByDate).map(screen => <Link to={"/ticket/" + movie.path} state={{
+                      from: [
+                        screen.auditorium,
+                        screen.film,
+                        screen.date,
+                        screen.time,
+                      ],
+                    }}> <p>{screen.date} {screen.time}</p> </Link>)}
                                     </div>
                                 </div>
                             )}

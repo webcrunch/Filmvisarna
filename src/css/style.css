@@ -980,6 +980,10 @@ align-self: center;
 
 /* ?? ______________________________________ Detail page css start ___________________________________________ ?? */
 
+body.detailedInfo {
+  background-color: black;
+}
+
 .detailedPageContainer {
   color: white;
   width: 100%;
