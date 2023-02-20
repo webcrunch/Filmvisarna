@@ -238,7 +238,7 @@ body.homePage{
 
 .flex-container>div {
   background-color: #1a1a1a;
-  width: 300px;
+  width: 290px;
   padding: 1px;
   height: 450px;
   text-align: center;
@@ -248,7 +248,7 @@ body.homePage{
   border-bottom-right-radius: 0px;
   border-bottom: #575757 solid;
   margin-top: 1%;
-  margin: 0 15px 40px -20px;
+  margin: 0 15px 40px -55px;
   box-shadow: inset 0 0 0 0 #ffffff28;
   transition: ease-out 0.4s;
   cursor: pointer;
@@ -293,9 +293,10 @@ body.homePage{
 }
 
 .under-home-container p{
-  font-size: 45px;
+  font-size: 35px;
   font-family: fantasy;
   text-align: center;
+  width: 80%;
 }
 
 .snack-click{
@@ -340,8 +341,23 @@ body.homePage{
   .topcontainerimagedivv p {
     font-size: 7.5px;
     text-align: center;
-    margin-top: -2px;
+    margin-top: 1px;
   }
+
+  .under-home-container p {
+    margin-top: 5px;
+      font-size: 12px;
+      font-family: fantasy;
+      text-align: center;
+      width: 80%;
+      height: 50px;
+    }
+  
+  .snack-click{
+    margin-top: 50px;
+    font-size: 12px;
+  }
+  
 }
 
 
@@ -368,6 +384,22 @@ body.homePage{
     text-align: center;
     margin-top: -2px;
   }
+
+  
+
+  .under-home-container p {
+      margin-top: -20px;
+      font-size: 13px;
+      font-family: fantasy;
+      text-align: center;
+      width: 75%;
+      height: 50px;
+    }
+  
+    .snack-click {
+      margin-top: 50px;
+      font-size: 12px;
+    }
 }
 
 @media screen and (min-width: 374px) and (max-width: 403px){
@@ -391,6 +423,21 @@ body.homePage{
     text-align: center;
     margin-top: -2px;
   }
+
+    .under-home-container p {
+      margin-top: -20px;
+      font-size: 14px;
+      font-family: fantasy;
+      text-align: center;
+      width: 75%;
+      height: 50px;
+    }
+  
+    .snack-click {
+      margin-top: 70px;
+      font-size: 12px;
+    }
+
 }
 
 @media screen and (min-width: 404px) and (max-width: 437px){
@@ -415,6 +462,20 @@ body.homePage{
     text-align: center;
     margin-top: -2px;
   }
+
+    .under-home-container p {
+      margin-top: -20px;
+      font-size: 16px;
+      font-family: fantasy;
+      text-align: center;
+      width: 75%;
+      height: 50px;
+    }
+  
+    .snack-click {
+      margin-top: 75px;
+      font-size: 13px;
+    }
 }
 
 @media screen and (min-width: 438px) and (max-width: 451px){
@@ -436,10 +497,24 @@ body.homePage{
   }
 
   .topcontainerimagedivv p {
-    font-size: 10.5px;
-    text-align: center;
-    margin-top: -2px;
+      font-size: 10.5px;
+      text-align: center;
+      margin-top: -2px;
   }
+
+  .under-home-container p {
+       margin-top: -17px;
+       font-size: 17px;
+       font-family: fantasy;
+       text-align: center;
+       width: 75%;
+       height: 55px;
+     }
+  
+  .snack-click {
+      margin-top: 75px;
+      font-size: 13px;
+     }
 }
 
 /***/
@@ -466,6 +541,20 @@ body.homePage{
     text-align: center;
     margin-top: -2px;
   }
+
+  .under-home-container p {
+      margin-top: -17px;
+      font-size: 17px;
+      font-family: fantasy;
+      text-align: center;
+      width: 75%;
+      height: 55px;
+  }
+  
+  .snack-click {
+      margin-top: 75px;
+      font-size: 13px;
+  }
 }
 @media screen and (min-width: 466px) and (max-width: 479px){
   
@@ -490,6 +579,20 @@ body.homePage{
     text-align: center;
     margin-top: -2px;
   }
+
+  .under-home-container p {
+       margin-top: -10px;
+       font-size: 16px;
+       font-family: fantasy;
+       text-align: center;
+       width: 75%;
+       height: 55px;
+     }
+  
+  .snack-click {
+    margin-top: 70px;
+    font-size: 13px;
+     }
 }
 
 @media screen and (min-width:480px) and (max-width: 500px){
@@ -514,6 +617,20 @@ body.homePage{
     text-align: center;
     margin-top: -2px;
   }
+
+  .under-home-container p {
+      margin-top: -10px;
+      font-size: 16px;
+      font-family: fantasy;
+      text-align: center;
+      width: 75%;
+      height: 55px;
+    }
+  
+  .snack-click {
+      margin-top: 70px;
+      font-size: 14px;
+    }
 }
 
 @media screen and (min-width:480px) and (max-width: 501px){
@@ -563,6 +680,20 @@ body.homePage{
     text-align: center;
     margin-top: -2px;
   }
+
+    .under-home-container p {
+      margin-top: -10px;
+      font-size: 18px;
+      font-family: fantasy;
+      text-align: center;
+      width: 75%;
+      height: 55px;
+    }
+  
+    .snack-click {
+      margin-top: 70px;
+      font-size: 15px;
+    }
 }
 
 
@@ -599,6 +730,21 @@ body.homePage{
     padding: 5px;
     
   }
+
+
+    .under-home-container p {
+       margin-top: -10px;
+       font-size: 18px;
+       font-family: fantasy;
+       text-align: center;
+       width: 75%;
+       height: 55px;
+     }
+  
+     .snack-click {
+       margin-top: 70px;
+       font-size: 15px;
+     }
 }
 
 @media screen and (min-width:526px) and (max-width: 538px){
@@ -1262,7 +1408,7 @@ body.homePage{
     padding: 0;
     padding-bottom: 0%;
     width: 308px;
-    margin: 0 28px 0 -36px;
+    margin: 0 30px 0 -45px;
     margin-bottom: 25px;
     height: 445px;
   }
