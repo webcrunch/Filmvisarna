@@ -230,7 +230,7 @@ export default function TicketPage() {
           Du har valt <span id="count">{clickerss.totalSeats}</span> platser.
         </p>
       </div>
-      <button onClick={book}>
+      <button className="bokabtnbiljett" onClick={book}>
         Boka
       </button>
     </div>
