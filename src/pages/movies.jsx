@@ -232,7 +232,7 @@ export default function Movies() {
               <div className="card">
                 <Link to={"/movie/" + getMovies(display.film, "path")}>
                   <img
-                    src={"../" + getMovies(display.film, "images")}
+                    src={"Filmvisarna/" + getMovies(display.film, "images")}
                     alt={"Poster av filmen " + display.film}
                   />
                 </Link>
