@@ -10,7 +10,7 @@ export default function TicketPage() {
   let largest = 0;
   const s = useStates('main');
   const saloonData = s.saloons.find(saloon => saloon.name == location.state.from[0]);
-
+  const screeningsData = s.screenings.find(screen => screen.id === location.state.from[4]);
   const clickerss = useStates({
     numberofChildren: 0,
     priceChildren: 65,
@@ -22,7 +22,6 @@ export default function TicketPage() {
   });
 
   useEffect(() => {
-    console.log(s.saloons);
     // add the class ticketPage to the body element
     // when the page shows / the component mounts
     document.body.classList.add("ticketPage");
@@ -31,16 +30,11 @@ export default function TicketPage() {
     return () => document.body.classList.remove("ticketPage");
   }, []);
 
-
-  const getSeats = numberOfSeats => {
+  const getSeats = (numberOfSeatsPerRow,index) => {
     const list = [];
-    for (let i = 0; i < numberOfSeats; i++){
-      if (numberOfSeats < i) {
-
-      }  
-      else {
-      list.push(<div key={i} onClick={()=> something(i)} className="seat-sold"></div>)  
-      }
+    for (let i = 1; i <= numberOfSeatsPerRow; i++){
+      let check_occupied_seat = screeningsData.occupiedSeats[index].find(element => element === i );
+      list.push(<div key={i} onClick={() => something([index,i])} className={check_occupied_seat !== undefined ? "seat-sold" : "seat"}></div>);
     }
     return  list;
   }
@@ -184,6 +178,7 @@ export default function TicketPage() {
           </button>
         </div>
 
+        
         <div className="ticket-option3">
           <h3 className="senior-title">Pensionär</h3>
           <p className="price-tag-name">Pris: {clickerss.priceSenior}Kr</p>
@@ -250,15 +245,14 @@ export default function TicketPage() {
 
 
       <div className="seat-selector-container">
-      {!saloonData ? null : saloonData.seatsPerRow.map(s => 
+      {!saloonData ? null : saloonData.seatsPerRow.map((s,i) => 
         <div className="row">
-            {getSeats(s)}
+            {getSeats(s,i)}
         </div>)}
-               </div>
-      
-        <p className="total-seats">
+         <p className="total-seats">
           Du har valt <span id="count">0</span> platser.
         </p>
-      </div>
-    );
+               </div>
+    </div>
+  );
 }
