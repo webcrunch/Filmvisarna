@@ -69,8 +69,8 @@ export default function TicketPage() {
   const navigate = useNavigate();
 
   function book() {
-    let all = { ...clickerss, ...seats, ...movie };
-    navigate("/done/" + JSON.stringify(all));
+    let all = { ...clickerss, ...seats, screeningsData,movie:movie.path };
+    navigate("/done/" + encodeURIComponent(JSON.stringify(all)));
   }
 
 
