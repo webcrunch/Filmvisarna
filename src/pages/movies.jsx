@@ -49,8 +49,8 @@ export default function Movies() {
 
   useEffect(() => {
     createCategories();
-    document.body.classList.add("ticketPage");
-    return () => document.body.classList.remove("ticketPage");
+    document.body.classList.add("moviePage");
+    return () => document.body.classList.remove("moviePage");
   }, []);
 
   useEffect(() => {
@@ -212,8 +212,16 @@ export default function Movies() {
                   </h4>
                 </div>
                 <Link
-                  to={"/ticket/" + display.film}
-                  state={{ from: "occupation" }}
+                  to={"/ticket/" + getMovies(display.film, "path")}
+                  state={{
+                    from: [
+                      display.auditorium,
+                        display.film,
+                        display.date,
+                        display.time,
+                      display.id
+                    ],
+                  }}
                 >
                   <button className="moviebtnsitplatser">
                     Välj sittplatser
@@ -232,7 +240,7 @@ export default function Movies() {
                   <h2 className="movietitlefilmer">{display.film}</h2>
                   <div className="tidochsalong ">
                     <h4 className="tidochsalongtitle">
-                      Sal: {display.auditorium} <br /> Längd:{" "}
+                      Sal: {display.auditorium} <br /> Längd:
                       {calculatingTime(getMovies(display.film, "length"))}
                     </h4>
                     <h4 className="tidochsalongtitle">
@@ -245,8 +253,16 @@ export default function Movies() {
                     Genre: {getMovies(display.film, "genre")}
                   </h4>
                   <Link
-                    to={"/ticket/" + getMovies(display.film, "path")}
-                    state={{ from: "occupation" }}
+                    to={"/ticket/" + getMovies(display.film, "path") }
+                    state={{
+                      from: [
+                        display.auditorium,
+                        display.film,
+                        display.date,
+                        display.time,
+                        display.id,
+                      ],
+                    }}
                   >
                     <button className="moviebtnsitplatser_small tidochsalongtitle">
                       Välj sittplatser
