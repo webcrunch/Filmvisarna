@@ -1992,8 +1992,7 @@ contact {
   padding-bottom: 0;
   padding-right: 20px;
   padding-left: 20px;
-  margin: auto;
-  width: 45%;
+  
 }
 
 .contact p{
@@ -2017,9 +2016,6 @@ contact {
   color:rgba(59, 6, 183, 0.895);
 } 
 /*----------------------------- kontakt PAGE ENDS HERE-----------------------------*/
-/* b{
-  color:green;
-} */
 
 
 /*-----------------------------Om Oss PAGE STARTS HERE---------------------------------------- */
