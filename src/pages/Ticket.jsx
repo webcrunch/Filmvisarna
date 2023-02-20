@@ -10,7 +10,7 @@ export default function TicketPage() {
   let largest = 0;
   const s = useStates('main');
   const saloonData = s.saloons.find(saloon => saloon.name == location.state.from[0]);
-
+  const screeningsData = s.screenings.find(screen => screen.id === location.state.from[4]);
   const clickerss = useStates({
     numberofChildren: 0,
     priceChildren: 65,
@@ -22,7 +22,6 @@ export default function TicketPage() {
   });
 
   useEffect(() => {
-    console.log(s.saloons);
     // add the class ticketPage to the body element
     // when the page shows / the component mounts
     document.body.classList.add("ticketPage");
@@ -31,16 +30,11 @@ export default function TicketPage() {
     return () => document.body.classList.remove("ticketPage");
   }, []);
 
-
-  const getSeats = numberOfSeats => {
+  const getSeats = (numberOfSeatsPerRow,index) => {
     const list = [];
-    for (let i = 0; i < numberOfSeats; i++){
-      if (numberOfSeats < i) {
-
-      }  
-      else {
-      list.push(<div key={i} onClick={()=> something(i)} className="seat-sold"></div>)  
-      }
+    for (let i = 1; i <= numberOfSeatsPerRow; i++){
+      let check_occupied_seat = screeningsData.occupiedSeats[index].find(element => element === i );
+      list.push(<div key={i} onClick={() => something([index,i])} className={check_occupied_seat !== undefined ? "seat-sold" : "seat"}></div>);
     }
     return  list;
   }
@@ -184,6 +178,7 @@ export default function TicketPage() {
           </button>
         </div>
 
+        
         <div className="ticket-option3">
           <h3 className="senior-title">Pensionär</h3>
           <p className="price-tag-name">Pris: {clickerss.priceSenior}Kr</p>
@@ -235,134 +230,29 @@ export default function TicketPage() {
           </li>
         </ul>
       </div>
-      <div className="tv-screen-container">
-        <div className="tv-screen"></div>
+
+      <div className="tv-section">
+            <div className="tv-outer-red">
+                <div className="tv-middle-red">
+                      <div className="tv-inner-red">
+                          <div className="tv-screen-container">
+                               <div className="tv-screen"></div>
+                          </div>
+                      </div>
+                </div>
+            </div>
       </div>
+
+
       <div className="seat-selector-container">
-      {!saloonData ? null : saloonData.seatsPerRow.map(s => 
+      {!saloonData ? null : saloonData.seatsPerRow.map((s,i) => 
         <div className="row">
-            {getSeats(s)}
+            {getSeats(s,i)}
         </div>)}
-               </div>
-      <div className="seat-selector-container">
-        <div className="row1">
-          <div className="seat"></div>
-          <div className="seat-sold"></div>
-          <div className="seat"></div>
-          <div className="seat-sold"></div>
-          <div className="seat-sold"></div>
-          <div className="seat"></div>
-          <div className="seat"></div>
-          <div className="seat"></div>
-          <div className="seat"></div>
-        </div>
-        <div className="row2">
-          <div className="seat"></div>
-          <div className="seat"></div>
-          <div className="seat"></div>
-          <div className="seat"></div>
-          <div className="seat"></div>
-          <div className="seat"></div>
-          <div className="seat-sold"></div>
-          <div className="seat-sold"></div>
-          <div className="seat"></div>
-        </div>
-        <div className="row3">
-          <div className="seat"></div>
-          <div className="seat"></div>
-          <div className="seat-sold"></div>
-          <div className="seat"></div>
-          <div className="seat"></div>
-          <div className="seat-sold"></div>
-          <div className="seat"></div>
-          <div className="seat"></div>
-          <div className="seat"></div>
-        </div>
-
-        <div className="row4">
-          <div className="seat-sold"></div>
-          <div className="seat"></div>
-          <div className="seat"></div>
-          <div className="seat"></div>
-          <div className="seat"></div>
-          <div className="seat-sold"></div>
-          <div className="seat"></div>
-          <div className="seat"></div>
-          <div className="seat"></div>
-        </div>
-
-        <div className="row5">
-          <div className="seat"></div>
-          <div className="seat"></div>
-          <div className="seat-sold"></div>
-          <div className="seat"></div>
-          <div className="seat"></div>
-          <div className="seat"></div>
-          <div className="seat"></div>
-          <div className="seat"></div>
-          <div className="seat"></div>
-        </div>
-        <div className="row6">
-          <div className="seat-sold"></div>
-          <div className="seat-sold"></div>
-          <div className="seat-sold"></div>
-          <div className="seat"></div>
-          <div className="seat"></div>
-          <div className="seat-sold"></div>
-          <div className="seat"></div>
-          <div className="seat"></div>
-          <div className="seat"></div>
-        </div>
-        <div className="row7">
-          <div className="seat"></div>
-          <div className="seat"></div>
-          <div className="seat-sold"></div>
-          <div className="seat"></div>
-          <div className="seat-sold"></div>
-          <div className="seat"></div>
-          <div className="seat"></div>
-          <div className="seat-sold"></div>
-          <div className="seat-sold"></div>
-        </div>
-
-        <div className="row8">
-          <div className="seat-sold"></div>
-          <div className="seat"></div>
-          <div className="seat"></div>
-          <div className="seat-sold"></div>
-          <div className="seat-sold"></div>
-          <div className="seat-sold"></div>
-          <div className="seat"></div>
-          <div className="seat"></div>
-          <div className="seat"></div>
-        </div>
-        <div className="row9">
-          <div className="seat"></div>
-          <div className="seat-sold"></div>
-          <div className="seat"></div>
-          <div className="seat-sold"></div>
-          <div className="seat"></div>
-          <div className="seat"></div>
-          <div className="seat-sold"></div>
-          <div className="seat-sold"></div>
-          <div className="seat"></div>
-        </div>
-        <div className="row10">
-          <div className="seat"></div>
-          <div className="seat"></div>
-          <div className="seat-sold"></div>
-          <div className="seat"></div>
-          <div className="seat"></div>
-          <div className="seat"></div>
-          <div className="seat-sold"></div>
-          <div className="seat-sold"></div>
-          <div className="seat"></div>
-        </div>
-
-        <p className="total-seats">
+         <p className="total-seats">
           Du har valt <span id="count">0</span> platser.
         </p>
-      </div>
+               </div>
     </div>
   );
 }
