@@ -9,6 +9,7 @@ export default function TicketPage() {
   const location = useLocation();
   let largest = 0;
   const s = useStates('main');
+  const movie = s.movies != undefined ? s.movies.find(movie => movie.path == moviePath) : null;
   const saloonData = s.saloons.find(saloon => saloon.name == location.state.from[0]);
   const screeningsData = s.screenings.find(screen => screen.id === location.state.from[4]);
   const clickerss = useStates({
@@ -74,17 +75,19 @@ export default function TicketPage() {
       const location = useLocation()
 
         const s = useStates('main');
-    const movie = s.movies.find(movie => movie.title == moviePath);
     
     
     return <>
         
         {
             movie != undefined ? <div className="detailedPageContainer">
-                            <h1  className="detailedTitle">Boka platser för filmen: {movie.title}</h1>
             </div>: null    
     } */}
+      {
+        movie != undefined ?
 
+          <h1 className="detailedTitle">Boka platser för filmen: {movie.title}</h1>
+          : null}
       <div className="ticket-container" id="ticket-pricing">
         <div className="ticket-option1">
           <h3 className="vuxen-title">Vuxen</h3>
@@ -232,6 +235,12 @@ export default function TicketPage() {
           Du har valt <span id="count">{clickerss.totalSeats}</span> platser.
         </p>
       </div>
+      {
+        movie !== undefined ? <Link to={"/done/" + movie.path}>
+          <button>Boka film</button>
+        </Link> : null
+      }
+
     </div>
   );
 }
