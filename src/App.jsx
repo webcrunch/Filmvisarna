@@ -53,7 +53,7 @@ export default function App() {
       { path: '/auth', Component: RegisterPage },
       { path: '/authentication', Component: LoginPage },
       { path: '/ticket/:moviePath', Component: TicketPage },
-      { path: '/done/:bookingId', Component: Booked }
+      { path: '/done/:bookingInfo', Component: Booked }
     ],
     screenings: [],
     saloons: []

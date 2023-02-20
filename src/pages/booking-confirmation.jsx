@@ -2,16 +2,22 @@ import { useStates } from "../utilities/states";
 import copyContent from '../utilities/copyFunction';
 import { calculatingTime } from '../utilities/length-calculating';
 import { useEffect } from 'react';
-import { useParams } from 'react-router-dom';
-
+import { useParams, useLocation } from 'react-router-dom';
 import generate from "../utilities/random-order-confirmation"
 export default function Booked() {
-    const { bookingId } = useParams();
-    const { movies, screenings } = useStates('main');
-    const l = useStates({
-        movie: null,
-        screning: null
-    });
+    /* const { bookingId } = useParams();
+     const bi = useStates("booked");
+     const location = useLocation();
+     console.log(location, bi);
+     const { movies, screenings } = useStates('main');
+     const l = useStates({
+         movie: null,
+         screning: null
+     });*/
+
+    let { bookingInfo } = useParams();
+    bookingInfo = JSON.parse(bookingInfo);
+    let of = bookingInfo;
 
     useEffect(() => {
         l.movie = movies.find(movie => movie.path === bookingId);
@@ -19,7 +25,7 @@ export default function Booked() {
     }, []);
 
 
-    let of = {
+    /*let of = {
         phoneNumber: 333333,
         numberOfChildren: 0,
         numberOfAdults: 4,
@@ -29,7 +35,9 @@ export default function Booked() {
         calculateAll() {
             return this.numberOfAdults + this.numberOfChildren + this.numberOfSeniors
         }
-    }
+    }*/
+
+
 
     return <>{l.movie && l.screning ?
         < div className="doneA" >

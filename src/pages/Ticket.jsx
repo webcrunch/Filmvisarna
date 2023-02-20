@@ -1,5 +1,5 @@
 import { useStates } from "../utilities/states";
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link, useNavigate } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 import { calculatingTime } from "../utilities/length-calculating";
 import { useEffect } from "react";
@@ -7,7 +7,6 @@ import { useEffect } from "react";
 export default function TicketPage() {
   const { moviePath, id } = useParams();
   const location = useLocation();
-  let largest = 0;
   const s = useStates('main');
   const movie = s.movies != undefined ? s.movies.find(movie => movie.path == moviePath) : null;
   const saloonData = s.saloons.find(saloon => saloon.name == location.state.from[0]);
@@ -67,22 +66,16 @@ export default function TicketPage() {
   }
 
 
-  return (
-    <div className="full-ticket-page">
-      {/*  {
-export default function TicketPage() { 
-    const { moviePath } = useParams();
-      const location = useLocation()
+  const navigate = useNavigate();
 
-        const s = useStates('main');
-    
-    
-    return <>
-        
-        {
-            movie != undefined ? <div className="detailedPageContainer">
-            </div>: null    
-    } */}
+  function book() {
+    let all = { ...clickerss, ...seats, ...movie };
+    navigate("/done/" + JSON.stringify(all));
+  }
+
+
+  return movie && (
+    <div className="full-ticket-page">
       {
         movie != undefined ?
 
@@ -235,12 +228,9 @@ export default function TicketPage() {
           Du har valt <span id="count">{clickerss.totalSeats}</span> platser.
         </p>
       </div>
-      {
-        movie !== undefined ? <Link to={"/done/" + movie.path}>
-          <button>Boka film</button>
-        </Link> : null
-      }
-
+      <button onClick={book}>
+        Boka
+      </button>
     </div>
   );
 }
