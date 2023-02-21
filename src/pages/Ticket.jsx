@@ -1,9 +1,6 @@
 import { useStates } from "../utilities/states";
-import { useParams, Link } from "react-router-dom";
-import { useLocation } from "react-router-dom";
-import { calculatingTime } from "../utilities/length-calculating";
 import { useEffect, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 // import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
 
