@@ -385,7 +385,7 @@ body.homePage {
 
 /*TOP HOMEPAGE MEDIA QUERIES */
 
-@media screen and (min-width: 312px) and (max-width: 354px) {
+@media screen and (min-width: 212px) and (max-width: 354px) {
 
   .top-title {
     margin-bottom: -129%;
