@@ -14,10 +14,7 @@ export default function TicketPage() {
   // const saloonData = s.saloons.find(saloon => saloon.name == location.state.from[0]);
   // const screeningsData = s.screenings.find(screen => screen.id === location.state.from[4]);
   const s = useStates('main');
-  const saloonData = s.saloons.find(saloon => saloon.name == location.state.from[0]);
   const [width, setWidth] = useState(0);
-
-
   const movie = s.movies != undefined ? s.movies.find(movie => movie.path == screeningInfo.moviePath) : null;
   const saloonData = s.saloons.find(saloon => saloon.name == screeningInfo.auditorium);
   const screeningsData = s.screenings.find(screen => screen.id === screeningInfo.id);
