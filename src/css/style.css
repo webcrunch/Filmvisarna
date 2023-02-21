@@ -238,9 +238,9 @@ body.homePage {
 
 .flex-container>div {
   background-color: #1a1a1a;
-  width: 57.9vh;
+  width: 40.9vh;
   padding: 1px;
-  height: 450px;
+  height: 50vh;
   text-align: center;
   position: relative;
   border-radius: 10px;
