@@ -38,6 +38,8 @@ export default function TicketPage() {
     document.body.classList.add("ticketPage");
     // remove the class ticketPage when the page
     // unmounts..
+    
+
     return () => document.body.classList.remove("ticketPage");
   }, []);
 
