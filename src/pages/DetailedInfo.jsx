@@ -45,7 +45,7 @@ export default function DetailedInfo() {
                     <div className='detailedLeftContainer'>
                         <img className="detailedImages" src={movie.images} />
                         <Trailer className="detailedTrailer" embedId={trailer} />
-                        {/* <iframe className="movieTrailer" width="350px" height="315px" src={"https://www.youtube.com/embed/" + movie.youtubeTrailer} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> */}
+                        {/* <iframe className="detailedTrailer" width="350px" height="315px" src={"https://www.youtube.com/embed/" + movie.youtubeTrailer} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> */}
                     </div>
                     <div className="detailedRightContainer">
                         <h1 className="detailedTitle">{movie.title}</h1>
