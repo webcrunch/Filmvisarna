@@ -20,6 +20,7 @@ import DetailedInfo from './pages/DetailedInfo.jsx';
 import TicketPage from './pages/Ticket.jsx';
 import RegisterPage from './pages/register.jsx';
 import LoginPage from './pages/login.jsx';
+import Listing from './pages/Listings.jsx';
 // A React component is a function
 // it will run every time a state variable changes
 // thus rerendering the content you see in your Browser
@@ -41,6 +42,7 @@ export default function App() {
   let a = useStates('user', {
     loggedin: false,
     name: null,
+    id: null,
     users: []
   })
 
@@ -55,7 +57,8 @@ export default function App() {
       { path: '/auth', Component: RegisterPage },
       { path: '/authentication', Component: LoginPage },
       { path: '/ticket/:screeningInfo', Component: TicketPage },
-      { path: '/done/:bookingInfo', Component: Booked }
+      { path: '/done/:bookingInfo', Component: Booked },
+      { path: '/yourlist', Component: Listing}
     ],
     screenings: [],
     saloons: []
