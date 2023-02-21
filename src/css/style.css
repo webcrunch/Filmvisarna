@@ -1205,7 +1205,8 @@ word-break:keep-all;
 
 .li-avaliable {
   box-sizing: border-box;
-  background-color: #474747;
+  background-color: white;
+  color: black;
   box-shadow: 0px 0px 35px 0px #000000;
   border: 1px solid rgb(147, 147, 147);
   width: 30%;
@@ -1430,10 +1431,10 @@ margin-bottom:30px; */
   align-self: center;
 }
 
-.seat {
+.seat-sold {
   position: relative;
   display: inline-block;
-  background-color: #ffffff;
+  background: #afafaf linear-gradient(to right bottom, transparent 47.75%, currentColor 49.5%, currentColor 50.5%, transparent 52.25%);
   box-shadow: rgb(0, 0, 0) 100px, 100px, 900px, 90px;
   width: 30px;
   height: 27px;
@@ -1446,26 +1447,11 @@ margin-bottom:30px; */
   align-self: center;
 }
 
-.seat-disapeared {
-  position: relative;
-  display: inline-block;
-  background-color: #ff0000;
-  width: 30px;
-  height: 27px;
-  margin: auto;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  transform: rotate3d(184, 102, 1, 45deg);
-  align-items: center;
-  align-content: center;
-  align-self: center;
-  /* visibility: hidden; */
-}
 
-.seat-sold {
+.seat {
   position: relative;
   display: inline-block;
-  background-color: #afafaf;
+  background-color: #ffffff;
   margin: 5px;
   width: 30px;
   height: 27px;
@@ -1488,8 +1474,8 @@ margin-bottom:30px; */
 }
 
 .li-sold {
-  background-color: white;
-  color: black;
+  background-color: #474747;
+  color: white;
 }
 
 
