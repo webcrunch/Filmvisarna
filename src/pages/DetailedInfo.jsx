@@ -23,17 +23,17 @@ export default function DetailedInfo() {
     // })
 
     function createDates() {
-        // let categories = [];
+        let categories = [];
         for (let screen of screenings) {
             console.log(screen);
-            //   categories = [...categories, ...movie.genre.split(",")];
+            categories = [...categories, ...movie.genre.split(",")];
         }
-        // l.categories = [...new Set(categories)];
+        l.categories = [...new Set(categories)];
     }
 
 
     useEffect(() => {
-        createDates();
+        /*   createDates(); */
         document.body.classList.add("detailedInfo");
         return () => document.body.classList.remove("detailedInfo");
     }, []);
