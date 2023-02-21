@@ -1,6 +1,7 @@
 import { useStates } from './utilities/states.js';
 import { useEffect } from 'react';
 import { kebabify } from './utilities/kebabify';
+
 import {
   BrowserRouter,
   Routes,
@@ -14,9 +15,11 @@ import Home from './pages/home.jsx';
 import Contact from './pages/contact.jsx';
 import About from './pages/about.jsx';
 import Movies from './pages/movies.jsx';
-import Booked from './pages/booking-confirmatin.jsx';
-import DetailedInfo from './detailedInfo.jsx';
+import Booked from './pages/booking-confirmation.jsx';
+import DetailedInfo from './pages/DetailedInfo.jsx';
 import TicketPage from './pages/Ticket.jsx';
+import RegisterPage from './pages/register.jsx';
+import LoginPage from './pages/login.jsx';
 // A React component is a function
 // it will run every time a state variable changes
 // thus rerendering the content you see in your Browser
@@ -47,9 +50,10 @@ export default function App() {
       { label: 'OM OSS ', path: '/about', Component: About }, //, Component:
       { label: 'KONTAKT', path: '/contact', Component: Contact },
       { path: '/movie/:moviePath', Component: DetailedInfo },
-      // { path: '/authentication/, Component: DetailedInfo },
-      { path: '/ticket/:moviePath', Component: TicketPage },
-      { path: '/done/:bookingId', Component: Booked }
+      { path: '/auth', Component: RegisterPage },
+      { path: '/authentication', Component: LoginPage },
+      { path: '/ticket/:screeningInfo', Component: TicketPage },
+      { path: '/done/:bookingInfo', Component: Booked }
     ],
     screenings: [],
     saloons: []
@@ -60,7 +64,7 @@ export default function App() {
     // Load animal data from /json/niceAnimals.json
     (async () => {
       s.screenings = await (await fetch('/json/screening.json')).json();
-      s.sallons = await (await fetch('/json/saloons.json')).json();
+      s.saloons = await (await fetch('/json/saloons.json')).json();
       let movies = await (await fetch('/json/movies.json')).json();
       for (let movie of movies) {
         movie.path = kebabify(movie.title)
