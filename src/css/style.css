@@ -1237,8 +1237,20 @@ margin-bottom:30px; */
   border-left: solid rgb(137, 12, 12) 15px;
   border-right: solid rgb(137, 12, 12) 15px;
   border-width: 10px, 10px, 10px, 10px;
-  transition: width 10s;
+  transition: width 6s;
 }
+.tv-screen:after {
+  width: 35vh;
+  height: 208px;
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  box-shadow: 0px 10px 85px 20px #953333;
+  border-left: solid rgb(137, 12, 12) 15px;
+  border-right: solid rgb(137, 12, 12) 15px;
+  border-width: 10px, 10px, 10px, 10px;
+  transition: width 6s;
+}
+
 
 .seat-selector-container {
   align-items: center;
