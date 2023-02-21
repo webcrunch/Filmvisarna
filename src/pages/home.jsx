@@ -16,9 +16,8 @@ export default function Home() {
   }, []);
 
   return <div className="home-page-container">
-      <div className="top-title">
-           <h1 className='flexp'>Aktuella filmer på bio</h1>
-      </div>
+
+    <h1 className='flexp'>Aktuella filmer på bio</h1>
       <div className="flex-container">
           {movies.map(movie =>
             <>
