@@ -1,7 +1,7 @@
 import { useStates } from "../utilities/states";
-import { useParams, Link, useNavigate } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { useNavigate, useParams } from "react-router-dom";
 // import { useLocation } from "react-router-dom";
-import { useEffect } from "react";
 
 export default function TicketPage() {
   let { screeningInfo } = useParams();
@@ -10,6 +10,7 @@ export default function TicketPage() {
   // const saloonData = s.saloons.find(saloon => saloon.name == location.state.from[0]);
   // const screeningsData = s.screenings.find(screen => screen.id === location.state.from[4]);
   const s = useStates('main');
+  const [width, setWidth] = useState(0);
   const movie = s.movies != undefined ? s.movies.find(movie => movie.path == screeningInfo.moviePath) : null;
   const saloonData = s.saloons.find(saloon => saloon.name == screeningInfo.auditorium);
   const screeningsData = s.screenings.find(screen => screen.id === screeningInfo.id);
