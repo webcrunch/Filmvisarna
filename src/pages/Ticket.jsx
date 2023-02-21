@@ -3,7 +3,7 @@ import { useParams, Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 import { calculatingTime } from "../utilities/length-calculating";
 import { useEffect, useState } from "react";
-import { useParams, Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 // import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
 
