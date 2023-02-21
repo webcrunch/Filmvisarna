@@ -262,7 +262,7 @@ body.homePage {
   width: auto;
 }
 
-.topcontainerimagedivv p {
+.topcontainerimagedivv p{
   font-size: 24px;
   margin-top: 25px;
 }
@@ -294,7 +294,7 @@ body.homePage {
   text-align: center;
 }
 
-.under-home-container p {
+.under-home-container p{
   font-size: 35px;
   font-family: fantasy;
   text-align: center;
@@ -332,37 +332,29 @@ body.homePage {
   }
 
   .flexp {
-    font-size: 8vw;
-    /* Scale font size proportionally */
+    font-size: 8vw; /* Scale font size proportionally */
     font-weight: bolder;
     letter-spacing: 3px;
     color: white;
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    margin-top: 5vw;
-    /* Scale margin proportionally */
-    margin-left: -32vw;
-    /* Scale margin proportionally */
-    margin-bottom: 0vw;
-    /* Scale margin proportionally */
+    margin-top: 5vw; /* Scale margin proportionally */
+    margin-left: -32vw; /* Scale margin proportionally */
+    margin-bottom: 0vw; /* Scale margin proportionally */
     transform: scale(0.45);
-
+    
   }
 
   .flex-container {
-    margin-left: -34.5vw;
-    /* Scale margin proportionally */
-    margin-top: -20vw;
-    /* Scale margin proportionally */
+    margin-left: -34.5vw; /* Scale margin proportionally */
+    margin-top: -20vw; /* Scale margin proportionally */
     display: grid;
     grid-template-columns: auto auto auto auto;
-    padding: 0vw;
-    /* Scale padding proportionally */
+    padding: 0vw; /* Scale padding proportionally */
     flex-wrap: nowrap;
     background-color: rgba(0, 0, 0, 0.537);
     height: auto;
     width: 100%;
-    gap: 2vw;
-    /* Scale gap proportionally */
+    gap: 2vw; /* Scale gap proportionally */
     row-gap: 2%;
     margin-top: 0;
     transform: scale(0.299);
@@ -370,25 +362,18 @@ body.homePage {
 
   .flex-container>div {
     background-color: #1a1a1a;
-    width: 78vw;
-    /* Scale width proportionally */
-    padding: 1vw;
-    /* Scale padding proportionally */
-    height: 115vw;
-    /* Scale height proportionally */
+    width: 78vw; /* Scale width proportionally */
+    padding: 1vw; /* Scale padding proportionally */
+    height: 115vw; /* Scale height proportionally */
     text-align: center;
     position: relative;
-    border-radius: 1vw;
-    /* Scale border-radius proportionally */
+    border-radius: 1vw; /* Scale border-radius proportionally */
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px;
     border-bottom: #575757 solid;
-    margin-top: 1vw;
-    /* Scale margin proportionally */
-    margin-right: 0;
-    /* Remove fixed margin value */
-    margin-left: 2.5vw;
-    /* Scale margin proportionally */
+    margin-top: 1vw; /* Scale margin proportionally */
+    margin-right: 0; /* Remove fixed margin value */
+    margin-left: 2.5vw; /* Scale margin proportionally */
     box-shadow: inset 0 0 0 0 #ffffff28;
     transition: ease-out 0.4s;
     cursor: pointer;
@@ -398,7 +383,7 @@ body.homePage {
 
   .topcontainerimagedivv p {
     margin-top: 2%;
-    font-size: 2.99vh;
+   font-size: 2.99vh;
   }
 
   .under-home-container {
@@ -407,24 +392,24 @@ body.homePage {
     height: auto;
     align-items: center;
     text-align: center;
-
+    
   }
 
-  .under-home-container p {
+  .under-home-container p{
     margin-top: 10vh;
-    margin-right: auto;
+    margin-right:auto ;
     font-size: 2vh;
     width: 35vh;
     height: auto;
     text-align: center;
   }
 
-  .snack-click {
+  .snack-click{
     margin-top: 5vh;
     font-size: 2vh;
   }
 
-  .snack-container {
+  .snack-container{
     width: 100%;
     margin-top: 0vh;
 
@@ -438,37 +423,29 @@ body.homePage {
   }
 
   .flexp {
-    font-size: 8vw;
-    /* Scale font size proportionally */
+    font-size: 8vw; /* Scale font size proportionally */
     font-weight: bolder;
     letter-spacing: 3px;
     color: white;
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    margin-top: 5vw;
-    /* Scale margin proportionally */
-    margin-left: -32vw;
-    /* Scale margin proportionally */
-    margin-bottom: 0vw;
-    /* Scale margin proportionally */
+    margin-top: 5vw; /* Scale margin proportionally */
+    margin-left: -32vw; /* Scale margin proportionally */
+    margin-bottom: 0vw; /* Scale margin proportionally */
     transform: scale(0.45);
-
+    
   }
 
   .flex-container {
-    margin-left: -34.5vw;
-    /* Scale margin proportionally */
-    margin-top: -20vw;
-    /* Scale margin proportionally */
+    margin-left: -34.5vw; 
+    margin-top: -20vw; 
     display: grid;
     grid-template-columns: auto auto auto auto;
-    padding: 0vw;
-    /* Scale padding proportionally */
+    padding: 0vw; 
     flex-wrap: nowrap;
     background-color: rgba(0, 0, 0, 0.537);
     height: auto;
     width: 100%;
-    gap: 2vw;
-    /* Scale gap proportionally */
+    gap: 2vw; 
     row-gap: 2%;
     margin-top: 0;
     transform: scale(0.299);
@@ -476,25 +453,18 @@ body.homePage {
 
   .flex-container>div {
     background-color: #1a1a1a;
-    width: 78vw;
-    /* Scale width proportionally */
-    padding: 1vw;
-    /* Scale padding proportionally */
-    height: 115vw;
-    /* Scale height proportionally */
+    width: 78vw; /* Scale width proportionally */
+    padding: 1vw; /* Scale padding proportionally */
+    height: 115vw; /* Scale height proportionally */
     text-align: center;
     position: relative;
-    border-radius: 1vw;
-    /* Scale border-radius proportionally */
+    border-radius: 1vw; /* Scale border-radius proportionally */
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px;
     border-bottom: #575757 solid;
-    margin-top: 1vw;
-    /* Scale margin proportionally */
-    margin-right: 0;
-    /* Remove fixed margin value */
-    margin-left: 2.5vw;
-    /* Scale margin proportionally */
+    margin-top: 1vw; /* Scale margin proportionally */
+    margin-right: 0; /* Remove fixed margin value */
+    margin-left: 2.5vw; /* Scale margin proportionally */
     box-shadow: inset 0 0 0 0 #ffffff28;
     transition: ease-out 0.4s;
     cursor: pointer;
@@ -503,7 +473,7 @@ body.homePage {
   }
 
   .topcontainerimagedivv p {
-    font-size: 5vh;
+   font-size: 5vh;
   }
 
   .under-home-container {
@@ -511,10 +481,10 @@ body.homePage {
     width: 100%;
     height: auto;
     text-align: center;
-
+    
   }
 
-  .under-home-container p {
+  .under-home-container p{
     margin-top: -97vh;
     font-size: 3vh;
     width: 55vh;
@@ -522,12 +492,12 @@ body.homePage {
     text-align: center;
   }
 
-  .snack-click {
+  .snack-click{
     margin-top: 4vh;
     font-size: 2vh;
   }
 
-  .snack-container {
+  .snack-container{
     width: 66.4vh;
   }
 }
@@ -540,37 +510,29 @@ body.homePage {
   }
 
   .flexp {
-    font-size: 8vw;
-    /* Scale font size proportionally */
+    font-size: 8vw; /* Scale font size proportionally */
     font-weight: bolder;
     letter-spacing: 3px;
     color: white;
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    margin-top: 5vw;
-    /* Scale margin proportionally */
-    margin-left: -32vw;
-    /* Scale margin proportionally */
-    margin-bottom: 0vw;
-    /* Scale margin proportionally */
+    margin-top: 5vw; /* Scale margin proportionally */
+    margin-left: -32vw; /* Scale margin proportionally */
+    margin-bottom: 0vw; /* Scale margin proportionally */
     transform: scale(0.45);
-
+    
   }
 
   .flex-container {
-    margin-left: -34.5vw;
-    /* Scale margin proportionally */
-    margin-top: -20vw;
-    /* Scale margin proportionally */
+    margin-left: -34.5vw; /* Scale margin proportionally */
+    margin-top: -20vw; /* Scale margin proportionally */
     display: grid;
     grid-template-columns: auto auto auto auto;
-    padding: 0vw;
-    /* Scale padding proportionally */
+    padding: 0vw; /* Scale padding proportionally */
     flex-wrap: nowrap;
     background-color: rgba(0, 0, 0, 0.537);
     height: auto;
     width: 100%;
-    gap: 2vw;
-    /* Scale gap proportionally */
+    gap: 2vw; /* Scale gap proportionally */
     row-gap: 2%;
     margin-top: 0;
     transform: scale(0.299);
@@ -578,25 +540,18 @@ body.homePage {
 
   .flex-container>div {
     background-color: #1a1a1a;
-    width: 78vw;
-    /* Scale width proportionally */
-    padding: 1vw;
-    /* Scale padding proportionally */
-    height: 115vw;
-    /* Scale height proportionally */
+    width: 78vw; /* Scale width proportionally */
+    padding: 1vw; /* Scale padding proportionally */
+    height: 115vw; /* Scale height proportionally */
     text-align: center;
     position: relative;
-    border-radius: 1vw;
-    /* Scale border-radius proportionally */
+    border-radius: 1vw; 
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px;
     border-bottom: #575757 solid;
-    margin-top: 1vw;
-    /* Scale margin proportionally */
-    margin-right: 0;
-    /* Remove fixed margin value */
-    margin-left: 2.5vw;
-    /* Scale margin proportionally */
+    margin-top: 1vw; 
+    margin-right: 0; 
+    margin-left: 2.5vw; 
     box-shadow: inset 0 0 0 0 #ffffff28;
     transition: ease-out 0.4s;
     cursor: pointer;
@@ -606,7 +561,7 @@ body.homePage {
 
   .topcontainerimagedivv p {
     margin-top: 5vh;
-    font-size: 8vh;
+   font-size: 8vh;
   }
 
   .under-home-container {
@@ -614,10 +569,10 @@ body.homePage {
     width: 100%;
     height: auto;
     text-align: center;
-
+    
   }
 
-  .under-home-container p {
+  .under-home-container p{
     margin-top: -97vh;
     font-size: 3vh;
     width: 55vh;
@@ -625,12 +580,12 @@ body.homePage {
     text-align: center;
   }
 
-  .snack-click {
+  .snack-click{
     margin-top: 4vh;
     font-size: 2vh;
   }
 
-  .snack-container {
+  .snack-container{
     width: 66.4vh;
   }
 }
@@ -642,37 +597,29 @@ body.homePage {
   }
 
   .flexp {
-    font-size: 8vw;
-    /* Scale font size proportionally */
+    font-size: 8vw; /* Scale font size proportionally */
     font-weight: bolder;
     letter-spacing: 3px;
     color: white;
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    margin-top: 5vw;
-    /* Scale margin proportionally */
-    margin-left: -32vw;
-    /* Scale margin proportionally */
-    margin-bottom: 0vw;
-    /* Scale margin proportionally */
+    margin-top: 5vw; /* Scale margin proportionally */
+    margin-left: -32vw; /* Scale margin proportionally */
+    margin-bottom: 0vw; /* Scale margin proportionally */
     transform: scale(0.45);
-
+    
   }
 
   .flex-container {
-    margin-left: -34.5vw;
-    /* Scale margin proportionally */
-    margin-top: -20vw;
-    /* Scale margin proportionally */
+    margin-left: -34.5vw; /* Scale margin proportionally */
+    margin-top: -20vw; /* Scale margin proportionally */
     display: grid;
     grid-template-columns: auto auto auto auto;
-    padding: 0vw;
-    /* Scale padding proportionally */
+    padding: 0vw; /* Scale padding proportionally */
     flex-wrap: nowrap;
     background-color: rgba(0, 0, 0, 0.537);
     height: auto;
     width: 100%;
-    gap: 2vw;
-    /* Scale gap proportionally */
+    gap: 2vw; /* Scale gap proportionally */
     row-gap: 2%;
     margin-top: 0;
     transform: scale(0.299);
@@ -680,25 +627,18 @@ body.homePage {
 
   .flex-container>div {
     background-color: #1a1a1a;
-    width: 78vw;
-    /* Scale width proportionally */
-    padding: 1vw;
-    /* Scale padding proportionally */
-    height: 115vw;
-    /* Scale height proportionally */
+    width: 78vw; /* Scale width proportionally */
+    padding: 1vw; /* Scale padding proportionally */
+    height: 115vw; /* Scale height proportionally */
     text-align: center;
     position: relative;
-    border-radius: 1vw;
-    /* Scale border-radius proportionally */
+    border-radius: 1vw; /* Scale border-radius proportionally */
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px;
     border-bottom: #575757 solid;
-    margin-top: 1vw;
-    /* Scale margin proportionally */
-    margin-right: 0;
-    /* Remove fixed margin value */
-    margin-left: 2.5vw;
-    /* Scale margin proportionally */
+    margin-top: 1vw; /* Scale margin proportionally */
+    margin-right: 0; /* Remove fixed margin value */
+    margin-left: 2.5vw; /* Scale margin proportionally */
     box-shadow: inset 0 0 0 0 #ffffff28;
     transition: ease-out 0.4s;
     cursor: pointer;
@@ -708,7 +648,7 @@ body.homePage {
 
   .topcontainerimagedivv p {
     margin-top: 9vh;
-    font-size: 10vh;
+   font-size: 10vh;
   }
 
   .under-home-container {
@@ -716,10 +656,10 @@ body.homePage {
     width: 100%;
     height: auto;
     text-align: center;
-
+    
   }
 
-  .under-home-container p {
+  .under-home-container p{
     margin-top: 0vh;
     font-size: 5vh;
     width: 85vh;
@@ -727,12 +667,12 @@ body.homePage {
     text-align: center;
   }
 
-  .snack-click {
+  .snack-click{
     margin-top: 8vh;
     font-size: 4vh;
   }
 
-  .snack-container {
+  .snack-container{
     width: 66.4vh;
   }
 }
@@ -849,7 +789,6 @@ body.homePage {
   margin: 20px;
   color: white;
 }
-
 /*------                FILTER homepage                ----------- */
 
 /*---------------------HOMEPAGE ENDS HERE---------------------------------------------------- */
@@ -865,7 +804,7 @@ display: flex;
 flex-direction: row;
 justify-content: space-between;
 align-items: center;
-width: 60%;
+width: 60vh;
 margin: 0 auto;
 
 }
@@ -882,7 +821,7 @@ justify-content: space-between;
 box-shadow: 0px 0px 35px 0px #000000;
 border-radius: 20px;
 
-padding: 20px;
+padding: 20vh;
 }
 
 .ticket-option1, .ticket-option2, .ticket-option3 {
@@ -1066,7 +1005,7 @@ word-break:keep-all;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  width: 50%;
+  width: 100vh;
   margin: 0 auto;
 }
 
@@ -1078,7 +1017,7 @@ word-break:keep-all;
 }
 
 .full-ticket-page {
-  margin-top: 15px;
+  margin-top: 5vh;
   height: 100%;
   width: auto;
   aspect-ratio: 11/16;
@@ -1089,7 +1028,7 @@ word-break:keep-all;
   flex-direction: column;
   align-items: center;
   width: 30%;
-  padding: 20px;
+  padding: 3vh;
   border-left: 1px solid;
   border-bottom-left-radius: 20px rgb(38, 38, 38);
   border-top-left-radius: 20px;
@@ -1101,7 +1040,7 @@ word-break:keep-all;
   flex-direction: column;
   align-items: center;
   width: 30%;
-  padding: 20px;
+  padding: 3vh;
 }
 
 .ticket-option3 {
@@ -1109,7 +1048,7 @@ word-break:keep-all;
   flex-direction: column;
   align-items: center;
   width: 30%;
-  padding: 20px;
+  padding: 3vh;
   border-right: 1px solid rgb(38, 38, 38);
 }
 
@@ -1120,8 +1059,8 @@ word-break:keep-all;
 }
 
 .add-ticket {
-  width: 50px;
-  height: 30px;
+  width: 8vh;
+  height: 4.5vh;
   margin: 10px;
   border-radius: 10px;
   border: none;
@@ -1131,9 +1070,9 @@ word-break:keep-all;
 }
 
 .remove-ticket {
-  width: 50px;
-  height: 30px;
-  margin: 10px;
+  width: 8vh;
+  height: 4.5vh;
+  margin: 3vh;
   border-radius: 10px;
   border: none;
   background-color: rgb(187, 41, 58);
@@ -1181,7 +1120,6 @@ word-break:keep-all;
   justify-content: space-around;
   padding-left: 33.3333%;
   padding-right: 33.3333%;
-
 
 }
 
@@ -1279,7 +1217,7 @@ margin-bottom:30px; */
 }
 
 .tv-screen-container {
-  width: 300px;
+  width: 50vh;
   height: 200px;
   display: flex;
   align-items: center;
@@ -1293,7 +1231,19 @@ margin-bottom:30px; */
 }
 
 .tv-screen {
-  width: 370px;
+  width: 10vh;
+  height: 30.8vh;
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  box-shadow: 0px 10px 85px 20px #953333;
+  border-left: solid rgb(137, 12, 12) 15px;
+  border-right: solid rgb(137, 12, 12) 15px;
+  border-width: 10px, 10px, 10px, 10px;
+
+}
+
+.tv-screen:before {
+  width: 55vh;
   height: 208px;
   background-color: rgb(255, 255, 255);
   position: absolute;
@@ -1301,7 +1251,10 @@ margin-bottom:30px; */
   border-left: solid rgb(137, 12, 12) 15px;
   border-right: solid rgb(137, 12, 12) 15px;
   border-width: 10px, 10px, 10px, 10px;
+  transition: width 6s;
 }
+
+
 
 .seat-selector-container {
   align-items: center;
