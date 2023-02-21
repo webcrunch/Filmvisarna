@@ -236,9 +236,9 @@ body.homePage {
 
 .flex-container>div {
   background-color: #1a1a1a;
-  width: 43vh;
+  width: 45vh;
   padding: 1px;
-  height: 450px;
+  height:55vh;
   text-align: center;
   position: relative;
   border-radius: 10px;
@@ -256,8 +256,8 @@ body.homePage {
   width: auto;
 }
 .topcontainerimagedivv p{
-  font-size: 2.9vh;
-  margin-top: 1vh;
+  font-size: 2.8vh;
+  margin-top: 1.5vh;
 }
 .topcontainerimagedivv {
   height: 100%;
@@ -305,109 +305,6 @@ body.homePage {
   font-size: 90px;
   width: 90%;
 }
-
-
-
-/*TOP HOMEPAGE MEDIA QUERIES */
-
-/*  */
-
-/*TOPHOMEPAGEEND*/
-
-
-
-
-
-@media screen and (min-width: 1001px) and (max-width: 1340px) {
-
-  .top-title {
-    margin-bottom: -127%;
-  }
-
-  .flexp {
-    font-size: 8vw; /* Scale font size proportionally */
-    font-weight: bolder;
-    letter-spacing: 3px;
-    color: white;
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    margin-top: 5vw; /* Scale margin proportionally */
-    margin-left: -32vw; /* Scale margin proportionally */
-    margin-bottom: 0vw; /* Scale margin proportionally */
-    transform: scale(0.45);
-    
-  }
-
-  .flex-container {
-    margin-left: -34.5vw; /* Scale margin proportionally */
-    margin-top: -20vw; /* Scale margin proportionally */
-    display: grid;
-    grid-template-columns: auto auto auto auto;
-    padding: 0vw; /* Scale padding proportionally */
-    flex-wrap: nowrap;
-    background-color: rgba(0, 0, 0, 0.537);
-    height: auto;
-    width: 100%;
-    gap: 2vw; /* Scale gap proportionally */
-    row-gap: 2%;
-    margin-top: 0;
-    transform: scale(0.299);
-  }
-
-  .flex-container>div {
-    background-color: #1a1a1a;
-    width: 78vw; /* Scale width proportionally */
-    padding: 1vw; /* Scale padding proportionally */
-    height: 115vw; /* Scale height proportionally */
-    text-align: center;
-    position: relative;
-    border-radius: 1vw; /* Scale border-radius proportionally */
-    border-bottom-left-radius: 0px;
-    border-bottom-right-radius: 0px;
-    border-bottom: #575757 solid;
-    margin-top: 1vw; /* Scale margin proportionally */
-    margin-right: 0; /* Remove fixed margin value */
-    margin-left: 2.5vw; /* Scale margin proportionally */
-    box-shadow: inset 0 0 0 0 #ffffff28;
-    transition: ease-out 0.4s;
-    cursor: pointer;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-  }
-
-  .topcontainerimagedivv p {
-    margin-top: 9vh;
-   font-size: 10vh;
-  }
-
-  .under-home-container {
-    margin-top: -75vh;
-    width: 100%;
-    height: auto;
-    text-align: center;
-    
-  }
-
-  .under-home-container p{
-    margin-top: 0vh;
-    font-size: 5vh;
-    width: 85vh;
-    height: auto;
-    text-align: center;
-  }
-
-  .snack-click{
-    margin-top: 8vh;
-    font-size: 4vh;
-  }
-
-  .snack-container{
-    width: 66.4vh;
-  }
-}
-
-
-
-/*TOPHOMEPAGEEND*/
 
 .snack-container {
   width: 100%;
@@ -486,37 +383,759 @@ body.homePage {
   box-shadow: inset 0 0 0 0 #ffffff28;
 }
 
-.flexp p {
-  color: rgba(94, 94, 94, 0.471);
-  display: inline;
-  width: 100%;
-  margin-left: 20%;
+/*TOP HOMEPAGE MEDIA QUERIES */
+
+@media screen and (min-width: 0px) and (max-width: 358px) {
+
+  .top-title {
+    margin-bottom: -129%;
+  }
+
+  .flexp {
+    font-size: 8vw; /* Scale font size proportionally */
+    font-weight: bolder;
+    letter-spacing: 3px;
+    color: white;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    margin-top: 5vw; /* Scale margin proportionally */
+    margin-left: -32vw; /* Scale margin proportionally */
+    margin-bottom: 0vw; /* Scale margin proportionally */
+    transform: scale(0.45);
+
+  }
+
+  .flex-container {
+    margin-left: -34.5vw; /* Scale margin proportionally */
+    margin-top: -20vw; /* Scale margin proportionally */
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    padding: 0vw; /* Scale padding proportionally */
+    flex-wrap: nowrap;
+    background-color: rgba(0, 0, 0, 0.537);
+    height: auto;
+    width: 100%;
+    gap: 2vw; /* Scale gap proportionally */
+    row-gap: 2%;
+    margin-top: 0;
+    transform: scale(0.299);
+  }
+
+  .flex-container>div {
+    background-color: #1a1a1a;
+    width: 78vw; /* Scale width proportionally */
+    padding: 1vw; /* Scale padding proportionally */
+    height: 115vw; /* Scale height proportionally */
+    text-align: center;
+    position: relative;
+    border-radius: 1vw; /* Scale border-radius proportionally */
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-bottom: #575757 solid;
+    margin-top: 1vw; /* Scale margin proportionally */
+    margin-right: 0; /* Remove fixed margin value */
+    margin-left: 2.5vw; /* Scale margin proportionally */
+    box-shadow: inset 0 0 0 0 #ffffff28;
+    transition: ease-out 0.4s;
+    cursor: pointer;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+
+  .topcontainerimagedivv p {
+    margin-top: 2%;
+   font-size: 1.70vh;
+  }
+
+  .under-home-container {
+    margin-top: -55vh;
+    width: 100%;
+    height: auto;
+    align-items: center;
+    text-align: center;
+
+  }
+
+  .under-home-container p{
+    margin-top: 10vh;
+    margin-right:auto ;
+    font-size: 2vh;
+    width: 35vh;
+    height: auto;
+    text-align: center;
+  }
+
+  .snack-click{
+    margin-top: 5vh;
+    font-size: 2vh;
+  }
+
+  .snack-container{
+    width: 100%;
+    margin-top: 0vh;
+
+  }
 }
 
-.undertext {
-  color: white;
-  font-weight: normal;
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+@media screen and (min-width: 359px) and (max-width: 412px) {
 
-  font-size: 22px;
-  word-wrap: break-word;
-  text-align: center;
-  margin: auto;
-  margin-top: -80px;
-  margin-bottom: 30px;
-  width: 50%;
+  .top-title {
+    margin-bottom: -129%;
+  }
+
+  .flexp {
+    font-size: 8vw; /* Scale font size proportionally */
+    font-weight: bolder;
+    letter-spacing: 3px;
+    color: white;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    margin-top: 5vw; /* Scale margin proportionally */
+    margin-left: -32vw; /* Scale margin proportionally */
+    margin-bottom: 0vw; /* Scale margin proportionally */
+    transform: scale(0.45);
+
+  }
+
+  .flex-container {
+    margin-left: -34.5vw; /* Scale margin proportionally */
+    margin-top: -20vw; /* Scale margin proportionally */
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    padding: 0vw; /* Scale padding proportionally */
+    flex-wrap: nowrap;
+    background-color: rgba(0, 0, 0, 0.537);
+    height: auto;
+    width: 100%;
+    gap: 2vw; /* Scale gap proportionally */
+    row-gap: 2%;
+    margin-top: 0;
+    transform: scale(0.299);
+  }
+
+  .flex-container>div {
+    background-color: #1a1a1a;
+    width: 78vw; /* Scale width proportionally */
+    padding: 1vw; /* Scale padding proportionally */
+    height: 115vw; /* Scale height proportionally */
+    text-align: center;
+    position: relative;
+    border-radius: 1vw; /* Scale border-radius proportionally */
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-bottom: #575757 solid;
+    margin-top: 1vw; /* Scale margin proportionally */
+    margin-right: 0; /* Remove fixed margin value */
+    margin-left: 2.5vw; /* Scale margin proportionally */
+    box-shadow: inset 0 0 0 0 #ffffff28;
+    transition: ease-out 0.4s;
+    cursor: pointer;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+
+  .topcontainerimagedivv p {
+    margin-top: 2%;
+   font-size: 2.00vh;
+  }
+
+  .under-home-container {
+    margin-top: -55vh;
+    width: 100%;
+    height: auto;
+    align-items: center;
+    text-align: center;
+
+  }
+
+  .under-home-container p{
+    margin-top: 10vh;
+    margin-right:auto ;
+    font-size: 2vh;
+    width: 35vh;
+    height: auto;
+    text-align: center;
+  }
+
+  .snack-click{
+    margin-top: 5vh;
+    font-size: 2vh;
+  }
+
+  .snack-container{
+    width: 100%;
+    margin-top: 0vh;
+
+  }
 }
 
-.undertopcontainer {
-  color: white;
-  text-align: center;
-  width: 100%;
+@media screen and (min-width: 413px) and (max-width: 500px) {
+
+  .top-title {
+    margin-bottom: -129%;
+  }
+
+  .flexp {
+    font-size: 8vw; /* Scale font size proportionally */
+    font-weight: bolder;
+    letter-spacing: 3px;
+    color: white;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    margin-top: 5vw; /* Scale margin proportionally */
+    margin-left: -32vw; /* Scale margin proportionally */
+    margin-bottom: 0vw; /* Scale margin proportionally */
+    transform: scale(0.45);
+
+  }
+
+  .flex-container {
+    margin-left: -34.5vw; /* Scale margin proportionally */
+    margin-top: -20vw; /* Scale margin proportionally */
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    padding: 0vw; /* Scale padding proportionally */
+    flex-wrap: nowrap;
+    background-color: rgba(0, 0, 0, 0.537);
+    height: auto;
+    width: 100%;
+    gap: 2vw; /* Scale gap proportionally */
+    row-gap: 2%;
+    margin-top: 0;
+    transform: scale(0.299);
+  }
+
+  .flex-container>div {
+    background-color: #1a1a1a;
+    width: 78vw; /* Scale width proportionally */
+    padding: 1vw; /* Scale padding proportionally */
+    height: 115vw; /* Scale height proportionally */
+    text-align: center;
+    position: relative;
+    border-radius: 1vw; /* Scale border-radius proportionally */
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-bottom: #575757 solid;
+    margin-top: 1vw; /* Scale margin proportionally */
+    margin-right: 0; /* Remove fixed margin value */
+    margin-left: 2.5vw; /* Scale margin proportionally */
+    box-shadow: inset 0 0 0 0 #ffffff28;
+    transition: ease-out 0.4s;
+    cursor: pointer;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+
+  .topcontainerimagedivv p {
+    margin-top: 2%;
+   font-size: 2.30vh;
+  }
+
+  .under-home-container {
+    margin-top: -55vh;
+    width: 100%;
+    height: auto;
+    align-items: center;
+    text-align: center;
+
+  }
+
+  .under-home-container p{
+    margin-top: 10vh;
+    margin-right:auto ;
+    font-size: 2vh;
+    width: 35vh;
+    height: auto;
+    text-align: center;
+  }
+
+  .snack-click{
+    margin-top: 5vh;
+    font-size: 2vh;
+  }
+
+  .snack-container{
+    width: 100%;
+    margin-top: 0vh;
+
+  }
 }
 
-.undertopcontainer h3 {
-  margin: 20px;
-  color: white;
+@media screen and (min-width: 501px) and (max-width: 608px) {
+  .top-title {
+    margin-bottom: -129%;
+  }
+
+  .flexp {
+    font-size: 8vw; /* Scale font size proportionally */
+    font-weight: bolder;
+    letter-spacing: 3px;
+    color: white;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    margin-top: 5vw; /* Scale margin proportionally */
+    margin-left: -32vw; /* Scale margin proportionally */
+    margin-bottom: 0vw; /* Scale margin proportionally */
+    transform: scale(0.45);
+
+  }
+
+  .flex-container {
+    margin-left: -34.5vw; /* Scale margin proportionally */
+    margin-top: -20vw; /* Scale margin proportionally */
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    padding: 0vw; /* Scale padding proportionally */
+    flex-wrap: nowrap;
+    background-color: rgba(0, 0, 0, 0.537);
+    height: auto;
+    width: 100%;
+    gap: 2vw; /* Scale gap proportionally */
+    row-gap: 2%;
+    margin-top: 0;
+    transform: scale(0.299);
+  }
+
+  .flex-container>div {
+    background-color: #1a1a1a;
+    width: 78vw; /* Scale width proportionally */
+    padding: 1vw; /* Scale padding proportionally */
+    height: 115vw; /* Scale height proportionally */
+    text-align: center;
+    position: relative;
+    border-radius: 1vw; /* Scale border-radius proportionally */
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-bottom: #575757 solid;
+    margin-top: 1vw; /* Scale margin proportionally */
+    margin-right: 0; /* Remove fixed margin value */
+    margin-left: 2.5vw; /* Scale margin proportionally */
+    box-shadow: inset 0 0 0 0 #ffffff28;
+    transition: ease-out 0.4s;
+    cursor: pointer;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+
+  .topcontainerimagedivv p {
+    margin-top: 3%;
+   font-size: 2.79vh;
+  }
+
+  .under-home-container {
+    margin-top: -68vh;
+    width: 100%;
+    height: auto;
+    align-items: center;
+    text-align: center;
+
+  }
+
+  .under-home-container p{
+    margin-top: 24vh;
+    margin-left: 2vh;
+    font-size: 1.5vh;
+    color: white;
+    width: 35vh;
+    height: auto;
+    text-align: center;
+  }
+
+  .snack-click{
+    margin-top: 3vh;
+    font-size: 1.5vh;
+  }
+
+  .snack-container{
+    width: 100%;
+    margin-top: 1.5vh;
+
+  }
+  
 }
+
+@media screen and (min-width: 609px) and (max-width: 800px) {
+  .top-title {
+    margin-bottom: -129%;
+  }
+
+  .flexp {
+    font-size: 8vw; /* Scale font size proportionally */
+    font-weight: bolder;
+    letter-spacing: 3px;
+    color: white;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    margin-top: 5vw; /* Scale margin proportionally */
+    margin-left: -32vw; /* Scale margin proportionally */
+    margin-bottom: 0vw; /* Scale margin proportionally */
+    transform: scale(0.45);
+
+  }
+
+  .flex-container {
+    margin-left: -34.5vw; /* Scale margin proportionally */
+    margin-top: -20vw; /* Scale margin proportionally */
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    padding: 0vw; /* Scale padding proportionally */
+    flex-wrap: nowrap;
+    background-color: rgba(0, 0, 0, 0.537);
+    height: auto;
+    width: 100%;
+    gap: 2vw; /* Scale gap proportionally */
+    row-gap: 2%;
+    margin-top: 0;
+    transform: scale(0.299);
+  }
+
+  .flex-container>div {
+    background-color: #1a1a1a;
+    width: 78vw; /* Scale width proportionally */
+    padding: 1vw; /* Scale padding proportionally */
+    height: 115vw; /* Scale height proportionally */
+    text-align: center;
+    position: relative;
+    border-radius: 1vw; /* Scale border-radius proportionally */
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-bottom: #575757 solid;
+    margin-top: 1vw; /* Scale margin proportionally */
+    margin-right: 0; /* Remove fixed margin value */
+    margin-left: 2.5vw; /* Scale margin proportionally */
+    box-shadow: inset 0 0 0 0 #ffffff28;
+    transition: ease-out 0.4s;
+    cursor: pointer;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+
+  .topcontainerimagedivv p {
+    margin-top: 4%;
+   font-size: 3.39vh;
+  }
+
+  .under-home-container {
+    margin-top: -68vh;
+    width: 100%;
+    height: auto;
+    align-items: center;
+    text-align: center;
+
+  }
+
+  .under-home-container p{
+    margin-top: 24vh;
+    margin-left: 2vh;
+    font-size: 1.5vh;
+    color: white;
+    width: 35vh;
+    height: auto;
+    text-align: center;
+  }
+
+  .snack-click{
+    margin-top: 3vh;
+    font-size: 1.5vh;
+  }
+
+  .snack-container{
+    width: 100%;
+    margin-top: 1.5vh;
+
+  }
+  
+}
+
+
+@media screen and (min-width: 801px) and (max-width: 1000px) {
+  .top-title {
+    margin-bottom: -129%;
+  }
+
+  .flexp {
+    font-size: 8vw; /* Scale font size proportionally */
+    font-weight: bolder;
+    letter-spacing: 3px;
+    color: white;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    margin-top: 5vw; /* Scale margin proportionally */
+    margin-left: -32vw; /* Scale margin proportionally */
+    margin-bottom: 0vw; /* Scale margin proportionally */
+    transform: scale(0.45);
+
+  }
+
+  .flex-container {
+    margin-left: -34.5vw; /* Scale margin proportionally */
+    margin-top: -20vw; /* Scale margin proportionally */
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    padding: 0vw; /* Scale padding proportionally */
+    flex-wrap: nowrap;
+    background-color: rgba(0, 0, 0, 0.537);
+    height: auto;
+    width: 100%;
+    gap: 2vw; /* Scale gap proportionally */
+    row-gap: 2%;
+    margin-top: 0;
+    transform: scale(0.299);
+  }
+
+  .flex-container>div {
+    background-color: #1a1a1a;
+    width: 78vw; /* Scale width proportionally */
+    padding: 1vw; /* Scale padding proportionally */
+    height: 115vw; /* Scale height proportionally */
+    text-align: center;
+    position: relative;
+    border-radius: 1vw; /* Scale border-radius proportionally */
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-bottom: #575757 solid;
+    margin-top: 1vw; /* Scale margin proportionally */
+    margin-right: 0; /* Remove fixed margin value */
+    margin-left: 2.5vw; /* Scale margin proportionally */
+    box-shadow: inset 0 0 0 0 #ffffff28;
+    transition: ease-out 0.4s;
+    cursor: pointer;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+
+  .topcontainerimagedivv p {
+    margin-top: 4%;
+   font-size: 3.95vh;
+  }
+
+  .under-home-container {
+    margin-top: -68vh;
+    width: 100%;
+    height: auto;
+    align-items: center;
+    text-align: center;
+
+  }
+
+  .under-home-container p{
+    margin-top: 24vh;
+    margin-left: 2vh;
+    font-size: 1.5vh;
+    color: white;
+    width: 35vh;
+    height: auto;
+    text-align: center;
+  }
+
+  .snack-click{
+    margin-top: 3vh;
+    font-size: 1.5vh;
+  }
+
+  .snack-container{
+    width: 100%;
+    margin-top: 1.5vh;
+
+  }
+  
+}
+
+
+@media screen and (min-width: 1001px) and (max-width: 1300px) {
+  .top-title {
+    margin-bottom: -129%;
+  }
+
+  .flexp {
+    font-size: 8vw; /* Scale font size proportionally */
+    font-weight: bolder;
+    letter-spacing: 3px;
+    color: white;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    margin-top: 5vw; /* Scale margin proportionally */
+    margin-left: -32vw; /* Scale margin proportionally */
+    margin-bottom: 0vw; /* Scale margin proportionally */
+    transform: scale(0.45);
+
+  }
+
+  .flex-container {
+    margin-left: -34.5vw; /* Scale margin proportionally */
+    margin-top: -20vw; /* Scale margin proportionally */
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    padding: 0vw; /* Scale padding proportionally */
+    flex-wrap: nowrap;
+    background-color: rgba(0, 0, 0, 0.537);
+    height: auto;
+    width: 100%;
+    gap: 2vw; /* Scale gap proportionally */
+    row-gap: 2%;
+    margin-top: 0;
+    transform: scale(0.299);
+  }
+
+  .flex-container>div {
+    background-color: #1a1a1a;
+    width: 78vw; /* Scale width proportionally */
+    padding: 1vw; /* Scale padding proportionally */
+    height: 115vw; /* Scale height proportionally */
+    text-align: center;
+    position: relative;
+    border-radius: 1vw; /* Scale border-radius proportionally */
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-bottom: #575757 solid;
+    margin-top: 1vw; /* Scale margin proportionally */
+    margin-right: 0; /* Remove fixed margin value */
+    margin-left: 2.5vw; /* Scale margin proportionally */
+    box-shadow: inset 0 0 0 0 #ffffff28;
+    transition: ease-out 0.4s;
+    cursor: pointer;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+
+  .topcontainerimagedivv p {
+    margin-top: 4%;
+   font-size: 5.45vh;
+  }
+
+  .under-home-container {
+    margin-top: -68vh;
+    width: 100%;
+    height: auto;
+    align-items: center;
+    text-align: center;
+
+  }
+
+  .under-home-container p{
+    margin-top: 24vh;
+    margin-left: 2vh;
+    font-size: 1.5vh;
+    color: white;
+    width: 35vh;
+    height: auto;
+    text-align: center;
+  }
+
+  .snack-click{
+    margin-top: 3vh;
+    font-size: 1.5vh;
+  }
+
+  .snack-container{
+    width: 100%;
+    margin-top: 1.5vh;
+
+  }
+  
+}
+
+
+
+@media screen and (min-width: 1001px) and (max-width: 1300px) {
+  .top-title {
+    margin-bottom: -129%;
+  }
+
+  .flexp {
+    font-size: 8vw; /* Scale font size proportionally */
+    font-weight: bolder;
+    letter-spacing: 3px;
+    color: white;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    margin-top: 5vw; /* Scale margin proportionally */
+    margin-left: -32vw; /* Scale margin proportionally */
+    margin-bottom: 0vw; /* Scale margin proportionally */
+    transform: scale(0.45);
+
+  }
+
+  .flex-container {
+    margin-left: -34.5vw; /* Scale margin proportionally */
+    margin-top: -20vw; /* Scale margin proportionally */
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    padding: 0vw; /* Scale padding proportionally */
+    flex-wrap: nowrap;
+    background-color: rgba(0, 0, 0, 0.537);
+    height: auto;
+    width: 100%;
+    gap: 2vw; /* Scale gap proportionally */
+    row-gap: 2%;
+    margin-top: 0;
+    transform: scale(0.299);
+  }
+
+  .flex-container>div {
+    background-color: #1a1a1a;
+    width: 78vw; /* Scale width proportionally */
+    padding: 1vw; /* Scale padding proportionally */
+    height: 115vw; /* Scale height proportionally */
+    text-align: center;
+    position: relative;
+    border-radius: 1vw; /* Scale border-radius proportionally */
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-bottom: #575757 solid;
+    margin-top: 1vw; /* Scale margin proportionally */
+    margin-right: 0; /* Remove fixed margin value */
+    margin-left: 2.5vw; /* Scale margin proportionally */
+    box-shadow: inset 0 0 0 0 #ffffff28;
+    transition: ease-out 0.4s;
+    cursor: pointer;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+
+  .topcontainerimagedivv p {
+    margin-top: 4%;
+   font-size: 5.45vh;
+  }
+
+  .under-home-container {
+    margin-top: -68vh;
+    width: 100%;
+    height: auto;
+    align-items: center;
+    text-align: center;
+
+  }
+
+  .under-home-container p{
+    margin-top: 24vh;
+    margin-left: 2vh;
+    font-size: 1.5vh;
+    color: white;
+    width: 35vh;
+    height: auto;
+    text-align: center;
+  }
+
+  .snack-click{
+    margin-top: 3vh;
+    font-size: 1.5vh;
+  }
+
+  .snack-container{
+    width: 100%;
+    margin-top: 1.5vh;
+
+  }
+  
+}
+/* MEDIA QUERIE END */
+/*TOPHOMEPAGEEND*/
+
+
+
+
+
+
+
+
+
+/*TOPHOMEPAGEEND*/
+
+
+
 /*------                FILTER homepage                ----------- */
 
 /*---------------------HOMEPAGE ENDS HERE---------------------------------------------------- */
