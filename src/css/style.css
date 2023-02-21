@@ -281,7 +281,7 @@ body.homePage {
   border-top-right-radius: 12px;
   border-top-left-radius: 12px;
   border-bottom-right-radius: 12px;
-  box-shadow: 400px 20px 100px 75px #000000;
+  box-shadow: 155vh 20px 100px 75px #000000;
   aspect-ratio: 11/16;
 }
 
@@ -293,7 +293,8 @@ body.homePage {
 }
 
 .under-home-container p {
-  font-size: 35px;
+  margin-top: 4vh;
+  font-size: 8vh;
   font-family: fantasy;
   text-align: center;
   width: 80%;
@@ -302,16 +303,16 @@ body.homePage {
 .snack-click {
   text-align: center;
   color: white;
-  font-size: 24px;
+  font-size: 5vh;
   width: 100%;
-  height: 50px;
-  margin-top: 90px;
-  margin-bottom: -20px;
+  height: 10vh;
+  margin-top: 12vh;
+  margin-bottom:0%;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .undertext {
-  font-size: 90px;
+  font-size: 10vh;
   width: 90%;
 }
 
