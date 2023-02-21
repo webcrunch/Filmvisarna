@@ -463,7 +463,6 @@ body.homePage {
     width: 100vw;
     height: auto;
     text-align: center;
-    margin-left: 15vw;
   }
 
   .snack-click{
@@ -551,9 +550,8 @@ body.homePage {
   }
 
   .under-home-container p{
-    margin-left: 20vw;
     margin-top: 0vh;
-    font-size: 1.1vh;
+    font-size: 1.7vh;
     color: white;
     width: 100vw;
     height: auto;
@@ -562,7 +560,7 @@ body.homePage {
 
   .snack-click{
     margin-top: 5vh;
-    font-size: 1.5vh;
+    font-size: 1.9vh;
   }
 
   .snack-container{
@@ -629,7 +627,7 @@ body.homePage {
 
   .topcontainerimagedivv p {
     margin-top: 2%;
-   font-size: 7.005vw;
+   font-size: 6.9vw;
    color: white;
   }
 
@@ -720,43 +718,44 @@ body.homePage {
   }
 
   .topcontainerimagedivv p {
-    margin-top: 3%;
-   font-size: 2.79vh;
+    margin-top: 2%;
+   font-size: 7vw;
+   color: white;
   }
 
   .under-home-container {
-    margin-top: -68vh;
+    margin-top: -60vh;
     width: 100%;
     height: auto;
     align-items: center;
     text-align: center;
-
+    
   }
 
   .under-home-container p{
-    margin-top: 24vh;
-    margin-left: 2vh;
-    font-size: 1.5vh;
+    margin-left: 0;
+    margin-top: 0vh;
+    font-size: 2.5vh;
     color: white;
-    width: 35vh;
+    width: 100vw;
     height: auto;
     text-align: center;
   }
 
   .snack-click{
-    margin-top: 3vh;
-    font-size: 1.5vh;
+    margin-top: 5vh;
+    font-size: 2.1vh;
   }
 
   .snack-container{
     width: 100%;
-    margin-top: 1.5vh;
+    margin-top: 0vh;
 
   }
   
 }
 
-@media screen and (min-width: 609px) and (max-width: 800px) {
+@media screen and (min-width:609px) and (max-width:800px){
   .top-title {
     margin-bottom: -129%;
   }
@@ -812,42 +811,41 @@ body.homePage {
   }
 
   .topcontainerimagedivv p {
-    margin-top: 4%;
-   font-size: 3.39vh;
+    margin-top: 2%;
+   font-size: 6.5vw;
+   color: white;
   }
 
   .under-home-container {
-    margin-top: -68vh;
+    margin-top: -80vh;
     width: 100%;
     height: auto;
     align-items: center;
     text-align: center;
-
+    
   }
 
   .under-home-container p{
-    margin-top: 24vh;
-    margin-left: 2vh;
-    font-size: 1.5vh;
+    margin-left: 0;
+    margin-top: 0vh;
+    font-size: 2.5vh;
     color: white;
-    width: 35vh;
+    width: 100vw;
     height: auto;
     text-align: center;
   }
 
   .snack-click{
-    margin-top: 3vh;
-    font-size: 1.5vh;
+    margin-top: 5vh;
+    font-size: 2.1vh;
   }
 
   .snack-container{
     width: 100%;
-    margin-top: 1.5vh;
+    margin-top: 0vh;
 
   }
-  
 }
-
 
 @media screen and (min-width: 801px) and (max-width: 1000px) {
   .top-title {
@@ -905,37 +903,38 @@ body.homePage {
   }
 
   .topcontainerimagedivv p {
-    margin-top: 4%;
-   font-size: 3.95vh;
+    margin-top: 2%;
+   font-size: 6.5vw;
+   color: white;
   }
 
   .under-home-container {
-    margin-top: -68vh;
+    margin-top: -100vh;
     width: 100%;
     height: auto;
     align-items: center;
     text-align: center;
-
+    
   }
 
   .under-home-container p{
-    margin-top: 24vh;
-    margin-left: 2vh;
-    font-size: 1.5vh;
+    margin-left: 0;
+    margin-top: 0vh;
+    font-size: 2.5vh;
     color: white;
-    width: 35vh;
+    width: 100vw;
     height: auto;
     text-align: center;
   }
 
   .snack-click{
-    margin-top: 3vh;
-    font-size: 1.5vh;
+    margin-top: 5vh;
+    font-size: 2.1vh;
   }
 
   .snack-container{
     width: 100%;
-    margin-top: 1.5vh;
+    margin-top: 0vh;
 
   }
   
@@ -998,37 +997,38 @@ body.homePage {
   }
 
   .topcontainerimagedivv p {
-    margin-top: 4%;
-   font-size: 5.45vh;
+    margin-top: 2%;
+   font-size: 6.5vw;
+   color: white;
   }
 
   .under-home-container {
-    margin-top: -68vh;
+    margin-top: -120vh;
     width: 100%;
     height: auto;
     align-items: center;
     text-align: center;
-
+    
   }
 
   .under-home-container p{
-    margin-top: 24vh;
-    margin-left: 2vh;
-    font-size: 1.5vh;
+    margin-left: 0;
+    margin-top: 0vh;
+    font-size: 3.5vh;
     color: white;
-    width: 35vh;
+    width: 100vw;
     height: auto;
     text-align: center;
   }
 
   .snack-click{
-    margin-top: 3vh;
-    font-size: 1.5vh;
+    margin-top: 5vh;
+    font-size: 3.1vh;
   }
 
   .snack-container{
     width: 100%;
-    margin-top: 1.5vh;
+    margin-top: 0vh;
 
   }
   
@@ -1037,94 +1037,6 @@ body.homePage {
 
 
 @media screen and (min-width: 1301px) and (max-width: 1600px) {
-  .top-title {
-    margin-bottom: -129%;
-  }
-
-  .flexp {
-    font-size: 8vw; /* Scale font size proportionally */
-    font-weight: bolder;
-    letter-spacing: 3px;
-    color: white;
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    margin-top: 5vw; /* Scale margin proportionally */
-    margin-left: -32vw; /* Scale margin proportionally */
-    margin-bottom: 0vw; /* Scale margin proportionally */
-    transform: scale(0.45);
-
-  }
-
-  .flex-container {
-    margin-left: -34.5vw; /* Scale margin proportionally */
-    margin-top: -20vw; /* Scale margin proportionally */
-    display: grid;
-    grid-template-columns: auto auto auto auto;
-    padding: 0vw; /* Scale padding proportionally */
-    flex-wrap: nowrap;
-    background-color: rgba(0, 0, 0, 0.537);
-    height: auto;
-    width: 100%;
-    gap: 2vw; /* Scale gap proportionally */
-    row-gap: 2%;
-    margin-top: 0;
-    transform: scale(0.299);
-  }
-
-  .flex-container>div {
-    background-color: #1a1a1a;
-    width: 78vw; /* Scale width proportionally */
-    padding: 1vw; /* Scale padding proportionally */
-    height: 115vw; /* Scale height proportionally */
-    text-align: center;
-    position: relative;
-    border-radius: 1vw; /* Scale border-radius proportionally */
-    border-bottom-left-radius: 0px;
-    border-bottom-right-radius: 0px;
-    border-bottom: #575757 solid;
-    margin-top: 1vw; /* Scale margin proportionally */
-    margin-right: 0; /* Remove fixed margin value */
-    margin-left: 2.5vw; /* Scale margin proportionally */
-    box-shadow: inset 0 0 0 0 #ffffff28;
-    transition: ease-out 0.4s;
-    cursor: pointer;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-  }
-
-  .topcontainerimagedivv p {
-    margin-top: 4%;
-   font-size: 6.45vh;
-  }
-
-  .under-home-container {
-    margin-top: -68vh;
-    width: 100%;
-    height: auto;
-    align-items: center;
-    text-align: center;
-
-  }
-
-  .under-home-container p{
-    margin-top: 24vh;
-    margin-left: 2vh;
-    font-size: 1.5vh;
-    color: white;
-    width: 35vh;
-    height: auto;
-    text-align: center;
-  }
-
-  .snack-click{
-    margin-top: 3vh;
-    font-size: 1.5vh;
-  }
-
-  .snack-container{
-    width: 100%;
-    margin-top: 1.5vh;
-
-  }
   
 }
 
