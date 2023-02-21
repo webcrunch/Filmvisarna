@@ -2,7 +2,7 @@ import { useStates } from "../utilities/states";
 import { useParams, Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 import { calculatingTime } from "../utilities/length-calculating";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 export default function TicketPage() {
   const { moviePath,id } = useParams();
@@ -10,6 +10,8 @@ export default function TicketPage() {
   let largest = 0;
   const s = useStates('main');
   const saloonData = s.saloons.find(saloon => saloon.name == location.state.from[0]);
+  const [width, setWidth] = useState(0);
+
 
   const clickerss = useStates({
     numberofChildren: 0,
@@ -28,7 +30,9 @@ export default function TicketPage() {
     document.body.classList.add("ticketPage");
     // remove the class ticketPage when the page
     // unmounts..
-    return () => document.body.classList.remove("ticketPage");
+  
+  
+  return () => document.body.classList.remove("ticketPage");
   }, []);
 
 
@@ -241,7 +245,7 @@ export default function TicketPage() {
                 <div className="tv-middle-red">
                       <div className="tv-inner-red">
                           <div className="tv-screen-container">
-                               <div className="tv-screen"></div>
+                               <div className="tv-screen" onLoad={() => setWidth(200)}></div>
                           </div>
                       </div>
                 </div>
