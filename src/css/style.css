@@ -808,7 +808,7 @@ display: flex;
 flex-direction: row;
 justify-content: space-between;
 align-items: center;
-width: 60%;
+width: 60vh;
 margin: 0 auto;
 
 }
@@ -825,7 +825,7 @@ justify-content: space-between;
 box-shadow: 0px 0px 35px 0px #000000;
 border-radius: 20px;
 
-padding: 20px;
+padding: 20vh;
 }
 
 .ticket-option1, .ticket-option2, .ticket-option3 {
@@ -1009,7 +1009,7 @@ word-break:keep-all;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  width: 50%;
+  width: 100vh;
   margin: 0 auto;
 }
 
@@ -1021,7 +1021,7 @@ word-break:keep-all;
 }
 
 .full-ticket-page {
-  margin-top: 15px;
+  margin-top: 5vh;
   height: 100%;
   width: auto;
   aspect-ratio: 11/16;
@@ -1032,7 +1032,7 @@ word-break:keep-all;
   flex-direction: column;
   align-items: center;
   width: 30%;
-  padding: 20px;
+  padding: 3vh;
   border-left: 1px solid;
   border-bottom-left-radius: 20px rgb(38, 38, 38);
   border-top-left-radius: 20px;
@@ -1044,7 +1044,7 @@ word-break:keep-all;
   flex-direction: column;
   align-items: center;
   width: 30%;
-  padding: 20px;
+  padding: 3vh;
 }
 
 .ticket-option3 {
@@ -1052,7 +1052,7 @@ word-break:keep-all;
   flex-direction: column;
   align-items: center;
   width: 30%;
-  padding: 20px;
+  padding: 3vh;
   border-right: 1px solid rgb(38, 38, 38);
 }
 
@@ -1063,8 +1063,8 @@ word-break:keep-all;
 }
 
 .add-ticket {
-  width: 50px;
-  height: 30px;
+  width: 8vh;
+  height: 4.5vh;
   margin: 10px;
   border-radius: 10px;
   border: none;
@@ -1074,9 +1074,9 @@ word-break:keep-all;
 }
 
 .remove-ticket {
-  width: 50px;
-  height: 30px;
-  margin: 10px;
+  width: 8vh;
+  height: 4.5vh;
+  margin: 3vh;
   border-radius: 10px;
   border: none;
   background-color: rgb(187, 41, 58);
@@ -1124,7 +1124,6 @@ word-break:keep-all;
   justify-content: space-around;
   padding-left: 33.3333%;
   padding-right: 33.3333%;
-
 
 }
 
@@ -1204,7 +1203,7 @@ margin-bottom:30px; */
 }
 
 .tv-screen-container {
-  width: 300px;
+  width: 50vh;
   height: 200px;
   display: flex;
   align-items: center;
@@ -1218,7 +1217,7 @@ margin-bottom:30px; */
 }
 
 .tv-screen {
-  width: 370px;
+  width: 10vh;
   height: 208px;
   background-color: rgb(255, 255, 255);
   position: absolute;
@@ -1226,6 +1225,19 @@ margin-bottom:30px; */
   border-left: solid rgb(137, 12, 12) 15px;
   border-right: solid rgb(137, 12, 12) 15px;
   border-width: 10px, 10px, 10px, 10px;
+
+}
+
+.tv-screen:hover {
+  width: 55vh;
+  height: 208px;
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  box-shadow: 0px 10px 85px 20px #953333;
+  border-left: solid rgb(137, 12, 12) 15px;
+  border-right: solid rgb(137, 12, 12) 15px;
+  border-width: 10px, 10px, 10px, 10px;
+  transition: width 10s;
 }
 
 .seat-selector-container {
