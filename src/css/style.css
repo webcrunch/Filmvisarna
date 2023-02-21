@@ -385,7 +385,7 @@ body.homePage {
 
 /*TOP HOMEPAGE MEDIA QUERIES */
 
-@media screen and (min-width: 0px) and (max-width: 358px) {
+@media screen and (min-width: 312px) and (max-width: 354px) {
 
   .top-title {
     margin-bottom: -129%;
@@ -443,11 +443,13 @@ body.homePage {
 
   .topcontainerimagedivv p {
     margin-top: 2%;
-   font-size: 1.70vh;
+   font-size: 2.45vh;
+   color: white;
   }
 
   .under-home-container {
-    margin-top: -55vh;
+    
+    margin-top: -40vh;
     width: 100%;
     height: auto;
     align-items: center;
@@ -456,17 +458,19 @@ body.homePage {
   }
 
   .under-home-container p{
-    margin-top: 10vh;
-    margin-right:auto ;
-    font-size: 2vh;
-    width: 35vh;
+    margin-top: 0vh;
+    margin-right:0 ;
+    font-size: 1.8vh;
+    color: white;
+    width: 30vh;
     height: auto;
     text-align: center;
+    margin-left: 13vw;
   }
 
   .snack-click{
     margin-top: 5vh;
-    font-size: 2vh;
+    font-size: 1.5vh;
   }
 
   .snack-container{
