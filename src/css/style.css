@@ -1030,7 +1030,7 @@ body.homePage {
 
 
 
-@media screen and (min-width: 1001px) and (max-width: 1300px) {
+@media screen and (min-width: 1301px) and (max-width: 1600px) {
   .top-title {
     margin-bottom: -129%;
   }
@@ -1087,7 +1087,7 @@ body.homePage {
 
   .topcontainerimagedivv p {
     margin-top: 4%;
-   font-size: 5.45vh;
+   font-size: 6.45vh;
   }
 
   .under-home-container {
@@ -1121,6 +1121,8 @@ body.homePage {
   }
   
 }
+
+
 /* MEDIA QUERIE END */
 /*TOPHOMEPAGEEND*/
 
