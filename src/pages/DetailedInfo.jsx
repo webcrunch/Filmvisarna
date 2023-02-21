@@ -26,10 +26,10 @@ export default function DetailedInfo() {
         // let categories = [];
         for (let screen of screenings) {
             console.log(screen);
-        //   categories = [...categories, ...movie.genre.split(",")];
+            //   categories = [...categories, ...movie.genre.split(",")];
         }
         // l.categories = [...new Set(categories)];
-      }
+    }
 
 
     useEffect(() => {
@@ -88,28 +88,28 @@ export default function DetailedInfo() {
                                 </div>
                             )}
                             {showScreenings && (
-  <div className="detailedScreeningsDropdown">
-    <div className="detailedScreening">
-      <select name="" {...screening.bind("categories")} id="">
-        {dateArray.map(cat => <option>{cat}</option>)}
-      </select>
-      {screenings.filter(filterByDate).map(screen => (
-        <Link to={"/ticket/" + movie.path} state={{
-          from: [
-            screen.auditorium,
-            screen.film,
-            screen.date,
-            screen.time,
-          ],
-        }}>
-          <p>
-          {screen.film} - {screen.date} - {screen.time} - in {screen.auditorium}
-          </p>
-        </Link>
-      ))}
-    </div>
-  </div>
-)}
+                                <div className="detailedScreeningsDropdown">
+                                    <div className="detailedScreening">
+                                        <select name="" {...screening.bind("categories")} id="">
+                                            {dateArray.map(cat => <option>{cat}</option>)}
+                                        </select>
+                                        {screenings.filter(filterByDate).map(screen => (
+                                            <Link to={"/ticket/" + movie.path} state={{
+                                                from: [
+                                                    screen.auditorium,
+                                                    screen.film,
+                                                    screen.date,
+                                                    screen.time,
+                                                ],
+                                            }} className="detailedScreeningsInfo">
+                                                <p>
+                                                    {screen.film} - {screen.date} - {screen.time} - in {screen.auditorium}
+                                                </p>
+                                            </Link>
+                                        ))}
+                                    </div>
+                                </div>
+                            )}
 
                         </div>
 
