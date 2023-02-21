@@ -7,6 +7,7 @@ function LoginPage() {
         email: '',
         password: ''
     })
+    const user = useStates('user');
     // send email and password to server for authentication
 
     useEffect(() => {
@@ -20,12 +21,12 @@ function LoginPage() {
 
     function handleSubmit(e) {
         e.preventDefault();
-        console.log(form.email, form.password);
+        console.log(form.email, form.password, user);
+        let correctUser = user.users.filter(obj => obj.username == form.email && obj.password == form.password);
+        if (correctUser.lenght) console.log(correctUser)
+        else alert("somethin wrong")
     }
-
-    return <>
-
-        <div className="login">
+    return <div className="login">
             <div className="login_form">
                 <form onSubmit={handleSubmit}>
                     <label className="label">Username</label>
@@ -35,8 +36,6 @@ function LoginPage() {
                     <button type="submit">Complete your booking</button>
                 </form >
             </div >
-        </div >
-
-    </>
+    </div>
 
 }

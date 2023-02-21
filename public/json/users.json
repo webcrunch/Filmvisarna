@@ -1,0 +1,27 @@
+[
+    {
+        "username": "Antons Globbetrotter",
+        "password": "12345",
+        "email": "anton_g@gmail.com"
+    },
+    {
+        "username": "John Doe",
+        "password": "jagvetintevadduheter",
+        "email": "john_doe@gmail.com"
+    },
+    {
+        "username": "stinas_blad",
+        "password": "123ABSD",
+        "email": "stinaSBlad@gmail.com"
+    },
+    {
+        "username": "Anna Anka",
+        "password": "quacken",
+        "email": "AAaa@gmail.com"
+    },
+    {
+        "username": "blblablalblab",
+        "password": "12345",
+        "email": "blablablabl@gmail.com"
+    }
+]

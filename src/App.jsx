@@ -38,8 +38,10 @@ export default function App() {
   }
 
 
-  useStates('user', {
-    loggedin: false
+  let a = useStates('user', {
+    loggedin: false,
+    name: null,
+    users: []
   })
 
   let s = useStates('main', {
@@ -65,6 +67,7 @@ export default function App() {
     (async () => {
       s.screenings = await (await fetch('/json/screening.json')).json();
       s.saloons = await (await fetch('/json/saloons.json')).json();
+      a.users = await (await fetch('/json/users.json')).json();
       let movies = await (await fetch('/json/movies.json')).json();
       for (let movie of movies) {
         movie.path = kebabify(movie.title)
