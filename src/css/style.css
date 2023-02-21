@@ -804,12 +804,12 @@ body.ticketPage {
 }
 
 #ticket-pricing {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  width: 60%;
-  margin: 0 auto;
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+width: 60%;
+margin: 0 auto;
 
 }
 
@@ -817,211 +817,193 @@ body.ticketPage {
 
 /*small screen (iphone) */
 @media only screen and (min-width: 280px) and (max-width: 401px) {
-  #ticket-pricing {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    box-shadow: 0px 0px 35px 0px #000000;
-    border-radius: 20px;
+#ticket-pricing {
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: space-between;
+box-shadow: 0px 0px 35px 0px #000000;
+border-radius: 20px;
 
-    padding: 20px;
-  }
+padding: 20px;
+}
 
-  .ticket-option1,
-  .ticket-option2,
-  .ticket-option3 {
-    width: 30%;
-    border-radius: 20px;
-    border: none;
-    border-style: none;
+.ticket-option1, .ticket-option2, .ticket-option3 {
+width: 30%;
+border-radius: 20px;
+border: none;
+border-style: none;
 
-    margin-right: 5px 5px;
-  }
+margin-right: 5px 5px;
+}
 
-  .ticket-option1 {
+.ticket-option1 {
 
-    border-bottom-left-radius: 0;
-    border-top-left-radius: 20px;
-  }
+border-bottom-left-radius: 0;
+border-top-left-radius: 20px;
+}
 
-  .ticket-option3 {
+.ticket-option3 {
 
-    border-top-right-radius: 20px;
-  }
+border-top-right-radius: 20px;
+}
 
-  .quantity {
-    width: 40px;
-    text-align: center;
-    margin: 10px 0;
-  }
+.quantity {
+width: 40px;
+text-align: center;
+margin: 10px 0;
+}
 
-  .add-ticket,
-  .remove-ticket {
-    width: 30px;
-    height: 25px;
-    margin: 5px;
-    border-radius: 5px;
-    font-size: 12px;
-  }
+.add-ticket,
+.remove-ticket {
+width: 30px;
+height: 25px;
+margin: 5px;
+border-radius: 5px;
+font-size: 12px;
+}
 
-  .vuxen-title,
-  .barn-title,
-  .senior-title {
-    font-size: 12px;
-  }
+.vuxen-title,
+.barn-title,
+.senior-title {
+font-size: 12px;
+}
 
-  .price-tag-name {
-    font-size: 14px;
-  }
+.price-tag-name {
+font-size: 14px;
+}
 
-  .seat-option-container p {
-    font-size: 13px;
+.seat-option-container p{
+font-size: 13px;
 
-  }
+}
+.seat-option-container li{
+width: 70px;
+margin: 2px;
+margin-bottom: -5px;
+}
 
-  .seat-option-container li {
-    width: 70px;
-    margin: 2px;
-    margin-bottom: -5px;
-  }
+#total-price {
+display:flex ;
+align-items: center;
+position: relative;
+font-size: 10px;
+word-break: break-all;
+height: 220px;
+padding: 15px;
+}
 
-  #total-price {
-    display: flex;
-    align-items: center;
-    position: relative;
-    font-size: 10px;
-    word-break: break-all;
-    height: 220px;
-    padding: 15px;
-  }
+}@media screen and  (min-width: 402px) and (max-width: 499px){
+#total-price {
+display:flex ;
+align-items: center;
+position: relative;
+font-size: 12px;
+word-break: break-all;
+height: 220px;
+padding: 15px;
+}
+}
+
+@media screen and  (min-width: 500px) and (max-width: 670px) {
+.tv-screen-container{
+display: flex;
+flex-direction: column;
+align-items: center;
+box-shadow: 0px 0px 35px 0px #000000;
+border-radius: 20px;
+border-bottom:1px solid rgb(38, 38, 38);
+padding: 20px;
+}
+
+.ticket-option1, .ticket-option2, .ticket-option3 {
+width: 100%;
+border-radius: 20px;
+border: none;
+border-bottom: 1px solid rgb(38, 38, 38);
+padding:20px;
+margin-bottom: 20px;
+}
+.ticket-option1 {
+border-bottom-left-radius: 0;
+border-top-left-radius: 20px;
+}
+
+.ticket-option3 {
+border-bottom-right-radius: 0;
+border-top-right-radius: 20px;
+}
+
+.quantity {
+width: 40px;
+text-align: center;
+margin: 10px 0;
+}
+
+.add-ticket, .remove-ticket {
+width: 50px;
+height: 30px;
+margin: 10px;
+border-radius: 10px;
+border: none;
+background-color: rgb(187, 41, 58);
+color: white;
+cursor: pointer;
+}
+
+.vuxen-title, .barn-title, .senior-title, .price-tag-name, .total-price-css, .quantity {
+font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+color: aliceblue;
+}
+
+.vuxen-title, .barn-title, .senior-title, .price-tag-name {
+font-size: 16px;
+}
+
+.total-price-css {
+font-weight: bold;
+font-size: 10px;
+word-wrap: break-word;
+}
+
+.add-ticket,
+.remove-ticket {
+width: 30px;
+height: 25px;
+margin: 5px;
+border-radius: 5px;
+font-size: 12px;
+}
+
+.vuxen-title,
+.barn-title,
+.senior-title {
+font-size: 14px;
+}
+
+.price-tag-name {
+font-size: 14px;
+}
+
+#total-price {
+  display:flex ;
+  align-items: center;
+  position: relative;
+  font-size: 16px;
+  word-break: break-all;
+  height: 220px;
+  padding: 15px;
+}
 
 }
 
-@media screen and (min-width: 402px) and (max-width: 499px) {
-  #total-price {
-    display: flex;
-    align-items: center;
-    position: relative;
-    font-size: 12px;
-    word-break: break-all;
-    height: 220px;
-    padding: 15px;
-  }
+@media screen and (min-width: 648px) and (max-width: 900px){
+#total-price {
+font-size: 19px;
+padding: 20px;
+word-break:keep-all;
 }
-
-@media screen and (min-width: 500px) and (max-width: 670px) {
-  .tv-screen-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    box-shadow: 0px 0px 35px 0px #000000;
-    border-radius: 20px;
-    border-bottom: 1px solid rgb(38, 38, 38);
-    padding: 20px;
-  }
-
-  .ticket-option1,
-  .ticket-option2,
-  .ticket-option3 {
-    width: 100%;
-    border-radius: 20px;
-    border: none;
-    border-bottom: 1px solid rgb(38, 38, 38);
-    padding: 20px;
-    margin-bottom: 20px;
-  }
-
-  .ticket-option1 {
-    border-bottom-left-radius: 0;
-    border-top-left-radius: 20px;
-  }
-
-  .ticket-option3 {
-    border-bottom-right-radius: 0;
-    border-top-right-radius: 20px;
-  }
-
-  .quantity {
-    width: 40px;
-    text-align: center;
-    margin: 10px 0;
-  }
-
-  .add-ticket,
-  .remove-ticket {
-    width: 50px;
-    height: 30px;
-    margin: 10px;
-    border-radius: 10px;
-    border: none;
-    background-color: rgb(187, 41, 58);
-    color: white;
-    cursor: pointer;
-  }
-
-  .vuxen-title,
-  .barn-title,
-  .senior-title,
-  .price-tag-name,
-  .total-price-css,
-  .quantity {
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    color: aliceblue;
-  }
-
-  .vuxen-title,
-  .barn-title,
-  .senior-title,
-  .price-tag-name {
-    font-size: 16px;
-  }
-
-  .total-price-css {
-    font-weight: bold;
-    font-size: 10px;
-    word-wrap: break-word;
-  }
-
-  .add-ticket,
-  .remove-ticket {
-    width: 30px;
-    height: 25px;
-    margin: 5px;
-    border-radius: 5px;
-    font-size: 12px;
-  }
-
-  .vuxen-title,
-  .barn-title,
-  .senior-title {
-    font-size: 14px;
-  }
-
-  .price-tag-name {
-    font-size: 14px;
-  }
-
-  #total-price {
-    display: flex;
-    align-items: center;
-    position: relative;
-    font-size: 16px;
-    word-break: break-all;
-    height: 220px;
-    padding: 15px;
-  }
-
 }
-
-@media screen and (min-width: 648px) and (max-width: 900px) {
-  #total-price {
-    font-size: 19px;
-    padding: 20px;
-    word-break: keep-all;
-  }
-}
-
 #ticket-pricing {
   display: flex;
   flex-direction: row;
@@ -1175,13 +1157,56 @@ body.ticketPage {
   justify-content: center;
   align-items: center;
   /*  perspective: 500px;
-  margin-bottom:30px; */
+margin-bottom:30px; */
+}
+
+.tv-section {
+  width: 100%;
+  height: 260px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+}
+
+.tv-outer-red {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 420px;
+  height: 208px;
+  background-color: rgb(115, 0, 0);
+  border-top-right-radius: 40px;
+  border-top-left-radius: 40px;
+}
+
+.tv-middle-red {
+  border-top-right-radius: 1px;
+  border-top-left-radius: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 410px;
+  height: 204px;
+  background-color: rgb(146, 2, 2);
+}
+
+.tv-inner-red {
+  width: 388px;
+  height: 208px;
+  background-color: rgb(180, 0, 0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .tv-screen-container {
-  width: 100%;
-  height: 250px;
-  align-content: center;
+  width: 300px;
+  height: 200px;
+  display: flex;
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
@@ -1189,16 +1214,18 @@ body.ticketPage {
   display: flex;
   justify-content: space-around;
   position: relative;
-  transform: rotate3d(394, 1, 6, 35deg);
+
 }
 
 .tv-screen {
   width: 370px;
-  height: 210px;
-  background-color: rgba(255, 255, 255, 0.891);
-  transform: rotate3d(394, 92, 25, 35deg);
+  height: 208px;
+  background-color: rgb(255, 255, 255);
   position: absolute;
-  box-shadow: 0px 10px 85px 20px #000000;
+  box-shadow: 0px 10px 85px 20px #953333;
+  border-left: solid rgb(137, 12, 12) 15px;
+  border-right: solid rgb(137, 12, 12) 15px;
+  border-width: 10px, 10px, 10px, 10px;
 }
 
 .seat-selector-container {
@@ -1207,7 +1234,17 @@ body.ticketPage {
   display: -moz-inline-grid;
   display: -ms-inline-grid;
   height: 400px;
-  transform: rotate3d(394, 1, 40, 35deg);
+  margin-right: 20px;
+
+}
+
+.row {
+  align-items: center;
+  align-content: center;
+  align-self: center;
+  text-align: center;
+  width: 100%;
+  position: relative;
 }
 
 .row1 {
@@ -1306,6 +1343,22 @@ body.ticketPage {
   position: relative;
   display: inline-block;
   background-color: #ffffff;
+  box-shadow: rgb(0, 0, 0) 100px, 100px, 900px, 90px;
+  width: 30px;
+  height: 27px;
+  margin: auto;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  margin: 5px;
+  align-items: center;
+  align-content: center;
+  align-self: center;
+}
+
+.seat-disapeared {
+  position: relative;
+  display: inline-block;
+  background-color: #ff0000;
   width: 30px;
   height: 27px;
   margin: auto;
@@ -1315,18 +1368,19 @@ body.ticketPage {
   align-items: center;
   align-content: center;
   align-self: center;
+  /* visibility: hidden; */
 }
 
 .seat-sold {
   position: relative;
   display: inline-block;
   background-color: #afafaf;
+  margin: 5px;
   width: 30px;
   height: 27px;
-  margin: auto;
+  box-shadow: rgb(0, 0, 0) 100px, 100px, 900px, 90px;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
-  transform: rotate3d(184, 102, 1, 45deg);
   align-items: center;
   align-content: center;
   align-self: center;
@@ -1346,6 +1400,7 @@ body.ticketPage {
   background-color: white;
   color: black;
 }
+
 
 
 /*---------------------TICKET PAGE ENDS HERE---------------------------------------------------- */
