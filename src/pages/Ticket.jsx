@@ -50,7 +50,7 @@ export default function TicketPage() {
       let check_occupied_seat = screeningsData.occupiedSeats[index] !== undefined ? screeningsData.occupiedSeats[index].find(element => element === i) : undefined ;
       list.push(<div key={i} onClick={() => !check_occupied_seat && clickOnSeat([index + 1, i])} className={
         (check_occupied_seat !== undefined ? "seat-sold" : "seat")
-        + (seats.markedChairs[(index + 1) + ' ' + i] ? "  seat-marked" : "")
+        + (seats.markedChairs[(index + 1) + ' ' + i] ? "-marked" : "")
       } ></div>);
     }
     return list;
@@ -229,10 +229,10 @@ export default function TicketPage() {
         <p className="total-seats">
           Du har valt <span id="count">{clickerss.totalSeats}</span> platser.
         </p>
-      </div>
-      <button className="bokabtnbiljett" onClick={book}>
+              <button className="bokabtnbiljett" onClick={book}>
         Boka
       </button>
+      </div>
     </div>
   );
 }
