@@ -1,4 +1,4 @@
-
+import { useEffect } from 'react';
 import { useStates } from '../utilities/states';
 export default RegisterPage;
 
@@ -11,12 +11,22 @@ function RegisterPage(){
 		password:""
 	})
 
+
+	useEffect(() => {
+		document.body.classList.add("registerPage");
+		return() => document.body.classList.remove("registerPage");
+		
+	}, [] );
+
 	function handleSubmit(e){
 		e.preventDefault();
 		console.log(form.username,form.firstname,form.lastname,form.password);
 	}
 
 	return <>
+
+	
+	
 
 
 		<div className='register'>
@@ -40,4 +50,3 @@ function RegisterPage(){
     </>
 
 }
-
