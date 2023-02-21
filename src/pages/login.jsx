@@ -21,12 +21,15 @@ function LoginPage() {
 
     function handleSubmit(e) {
         e.preventDefault();
-        console.log(form.email, form.password, user);
-        let correctUser = user.users.filter(obj => obj.username == form.email && obj.password == form.password);
-        if (correctUser.lenght) console.log(correctUser)
-        else alert("somethin wrong")
+        let correctUser = user.users.users.filter(obj => obj.username == form.email && obj.password == form.password);
+        if (correctUser.length > 0) {
+            user.name = correctUser[0].username;
+            user.id = correctUser[0].id;
+            user.loggedin = true;
+
+        }
     }
-    return <div className="login">
+    return  <>{ !user.loggedin ?  <div className="login">
             <div className="login_form">
                 <form onSubmit={handleSubmit}>
                     <label className="label">Username</label>
@@ -34,8 +37,10 @@ function LoginPage() {
                     <label className="label">Password</label>
                     <input className="username" type="password" id="username"  {...form.bind('password')}></input>
                     <button type="submit">Complete your booking</button>
-                </form >
-            </div >
-    </div>
+            </form >
+        </div > </div> : 
+            <p>Välkommen {user.name} du är inloggad</p>
+            }
+    </>
 
 }
