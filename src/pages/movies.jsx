@@ -1,8 +1,7 @@
 import { useStates } from "../utilities/states";
 import { useEffect } from "react";
 import { calculatingTime } from "../utilities/length-calculating";
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function Movies() {
   let s = useStates("main");
@@ -32,6 +31,7 @@ export default function Movies() {
     open: false,
   });
 
+  const navigate = useNavigate();
   const filterVars = useStates({
     movie: "null",
     category: "null",
@@ -90,7 +90,11 @@ export default function Movies() {
     });
   }
 
-  function sortByName(order) {
+  const toTicket = (screening,moviePath) => { 
+    navigate("/ticket/" + encodeURIComponent(JSON.stringify({id:screening.id, auditorium:screening.auditorium, moviePath:moviePath})));
+  }
+
+  const sortByName = order =>  {
     l.screenings.sort((a, b) => {
       // compare case-insensitive
       // + omit beginning 'The' in comparison and omit spaces
@@ -211,22 +215,29 @@ export default function Movies() {
                     {calculatingTime(getMovies(display.film, "length"))}
                   </h4>
                 </div>
-                <Link
+                
+                {/* <Link
                   to={"/ticket/" + getMovies(display.film, "path")}
                   state={{
                     from: [
                       display.auditorium,
+                      display.film,
+                      display.date,
+                      display.time,
+                    ],
+                  }}
+                >
+                  <button className="moviebtnsitplatser">
                         display.film,
                         display.date,
                         display.time,
                       display.id
                     ],
                   }}
-                >
-                  <button className="moviebtnsitplatser">
+                > */}
+                  <button onClick={() => toTicket(display,getMovies(display.film, "path"))} className="moviebtnsitplatser">
                     Välj sittplatser
                   </button>
-                </Link>
               </div>
 
               <div className="card">
@@ -252,22 +263,9 @@ export default function Movies() {
                   <h4 className="tidochsalongtitle">
                     Genre: {getMovies(display.film, "genre")}
                   </h4>
-                  <Link
-                    to={"/ticket/" + getMovies(display.film, "path") }
-                    state={{
-                      from: [
-                        display.auditorium,
-                        display.film,
-                        display.date,
-                        display.time,
-                        display.id,
-                      ],
-                    }}
-                  >
-                    <button className="moviebtnsitplatser_small tidochsalongtitle">
+                  <button onClick={ () => toTicket(display,getMovies(display.film, "path"))} className="moviebtnsitplatser_small tidochsalongtitle">
                       Välj sittplatser
                     </button>
-                  </Link>
                 </div>
               </div>
             </>
