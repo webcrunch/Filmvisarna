@@ -1967,6 +1967,13 @@ body.aboutPage {
   word-wrap: break-word;
 }
 
+.contactLink {
+  color: #add8e6;
+}
+
+.contactLink:hover{
+  color: #76c6e0;
+}
 /*-----------------------------Om Oss PAGE ENDS HERE---------------------------------------- */
 
 .varumarkeslofte {
