@@ -198,7 +198,7 @@ export default function Movies() {
             <>
               <div className="imagelistdiv">
                 {/* <hr className='movieshr'></hr> */}
-                <Link to={"/movie/" + display.film}>
+                <Link to={"/movie/" + getMovies(display.film, "path")}>
                   <img
                     className="imagesmovies"
                     src={"../" + getMovies(display.film, "images")}
