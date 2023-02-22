@@ -1787,7 +1787,27 @@ height: 220px;
 padding: 15px;
 }
 
-}@media screen and  (min-width: 402px) and (max-width: 499px){
+#total-price {
+  font-size: 19px;
+  padding: 20px;
+  word-break:keep-all;
+  }
+  
+  
+  .tv-screen {
+    width: 5vh;
+    height: 20.4vh;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    box-shadow: 0px 10px 85px 20px #953333;
+    border-left: solid rgb(137, 12, 12) 15px;
+    border-right: solid rgb(137, 12, 12) 15px;
+    border-width: 10px, 10px, 10px, 10px;
+  
+  }
+}
+
+@media screen and  (min-width: 402px) and (max-width: 499px){
 #total-price {
 display:flex ;
 align-items: center;
@@ -1879,25 +1899,12 @@ font-size: 14px;
 font-size: 14px;
 }
 
-#total-price {
-  display:flex ;
-  align-items: center;
-  position: relative;
-  font-size: 16px;
-  word-break: break-all;
-  height: 220px;
-  padding: 15px;
-}
+
 
 }
 
-@media screen and (min-width: 648px) and (max-width: 900px){
-#total-price {
-font-size: 19px;
-padding: 20px;
-word-break:keep-all;
-}
-}
+
+
 #ticket-pricing {
   display: flex;
   flex-direction: row;
@@ -2130,8 +2137,8 @@ margin-bottom:30px; */
 }
 
 .tv-screen {
-  width: 10vh;
-  height: 30.8vh;
+  width: 5vh;
+  height: 29.4vh;
   background-color: rgb(255, 255, 255);
   position: absolute;
   box-shadow: 0px 10px 85px 20px #953333;
@@ -2141,8 +2148,8 @@ margin-bottom:30px; */
 
 }
 
-.tv-screen:before {
-  width: 55vh;
+.tv-screen:hover {
+  width: 40vh;
   height: 208px;
   background-color: rgb(255, 255, 255);
   position: absolute;
@@ -2595,6 +2602,7 @@ body.bookingPage {
   margin-bottom: 30px;
   text-align: center;
   box-sizing: border-box;
+  color: white;
 }
 
 
