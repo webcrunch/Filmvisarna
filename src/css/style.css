@@ -1787,7 +1787,27 @@ height: 220px;
 padding: 15px;
 }
 
-}@media screen and  (min-width: 402px) and (max-width: 499px){
+#total-price {
+  font-size: 19px;
+  padding: 20px;
+  word-break:keep-all;
+  }
+  
+  
+  .tv-screen {
+    width: 5vh;
+    height: 20.4vh;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    box-shadow: 0px 10px 85px 20px #953333;
+    border-left: solid rgb(137, 12, 12) 15px;
+    border-right: solid rgb(137, 12, 12) 15px;
+    border-width: 10px, 10px, 10px, 10px;
+  
+  }
+}
+
+@media screen and  (min-width: 402px) and (max-width: 499px){
 #total-price {
 display:flex ;
 align-items: center;
@@ -1879,25 +1899,12 @@ font-size: 14px;
 font-size: 14px;
 }
 
-#total-price {
-  display:flex ;
-  align-items: center;
-  position: relative;
-  font-size: 16px;
-  word-break: break-all;
-  height: 220px;
-  padding: 15px;
-}
+
 
 }
 
-@media screen and (min-width: 648px) and (max-width: 900px){
-#total-price {
-font-size: 19px;
-padding: 20px;
-word-break:keep-all;
-}
-}
+
+
 #ticket-pricing {
   display: flex;
   flex-direction: row;
@@ -2130,8 +2137,8 @@ margin-bottom:30px; */
 }
 
 .tv-screen {
-  width: 10vh;
-  height: 30.8vh;
+  width: 5vh;
+  height: 29.4vh;
   background-color: rgb(255, 255, 255);
   position: absolute;
   box-shadow: 0px 10px 85px 20px #953333;
@@ -2141,8 +2148,8 @@ margin-bottom:30px; */
 
 }
 
-.tv-screen:before {
-  width: 55vh;
+.tv-screen:hover {
+  width: 40vh;
   height: 208px;
   background-color: rgb(255, 255, 255);
   position: absolute;
@@ -2404,6 +2411,102 @@ body.aboutPage {
   word-wrap: break-word;
 }
 
+/*-------------Omoss page MEDIA QUERIES--------------------------------*/
+
+/* small screen(iphone)*/
+
+@media only screen and (min-width:50px) and (max-width: 279px) {
+
+  .OmOss{
+    display:flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content:  space-between;
+    width: 100%;
+
+  }
+
+  .OmOss p{
+    height: 4vh;
+    width: 30%;
+    text-align: center;
+    word-wrap: break-word;
+    font-size: 10px;
+    padding: 5px;
+    transform: scale(0.5);
+    
+  
+  }
+}
+@media only screen and (min-width :280px) and (max-width : 512px){
+  .OmOss {
+    display:flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-between;
+    /*box-shadow: 0px 0px 35px 0px #000000;
+    border-radius:20px;*/
+    width:100%;
+
+  }
+
+  .OmOss p{
+    width: 30%;
+    text-align: center;
+    word-wrap:break-word;
+    font-size: 20px;
+    padding: 10px;
+    /*border-radius: 20px;
+    border:none;
+    margin-right:5px 5px;*/
+
+  }
+}
+
+@media screen and (min-width:513px) and (max-width:709px){
+  .OmOss{
+    display:flex;
+    flex-direction:column;
+    text-align: center;
+    width:100%;
+    justify-content: space-between;
+    margin: 0 auto;
+  
+  }
+
+  .OmOss p{
+    width: 20%;
+    text-align: center;
+    word-wrap: break-word;
+    padding: 15px;
+    /*border-radius:20px ;
+    border:none;
+    margin-right: 5px 5px;*/
+    font-size: 12px;
+  }
+}
+
+
+@media screen and (min-width:715px ) and (max-width:822px) {
+
+  .OmOss{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+    margin: 0 auto;
+  }
+  
+  .OmOss p{
+    width: 10%;
+    text-align: center;
+    word-wrap: break-word;
+    font-size:19px;
+    padding: 20px;
+  }
+}
+
 /*-----------------------------Om Oss PAGE ENDS HERE---------------------------------------- */
 
 .varumarkeslofte {
@@ -2595,6 +2698,7 @@ body.bookingPage {
   margin-bottom: 30px;
   text-align: center;
   box-sizing: border-box;
+  color: white;
 }
 
 
