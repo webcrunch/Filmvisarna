@@ -215,7 +215,7 @@ export default function Movies() {
                     {calculatingTime(getMovies(display.film, "length"))}
                   </h4>
                 </div>
-                <Link></Link>
+                
                 {/* <Link
                   to={"/ticket/" + getMovies(display.film, "path")}
                   state={{
@@ -238,7 +238,6 @@ export default function Movies() {
                   <button onClick={() => toTicket(display,getMovies(display.film, "path"))} className="moviebtnsitplatser">
                     Välj sittplatser
                   </button>
-                {/* </Link> */}
               </div>
 
               <div className="card">
