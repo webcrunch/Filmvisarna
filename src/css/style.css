@@ -20,6 +20,12 @@ main {
   flex: 1;
 }
 
+main:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 footer {
   display: flex;
   justify-content: space-between;
@@ -41,6 +47,12 @@ footer {
 
 .footerleft p {
   text-align: center;
+}
+.footerleft a{
+  color: #add8e6;
+}
+.footerleft :hover a{
+  color: #76c6e0;
 }
 
 .footerright a img {
@@ -2369,16 +2381,16 @@ body.contactPage {
 }
 
 .contact a {
-  color: rgba(10, 217, 106, 0.895);
+  color: #add8e6;
 }
 
 .contact a:hover {
   cursor: pointer;
-  color: rgba(10, 217, 106, 0.895);
+  color: #76c6e0;
 }
 
 .contact b {
-  color: rgba(10, 217, 106, 0.895);
+  color: #76c6e0;
 }
 
 /*----------------------------- kontakt PAGE ENDS HERE-----------------------------*/
@@ -2411,6 +2423,13 @@ body.aboutPage {
   word-wrap: break-word;
 }
 
+.contactLink {
+  color: #add8e6;
+}
+
+.contactLink:hover{
+  color: #76c6e0;
+}
 /*-------------Omoss page MEDIA QUERIES--------------------------------*/
 
 /* small screen(iphone)*/
@@ -2676,6 +2695,10 @@ body.bookingPage {
 
 /* ?? ______________________________________ Detail page css start ___________________________________________ ?? */
 
+body.detailedInfo {
+  background-color: black;
+}
+
 .detailedPageContainer {
   color: white;
   width: 100%;
@@ -2688,7 +2711,6 @@ body.bookingPage {
 }
 
 .detailedRightContainer {
-  height: 400px;
   width: 50%;
   float: left;
   margin-left: 150px;
@@ -2707,19 +2729,19 @@ body.bookingPage {
   height: 500px;
   object-fit: fill;
   border-radius: 10px;
-  box-shadow: 0px 0px 7px 0px rgba(255, 255, 255, 0.3);
+  box-shadow: 0px 0px 7px 0px rgba(255, 255, 255, 0);
   transition: transform 0.3s ease-in-out;
   margin: 5%;
 
 }
 
-.movieTrailer {
+.detailedTrailer {
   width: 100%;
   height: 315px;
-  margin: 5%;
   object-fit: cover;
-  border-radius: 7px 7px;
-  box-shadow: 0px 0px 7px 0px rgba(255, 255, 255, 0.3);
+  margin: 5%;
+  border-radius: 10px;
+  margin-top: -1%;
 
 }
 
@@ -2734,13 +2756,19 @@ body.bookingPage {
 }
 
 .detailedRating {
-  border: 2px solid gray;
+  border: 2px solid rgb(0, 0, 0);
   font-size: 18px;
-  background-color: rgb(142, 126, 126);
+  background-color: rgb(82, 81, 81);
   padding-left: 20px;
   color: #ffffff;
-  margin: 10px 0;
-  bottom: 10px;
+  margin: 20px 0;
+  margin-left: 5px;
+  margin-right: 5px;
+  border-radius: 10px;
+}
+
+.detailedRating p {
+  padding-left: 10px;
 }
 
 /*
@@ -2754,7 +2782,7 @@ body.bookingPage {
 } */
 
 .detailedRatingDropdown {
-  background-color: rgb(7, 5, 5);
+  background-color: rgb(0, 0, 0);
   border: 1px solid rgb(0, 0, 0);
   box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
@@ -2783,6 +2811,15 @@ body.bookingPage {
   color: #add8e6;
 }
 
+.detailedScreeningsInfo {
+  color: #808080;
+  cursor: pointer;
+}
+
+.detailedScreeningsInfo:hover {
+  color: #add8e6;
+  cursor: pointer;
+}
 
 /* --------------------Detail page css end here--------------------- */
 
