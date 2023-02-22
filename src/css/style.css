@@ -1531,16 +1531,16 @@ body.contactPage {
 }
 
 .contact a {
-  color: rgba(10, 217, 106, 0.895);
+  color: #add8e6;
 }
 
 .contact a:hover {
   cursor: pointer;
-  color: rgba(10, 217, 106, 0.895);
+  color: #76c6e0;
 }
 
 .contact b {
-  color: rgba(10, 217, 106, 0.895);
+  color: #76c6e0;
 }
 
 /*----------------------------- kontakt PAGE ENDS HERE-----------------------------*/
