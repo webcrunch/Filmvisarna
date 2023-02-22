@@ -197,7 +197,7 @@ export default function Movies() {
                 <Link to={"/movie/" + display.film}>
                   <img
                     className="imagesmovies"
-                    src={"Filmvisarna/" + getMovies(display.film, "images")}
+                    src={getMovies(display.film, "images")}
                     alt={"Poster av filmen " + display.film}
                   />
                 </Link>
@@ -232,7 +232,7 @@ export default function Movies() {
               <div className="card">
                 <Link to={"/movie/" + getMovies(display.film, "path")}>
                   <img
-                    src={"Filmvisarna/" + getMovies(display.film, "images")}
+                    src={getMovies(display.film, "images")}
                     alt={"Poster av filmen " + display.film}
                   />
                 </Link>
