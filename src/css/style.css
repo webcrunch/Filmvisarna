@@ -2288,7 +2288,7 @@ margin-bottom:30px; */
 .seat-marked {
   position: relative;
   display: inline-block;
-  background-color: #474747;
+  background-color: rgb(2, 159, 2);
   box-shadow: rgb(0, 0, 0) 100px, 100px, 900px, 90px;
   width: 30px;
   height: 27px;
