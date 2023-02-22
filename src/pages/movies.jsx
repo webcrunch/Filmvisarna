@@ -263,13 +263,9 @@ export default function Movies() {
                   <h4 className="tidochsalongtitle">
                     Genre: {getMovies(display.film, "genre")}
                   </h4>
-                  <Link
-                    to={"/ticket/" + getMovies(display.film, "path")}
-                  ></Link>
                   <button onClick={ () => toTicket(display,getMovies(display.film, "path"))} className="moviebtnsitplatser_small tidochsalongtitle">
                       Välj sittplatser
                     </button>
-                  {/* </Link> */}
                 </div>
               </div>
             </>
