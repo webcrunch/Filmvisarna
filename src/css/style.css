@@ -2903,6 +2903,12 @@ body.loginPage {
   background-color: rgb(23, 23, 23);
 }
 
+body.listings{
+  background-color: rgb(23, 23, 23);
+  color:white;
+}
+
+
 .login {
   background-color: rgb(46, 11, 102);
   width: 450px;
