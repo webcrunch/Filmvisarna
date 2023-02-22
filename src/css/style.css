@@ -20,6 +20,10 @@ footer {
   text-align: center;
 }
 
+.footerleft a {
+  color: #add8e6;
+}
+
 .footerleft p{
   text-align: center;
 }
