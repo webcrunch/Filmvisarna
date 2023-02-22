@@ -2,10 +2,12 @@
 
 .imagelistdiv {
   text-align: center;
-  background-color: azure;
+  background-color: rgba(0, 0, 0, 0.503);
+  color: white;
   position: relative;
   height: 250px;
   margin-top: 20px;
+  border-radius: 10px;
   box-sizing: content-box;
   padding-left: 220px;
   padding-top: 30px;
