@@ -45,15 +45,15 @@ export default function App() {
   let s = useStates('main', {
     movies: [],
     menu: [
-      { label: 'HEM', path: '/', Component: Home },
-      { label: 'FILMER', path: 'movies', Component: Movies },
-      { label: 'OM OSS ', path: '/about', Component: About },
-      { label: 'KONTAKT', path: '/contact', Component: Contact },
-      { path: '/movie/:moviePath', Component: DetailedInfo },
-      { path: '/auth', Component: RegisterPage },
-      { path: '/authentication', Component: LoginPage },
-      { path: '/ticket/:moviePath', Component: TicketPage },
-      { path: '/done/:bookingId', Component: Booked }
+      { label: 'HEM', path: '/Filmvisarna/', Component: Home },
+      { label: 'FILMER', path: '/Filmvisarna/movies', Component: Movies },
+      { label: 'OM OSS ', path: '/Filmvisarna/about', Component: About },
+      { label: 'KONTAKT', path: '/Filmvisarna/contact', Component: Contact },
+      { path: '/Filmvisarna/movie/:moviePath', Component: DetailedInfo },
+      { path: '/Filmvisarna/auth', Component: RegisterPage },
+      { path: '/Filmvisarna/authentication', Component: LoginPage },
+      { path: '/Filmvisarna/ticket/:moviePath', Component: TicketPage },
+      { path: '/Filmvisarna/done/:bookingId', Component: Booked }
     ],
     screenings: [],
     saloons: []
