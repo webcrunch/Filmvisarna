@@ -2290,7 +2290,7 @@ margin-bottom:30px; */
 .seat-marked {
   position: relative;
   display: inline-block;
-  background-color: #474747;
+  background-color: rgb(2, 159, 2);
   box-shadow: rgb(0, 0, 0) 100px, 100px, 900px, 90px;
   width: 30px;
   height: 27px;
@@ -2941,6 +2941,12 @@ Detail page css end here */
 body.loginPage {
   background-color: rgb(23, 23, 23);
 }
+
+body.listings{
+  background-color: rgb(23, 23, 23);
+  color:white;
+}
+
 
 .login {
   background-color: rgb(46, 11, 102);

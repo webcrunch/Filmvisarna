@@ -13,8 +13,8 @@ export default function Listing() {
     }
 
     useEffect(() => {
-        document.body.classList.add("moviePage");
-        return () => document.body.classList.remove("moviePage");
+        document.body.classList.add("listings");
+        return () => document.body.classList.remove("listings");
   }, []);
 
     
@@ -25,7 +25,7 @@ export default function Listing() {
           
 
     return userData && user.loggedin && (
-        <>
+        <div className="listings">
             {
                 bookedArray.map(p => <ul>
                     <li>Film: {p.film}</li>
@@ -36,7 +36,7 @@ export default function Listing() {
                     <li>Pris: {p.price}</li>
                 </ul>)
             }
-            </>
+            </div>
     )
     
 }
