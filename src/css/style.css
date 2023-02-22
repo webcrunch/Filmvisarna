@@ -48,6 +48,12 @@ footer {
 .footerleft p {
   text-align: center;
 }
+.footerleft a{
+  color: #add8e6;
+}
+.footerleft :hover a{
+  color: #76c6e0;
+}
 
 .footerright a img {
   display: inline-block;
