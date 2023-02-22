@@ -1,9 +1,10 @@
 import { useStates } from '../utilities/states';
-import { useParams, Link } from 'react-router-dom';
+import { useParams, Link, useNavigate } from 'react-router-dom';
 import { calculatingTime } from '../utilities/length-calculating';
 import React, { useEffect, useState } from 'react';
-import { useLocation } from 'react-router-dom'
 
+import { useLocation } from 'react-router-dom'
+import Trailer from './trailer';
 // import Trailer from ''
 export default function DetailedInfo() {
     const { moviePath } = useParams();
@@ -14,15 +15,31 @@ export default function DetailedInfo() {
     const [showScreenings, setShowScreenings] = useState(false);
     const trailer = movie && movie.youtubeTrailer;
     const screening = useStates({ screenings: "null", categories: "null" })
-
+    const navigate = useNavigate();
     const screenings = movie != undefined ? s.screenings.filter(screen => screen.film === movie.title) : null;
+    // let dateArray =[];
     let dateArray = movie != undefined ? s.screenings.map(screen => screen.date) : null;
     // const testBlock = screenings.filter((screen,index) => {
     //     if(index < 4) return screen;
     // })
+
+    function createDates() {
+        let categories = [];
+        for (let screen of screenings) {
+            console.log(screen);
+            categories = [...categories, ...movie.genre.split(",")];
+        }
+        l.categories = [...new Set(categories)];
+    }
+
+    const toTicket = (screening,moviePath) => { 
+        navigate("/ticket/" + encodeURIComponent(JSON.stringify({id:screening.id, auditorium:screening.auditorium, moviePath:moviePath})));
+      }
+
     useEffect(() => {
-        document.body.classList.add("ticketPage");
-        return () => document.body.classList.remove("ticketPage");
+        /*   createDates(); */
+        document.body.classList.add("detailedInfo");
+        return () => document.body.classList.remove("detailedInfo");
     }, []);
     const filterByDate = (s) => screening.categories === "null" || s.date === screening.categories;
     return <>
@@ -31,8 +48,8 @@ export default function DetailedInfo() {
                 <div className="detailedPageContainer">
                     <div className='detailedLeftContainer'>
                         <img className="detailedImages" src={movie.images} />
-                        {/* <Trailer className="someting" embedId="xjDjIWPwcPU" /> */}
-                        {/* <iframe className="movieTrailer" width="350px" height="315px" src={"https://www.youtube.com/embed/" + movie.youtubeTrailer} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> */}
+                        <Trailer className="detailedTrailer" embedId={trailer} />
+                        {/* <iframe className="detailedTrailer" width="350px" height="315px" src={"https://www.youtube.com/embed/" + movie.youtubeTrailer} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> */}
                     </div>
                     <div className="detailedRightContainer">
                         <h1 className="detailedTitle">{movie.title}</h1>
@@ -77,11 +94,18 @@ export default function DetailedInfo() {
                             {showScreenings && (
                                 <div className="detailedScreeningsDropdown">
                                     <div className="detailedScreening">
-                                        <select name=""{...screening.bind("categories")} id="">{dateArray.map(cat => <option>{cat}</option>)}</select>
-                                        {screenings.filter(filterByDate).map(screen => <p>{screen.film}{screen.date}</p>)}
+                                        <select name="" {...screening.bind("categories")} id="">
+                                            {dateArray.map(cat => <option>{cat}</option>)}
+                                        </select>
+                                        {screenings.filter(filterByDate).map(screen => (
+                                                <p className="detailedScreeningsInfo" onClick={() => toTicket(screen, movie.path)}>
+                                                    {screen.film} - {screen.date} - {screen.time} - in {screen.auditorium}
+                                                </p>
+                                        ))}
                                     </div>
                                 </div>
                             )}
+
                         </div>
 
                     </div>
