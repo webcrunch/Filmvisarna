@@ -198,7 +198,7 @@ export default function Movies() {
             <>
               <div className="imagelistdiv">
                 {/* <hr className='movieshr'></hr> */}
-                <Link to={"/movie/" + display.film}>
+                <Link to={"/movie/" + getMovies(display.film, "path")}>
                   <img
                     className="imagesmovies"
                     src={"../" + getMovies(display.film, "images")}
@@ -214,6 +214,7 @@ export default function Movies() {
                     Tid: {display.time}. Längd:{" "}
                     {calculatingTime(getMovies(display.film, "length"))}
                   </h4>
+                  Genre: {getMovies(display.film, "genre")}
                 </div>
                 
                 {/* <Link
