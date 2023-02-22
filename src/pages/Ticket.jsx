@@ -6,7 +6,6 @@ import { useNavigate, useParams } from "react-router-dom";
 export default function TicketPage() {
   const { moviePath } = useParams();
   const location = useLocation();
-  console.log(location);
   let { screeningInfo } = useParams();
   screeningInfo = JSON.parse(decodeURIComponent(screeningInfo));
   // const location = useLocation();
