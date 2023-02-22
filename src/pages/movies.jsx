@@ -214,6 +214,7 @@ export default function Movies() {
                     Tid: {display.time}. Längd:{" "}
                     {calculatingTime(getMovies(display.film, "length"))}
                   </h4>
+                  Genre: {getMovies(display.film, "genre")}
                 </div>
                 
                 {/* <Link
