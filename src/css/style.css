@@ -1859,10 +1859,12 @@ body.detailedInfo {
 
 .detailedScreeningsInfo {
   color: #808080;
+  cursor: pointer;
 }
 
 .detailedScreeningsInfo:hover {
   color: #add8e6;
+  cursor: pointer;
 }
 
 /* --------------------Detail page css end here--------------------- */
