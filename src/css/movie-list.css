@@ -1,5 +1,9 @@
 /*---------------------MOVIE LIST START HERE ---------------------------------------------------- */
 
+body.moviePage {
+  background-color: rgb(23, 23, 23);
+}
+
 .imagelistdiv {
   text-align: center;
   background-color: rgba(0, 0, 0, 0.503);
