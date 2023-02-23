@@ -1,7 +1,8 @@
 import { useStates } from '../utilities/states';
-import { useParams, Link } from 'react-router-dom';
+import { useParams, Link, useNavigate } from 'react-router-dom';
 import { calculatingTime } from '../utilities/length-calculating';
 import React, { useEffect, useState } from 'react';
+
 import { useLocation } from 'react-router-dom'
 import Trailer from './trailer';
 // import Trailer from ''
@@ -14,7 +15,7 @@ export default function DetailedInfo() {
     const [showScreenings, setShowScreenings] = useState(false);
     const trailer = movie && movie.youtubeTrailer;
     const screening = useStates({ screenings: "null", categories: "null" })
-
+    const navigate = useNavigate();
     const screenings = movie != undefined ? s.screenings.filter(screen => screen.film === movie.title) : null;
     // let dateArray =[];
     let dateArray = movie != undefined ? s.screenings.map(screen => screen.date) : null;
@@ -31,6 +32,9 @@ export default function DetailedInfo() {
         l.categories = [...new Set(categories)];
     }
 
+    const toTicket = (screening,moviePath) => { 
+        navigate("/ticket/" + encodeURIComponent(JSON.stringify({id:screening.id, auditorium:screening.auditorium, moviePath:moviePath})));
+      }
 
     useEffect(() => {
         /*   createDates(); */
@@ -94,18 +98,9 @@ export default function DetailedInfo() {
                                             {dateArray.map(cat => <option>{cat}</option>)}
                                         </select>
                                         {screenings.filter(filterByDate).map(screen => (
-                                            <Link to={"/ticket/" + movie.path} state={{
-                                                from: [
-                                                    screen.auditorium,
-                                                    screen.film,
-                                                    screen.date,
-                                                    screen.time,
-                                                ],
-                                            }} className="detailedScreeningsInfo">
-                                                <p>
+                                                <p className="detailedScreeningsInfo" onClick={() => toTicket(screen, movie.path)}>
                                                     {screen.film} - {screen.date} - {screen.time} - in {screen.auditorium}
                                                 </p>
-                                            </Link>
                                         ))}
                                     </div>
                                 </div>

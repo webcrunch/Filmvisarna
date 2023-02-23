@@ -35,7 +35,7 @@ export default function About() {
 
         <div className="telefon">
             <p>Vår biosalong kan hittas på denna adress Stortorget 11, 124 84 Småstad, Sverige, behöver du kontakta oss kan du ringa telefonnumret
-                (073) 337 89 01 eller skicka ett email till info@filmvisarna.com. Biografen öppnar alltid 30 minuter innan första föreställning.
+            <a href="tel:+4733378901" className="contactLink"> Telefon: (073) 337 89 01 </a> eller skicka ett email till <a href="info@filmvisarna.com" className="contactLink"> info@filmvisarna.com</a>. Biografen öppnar alltid 30 minuter innan första föreställning.
                 Öppettiderna kan ändras vid specialevenemang, helgdagar eller skollov.</p>
         </div>
 
