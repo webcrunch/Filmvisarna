@@ -35,16 +35,16 @@ export default function Booked() {
                 <p>{bookingInfo.screeningsData.time}</p>
                 <p>{bookingInfo.totalPrice}kr</p>
                 <ul>
-                    <li>Barn biljetter: {bookingInfo.numberofChildren} st</li>
-                    <li>Vuxen biljetter: {bookingInfo.numberofAdults} st</li>
-                    <li>pensionär biljetter: {bookingInfo.numberofSenior} st</li>
+                    <li>Barnbiljetter: {bookingInfo.numberofChildren} st</li>
+                    <li>Vuxenbiljetter: {bookingInfo.numberofAdults} st</li>
+                    <li>Pensionärsbiljetter: {bookingInfo.numberofSenior} st</li>
                 </ul>
                     <p>Total antal platser/biljetter: {bookingInfo.totalSeats} st</p>
                     <p>Platser:</p>
                     {
                         placesArray.map(place => <p>Rad:{place.row} Stolrad: {place.chair}</p>)
                     }
-                <h3>Boknings information:</h3>
+                <h3>Bokningsinformation:</h3>
                 <p>Glöm inte att ta med bokningsnummret till biografen: <b>{confirmationNumber}</b> <button type="button" onClick={() => copyContent(confirmationNumber)}>Kopiera bokningsnummret</button></p>           
             </div>
             <img src="/images/bookingpage.jpg" alt="Here will be a image" />
