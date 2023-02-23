@@ -32,9 +32,9 @@ export default function DetailedInfo() {
         l.categories = [...new Set(categories)];
     }
 
-    const toTicket = (screening,moviePath) => { 
-        navigate("/ticket/" + encodeURIComponent(JSON.stringify({id:screening.id, auditorium:screening.auditorium, moviePath:moviePath})));
-      }
+    const toTicket = (screening, moviePath) => {
+        navigate("/ticket/" + encodeURIComponent(JSON.stringify({ id: screening.id, auditorium: screening.auditorium, moviePath: moviePath })));
+    }
 
     useEffect(() => {
         /*   createDates(); */
@@ -95,12 +95,12 @@ export default function DetailedInfo() {
                                 <div className="detailedScreeningsDropdown">
                                     <div className="detailedScreening">
                                         <select name="" {...screening.bind("categories")} id="">
-                                            {dateArray.map(cat => <option>{cat}</option>)}
+                                            {[...new Set(dateArray)].map(cat => <option>{cat}</option>)}
                                         </select>
                                         {screenings.filter(filterByDate).map(screen => (
-                                                <p className="detailedScreeningsInfo" onClick={() => toTicket(screen, movie.path)}>
-                                                    {screen.film} - {screen.date} - {screen.time} - in {screen.auditorium}
-                                                </p>
+                                            <p className="detailedScreeningsInfo" onClick={() => toTicket(screen, movie.path)}>
+                                                Datum: {screen.date} Tid: {screen.time} Salong: {screen.auditorium}
+                                            </p>
                                         ))}
                                     </div>
                                 </div>
