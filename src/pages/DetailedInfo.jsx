@@ -19,9 +19,9 @@ export default function DetailedInfo() {
     const screenings = movie != undefined ? s.screenings.filter(screen => screen.film === movie.title) : null;
     let dateArray = movie != undefined ? screenings.map(screen => screen.date) : null;
 
-    const toTicket = (screening,moviePath) => { 
-        navigate("/ticket/" + encodeURIComponent(JSON.stringify({id:screening.id, auditorium:screening.auditorium, moviePath:moviePath})));
-      }
+    const toTicket = (screening, moviePath) => {
+        navigate("/ticket/" + encodeURIComponent(JSON.stringify({ id: screening.id, auditorium: screening.auditorium, moviePath: moviePath })));
+    }
 
     useEffect(() => {
         document.body.classList.add("detailedInfo");
@@ -35,7 +35,6 @@ export default function DetailedInfo() {
                     <div className='detailedLeftContainer'>
                         <img className="detailedImages" src={movie.images} />
                         <Trailer className="detailedTrailer" embedId={trailer} />
-                        {/* <iframe className="detailedTrailer" width="350px" height="315px" src={"https://www.youtube.com/embed/" + movie.youtubeTrailer} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> */}
                     </div>
                     <div className="detailedRightContainer">
                         <h1 className="detailedTitle">{movie.title}</h1>
@@ -58,8 +57,8 @@ export default function DetailedInfo() {
                         </div>
 
                         <div className="buttonsUnderText">
-                            <button name="btnRatings" className="buttonRatings" onClick={() => setShowRatings(!showRatings)}>Visa recensioner</button>
-                            <button name="btnScreenings" className="buttonScreenings" onClick={() => setShowScreenings(!showScreenings)}>Visa visningar</button>
+                            <button name="btnRatings" className="buttonRatings" onClick={() => setShowRatings(!showRatings)}>{showRatings ? "Göm recensioner" : "Visa recensioner"}</button>
+                            <button name="btnScreenings" className="buttonScreenings" onClick={() => setShowScreenings(!showScreenings)}>{showScreenings ? "Göm visningar" : "Visa visningar"}</button>
                             {showRatings && (
                                 <div className="detailedRatingDropdown">
                                     {movie.reviews.map(rate =>
@@ -85,9 +84,9 @@ export default function DetailedInfo() {
                                             {[...new Set(dateArray)].map(cat => <option>{cat}</option>)}
                                         </select>
                                         {screenings.filter(filterByDate).map(screen => (
-                                                <p className="detailedScreeningsInfo" onClick={() => toTicket(screen, movie.path)}>
-                                                    Datum: {screen.date} Tid: {screen.time} Salong: {screen.auditorium}
-                                                </p>
+                                            <p className="detailedScreeningsInfo" onClick={() => toTicket(screen, movie.path)}>
+                                                Datum: {screen.date} Tid: {screen.time} Salong: {screen.auditorium}
+                                            </p>
                                         ))}
                                     </div>
                                 </div>
