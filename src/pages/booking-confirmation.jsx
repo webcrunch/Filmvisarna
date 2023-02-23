@@ -45,7 +45,7 @@ export default function Booked() {
                     {
                         placesArray.map(place => <p>Rad:{place.row} Stolrad: {place.chair}</p>)
                     }
-                    <h3>Boknings information:</h3>
+                    <h3>Bokningsinformation:</h3>
                     <p>Glöm inte att ta med bokningsnummret till biografen: <b>{confirmationNumber}</b> <button type="button" onClick={() => copyContent(confirmationNumber)}>Kopiera bokningsnummret</button></p>
                 </div>
                 <img src="/images/bookingpage.jpg" alt="Here will be a image" />
