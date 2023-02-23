@@ -68,8 +68,8 @@ export default function DetailedInfo() {
                         </div>
 
                         <div className="buttonsUnderText">
-                            <button name="btnRatings" className="buttonRatings" onClick={() => setShowRatings(!showRatings)}>Show Ratings</button>
-                            <button name="btnScreenings" className="buttonScreenings" onClick={() => setShowScreenings(!showScreenings)}>View Screenings</button>
+                            <button name="btnRatings" className="buttonRatings" onClick={() => setShowRatings(!showRatings)}>{showRatings ? "Göm betyg" : "Visa betyg"}</button>
+                            <button name="btnScreenings" className="buttonScreenings" onClick={() => setShowScreenings(!showScreenings)}>{showScreenings ? "Göm visningar" : "Visa visningar"}</button>
                             {showRatings && (
                                 <div className="detailedRatingDropdown">
                                     {movie.reviews.map(rate =>
