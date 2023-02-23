@@ -14,34 +14,20 @@ export default function DetailedInfo() {
     const [showRatings, setShowRatings] = useState(false);
     const [showScreenings, setShowScreenings] = useState(false);
     const trailer = movie && movie.youtubeTrailer;
-    const screening = useStates({ screenings: "null", categories: "null" })
+    const screening = useStates({ date: "null" })
     const navigate = useNavigate();
     const screenings = movie != undefined ? s.screenings.filter(screen => screen.film === movie.title) : null;
-    // let dateArray =[];
-    let dateArray = movie != undefined ? s.screenings.map(screen => screen.date) : null;
-    // const testBlock = screenings.filter((screen,index) => {
-    //     if(index < 4) return screen;
-    // })
-
-    function createDates() {
-        let categories = [];
-        for (let screen of screenings) {
-            console.log(screen);
-            categories = [...categories, ...movie.genre.split(",")];
-        }
-        l.categories = [...new Set(categories)];
-    }
+    let dateArray = movie != undefined ? screenings.map(screen => screen.date) : null;
 
     const toTicket = (screening,moviePath) => { 
         navigate("/ticket/" + encodeURIComponent(JSON.stringify({id:screening.id, auditorium:screening.auditorium, moviePath:moviePath})));
       }
 
     useEffect(() => {
-        /*   createDates(); */
         document.body.classList.add("detailedInfo");
         return () => document.body.classList.remove("detailedInfo");
     }, []);
-    const filterByDate = (s) => screening.categories === "null" || s.date === screening.categories;
+    const filterByDate = (s) => screening.date === "null" || s.date === screening.date;
     return <>
         {
             movie != undefined ?
@@ -56,7 +42,7 @@ export default function DetailedInfo() {
                         <div className="detailedInfo">
                             <p className="detailedDesc">{movie.description}</p>
                             <p className="detailedLength infoPart">Längd: <br /> {calculatingTime(movie.length)}</p>
-                            <p className="detailedGenre infoPart">Genre: <br /> {movie.genre}</p>
+                            <p className="detailedGenre infoPart">Genre: <br /> {movie.genre.replace(/,/g, ', ')}</p>
                             <div className="clearBoth"></div>
                             <p className="detailedReleaseDate infoPart">Premiär: <br /> {movie.productionYear}</p>
                             <p className="detailedDirector infoPart">Regi: <br /> {movie.director}</p>
@@ -72,8 +58,8 @@ export default function DetailedInfo() {
                         </div>
 
                         <div className="buttonsUnderText">
-                            <button name="btnRatings" className="buttonRatings" onClick={() => setShowRatings(!showRatings)}>Show Ratings</button>
-                            <button name="btnScreenings" className="buttonScreenings" onClick={() => setShowScreenings(!showScreenings)}>View Screenings</button>
+                            <button name="btnRatings" className="buttonRatings" onClick={() => setShowRatings(!showRatings)}>Visa recensioner</button>
+                            <button name="btnScreenings" className="buttonScreenings" onClick={() => setShowScreenings(!showScreenings)}>Visa visningar</button>
                             {showRatings && (
                                 <div className="detailedRatingDropdown">
                                     {movie.reviews.map(rate =>
@@ -94,12 +80,13 @@ export default function DetailedInfo() {
                             {showScreenings && (
                                 <div className="detailedScreeningsDropdown">
                                     <div className="detailedScreening">
-                                        <select name="" {...screening.bind("categories")} id="">
-                                            {dateArray.map(cat => <option>{cat}</option>)}
+                                        <select name="" {...screening.bind("date")} >
+                                            <option value="null">Alla tider</option>
+                                            {[...new Set(dateArray)].map(cat => <option>{cat}</option>)}
                                         </select>
                                         {screenings.filter(filterByDate).map(screen => (
                                                 <p className="detailedScreeningsInfo" onClick={() => toTicket(screen, movie.path)}>
-                                                    {screen.film} - {screen.date} - {screen.time} - in {screen.auditorium}
+                                                    Datum: {screen.date} Tid: {screen.time} Salong: {screen.auditorium}
                                                 </p>
                                         ))}
                                     </div>
