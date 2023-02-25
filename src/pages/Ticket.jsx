@@ -26,7 +26,8 @@ export default function TicketPage() {
   });
 
   const seats = useStates({
-    markedChairs: {}
+    markedChairs: {},
+    markedChairsArray: [[],[],[],[],[],[],[],[]]
   });
 
   if (Object.keys(seats.markedChairs).length > clickerss.totalSeats) {
@@ -70,10 +71,20 @@ export default function TicketPage() {
     }
   }
 
+  // adding new booked seats to the right index per same schema as in screanings json
+  const insertSeats = markedSeats => {
+     for (const [key, value] of Object.entries(markedSeats)) {
+        let row = key.split(" ")[0];
+       let chair = key.split(" ")[1];
+       seats.markedChairsArray[row-1].push(Number(chair))
+    }
+    return true;
+  }
 
   const navigate = useNavigate();
 
-  function book() {
+  async function book() {
+    let result = await  insertSeats(seats.markedChairs);
     let all = { ...clickerss, ...seats, screeningsData, movie: movie.path };
     navigate("/done/" + encodeURIComponent(JSON.stringify(all)));
   }
