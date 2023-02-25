@@ -214,7 +214,7 @@ export default function Movies() {
                     Tid: {display.time}. Längd:{" "}
                     {calculatingTime(getMovies(display.film, "length"))}
                   </h4>
-                  Genre: {getMovies(display.film, "genre")}
+                  Genre: {getMovies(display.film, "genre").replace(/,/g, ', ')}
                 </div>
                 
                 {/* <Link
@@ -262,7 +262,7 @@ export default function Movies() {
                     </h4>
                   </div>
                   <h4 className="tidochsalongtitle">
-                    Genre: {getMovies(display.film, "genre")}
+                    Genre: {getMovies(display.film, "genre").replace(/,/g, ', ')}
                   </h4>
                   <button onClick={ () => toTicket(display,getMovies(display.film, "path"))} className="moviebtnsitplatser_small tidochsalongtitle">
                       Välj sittplatser
