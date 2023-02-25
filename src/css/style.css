@@ -2982,37 +2982,42 @@ body.detailedInfo {
 /* css register starts */
 
 body.registerPage {
-  background-color: rgb(239, 230, 230);
+  background-color: #000000;
 }
 
 
 .register {
-  background-color: rgb(46, 11, 102);
+  background-color: #ffffff;
+  /* background-color: rgb(46, 11, 102); */
   width: 450px;
   height: 400px;
   position: relative;
-  border-radius: 7%;
+  border-radius: 10%;
   margin: auto;
-  border-top-left-radius: 0%;
+  /* border-top-left-radius: 0%; */
   margin-top: 30px;
 }
 
 .register_form {
   display: flex;
   margin: auto;
-  background-color: rgb(122, 119, 226);
+  /* background-color: rgb(122, 119, 226); */
   justify-content: center;
   width: 400px;
   height: 350px;
   align-items: center;
-  padding: 20px;
+  /* padding: 20px; */
   border-radius: 7%;
   position: absolute;
   top: 15px;
-  right: 14px;
+  left: 25px;
   border: top left radius 0%;
-  background: linear-gradient(to bottom, #00ABBE, #2057A9, #0A2E52, rgb(60, 59, 74));
+  /* background: linear-gradient(to bottom, #00ABBE, #2057A9, #0A2E52, rgb(60, 59, 74)); */
   box-shadow: 0px 60px 300px 35px #000000;
+}
+
+.register_form button {
+  margin: 1vh 0vh;
 }
 
 .label {
@@ -3021,7 +3026,8 @@ body.registerPage {
   font-family: sans-serif;
   font-size: auto;
   font-weight: bold;
-  color: rgb(79, 7, 7);
+  margin: 1vh 0vh;
+  /* color: rgb(79, 7, 7); */
   text-transform: uppercase;
 }
 
@@ -3037,7 +3043,7 @@ body.registerPage {
   display: block;
   font-family: sans-serif;
   font-size: 16px;
-  color: rgba(143, 11, 86, 0.82);
+  color: white;
   border-radius: 3px;
   border-style: none;
   background-color: rgb(41, 41, 41);
