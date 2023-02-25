@@ -21,12 +21,11 @@ function LoginPage() {
 
     function handleSubmit(e) {
         e.preventDefault();
-        let correctUser = user.users.users.filter(obj => obj.username == form.email && obj.password == form.password);
+        let correctUser = user.users.filter(obj => obj.username == form.email && obj.password == form.password);
         if (correctUser.length > 0) {
             user.name = correctUser[0].username;
             user.id = correctUser[0].id;
             user.loggedin = true;
-
         }
     }
     return  <>{ !user.loggedin ?  <div className="login">
