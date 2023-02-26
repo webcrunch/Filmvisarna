@@ -59,6 +59,26 @@ app.get('/api/users', async(req, res) => {
   res.status(200).json(users);
 })
 
+app.get('/api/user/:id', async (req, res) => {
+  let id = Number(req.params.id);
+  let users = await fs.readFile(getPath('users.json'), 'utf8');
+  users = JSON.parse(users);
+  let user = users.users.filter(user => user.id === id);
+  res.status(200).json(user[0]);
+})
+
+app.post('/api/userbooking', async (req, res) => {
+  let users = await fs.readFile(getPath('users.json'), 'utf8');
+  users = JSON.parse(users);
+  users.users.forEach(user => {
+    if (user.id === req.body.id) {
+      user.bookings.push(req.body.booking)
+    }
+  })
+  const writingStatus = await fs.writeFile(getPath('users.json'), JSON.stringify(users, null, 2));
+  !writingStatus ? res.status(200).json({status: `movie booked`, data: users}) : res.status(400).json(writingStatus);
+});
+
 // register a new user. 
 app.post('/api/register', async (req, res) => {
   let users = await fs.readFile(getPath('users.json'), 'utf8');
