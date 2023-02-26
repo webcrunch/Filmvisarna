@@ -84,7 +84,7 @@ export default function App() {
   return <BrowserRouter>
     <ScrollToTop>
       <Navbar />
-      <main>
+      <main className='websiteBackground'>
         <Routes>
           {s.menu.map(({ path, Component }) => <Route path={path} element={<Component />} />)}
         </Routes>
