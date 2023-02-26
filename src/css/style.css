@@ -2982,7 +2982,7 @@ body.detailedInfo {
 /* css register starts */
 
 body.registerPage {
-  background-color: #000000;
+  background-color: rgb(15, 14, 14);
 }
 
 
@@ -2994,7 +2994,7 @@ body.registerPage {
   position: relative;
   border-radius: 10%;
   margin: auto;
-  /* border-top-left-radius: 0%; */
+  border-top-left-radius: 10%;
   margin-top: 30px;
 }
 
@@ -3023,11 +3023,10 @@ body.registerPage {
 .label {
   display: block;
   margin-bottom: 2px;
-  font-family: sans-serif;
+  font-family: system-ui;
   font-size: auto;
-  font-weight: bold;
-  margin: 1vh 0vh;
-  /* color: rgb(79, 7, 7); */
+  font-weight: bolder;
+  color: rgb(79, 7, 7);
   text-transform: uppercase;
 }
 
@@ -3042,7 +3041,7 @@ body.registerPage {
 .lastname {
   display: block;
   font-family: sans-serif;
-  font-size: 16px;
+  font-size: 20px;
   color: white;
   border-radius: 3px;
   border-style: none;
@@ -3051,8 +3050,8 @@ body.registerPage {
 }
 
 .remember {
-  padding: 1px;
-  font-size: 13px;
+  padding: 50px;
+  font-size: 20px;
   background-color: lightgray;
   border-radius: 5px;
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
@@ -3065,17 +3064,17 @@ body.registerPage {
 
 .register_button {
   width: 100%;
-  height: 30px;
+  height: 60px;
   position: relative;
   display: block;
   margin-top: 24%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 0%;
-  padding: auto;
+  margin-left: 24%;
+  margin-right: 24%;
+  margin-bottom: 24%;
+  padding: center;
   color: white;
   background-color: #0A2E52;
-  border-radius: 10px;
+  border-radius: 50px;
   border-style: none;
   box-sizing: content-box;
   background: linear-gradient(to right, rgb(0, 145, 255), rgb(17, 0, 255), rgb(26, 0, 156));
@@ -3085,7 +3084,7 @@ body.registerPage {
 .register_button:hover,
 .register_button:active {
   background: linear-gradient(to left, rgb(255, 255, 255), rgb(218, 218, 218), rgb(197, 197, 197), rgb(146, 146, 146));
-  box-shadow: 0px 5px 100px 10px #ffffff;
+  box-shadow: 0px 10px 100px 10px #ffffff;
 }
 
 .loginlink {
@@ -3099,7 +3098,7 @@ Detail page css end here */
 /* ....................login page scc start here...................*/
 
 body.loginPage {
-  background-color: rgb(23, 23, 23);
+  background-color: rgb(15, 11, 11);
 }
 
 body.listings {
