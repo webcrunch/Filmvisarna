@@ -18,15 +18,18 @@ function RegisterPage(){
 
 	const handleSubmit = async e => {
 		e.preventDefault();
-		console.log(form.användarnamn,form.förnamn,form.efternamn,form.lösenord);
+
+		let body = {
+			 "id": user.users.users.length + 1,
+      		"username": form.username,
+      		"password": form.password,
+      		"bookings": []
+		}
+		let result = await post('/api/register', body);
+		user.users = result.data;
 	}
 
 	return <>
-
-	
-	
-
-
 		<div className='register'>
 			<div className='register_form'>
 				{/* <h1>Skapa konto för att boka filmer och hantera dina bokningar lättare.</h1> */}

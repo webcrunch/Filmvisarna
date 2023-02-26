@@ -83,7 +83,7 @@ app.post('/api/userbooking', async (req, res) => {
 app.post('/api/register', async (req, res) => {
   let users = await fs.readFile(getPath('users.json'), 'utf8');
   users = JSON.parse(users);
-  users.push(req.body);
+  users.users.push(req.body);
   const writingStatus = await fs.writeFile(getPath('users.json'), JSON.stringify(users, null, 2));
   !writingStatus ? res.status(200).json({status: `user: ${req.body.username} registered`, data: users}) : res.status(400).json(writingStatus);
 })
