@@ -2989,37 +2989,40 @@ body.detailedInfo {
 /* css register starts */
 
 body.registerPage {
-  background-color: rgb(239, 230, 230);
+  background-color: rgb(0, 0, 0);
 }
 
 
 .register{
-  background-color: rgb(11, 10, 14);
-  width:450px;
-  height:400px;
+  background-color: rgb(129, 15, 15);
+  width:22%;
+  height:45vh;
   position:relative;
   border-radius:0%;
   margin:auto;
-  border-top-left-radius: 0%;
-  margin-top: 30px;
+  border-top-right-radius: 10%;
+  border-bottom-right-radius: 12%;
+  margin-top: 15vh;
 }
 
 .register_form {
   display: flex;
-  margin: auto;
-  background-color: rgb(122, 119, 226);
-  justify-content: center;
-  width: 400px;
-  height: 350px;
-  align-items: center;
-  padding: 20px;
-  border-radius: 7%;
-  position: absolute;
-  top: 15px;
-  right: 14px;
-  border: top left radius 0%;
-  background: linear-gradient(to bottom,#00ABBE, #2057A9, #0A2E52, rgb(60, 59, 74));
-  box-shadow:0px 60px 300px 35px #0a0912;
+    margin:auto;
+    background-color: rgb(23, 23, 23);
+    justify-content: center;
+    width: 22vw;
+    height: 45vh;
+    align-items: center;
+    padding: 20px;
+    border-radius: 7%;
+    position: absolute; 
+    top:1.5vh;
+    right: 1.5vh;
+
+    border-top-left-radius: 0%;
+    border-bottom-right-radius: 13%;
+  
+    box-shadow:0px 10px 200px 20px #b66969;
 }
 
 .label {
@@ -3028,12 +3031,12 @@ body.registerPage {
   font-family: sans-serif;
   font-size: auto;
   font-weight: bold;
-  color: rgb(79, 7, 7);
+  color: rgb(255, 255, 255);
   text-transform: uppercase;
 }
 
 .label.label::after {
-  content: "";
+  content: "*";
   color: red;
 }
 
@@ -3065,34 +3068,37 @@ body.registerPage {
 }
 
 .register_button {
-  width: 100%;
-  height: 30px;
+  cursor: pointer;
+  width: 110%;
+  height: 3.2vh;
   position: relative;
   display: block;
-  margin-top: 24%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 0%;
+  margin: 2% 0 0 0;
   padding: auto;
-  color: white;
-  background-color: #0A2E52;
+  color: rgb(0, 0, 0);
+  background-color: #ffffff;
   border-radius: 10px;
   border-style: none;
   box-sizing: content-box;
-  background: linear-gradient(to right, rgb(0, 145, 255), rgb(17, 0, 255), rgb(26, 0, 156));
+  box-shadow: inset 0 0 0 0 #832323;
+  transition: ease-in 0.4s;
 
 }
 
-.register_button:hover,
+.register_button:hover{
+  cursor: pointer;
+  box-shadow: inset 500px 0 0 0 #53ff4a;
+  color: black;
+}
 .register_button:active {
-  background: linear-gradient(to left, rgb(255, 255, 255), rgb(218, 218, 218), rgb(197, 197, 197), rgb(146, 146, 146));
-  box-shadow: 0px 5px 100px 10px #ffffff;
+  background: linear-gradient(to left, rgb(118, 96, 96), rgb(218, 218, 218), rgb(197, 197, 197), rgb(146, 146, 146));
+  box-shadow: 0px 5px 70px 5px #ffffff;
 }
 
 .loginlink {
   position: absolute;
-  margin-top: 35px;
-  color: rgb(22, 137, 101);
+  margin-top: 6vh;
+  color: rgb(255, 255, 255);
   float: left;
 }
 
