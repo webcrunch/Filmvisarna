@@ -2702,18 +2702,31 @@ body.detailedInfo {
 .detailedPageContainer {
   color: white;
   width: 100%;
+  
 }
 
 
 .detailedLeftContainer {
-  width: 22%;
+  width: 22vw;
   float: left;
+  
 }
 
 .detailedRightContainer {
+  margin-top: 4vh;
+  height: 52vh;
+  padding-left: 2vw ;
+  padding-right: 1vw;
+  border-radius: 20px;
+  background-color:rgba(255, 255, 255, 0.168);
   width: 50%;
   float: left;
   margin-left: 150px;
+  box-shadow: 0vh 1vh 150px 2vh rgb(183, 26, 65);
+}
+
+.detailedRightContainer p{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .detailedTitle {
@@ -2721,6 +2734,7 @@ body.detailedInfo {
   text-align: center;
   box-sizing: border-box;
   color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 
@@ -2733,6 +2747,30 @@ body.detailedInfo {
   transition: transform 0.3s ease-in-out;
   margin: 5%;
 
+}
+
+.buttonRatings{
+  color: white;
+  margin-left: 2vw ;
+  width: 20vw;
+  box-shadow:  white inset 0 0 0 0;
+  transition:  0.4s ease-in;
+}
+.buttonRatings:hover{
+  color: black;
+  box-shadow: rgb(255, 0, 64) inset 20vw 0 0 0;
+}
+
+.buttonScreenings{
+  width: 20vw;
+  box-shadow:  white inset 0 0 0 0;
+  transition: 0.4s ease-out;
+}
+
+.buttonScreenings:hover{
+  color: black;
+  box-shadow: rgb(255, 0, 64)inset 20vw 0 0 0;
+  
 }
 
 .detailedTrailer {
