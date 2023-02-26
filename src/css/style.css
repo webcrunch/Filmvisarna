@@ -3008,7 +3008,7 @@ body.registerPage {
   padding: 20px;
   border-radius: 7%;
   position: absolute;
-  top: 15px;
+  top: 25px;
   right: 14px;
   border: top left radius 0%;
   background: linear-gradient(to bottom, #00ABBE, #2057A9, #0A2E52, rgb(60, 59, 74));
@@ -3058,18 +3058,18 @@ body.registerPage {
 }
 
 .register_button {
-  width: 100%;
-  height: 60px;
+  width: 110%;
+  height: 3.2vh;
   position: relative;
   display: block;
-  margin-top: 24%;
-  margin-left: 24%;
-  margin-right: 24%;
-  margin-bottom: 24%;
-  padding:center;
+  margin-top: 2%;
+  margin-left: 0%;
+  margin-right: 0%;
+  margin-bottom: 0%;
+  padding:auto;
   color: white;
   background-color: #0A2E52;
-  border-radius: 50px;
+  border-radius: 10px;
   border-style: none;
   box-sizing: content-box;
   background: linear-gradient(to right, rgb(0, 145, 255), rgb(17, 0, 255), rgb(26, 0, 156));
@@ -3083,8 +3083,8 @@ body.registerPage {
 }
 
 .loginlink {
-  position: absolute;
-  margin-top: 35px;
+  position: center;
+  margin-top: 30px;
   color: rgb(22, 137, 101);
   float: left;
 }
@@ -3094,6 +3094,10 @@ Detail page css end here */
 
 body.loginPage {
   background-color: rgb(15, 11, 11);
+}
+
+.websiteBackground{
+  background-color: black;
 }
 
 body.listings {
@@ -3125,7 +3129,7 @@ body.listings {
   padding: 20px;
   border-radius: 7%;
   position: absolute;
-  top: 15px;
+  top: 25px;
   right: 14px;
   border-top-left-radius: 0%;
   background: linear-gradient(to bottom, #00ABBE, #2057A9, #0A2E52, rgb(60, 59, 74));
@@ -3169,6 +3173,10 @@ body.listings {
   text-align: center;
   display: inline-block;
 
+}
+
+.welcome{
+  color:white;
 }
 
 .login button {
