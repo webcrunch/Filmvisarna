@@ -66,7 +66,7 @@ body.moviePage {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-weight: bold;
   /* width: 260px; */
-  height: 40px;
+  height: 6.5vh;
   /* border: none; */
   border-radius: 10px;
   background-color: rgb(207, 4, 4);
@@ -77,13 +77,13 @@ body.moviePage {
   transition: ease-out 0.5s;
   outline: none;
   font-size: 2rem;
+  margin-left: 35vw;
 }
 
 .moviebtnsitplatser:hover,
 .moviebtnsitplatser_small:hover {
   color: black;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  margin-left: 30%;
   box-shadow: inset 250px 0 0 0 #ffffff;
 }
 
