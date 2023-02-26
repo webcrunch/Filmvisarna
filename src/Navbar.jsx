@@ -24,7 +24,7 @@ export default function Navbar() {
             <div className={"boxContent " + (l.opened ? 'shown' : 'hidden')}>
                 <div>
                     <p>{ open.loggedin ? <Link to={"/yourlist"}><img src={"./images/icons8-movie-theater-24.png"} alt={""} />Mina bokningar</Link> :null}</p>
-                    <p>{open.loggedin ? <Link onClick={() => logout()} to={"#"}><img src={"./images/icons8-log-out-25.png"} alt={""} />Log out</Link> : <Link to={"/authentication"}><img src={"./images/icons8-log-in-25.png"} alt={""} />Log in</Link>}</p>
+                    <p>{open.loggedin ? <Link onClick={() => logout()} to={"#"}><img src={"./images/icons8-log-out-25.png"} alt={""} />Logga ut</Link> : <Link to={"/authentication"}><img src={"./images/icons8-log-in-25.png"} alt={""} />Logga in</Link>}</p>
                     <p><Link to={"/auth"}><img src={"./images/icons8-add-user-male-24.png"} alt={""} />  Registrera sig </Link></p>
                 </div>
             </div>
