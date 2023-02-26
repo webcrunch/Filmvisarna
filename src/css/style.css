@@ -2924,25 +2924,28 @@ body.detailedInfo {
 }
 
 .buttonRatings{
+  border-color: white;
   color: white;
-  margin-left: 2vw ;
+  margin-left: 2vw;
   width: 20vw;
   box-shadow:  white inset 0 0 0 0;
   transition:  0.4s ease-in;
 }
+
+
+
 .buttonRatings:hover{
-  color: black;
   box-shadow: rgb(255, 0, 64) inset 20vw 0 0 0;
 }
 
 .buttonScreenings{
+  border-color: white;
   width: 20vw;
   box-shadow:  white inset 0 0 0 0;
   transition: 0.4s ease-out;
 }
 
 .buttonScreenings:hover{
-  color: black;
   box-shadow: rgb(255, 0, 64)inset 20vw 0 0 0;
   
 }
