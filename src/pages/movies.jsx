@@ -198,7 +198,7 @@ export default function Movies() {
             <>
               <div className="imagelistdiv">
                 {/* <hr className='movieshr'></hr> */}
-                <Link to={"/movie/" + display.film}>
+                <Link to={"/movie/" + getMovies(display.film, "path")}>
                   <img
                     className="imagesmovies"
                     src={"../" + getMovies(display.film, "images")}
@@ -214,12 +214,21 @@ export default function Movies() {
                     Tid: {display.time}. Längd:{" "}
                     {calculatingTime(getMovies(display.film, "length"))}
                   </h4>
+                  Genre: {getMovies(display.film, "genre")}
                 </div>
+                
                 {/* <Link
                   to={"/ticket/" + getMovies(display.film, "path")}
                   state={{
                     from: [
                       display.auditorium,
+                      display.film,
+                      display.date,
+                      display.time,
+                    ],
+                  }}
+                >
+                  <button className="moviebtnsitplatser">
                         display.film,
                         display.date,
                         display.time,
@@ -230,7 +239,6 @@ export default function Movies() {
                   <button onClick={() => toTicket(display,getMovies(display.film, "path"))} className="moviebtnsitplatser">
                     Välj sittplatser
                   </button>
-                {/* </Link> */}
               </div>
 
               <div className="card">
@@ -256,22 +264,9 @@ export default function Movies() {
                   <h4 className="tidochsalongtitle">
                     Genre: {getMovies(display.film, "genre")}
                   </h4>
-                  {/* <Link
-                    to={"/ticket/" + getMovies(display.film, "path") }
-                    state={{
-                      from: [
-                        display.auditorium,
-                        display.film,
-                        display.date,
-                        display.time,
-                        display.id,
-                      ],
-                    }}
-                  > */}
                   <button onClick={ () => toTicket(display,getMovies(display.film, "path"))} className="moviebtnsitplatser_small tidochsalongtitle">
                       Välj sittplatser
                     </button>
-                  {/* </Link> */}
                 </div>
               </div>
             </>
