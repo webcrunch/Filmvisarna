@@ -2,6 +2,7 @@ import { useStates } from "../utilities/states";
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 // import { useLocation } from "react-router-dom";
+import generate from "../utilities/random-order-confirmation";
 
 export default function TicketPage() {
   let { screeningInfo } = useParams();
@@ -27,7 +28,8 @@ export default function TicketPage() {
 
   const seats = useStates({
     markedChairs: {},
-    markedChairsArray: [[],[],[],[],[],[],[],[]]
+    markedChairsArray: [[], [], [], [], [], [], [], []],
+    confnr:generate()
   });
 
   if (Object.keys(seats.markedChairs).length > clickerss.totalSeats) {
