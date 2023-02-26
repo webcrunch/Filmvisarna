@@ -7,7 +7,9 @@ function RegisterPage(){
 	const user = useStates('user');
 	const form = useStates({
 		username:"",
-		password:""
+		password: "",
+		firstname: "",
+		lastname: ""
 	})
 	useEffect(() => {
 		document.body.classList.add("registerPage");
@@ -17,7 +19,7 @@ function RegisterPage(){
 	const handleSubmit = async e => {
 		e.preventDefault();
 		let body = {
-			 "id": user.users.length + 1,
+			 "id": user.users.users.length + 1,
       		"username": form.username,
       		"password": form.password,
       		"bookings": []
