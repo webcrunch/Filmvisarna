@@ -26,16 +26,17 @@ function LoginPage() {
             user.name = correctUser[0].username;
             user.id = correctUser[0].id;
             user.loggedin = true;
+
         }
     }
     return  <>{ !user.loggedin ?  <div className="login">
             <div className="login_form">
                 <form onSubmit={handleSubmit}>
-                    <label className="label">Användarnamn</label>
+                    <label className="label">Username</label>
                     <input className="username" type="text" id="username"  {...form.bind('email')}></input>
-                    <label className="label">Lösenord</label>
+                    <label className="label">Password</label>
                     <input className="username" type="password" id="username"  {...form.bind('password')}></input>
-                    <button className="login_button" type="submit">Logga in</button>
+                    <button className="login_button" type="submit">Complete your booking</button>
             </form >
         </div > </div> : 
             <p>Välkommen {user.name} du är inloggad</p>

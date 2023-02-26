@@ -2,7 +2,6 @@ import { useStates } from "../utilities/states";
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 // import { useLocation } from "react-router-dom";
-import generate from "../utilities/random-order-confirmation";
 
 export default function TicketPage() {
   let { screeningInfo } = useParams();
@@ -27,9 +26,7 @@ export default function TicketPage() {
   });
 
   const seats = useStates({
-    markedChairs: {},
-    markedChairsArray: [[], [], [], [], [], [], [], []],
-    confnr:generate()
+    markedChairs: {}
   });
 
   if (Object.keys(seats.markedChairs).length > clickerss.totalSeats) {
@@ -73,20 +70,10 @@ export default function TicketPage() {
     }
   }
 
-  // adding new booked seats to the right index per same schema as in screanings json
-  const insertSeats = markedSeats => {
-     for (const [key, value] of Object.entries(markedSeats)) {
-        let row = key.split(" ")[0];
-       let chair = key.split(" ")[1];
-       seats.markedChairsArray[row-1].push(Number(chair))
-    }
-    return true;
-  }
 
   const navigate = useNavigate();
 
-  async function book() {
-    let result = await  insertSeats(seats.markedChairs);
+  function book() {
     let all = { ...clickerss, ...seats, screeningsData, movie: movie.path };
     navigate("/done/" + encodeURIComponent(JSON.stringify(all)));
   }

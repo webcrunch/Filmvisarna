@@ -15,9 +15,7 @@ export default function Listing() {
     useEffect(() => {
         document.body.classList.add("listings");
         return () => document.body.classList.remove("listings");
-    }, []);
-
-    const getPrice = i => userData.bookings[i].price + "kr";
+  }, []);
 
     
     function getMovies(name, properies) {
@@ -29,13 +27,13 @@ export default function Listing() {
     return userData && user.loggedin && (
         <div className="listings">
             {
-                bookedArray.map((p,i) => <ul>
+                bookedArray.map(p => <ul>
                     <li>Film: {p.film}</li>
                     <li>Längd:{" "} { calculatingTime(getMovies(p.film, 'length'))}</li>
                     <li>Datum: {p.date}</li>
                     <li>Sal: {p.auditorium}</li>
                     <li>Tid: {p.time}</li>
-                    <li>Pris: {getPrice(i)}</li>
+                    <li>Pris: {p.price}</li>
                 </ul>)
             }
             </div>
