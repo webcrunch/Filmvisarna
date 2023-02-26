@@ -68,10 +68,10 @@ export default function App() {
   useEffect(() => {
     // Load animal data from /json/niceAnimals.json
     (async () => {
-      s.screenings = await (await fetch('/json/screening.json')).json();
-      s.saloons = await (await fetch('/json/saloons.json')).json();
-      a.users = await (await fetch('/json/users.json')).json();
-      let movies = await (await fetch('/json/movies.json')).json();
+      s.screenings = await (await fetch('/api/screenings')).json();
+      s.saloons = await (await fetch('/api/saloons')).json();
+      a.users = await (await fetch('/api/users')).json();
+      let movies = await (await fetch('/api/movies')).json();
       for (let movie of movies) {
         movie.path = kebabify(movie.title)
       }
