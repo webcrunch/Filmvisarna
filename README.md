@@ -1,5 +1,14 @@
 # Filmvisarna
 
+Github:
+
+Real name: Armin   - Github name: draginojd
+Real name: Jarl    - Github name: webcrunch
+Real name: Kevin   - Github name: Dueweb
+Real name: Harisha - Github name: Harisha7
+Real name: Vanisha - Github name: vanishah30
+Real name: Simon   - Github name: zompes
+
 ## start
 
 to build the react the first time use
