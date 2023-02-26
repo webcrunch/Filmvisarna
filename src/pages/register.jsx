@@ -42,7 +42,7 @@ function RegisterPage(){
 					<input className='lastname' type="text" id="lastname" name="lastname" {...form.bind('lastname')} pattern='[A-Za-z0-9]{2,}' title='Minimum 1 characters required' required />
 					<a href="login.html" className='loginlink'>Already registered? Log In here!</a>
 
-					<button type="submit"> Register </button>
+					<button className="register_button" type="submit"> Register </button>
 				</form>
 			</div>
 	</div>
