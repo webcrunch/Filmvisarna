@@ -16,11 +16,6 @@ export default function Listing() {
         document.body.classList.add("listings");
         return () => document.body.classList.remove("listings");
     }, []);
-    
-    // function getPrice(i) {
-    //     console.log();
-    //     return 100 + "kr";
-    // }
 
     const getPrice = i => userData.bookings[i].price + "kr";
 
