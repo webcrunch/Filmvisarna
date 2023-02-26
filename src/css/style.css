@@ -3058,13 +3058,11 @@ body.registerPage {
   padding: 20px;
   border-radius: 7%;
   position: absolute;
-<<<<<<< HEAD
   top: 25px;
   right: 14px;
   border: top left radius 0%;
   background: linear-gradient(to bottom, #00ABBE, #2057A9, #0A2E52, rgb(60, 59, 74));
   box-shadow: 0px 60px 300px 35px #000000;
-=======
   top: 1.5vh;
   right: 1.5vh;
 
@@ -3076,7 +3074,6 @@ body.registerPage {
 
 .register_form button {
   margin: 1vh 0vh;
->>>>>>> dcd3fe79b99558d987583d94303b8864d4ed74e5
 }
 
 .label {
@@ -3122,15 +3119,10 @@ body.registerPage {
 }
 
 .register_button {
-<<<<<<< HEAD
-=======
-  cursor: pointer;
->>>>>>> dcd3fe79b99558d987583d94303b8864d4ed74e5
   width: 110%;
   height: 3.2vh;
   position: relative;
   display: block;
-<<<<<<< HEAD
   margin-top: 2%;
   margin-left: 0%;
   margin-right: 0%;
@@ -3138,12 +3130,6 @@ body.registerPage {
   padding:auto;
   color: white;
   background-color: #0A2E52;
-=======
-  margin: 2% 0 0 0;
-  padding: auto;
-  color: rgb(0, 0, 0);
-  background-color: #ffffff;
->>>>>>> dcd3fe79b99558d987583d94303b8864d4ed74e5
   border-radius: 10px;
   border-style: none;
   box-sizing: content-box;
