@@ -105,7 +105,7 @@ nav .img {
   filter: invert(100%);
   display: block;
   position: absolute;
-  top: 2vh;
+  top: 1vh;
   right: 70vh;
 }
 
