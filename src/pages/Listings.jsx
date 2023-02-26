@@ -1,33 +1,28 @@
 import { useStates } from "../utilities/states";
 import { useEffect } from "react";
 import { calculatingTime } from "../utilities/length-calculating";
-import { get, post, del } from '../utilities/backend-talk';
-
 export default function Listing() {
     const user = useStates('user');
     const { movies, screenings } = useStates('main');
     let bookedArray = [];
-
-
-    async function getData(user) {
-        let userWithBookings = await get('/api/user/' + user.id);
-        userWithBookings.bookings.map(book => {
-            let screening = screenings.find(screen => screen.id === book.id)
-            bookedArray.push([screening, book]);
-            
-            
-        });
+    
+    let userData = user.users.users != undefined ? user.users.users.find(userCheck => userCheck.id === user.id) : null;
+    if (userData) {
+        userData.bookings.map(booked => bookedArray.push(screenings.find(screen => screen.id === booked.id)));
         bookedArray.sort((a, b) => b.Datum - a.Datum)
     }
 
     useEffect(() => {
-        getData(user); 
-            // userData.bookings.map(booked => bookedArray.push(screenings.find(screen => screen.id === booked.id)));
-        // bookedArray.sort((a, b) => b.Datum - a.Datum)
-        
         document.body.classList.add("listings");
-            return () => document.body.classList.remove("listings");
-  }, []);
+        return () => document.body.classList.remove("listings");
+    }, []);
+    
+    // function getPrice(i) {
+    //     console.log();
+    //     return 100 + "kr";
+    // }
+
+    const getPrice = i => userData.bookings[i].price + "kr";
 
     
     function getMovies(name, properies) {
@@ -36,16 +31,16 @@ export default function Listing() {
      }
           
 
-    return user.loggedin && (
+    return userData && user.loggedin && (
         <div className="listings">
             {
-                bookedArray.map(p => <ul>
+                bookedArray.map((p,i) => <ul>
                     <li>Film: {p.film}</li>
                     <li>Längd:{" "} { calculatingTime(getMovies(p.film, 'length'))}</li>
                     <li>Datum: {p.date}</li>
                     <li>Sal: {p.auditorium}</li>
                     <li>Tid: {p.time}</li>
-                    <li>Pris: {p.price}</li>
+                    <li>Pris: {getPrice(i)}</li>
                 </ul>)
             }
             </div>
