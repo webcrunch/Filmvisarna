@@ -3106,7 +3106,7 @@ Detail page css end here */
 /* ....................login page scc start here...................*/
 
 body.loginPage {
-  background-color: rgb(23, 23, 23);
+  background-color: rgb(0, 0, 0);
 }
 
 body.listings {
@@ -3116,33 +3116,36 @@ body.listings {
 
 
 .login {
-  background-color: rgb(46, 11, 102);
-  width: 450px;
-  height: 400px;
-  position: relative;
-  border-radius: 7%;
-  margin: auto;
-  border: top left radius 0%;
-  margin-top: 30px;
+  background-color: rgb(129, 15, 15);
+  width:22%;
+  height:45vh;
+  position:relative;
+  border-radius:0%;
+  margin:auto;
+  border-top-right-radius: 10%;
+  border-bottom-right-radius: 12%;
+  margin-top: 15vh;
 
 }
 
 .login_form {
   display: flex;
-  margin: auto;
-  background-color: rgb(122, 119, 226);
+  margin:auto;
+  background-color: rgb(23, 23, 23);
   justify-content: center;
-  width: 400px;
-  height: 350px;
+  width: 22vw;
+  height: 45vh;
   align-items: center;
   padding: 20px;
   border-radius: 7%;
-  position: absolute;
-  top: 15px;
-  right: 14px;
+  position: absolute; 
+  top:1.5vh;
+  right: 1.5vh;
+
   border-top-left-radius: 0%;
-  background: linear-gradient(to bottom, #00ABBE, #2057A9, #0A2E52, rgb(60, 59, 74));
-  box-shadow: 0px 60px 300px 35px #000000;
+  border-bottom-right-radius: 13%;
+
+  box-shadow:0px 10px 200px 20px #b66969;
 }
 
 /*body {
@@ -3184,18 +3187,31 @@ body.listings {
 
 }
 
-.login button {
-  width: 100%;
-  height: 30px;
-  display: block;
-  margin-top: 24%;
-  margin-left: auto;
-  margin-right: auto;
-  padding: auto;
-  background-color: #b4c4d3;
+.login_button {
+  cursor: pointer;
+  width: 110%;
+  height: 3.2vh;
   position: relative;
-  background: linear-gradient(to right, rgb(46, 62, 75), rgb(130, 123, 227), rgb(26, 0, 156));
+  display: block;
+  margin: 2% 0 0 0;
+  padding: auto;
+  color: rgb(0, 0, 0);
+  background-color: #ffffff;
+  border-radius: 10px;
+  border-style: none;
+  box-sizing: content-box;
+  box-shadow: inset 0 0 0 0 #832323;
+  transition: ease-in 0.4s;
+}
 
+.login_button:hover{
+  cursor: pointer;
+  box-shadow: inset 500px 0 0 0 #53ff4a;
+  color: black;
+}
+.login_button:active {
+  background: linear-gradient(to left, rgb(118, 96, 96), rgb(218, 218, 218), rgb(197, 197, 197), rgb(146, 146, 146));
+  box-shadow: 0px 5px 70px 5px #ffffff;
 }
 
 /* ....................login page scc ends here...................*/

@@ -36,7 +36,7 @@ function LoginPage() {
                     <input className="username" type="text" id="username"  {...form.bind('email')}></input>
                     <label className="label">Password</label>
                     <input className="username" type="password" id="username"  {...form.bind('password')}></input>
-                    <button type="submit">Complete your booking</button>
+                    <button className="login_button" type="submit">Complete your booking</button>
             </form >
         </div > </div> : 
             <p>Välkommen {user.name} du är inloggad</p>
