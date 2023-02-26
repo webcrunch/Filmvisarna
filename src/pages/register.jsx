@@ -38,10 +38,15 @@ function RegisterPage(){
 				<form onSubmit={handleSubmit}>
 					<label className='label'>Användarnamn:</label>
 					<input type="text" className='username' id="username" name="username" {...form.bind('username')} pattern='[A-Za-z0-9]{4,}' title='Minimum 4 characters required' required />
-					<label className='label'>Lösenord</label>
+					<label className='label'>Lösenord:</label>
 					<input className='password' name="password" pattern="[A-Za-z0-9]{8,}" {...form.bind('password')} title='Minimum 8 characters required' required />
-					<a href="login.html" className='loginlink'>Har du redan ett konto ? Logga in här</a>
-					<button type="submit" className='submitbtn'> Skapa konto </button>
+					<label className='label'>Förnamn:</label>
+					<input className='firstname' type="text" id="firstname" name="firstname" {...form.bind('firstname')} pattern='[A-Za-z0-9]{2,}' title='Minimum 1 characters required' required />
+					<label className='label'>Efternamn:</label>
+					<input className='lastname' type="text" id="lastname" name="lastname" {...form.bind('lastname')} pattern='[A-Za-z0-9]{2,}' title='Minimum 1 characters required' required />
+					<a href="login.html" className='loginlink'>Har du redan ett konto ? Logga in här!</a>
+
+					<button className="register_button" type="submit"> Skapa konto </button>
 				</form>
 			</div>
 	</div>

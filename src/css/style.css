@@ -3,7 +3,6 @@
 @import url("star.css");
 @import url("movie-list.css");
 
-
 * {
   box-sizing: border-box;
 }
@@ -119,7 +118,7 @@ nav .img {
   filter: invert(100%);
   display: block;
   position: absolute;
-  top: 2vh;
+  top: 1vh;
   right: 70vh;
 }
 
@@ -459,8 +458,8 @@ body.homePage {
 }
 
 .topcontainerimagedivv p {
-  font-size: 2.8vh;
-  margin-top: 1.5vh;
+  font-size: 24px;
+  margin-top: 25px;
 }
 
 .topcontainerimagedivv {
@@ -567,29 +566,21 @@ body.homePage {
   transition: ease-in 0.4s;
 }
 
-.snackimage2:hover {
-  cursor: pointer;
-  width: auto;
-  height: auto;
-  display: inline-block;
-  margin-left: auto;
-  margin-right: auto;
-  border-radius: 50%;
-  width: 50%;
-  box-shadow: 200px 200px 590px 480px #000000;
-  margin-top: 1%;
-  box-shadow: inset 0 0 0 0 #ffffff28;
-  /*very important */
-  transition: ease-in-out 0.4s;
+.under-home-container p {
+  margin-top: 5px;
+  font-size: 12px;
+  font-family: fantasy;
+  text-align: center;
+  width: 80%;
+  height: 50px;
 }
 
-.snacklink:after {
-  height: auto;
-  width: 900px;
-
-  border-radius: 50%;
-  box-shadow: inset 0 0 0 0 #ffffff28;
+.snack-click {
+  margin-top: 50px;
+  font-size: 12px;
 }
+
+
 
 /*TOP HOMEPAGE MEDIA QUERIES */
 
@@ -670,363 +661,380 @@ body.homePage {
     color: white;
   }
 
-  .under-home-container {
-    margin-top: -40vh;
-    width: 100%;
-    height: auto;
-    align-items: center;
-    text-align: center;
 
-  }
 
   .under-home-container p {
-    margin-top: 0vh;
-    font-size: 1.1vh;
-    color: white;
-    width: 100vw;
-    height: auto;
+    margin-top: -20px;
+    font-size: 13px;
+    font-family: fantasy;
     text-align: center;
+    width: 75%;
+    height: 50px;
   }
 
   .snack-click {
-    margin-top: 5vh;
-    font-size: 1.5vh;
-  }
-
-  .snack-container {
-    width: 100%;
-    margin-top: 0vh;
-
-  }
-
-}
-
-@media screen and (min-width: 355px) and (max-width: 412px) {
-
-  .top-title {
-    margin-bottom: -129%;
-  }
-
-  .flexp {
-    font-size: 8vw;
-    /* Scale font size proportionally */
-    font-weight: bolder;
-    letter-spacing: 3px;
-    color: white;
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    margin-top: 5vw;
-    /* Scale margin proportionally */
-    margin-left: -32vw;
-    /* Scale margin proportionally */
-    margin-bottom: 0vw;
-    /* Scale margin proportionally */
-    transform: scale(0.45);
-
-  }
-
-  .flex-container {
-    margin-left: -34.5vw;
-    /* Scale margin proportionally */
-    margin-top: -20vw;
-    /* Scale margin proportionally */
-    display: grid;
-    grid-template-columns: auto auto auto auto;
-    padding: 0vw;
-    /* Scale padding proportionally */
-    flex-wrap: nowrap;
-    background-color: rgba(0, 0, 0, 0.537);
-    height: auto;
-    width: 100%;
-    gap: 2vw;
-    /* Scale gap proportionally */
-    row-gap: 2%;
-    margin-top: 0;
-    transform: scale(0.299);
-  }
-
-  .flex-container>div {
-    background-color: #1a1a1a;
-    width: 78vw;
-    /* Scale width proportionally */
-    padding: 1vw;
-    /* Scale padding proportionally */
-    height: 115vw;
-    /* Scale height proportionally */
-    text-align: center;
-    position: relative;
-    border-radius: 1vw;
-    /* Scale border-radius proportionally */
-    border-bottom-left-radius: 0px;
-    border-bottom-right-radius: 0px;
-    border-bottom: #575757 solid;
-    margin-top: 1vw;
-    /* Scale margin proportionally */
-    margin-right: 0;
-    /* Remove fixed margin value */
-    margin-left: 2.5vw;
-    /* Scale margin proportionally */
-    box-shadow: inset 0 0 0 0 #ffffff28;
-    transition: ease-out 0.4s;
-    cursor: pointer;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-  }
-
-  .topcontainerimagedivv p {
-    margin-top: 2%;
-    font-size: 7.015vw;
-    color: white;
-  }
-
-  .under-home-container {
-    margin-top: -50vh;
-    width: 100%;
-    height: auto;
-    align-items: center;
-    text-align: center;
-
-  }
-
-  .under-home-container p {
-    margin-top: 0vh;
-    font-size: 1.7vh;
-    color: white;
-    width: 100vw;
-    height: auto;
-    text-align: center;
-  }
-
-  .snack-click {
-    margin-top: 5vh;
-    font-size: 1.9vh;
-  }
-
-  .snack-container {
-    width: 100%;
-    margin-top: 0vh;
-
+    margin-top: 50px;
+    font-size: 12px;
   }
 }
 
-@media screen and (min-width: 413px) and (max-width: 500px) {
-  .top-title {
-    margin-bottom: -129%;
-  }
+.snack-container {
+  width: 100%;
+  margin-top: 0vh;
 
-  .flexp {
-    font-size: 8vw;
-    /* Scale font size proportionally */
-    font-weight: bolder;
-    letter-spacing: 3px;
-    color: white;
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    margin-top: 5vw;
-    /* Scale margin proportionally */
-    margin-left: -32vw;
-    /* Scale margin proportionally */
-    margin-bottom: 0vw;
-    /* Scale margin proportionally */
-    transform: scale(0.45);
-
-  }
-
-  .flex-container {
-    margin-left: -34.5vw;
-    /* Scale margin proportionally */
-    margin-top: -20vw;
-    /* Scale margin proportionally */
-    display: grid;
-    grid-template-columns: auto auto auto auto;
-    padding: 0vw;
-    /* Scale padding proportionally */
-    flex-wrap: nowrap;
-    background-color: rgba(0, 0, 0, 0.537);
-    height: auto;
-    width: 100%;
-    gap: 2vw;
-    /* Scale gap proportionally */
-    row-gap: 2%;
-    margin-top: 0;
-    transform: scale(0.299);
-  }
-
-  .flex-container>div {
-    background-color: #1a1a1a;
-    width: 78vw;
-    /* Scale width proportionally */
-    padding: 1vw;
-    /* Scale padding proportionally */
-    height: 115vw;
-    /* Scale height proportionally */
-    text-align: center;
-    position: relative;
-    border-radius: 1vw;
-    /* Scale border-radius proportionally */
-    border-bottom-left-radius: 0px;
-    border-bottom-right-radius: 0px;
-    border-bottom: #575757 solid;
-    margin-top: 1vw;
-    /* Scale margin proportionally */
-    margin-right: 0;
-    /* Remove fixed margin value */
-    margin-left: 2.5vw;
-    /* Scale margin proportionally */
-    box-shadow: inset 0 0 0 0 #ffffff28;
-    transition: ease-out 0.4s;
-    cursor: pointer;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-  }
-
-  .topcontainerimagedivv p {
-    margin-top: 2%;
-    font-size: 6.9vw;
-    color: white;
-  }
-
-  .under-home-container {
-    margin-top: -50vh;
-    width: 100%;
-    height: auto;
-    align-items: center;
-    text-align: center;
-
-  }
-
-  .under-home-container p {
-    margin-left: 0;
-    margin-top: 0vh;
-    font-size: 2.5vh;
-    color: white;
-    width: 100vw;
-    height: auto;
-    text-align: center;
-  }
-
-  .snack-click {
-    margin-top: 5vh;
-    font-size: 2.1vh;
-  }
-
-  .snack-container {
-    width: 100%;
-    margin-top: 0vh;
-
-  }
 }
+
+
+
+.under-home-container p {
+  margin-top: -20px;
+  font-size: 14px;
+  font-family: fantasy;
+  text-align: center;
+  width: 75%;
+  height: 50px;
+}
+
+.snack-click {
+  margin-top: 70px;
+  font-size: 12px;
+}
+
+.flexp {
+  font-size: 8vw;
+  /* Scale font size proportionally */
+  font-weight: bolder;
+  letter-spacing: 3px;
+  color: white;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin-top: 5vw;
+  /* Scale margin proportionally */
+  margin-left: -32vw;
+  /* Scale margin proportionally */
+  margin-bottom: 0vw;
+  /* Scale margin proportionally */
+  transform: scale(0.45);
+
+}
+
+.flex-container {
+  margin-left: -34.5vw;
+  /* Scale margin proportionally */
+  margin-top: -20vw;
+  /* Scale margin proportionally */
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  padding: 0vw;
+  /* Scale padding proportionally */
+  flex-wrap: nowrap;
+  background-color: rgba(0, 0, 0, 0.537);
+  height: auto;
+  width: 100%;
+  gap: 2vw;
+  /* Scale gap proportionally */
+  row-gap: 2%;
+  margin-top: 0;
+  transform: scale(0.299);
+}
+
+.flex-container>div {
+  background-color: #1a1a1a;
+  width: 78vw;
+  /* Scale width proportionally */
+  padding: 1vw;
+  /* Scale padding proportionally */
+  height: 115vw;
+  /* Scale height proportionally */
+  text-align: center;
+  position: relative;
+  border-radius: 1vw;
+  /* Scale border-radius proportionally */
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  border-bottom: #575757 solid;
+  margin-top: 1vw;
+  /* Scale margin proportionally */
+  margin-right: 0;
+  /* Remove fixed margin value */
+  margin-left: 2.5vw;
+  /* Scale margin proportionally */
+  box-shadow: inset 0 0 0 0 #ffffff28;
+  transition: ease-out 0.4s;
+  cursor: pointer;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.topcontainerimagedivv p {
+  margin-top: 2%;
+  font-size: 7.015vw;
+  color: white;
+}
+
+.under-home-container {
+  margin-top: -50vh;
+  width: 100%;
+  height: auto;
+  align-items: center;
+  text-align: center;
+
+}
+
+.under-home-container p {
+  margin-top: -20px;
+  font-size: 16px;
+  font-family: fantasy;
+  text-align: center;
+  width: 75%;
+  height: 50px;
+}
+
+.snack-click {
+  margin-top: 75px;
+  font-size: 13px;
+}
+
+.snack-container {
+  width: 100%;
+  margin-top: 0vh;
+
+}
+
+
+.topcontainerimagedivv p {
+  font-size: 10.5px;
+  text-align: center;
+  margin-top: -2px;
+}
+
+.under-home-container p {
+  margin-top: -17px;
+  font-size: 17px;
+  font-family: fantasy;
+  text-align: center;
+  width: 75%;
+  height: 55px;
+}
+
+.snack-click {
+  margin-top: 75px;
+  font-size: 13px;
+}
+
+
+.flex-container {
+  margin-left: -34.5vw;
+  /* Scale margin proportionally */
+  margin-top: -20vw;
+  /* Scale margin proportionally */
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  padding: 0vw;
+  /* Scale padding proportionally */
+  flex-wrap: nowrap;
+  background-color: rgba(0, 0, 0, 0.537);
+  height: auto;
+  width: 100%;
+  gap: 2vw;
+  /* Scale gap proportionally */
+  row-gap: 2%;
+  margin-top: 0;
+  transform: scale(0.299);
+}
+
+.flex-container>div {
+  background-color: #1a1a1a;
+  width: 78vw;
+  /* Scale width proportionally */
+  padding: 1vw;
+  /* Scale padding proportionally */
+  height: 115vw;
+  /* Scale height proportionally */
+  text-align: center;
+  position: relative;
+  border-radius: 1vw;
+  /* Scale border-radius proportionally */
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  border-bottom: #575757 solid;
+  margin-top: 1vw;
+  /* Scale margin proportionally */
+  margin-right: 0;
+  /* Remove fixed margin value */
+  margin-left: 2.5vw;
+  /* Scale margin proportionally */
+  box-shadow: inset 0 0 0 0 #ffffff28;
+  transition: ease-out 0.4s;
+  cursor: pointer;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.topcontainerimagedivv p {
+  margin-top: 2%;
+  font-size: 6.9vw;
+  color: white;
+}
+
+.under-home-container {
+  margin-top: -50vh;
+  width: 100%;
+  height: auto;
+  align-items: center;
+  text-align: center;
+
+}
+
+.under-home-container p {
+  margin-top: -17px;
+  font-size: 17px;
+  font-family: fantasy;
+  text-align: center;
+  width: 75%;
+  height: 55px;
+}
+
+.snack-click {
+  margin-top: 75px;
+  font-size: 13px;
+}
+
+.snack-container {
+  width: 100%;
+  margin-top: 0vh;
+
+}
+
 
 @media screen and (min-width: 501px) and (max-width: 608px) {
   .top-title {
     margin-bottom: -129%;
   }
 
-  .flexp {
-    font-size: 8vw;
-    /* Scale font size proportionally */
-    font-weight: bolder;
-    letter-spacing: 3px;
-    color: white;
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    margin-top: 5vw;
-    /* Scale margin proportionally */
-    margin-left: -32vw;
-    /* Scale margin proportionally */
-    margin-bottom: 0vw;
-    /* Scale margin proportionally */
-    transform: scale(0.45);
-
-  }
-
-  .flex-container {
-    margin-left: -34.5vw;
-    /* Scale margin proportionally */
-    margin-top: -20vw;
-    /* Scale margin proportionally */
-    display: grid;
-    grid-template-columns: auto auto auto auto;
-    padding: 0vw;
-    /* Scale padding proportionally */
-    flex-wrap: nowrap;
-    background-color: rgba(0, 0, 0, 0.537);
-    height: auto;
-    width: 100%;
-    gap: 2vw;
-    /* Scale gap proportionally */
-    row-gap: 2%;
-    margin-top: 0;
-    transform: scale(0.299);
-  }
-
-  .flex-container>div {
-    background-color: #1a1a1a;
-    width: 78vw;
-    /* Scale width proportionally */
-    padding: 1vw;
-    /* Scale padding proportionally */
-    height: 115vw;
-    /* Scale height proportionally */
-    text-align: center;
-    position: relative;
-    border-radius: 1vw;
-    /* Scale border-radius proportionally */
-    border-bottom-left-radius: 0px;
-    border-bottom-right-radius: 0px;
-    border-bottom: #575757 solid;
-    margin-top: 1vw;
-    /* Scale margin proportionally */
-    margin-right: 0;
-    /* Remove fixed margin value */
-    margin-left: 2.5vw;
-    /* Scale margin proportionally */
-    box-shadow: inset 0 0 0 0 #ffffff28;
-    transition: ease-out 0.4s;
-    cursor: pointer;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-  }
-
-  .topcontainerimagedivv p {
-    margin-top: 2%;
-    font-size: 7vw;
-    color: white;
-  }
-
-  .under-home-container {
-    margin-top: -60vh;
-    width: 100%;
-    height: auto;
-    align-items: center;
-    text-align: center;
-
-  }
-
   .under-home-container p {
-    margin-left: 0;
-    margin-top: 0vh;
-    font-size: 2.5vh;
-    color: white;
-    width: 100vw;
-    height: auto;
+    margin-top: -10px;
+    font-size: 16px;
+    font-family: fantasy;
     text-align: center;
+    width: 75%;
+    height: 55px;
   }
 
   .snack-click {
-    margin-top: 5vh;
-    font-size: 2.1vh;
+    margin-top: 70px;
+    font-size: 13px;
   }
+}
 
-  .snack-container {
-    width: 100%;
-    margin-top: 0vh;
+.flex-container {
+  margin-left: -34.5vw;
+  /* Scale margin proportionally */
+  margin-top: -20vw;
+  /* Scale margin proportionally */
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  padding: 0vw;
+  /* Scale padding proportionally */
+  flex-wrap: nowrap;
+  background-color: rgba(0, 0, 0, 0.537);
+  height: auto;
+  width: 100%;
+  gap: 2vw;
+  /* Scale gap proportionally */
+  row-gap: 2%;
+  margin-top: 0;
+  transform: scale(0.299);
+}
 
-  }
+.flex-container>div {
+  background-color: #1a1a1a;
+  width: 78vw;
+  /* Scale width proportionally */
+  padding: 1vw;
+  /* Scale padding proportionally */
+  height: 115vw;
+  /* Scale height proportionally */
+  text-align: center;
+  position: relative;
+  border-radius: 1vw;
+  /* Scale border-radius proportionally */
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  border-bottom: #575757 solid;
+  margin-top: 1vw;
+  /* Scale margin proportionally */
+  margin-right: 0;
+  /* Remove fixed margin value */
+  margin-left: 2.5vw;
+  /* Scale margin proportionally */
+  box-shadow: inset 0 0 0 0 #ffffff28;
+  transition: ease-out 0.4s;
+  cursor: pointer;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.topcontainerimagedivv p {
+  margin-top: 2%;
+  font-size: 7vw;
+  color: white;
+}
+
+.under-home-container p {
+  margin-top: -10px;
+  font-size: 16px;
+  font-family: fantasy;
+  text-align: center;
+  width: 75%;
+  height: 55px;
+}
+
+.snack-click {
+  margin-top: 70px;
+  font-size: 14px;
+}
+
+
+.under-home-container p {
+  margin-left: 0;
+  margin-top: 0vh;
+  font-size: 2.5vh;
+  color: white;
+  width: 100vw;
+  height: auto;
+  text-align: center;
+}
+
+.snack-click {
+  margin-top: 5vh;
+  font-size: 2.1vh;
+}
+
+.snack-container {
+  width: 100%;
+  margin-top: 0vh;
 
 }
 
-@media screen and (min-width:609px) and (max-width:800px) {
-  .top-title {
-    margin-bottom: -129%;
-  }
+
+
+.under-home-container p {
+  margin-top: -10px;
+  font-size: 18px;
+  font-family: fantasy;
+  text-align: center;
+  width: 75%;
+  height: 55px;
+}
+
+.snack-click {
+  margin-top: 70px;
+  font-size: 15px;
+}
+
+
+
+@media screen and (min-width:519px) and (max-width: 525px) {
 
   .flexp {
     font-size: 8vw;
@@ -1109,26 +1117,26 @@ body.homePage {
   }
 
   .under-home-container p {
-    margin-left: 0;
-    margin-top: 0vh;
-    font-size: 2.5vh;
-    color: white;
-    width: 100vw;
-    height: auto;
+    margin-top: -10px;
+    font-size: 18px;
+    font-family: fantasy;
     text-align: center;
+    width: 75%;
+    height: 55px;
   }
 
   .snack-click {
-    margin-top: 5vh;
-    font-size: 2.1vh;
-  }
-
-  .snack-container {
-    width: 100%;
-    margin-top: 0vh;
-
+    margin-top: 70px;
+    font-size: 15px;
   }
 }
+
+.snack-container {
+  width: 100%;
+  margin-top: 0vh;
+
+}
+
 
 @media screen and (min-width: 801px) and (max-width: 1000px) {
 
@@ -2553,8 +2561,8 @@ body.contactPage {
   color: #76c6e0;
 }
 
-.contact b {
-  color: #76c6e0;
+.contactPerson {
+  color: rgba(59, 6, 183, 0.895);
 }
 
 /*----------------------------- kontakt PAGE ENDS HERE-----------------------------*/
@@ -2982,38 +2990,40 @@ body.detailedInfo {
 /* css register starts */
 
 body.registerPage {
-  background-color: rgb(15, 14, 14);
+  background-color: rgb(0, 0, 0);
 }
 
 
 .register {
-  background-color: #ffffff;
-  /* background-color: rgb(46, 11, 102); */
-  width: 450px;
-  height: 400px;
+  background-color: rgb(129, 15, 15);
+  width: 22%;
+  height: 45vh;
   position: relative;
-  border-radius: 10%;
+  border-radius: 0%;
   margin: auto;
-  border-top-left-radius: 10%;
-  margin-top: 30px;
+  border-top-right-radius: 10%;
+  border-bottom-right-radius: 12%;
+  margin-top: 15vh;
 }
 
 .register_form {
   display: flex;
   margin: auto;
-  /* background-color: rgb(122, 119, 226); */
+  background-color: rgb(23, 23, 23);
   justify-content: center;
-  width: 400px;
-  height: 350px;
+  width: 22vw;
+  height: 45vh;
   align-items: center;
-  /* padding: 20px; */
+  padding: 20px;
   border-radius: 7%;
   position: absolute;
-  top: 15px;
-  left: 25px;
-  border: top left radius 0%;
-  /* background: linear-gradient(to bottom, #00ABBE, #2057A9, #0A2E52, rgb(60, 59, 74)); */
-  box-shadow: 0px 60px 300px 35px #000000;
+  top: 1.5vh;
+  right: 1.5vh;
+
+  border-top-left-radius: 0%;
+  border-bottom-right-radius: 13%;
+
+  box-shadow: 0px 10px 200px 20px #b66969;
 }
 
 .register_form button {
@@ -3025,13 +3035,13 @@ body.registerPage {
   margin-bottom: 2px;
   font-family: system-ui;
   font-size: auto;
-  font-weight: bolder;
-  color: rgb(79, 7, 7);
+  font-weight: bold;
+  color: rgb(255, 255, 255);
   text-transform: uppercase;
 }
 
 .label.label::after {
-  content: "";
+  content: "*";
   color: red;
 }
 
@@ -3063,34 +3073,38 @@ body.registerPage {
 }
 
 .register_button {
-  width: 100%;
-  height: 60px;
+  cursor: pointer;
+  width: 110%;
+  height: 3.2vh;
   position: relative;
   display: block;
-  margin-top: 24%;
-  margin-left: 24%;
-  margin-right: 24%;
-  margin-bottom: 24%;
-  padding: center;
-  color: white;
-  background-color: #0A2E52;
-  border-radius: 50px;
+  margin: 2% 0 0 0;
+  padding: auto;
+  color: rgb(0, 0, 0);
+  background-color: #ffffff;
+  border-radius: 10px;
   border-style: none;
   box-sizing: content-box;
-  background: linear-gradient(to right, rgb(0, 145, 255), rgb(17, 0, 255), rgb(26, 0, 156));
+  box-shadow: inset 0 0 0 0 #832323;
+  transition: ease-in 0.4s;
 
 }
 
-.register_button:hover,
+.register_button:hover {
+  cursor: pointer;
+  box-shadow: inset 500px 0 0 0 #53ff4a;
+  color: black;
+}
+
 .register_button:active {
-  background: linear-gradient(to left, rgb(255, 255, 255), rgb(218, 218, 218), rgb(197, 197, 197), rgb(146, 146, 146));
-  box-shadow: 0px 10px 100px 10px #ffffff;
+  background: linear-gradient(to left, rgb(118, 96, 96), rgb(218, 218, 218), rgb(197, 197, 197), rgb(146, 146, 146));
+  box-shadow: 0px 5px 70px 5px #ffffff;
 }
 
 .loginlink {
   position: absolute;
-  margin-top: 35px;
-  color: rgb(22, 137, 101);
+  margin-top: 6vh;
+  color: rgb(255, 255, 255);
   float: left;
 }
 
@@ -3098,7 +3112,7 @@ Detail page css end here */
 /* ....................login page scc start here...................*/
 
 body.loginPage {
-  background-color: rgb(15, 11, 11);
+  background-color: rgb(0, 0, 0);
 }
 
 body.listings {
@@ -3108,33 +3122,36 @@ body.listings {
 
 
 .login {
-  background-color: rgb(46, 11, 102);
-  width: 450px;
-  height: 400px;
+  background-color: rgb(129, 15, 15);
+  width: 22%;
+  height: 45vh;
   position: relative;
-  border-radius: 7%;
+  border-radius: 0%;
   margin: auto;
-  border: top left radius 0%;
-  margin-top: 30px;
+  border-top-right-radius: 10%;
+  border-bottom-right-radius: 12%;
+  margin-top: 15vh;
 
 }
 
 .login_form {
   display: flex;
   margin: auto;
-  background-color: rgb(122, 119, 226);
+  background-color: rgb(23, 23, 23);
   justify-content: center;
-  width: 400px;
-  height: 350px;
+  width: 22vw;
+  height: 45vh;
   align-items: center;
   padding: 20px;
   border-radius: 7%;
   position: absolute;
-  top: 15px;
-  right: 14px;
+  top: 1.5vh;
+  right: 1.5vh;
+
   border-top-left-radius: 0%;
-  background: linear-gradient(to bottom, #00ABBE, #2057A9, #0A2E52, rgb(60, 59, 74));
-  box-shadow: 0px 60px 300px 35px #000000;
+  border-bottom-right-radius: 13%;
+
+  box-shadow: 0px 10px 200px 20px #b66969;
 }
 
 /*body {
@@ -3159,7 +3176,7 @@ body.listings {
 }
 
 .login input {
-  width: 50%;
+  width: 70%;
 }
 
 .login input[type="email"] {
@@ -3170,24 +3187,38 @@ body.listings {
 }
 
 .login input[type="password"] {
-  width: 50%;
+  width: 70%;
   text-align: center;
   display: inline-block;
 
 }
 
-.login button {
-  width: 100%;
-  height: 30px;
-  display: block;
-  margin-top: 24%;
-  margin-left: auto;
-  margin-right: auto;
-  padding: auto;
-  background-color: #b4c4d3;
+.login_button {
+  cursor: pointer;
+  width: 110%;
+  height: 3.2vh;
   position: relative;
-  background: linear-gradient(to right, rgb(46, 62, 75), rgb(130, 123, 227), rgb(26, 0, 156));
+  display: block;
+  margin: 2% 0 0 0;
+  padding: auto;
+  color: rgb(0, 0, 0);
+  background-color: #ffffff;
+  border-radius: 10px;
+  border-style: none;
+  box-sizing: content-box;
+  box-shadow: inset 0 0 0 0 #832323;
+  transition: ease-in 0.4s;
+}
 
+.login_button:hover {
+  cursor: pointer;
+  box-shadow: inset 500px 0 0 0 #53ff4a;
+  color: black;
+}
+
+.login_button:active {
+  background: linear-gradient(to left, rgb(118, 96, 96), rgb(218, 218, 218), rgb(197, 197, 197), rgb(146, 146, 146));
+  box-shadow: 0px 5px 70px 5px #ffffff;
 }
 
 /* ....................login page scc ends here...................*/
