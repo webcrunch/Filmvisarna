@@ -6,7 +6,7 @@ import { get, post, del } from '../utilities/backend-talk';
 
 export default function Booked() {
     const user = useStates('user');
-    const { movies} = useStates('main');
+    const l = useStates('main');
     let { bookingInfo } = useParams();
     bookingInfo = JSON.parse(decodeURIComponent(bookingInfo));
     let save = useStates({
@@ -48,12 +48,16 @@ export default function Booked() {
             let resp = await post('/api/userbooking', bookingbj);
         } 
         let result = await post('/api/book', save);
-        
+        if (JSON.stringify(l.screenings) === JSON.stringify(result.data)) {
+            return;
+        }
+        l.screenings = result.data;
+        // how to add it to the useastates??
     }
     useEffect(() => {
         save.id = bookingInfo.screeningsData.id;
         handleChairsToSave();
-        movie = movies.find(movie => movie.path === bookingInfo.movie);
+        movie = l.movies.find(movie => movie.path === bookingInfo.movie);
         document.body.classList.add("bookingPage");
         return () => document.body.classList.remove("bookingPage");
     }, []);
