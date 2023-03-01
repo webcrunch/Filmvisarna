@@ -24,12 +24,12 @@ export default function Booked() {
         placesArray.sort();
     }
 
-
     const handleChairsToSave = async () => {
         
         for (let i = 0; i < bookingInfo.screeningsData.occupiedSeats.length; i++){
             save.bookedArray.push([...bookingInfo.markedChairsArray[i], ...bookingInfo.screeningsData.occupiedSeats[i]].sort());
         }
+        
         let bookingbj = {
             id: user.id,
             booking: {
