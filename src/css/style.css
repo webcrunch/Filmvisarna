@@ -3058,6 +3058,11 @@ body.registerPage {
   padding: 20px;
   border-radius: 7%;
   position: absolute;
+  top: 25px;
+  right: 14px;
+  border: top left radius 0%;
+  background: linear-gradient(to bottom, #00ABBE, #2057A9, #0A2E52, rgb(60, 59, 74));
+  box-shadow: 0px 60px 300px 35px #000000;
   top: 1.5vh;
   right: 1.5vh;
 
@@ -3114,15 +3119,17 @@ body.registerPage {
 }
 
 .register_button {
-  cursor: pointer;
   width: 110%;
   height: 3.2vh;
   position: relative;
   display: block;
-  margin: 2% 0 0 0;
-  padding: auto;
-  color: rgb(0, 0, 0);
-  background-color: #ffffff;
+  margin-top: 2%;
+  margin-left: 0%;
+  margin-right: 0%;
+  margin-bottom: 0%;
+  padding:auto;
+  color: white;
+  background-color: #0A2E52;
   border-radius: 10px;
   border-style: none;
   box-sizing: content-box;
@@ -3143,9 +3150,9 @@ body.registerPage {
 }
 
 .loginlink {
-  position: absolute;
-  margin-top: 6vh;
-  color: rgb(255, 255, 255);
+  position: center;
+  margin-top: 30px;
+  color: rgb(22, 137, 101);
   float: left;
 }
 
@@ -3154,6 +3161,10 @@ Detail page css end here */
 
 body.loginPage {
   background-color: rgb(0, 0, 0);
+}
+
+.websiteBackground{
+  background-color: black;
 }
 
 body.listings {
@@ -3186,9 +3197,8 @@ body.listings {
   padding: 20px;
   border-radius: 7%;
   position: absolute;
-  top: 1.5vh;
-  right: 1.5vh;
-
+  top: 25px;
+  right: 14px;
   border-top-left-radius: 0%;
   border-bottom-right-radius: 13%;
 
@@ -3234,11 +3244,13 @@ body.listings {
 
 }
 
-.login_button {
-  cursor: pointer;
-  width: 110%;
-  height: 3.2vh;
-  position: relative;
+.welcome{
+  color:white;
+}
+
+.login button {
+  width: 100%;
+  height: 30px;
   display: block;
   margin: 2% 0 0 0;
   padding: auto;

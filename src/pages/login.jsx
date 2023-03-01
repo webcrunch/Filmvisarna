@@ -38,7 +38,7 @@ function LoginPage() {
                     <button className="login_button" type="submit">Logga in</button>
             </form >
         </div > </div> : 
-            <p>Välkommen {user.name} du är inloggad</p>
+            <p className="welcome">Välkommen {user.name} du är inloggad</p>
             }
     </>
 
