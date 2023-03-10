@@ -2,6 +2,7 @@ import { useStates } from "../utilities/states";
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 // import { useLocation } from "react-router-dom";
+import generate from "../utilities/random-order-confirmation";
 
 export default function TicketPage() {
   let { screeningInfo } = useParams();
@@ -26,7 +27,9 @@ export default function TicketPage() {
   });
 
   const seats = useStates({
-    markedChairs: {}
+    markedChairs: {},
+    markedChairsArray: [[], [], [], [], [], [], [], []],
+    confnr:generate()
   });
 
   if (Object.keys(seats.markedChairs).length > clickerss.totalSeats) {
@@ -50,7 +53,7 @@ export default function TicketPage() {
   const getSeats = (numberOfSeatsPerRow, index) => {
     const list = [];
     for (let i = 1; i <= numberOfSeatsPerRow; i++) {
-      let check_occupied_seat = screeningsData.occupiedSeats[index] !== undefined ? screeningsData.occupiedSeats[index].find(element => element === i) : undefined ;
+      let check_occupied_seat = screeningsData.occupiedSeats[index] !== undefined ? screeningsData.occupiedSeats[index].find(element => element === i) : undefined;
       list.push(<div key={i} onClick={() => !check_occupied_seat && clickOnSeat([index + 1, i])} className={
         (check_occupied_seat !== undefined ? "seat-sold" : "seat")
         + (seats.markedChairs[(index + 1) + ' ' + i] ? "-marked" : "")
@@ -70,11 +73,21 @@ export default function TicketPage() {
     }
   }
 
+  // adding new booked seats to the right index per same schema as in screanings json
+  const insertSeats = markedSeats => {
+     for (const [key, value] of Object.entries(markedSeats)) {
+        let row = key.split(" ")[0];
+       let chair = key.split(" ")[1];
+       seats.markedChairsArray[row-1].push(Number(chair))
+    }
+    return true;
+  }
 
   const navigate = useNavigate();
 
-  function book() {
-    let all = { ...clickerss, ...seats, screeningsData,movie:movie.path };
+  async function book() {
+    let result = await  insertSeats(seats.markedChairs);
+    let all = { ...clickerss, ...seats, screeningsData, movie: movie.path };
     navigate("/done/" + encodeURIComponent(JSON.stringify(all)));
   }
 
@@ -230,11 +243,11 @@ export default function TicketPage() {
             {getSeats(s, i)}
           </div>)}
         <p className="total-seats">
-          Du har valt <span id="count">{clickerss.totalSeats}</span> platser.
+          Du har valt {clickerss.totalSeats} {clickerss.totalSeats === 1 ? "plats" : "platser"}.
         </p>
-              <button className="bokabtnbiljett" onClick={book}>
-        Boka
-      </button>
+        <button className="bokabtnbiljett" onClick={book}>
+          Boka
+        </button>
       </div>
     </div>
   );
