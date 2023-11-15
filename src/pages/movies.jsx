@@ -2,6 +2,8 @@ import { useStates } from "../utilities/states";
 import { useEffect } from "react";
 import { calculatingTime } from "../utilities/length-calculating";
 import { Link, useNavigate } from "react-router-dom";
+import generate from "../utilities/random-order-confirmation";
+import { get, post, del } from '../utilities/backend-talk';
 
 export default function Movies() {
   let s = useStates("main");
@@ -90,8 +92,11 @@ export default function Movies() {
     });
   }
 
-  const toTicket = (screening,moviePath) => { 
-    navigate("/ticket/" + encodeURIComponent(JSON.stringify({id:screening.id, auditorium:screening.auditorium, moviePath:moviePath})));
+  const toTicket = async (screening,moviePath) => { 
+    // an post to backend with the object and a id as booking number (( generate()
+    let bookingnumber = generate();
+    let resp = await post('/api/handle_bookings', {id:bookingnumber, screen_id:screening.id, auditorium:screening.auditorium, moviePath:moviePath});
+    navigate(`/ticket/${bookingnumber}`);
   }
 
   const sortByName = order =>  {

@@ -3,18 +3,16 @@ import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 // import { useLocation } from "react-router-dom";
 import generate from "../utilities/random-order-confirmation";
+import { get, post,put } from '../utilities/backend-talk';
 
 export default function TicketPage() {
   let { screeningInfo } = useParams();
-  screeningInfo = JSON.parse(decodeURIComponent(screeningInfo));
-  // const location = useLocation();
-  // const saloonData = s.saloons.find(saloon => saloon.name == location.state.from[0]);
-  // const screeningsData = s.screenings.find(screen => screen.id === location.state.from[4]);
   const s = useStates('main');
-  const [width, setWidth] = useState(0);
-  const movie = s.movies != undefined ? s.movies.find(movie => movie.path == screeningInfo.moviePath) : null;
-  const saloonData = s.saloons.find(saloon => saloon.name == screeningInfo.auditorium);
-  const screeningsData = s.screenings.find(screen => screen.id === screeningInfo.id);
+  const [data, setData] = useState(null)
+  const [width, setWidth] = useState(0);  
+  const movie = data != undefined && s.movies != undefined ? s.movies.find(movie => movie.path == data.moviePath) : null;
+  const saloonData =  data != undefined ? s.saloons.find(saloon => saloon.name == data.auditorium): null;
+  const screeningsData = data != undefined ? s.screenings.find(screen => screen.id === data.screen_id) : null;
   const clickerss = useStates({
     numberofChildren: 0,
     priceChildren: 65,
@@ -29,7 +27,7 @@ export default function TicketPage() {
   const seats = useStates({
     markedChairs: {},
     markedChairsArray: [[], [], [], [], [], [], [], []],
-    confnr:generate()
+    confnr:screeningInfo
   });
 
   if (Object.keys(seats.markedChairs).length > clickerss.totalSeats) {
@@ -40,6 +38,9 @@ export default function TicketPage() {
     // add the class ticketPage to the body element
     // when the page shows / the component mounts
     document.body.classList.add("ticketPage");
+    (async () => {
+      await get(`/api/bookings_information/${screeningInfo}`).then((response) => setData(response)) 
+    })();
     // remove the class ticketPage when the page
     // unmounts..
     
@@ -86,9 +87,11 @@ export default function TicketPage() {
   const navigate = useNavigate();
 
   async function book() {
-    let result = await  insertSeats(seats.markedChairs);
-    let all = { ...clickerss, ...seats, screeningsData, movie: movie.path };
-    navigate("/done/" + encodeURIComponent(JSON.stringify(all)));
+    await  insertSeats(seats.markedChairs);
+    let updateobj = { ...clickerss, ...seats, screeningsData, movie: movie.path, bnr: screeningInfo.bnr };
+    let updateBooking  = await post(`/api/handle_booking/${screeningInfo}`, updateobj);
+    
+    navigate(`/done/${screeningInfo}`);
   }
 
 
@@ -207,6 +210,20 @@ export default function TicketPage() {
           Total Pris: {clickerss.totalPrice}Kr
         </p>
       </div>
+      
+      <div className="tv-section">
+        <div className="tv-outer-red">
+          <div className="tv-middle-red">
+            <div className="tv-inner-red">
+              <div className="tv-screen-container">
+                <div className="tv-screen"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
       <div className="seat-option-container">
         <ul className="ul-seat">
           <li className="li-avaliable">
@@ -224,26 +241,13 @@ export default function TicketPage() {
         </ul>
       </div>
 
-      <div className="tv-section">
-        <div className="tv-outer-red">
-          <div className="tv-middle-red">
-            <div className="tv-inner-red">
-              <div className="tv-screen-container">
-                <div className="tv-screen"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-
       <div className="seat-selector-container">
         {!saloonData ? null : saloonData.seatsPerRow.map((s, i) =>
           <div className="row">
             {getSeats(s, i)}
           </div>)}
         <p className="total-seats">
-          Du har valt {clickerss.totalSeats} {clickerss.totalSeats === 1 ? "plats" : "platser"}.
+          Du har valt {clickerss.totalSeats < 1 ? null :clickerss.totalSeats } {clickerss.totalSeats < 1 ? "inga platser än": clickerss.totalSeats === 1 ? "plats" : "platser"}.
         </p>
         <button className="bokabtnbiljett" onClick={book}>
           Boka
