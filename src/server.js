@@ -18,6 +18,35 @@ app.get("/api/hello", (req, res) => {
   res.status(200).json(true);
 });
 
+app.post("/api/handle_bookings", async (req, res) => {
+  let bookings = await fs.readFile(getPath('bookings.json'), 'utf8');
+  bookings = JSON.parse(bookings);
+  bookings.push(req.body)
+  const writingStatus = await fs.writeFile(getPath('bookings.json'), JSON.stringify(bookings, null, 2));
+  !writingStatus ? res.status(200).json({status: "confimed"}) : res.status(400).json(writingStatus);
+});
+
+app.post("/api/handle_booking/:id", async (req, res) => {
+  let bookings = await fs.readFile(getPath('bookings.json'), 'utf8');
+  bookings = JSON.parse(bookings);
+  let booking = bookings.find(book => book.id === req.params.id)
+  let updateObj = Object.assign(booking, req.body)
+  const writingStatus = await fs.writeFile(getPath('bookings.json'), JSON.stringify(bookings, null, 2));
+  !writingStatus ? res.status(200).json({status: "updated"}) : res.status(400).json(writingStatus); 
+});
+
+app.get('/api/bookings_informations', async (req, res) => {
+  let bookings = await fs.readFile(getPath('bookings.json'), 'utf8');
+  bookings = JSON.parse(bookings);
+  res.status(200).json(bookings);
+})
+
+app.get("/api/bookings_information/:id", async (req, res) => {
+  let bookings = await fs.readFile(getPath('bookings.json'), 'utf8');
+  bookings = JSON.parse(bookings);
+  res.status(200).json(bookings.find(b => b.id == req.params.id ));
+});
+
 
 app.get('/api/movies', async (req, res) => {
   let movies = await fs.readFile(getPath('movies.json'), 'utf8');
