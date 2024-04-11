@@ -1,12 +1,10 @@
-import { useStates } from "../utilities/states"
-import { Link } from 'react-router-dom';
+import { useStates } from "../utilities/states";
+import { Link } from "react-router-dom";
 import { useEffect } from "react";
 export default function Home() {
-    
-  let { movies } = useStates('main');
+  let { movies } = useStates("main");
 
   useEffect(() => {
-
     // add the class ticketPage to the body element
     // when the page shows / the component mounts
     document.body.classList.add("homePage");
@@ -15,45 +13,48 @@ export default function Home() {
     return () => document.body.classList.remove("homePage");
   }, []);
 
-  return <div className="home-page-container">
-
-    <h1 className='flexp'>Aktuella filmer på bio</h1>
+  return (
+    <div className="home-page-container">
+      <h1 className="flexp">Aktuella filmer på bio</h1>
       <div className="flex-container">
-          {movies.map(movie =>
-            <>
-              <div className="topcontainerimagediv">
-                <div className="topcontainerimagedivv">
-
-                <Link to={"/movie/" + movie.path}> <img className="topcontainerimages" src={"Filmvisarna/" + movie.images}
-                  ></img></Link><p>{movie.title}</p>
-                </div>      
+        {movies.map((movie) => (
+          <>
+            <div className="topcontainerimagediv">
+              <div className="topcontainerimagedivv">
+                <Link to={"/movie/" + movie.path}>
+                  {" "}
+                  <img className="topcontainerimages" src={movie.images}></img>
+                </Link>
+                <p>{movie.title}</p>
+              </div>
             </div>
-            </>
-          )}
-    </div>
+          </>
+        ))}
+      </div>
 
-    <div className="under-home-container">   
-    <div className='undertopcontainer>'>
-        <p className='undertext'>
-            Förutom våra vanliga filmvisningar har vi också en fullt licensierad bar och försäljningsstånd
-            där du kan njuta av en dryck eller en måltid före, under eller efter filmen. 
-        </p>
-        <h3 className="snack-click">
+      <div className="under-home-container">
+        <div className="undertopcontainer>">
+          <p className="undertext">
+            Förutom våra vanliga filmvisningar har vi också en fullt licensierad
+            bar och försäljningsstånd där du kan njuta av en dryck eller en
+            måltid före, under eller efter filmen.
+          </p>
+          <h3 className="snack-click">
             Klicka på någon utav bilderna för att ta dig vidare
-        </h3>
-    </div>
+          </h3>
+        </div>
 
-    <div className="snack-container">
-        <a className="snacklink" href="about">
+        <div className="snack-container">
+          <a className="snacklink" href="about">
             <img className="snackimage1" src="images/cinemasnack1.png"></img>
-       </a>
-        <a className="snacklink" href="about">
+          </a>
+          <a className="snacklink" href="about">
             <img className="snackimage2" src="images/cinemasnack2.png"></img>
-       </a>
+          </a>
+        </div>
+      </div>
     </div>
-    </div>  
-
-  </div>
+  );
   function myFunction() {
     document.getElementById("myDropdown").classList.toggle("show");
   }
