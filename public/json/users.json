@@ -5,23 +5,7 @@
       "username": "user1",
       "password": "password1",
       "bookings": [
-        {
-          "id": 24,
-          "price": 300
-        },
-        {
-          "id": 66,
-          "price": 85
-        },
-        {
-          "id": 102,
-          "price": 75
-        },
-        {
-          "id": 1,
-          "price": 170,
-          "code": "TGC243"
-        }
+      
       ]
     },
     {
