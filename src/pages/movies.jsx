@@ -8,7 +8,7 @@ export default function Movies() {
 
   const l = useStates({
     startDate: "",
-    chosenCategory: "Choose a category",
+    chosenCategory: "Välj en kategori", // Choose a category
     possibleSorts: [
       "Ingen sortering",
       "Sortering efter namn (↓ A-Ö)",
@@ -90,11 +90,20 @@ export default function Movies() {
     });
   }
 
-  const toTicket = (screening,moviePath) => { 
-    navigate("/ticket/" + encodeURIComponent(JSON.stringify({id:screening.id, auditorium:screening.auditorium, moviePath:moviePath})));
-  }
+  const toTicket = (screening, moviePath) => {
+    navigate(
+      "/ticket/" +
+        encodeURIComponent(
+          JSON.stringify({
+            id: screening.id,
+            auditorium: screening.auditorium,
+            moviePath: moviePath,
+          })
+        )
+    );
+  };
 
-  const sortByName = order =>  {
+  const sortByName = (order) => {
     l.screenings.sort((a, b) => {
       // compare case-insensitive
       // + omit beginning 'The' in comparison and omit spaces
@@ -108,7 +117,7 @@ export default function Movies() {
         ? 1
         : -1;
     });
-  }
+  };
 
   const getMovies = (name, property) =>
     s.movies.find((movie) => movie.title === name)[property];
@@ -214,9 +223,9 @@ export default function Movies() {
                     Tid: {display.time}. Längd:{" "}
                     {calculatingTime(getMovies(display.film, "length"))}
                   </h4>
-                  Genre: {getMovies(display.film, "genre").replace(/,/g, ', ')}
+                  Genre: {getMovies(display.film, "genre").replace(/,/g, ", ")}
                 </div>
-                
+
                 {/* <Link
                   to={"/ticket/" + getMovies(display.film, "path")}
                   state={{
@@ -236,9 +245,14 @@ export default function Movies() {
                     ],
                   }}
                 > */}
-                  <button onClick={() => toTicket(display,getMovies(display.film, "path"))} className="moviebtnsitplatser">
-                    Välj sittplatser
-                  </button>
+                <button
+                  onClick={() =>
+                    toTicket(display, getMovies(display.film, "path"))
+                  }
+                  className="moviebtnsitplatser"
+                >
+                  Välj sittplatser
+                </button>
               </div>
 
               <div className="card">
@@ -262,11 +276,17 @@ export default function Movies() {
                     </h4>
                   </div>
                   <h4 className="tidochsalongtitle">
-                    Genre: {getMovies(display.film, "genre").replace(/,/g, ', ')}
+                    Genre:{" "}
+                    {getMovies(display.film, "genre").replace(/,/g, ", ")}
                   </h4>
-                  <button onClick={ () => toTicket(display,getMovies(display.film, "path"))} className="moviebtnsitplatser_small tidochsalongtitle">
-                      Välj sittplatser
-                    </button>
+                  <button
+                    onClick={() =>
+                      toTicket(display, getMovies(display.film, "path"))
+                    }
+                    className="moviebtnsitplatser_small tidochsalongtitle"
+                  >
+                    Välj sittplatser
+                  </button>
                 </div>
               </div>
             </>
