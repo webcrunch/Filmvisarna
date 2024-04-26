@@ -1,0 +1,41 @@
+/*-------------------- kontakt PAGE STARTS HERE------------------------------------------------- */
+body.contactPage {
+    background-color: #000000;
+}
+
+.contact {
+    text-align: center;
+    justify-content: space-between;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    padding: 20px;
+    position: relative;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-right: 20px;
+    padding-left: 20px;
+
+}
+
+.contact p {
+    margin: 0 auto;
+    padding: 10px 2px;
+    width: 50%;
+    text-align: start;
+    word-wrap: break-word;
+}
+
+.contact a {
+    color: #add8e6;
+}
+
+.contact a:hover {
+    cursor: pointer;
+    color: #76c6e0;
+}
+
+.contactPerson {
+    color: rgba(59, 6, 183, 0.895);
+}
+
+/*----------------------------- kontakt PAGE ENDS HERE-----------------------------*/

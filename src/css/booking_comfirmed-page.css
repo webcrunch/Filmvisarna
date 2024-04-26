@@ -1,0 +1,28 @@
+/* Booking confirmed page */
+
+body.bookingPage {
+    background-color: #000000;
+}
+
+.doneA {
+    color: white;
+    font-size: 20px;
+    padding-left: 20px;
+}
+
+.doneA img,
+.doneA .information {
+    float: left;
+}
+
+.doneA .information {
+    width: 30%;
+}
+
+.doneA img {
+    display: block;
+    width: 70%;
+    padding: 5px;
+}
+
+/*----------------------Booking confirmation page end.............. */

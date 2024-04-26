@@ -1,0 +1,57 @@
+/* Sticky footer */
+
+#root {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+main:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    background-color: #1a1a1a;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    padding: 20px;
+    margin-top: 0%;
+    /*changed from 10% to 0. */
+    position: relative;
+}
+
+.footerleft,
+.footercenter,
+.footerright {
+    width: 30%;
+    text-align: center;
+}
+
+.footerleft p {
+    text-align: center;
+}
+
+.footerleft a {
+    color: #add8e6;
+}
+
+.footerleft :hover a {
+    color: #76c6e0;
+}
+
+.footerright a img {
+    display: inline-block;
+    margin: 5px;
+}
+
+.crfooter {
+    margin-left: 4%;
+}

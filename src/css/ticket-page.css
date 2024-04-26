@@ -1,0 +1,665 @@
+/*-----------------TICKET PAGE STARTS HERE----------------------------------------------------*/
+
+body.ticketPage {
+    background-color: rgb(23, 23, 23);
+}
+
+#ticket-pricing {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 60vh;
+    margin: 0 auto;
+
+}
+
+/*---------ticket page MEDIA QUERIES--*/
+
+/*small screen (iphone) */
+@media only screen and (min-width: 280px) and (max-width: 401px) {
+    #ticket-pricing {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        box-shadow: 0px 0px 35px 0px #000000;
+        border-radius: 20px;
+
+        padding: 20vh;
+    }
+
+    .ticket-option1,
+    .ticket-option2,
+    .ticket-option3 {
+        width: 30%;
+        border-radius: 20px;
+        border: none;
+        border-style: none;
+
+        margin-right: 5px 5px;
+    }
+
+    .ticket-option1 {
+
+        border-bottom-left-radius: 0;
+        border-top-left-radius: 20px;
+    }
+
+    .ticket-option3 {
+
+        border-top-right-radius: 20px;
+    }
+
+    .quantity {
+        width: 40px;
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    .add-ticket,
+    .remove-ticket {
+        width: 30px;
+        height: 25px;
+        margin: 5px;
+        border-radius: 5px;
+        font-size: 12px;
+    }
+
+    .vuxen-title,
+    .barn-title,
+    .senior-title {
+        font-size: 12px;
+    }
+
+    .price-tag-name {
+        font-size: 14px;
+    }
+
+    .seat-option-container p {
+        font-size: 13px;
+
+    }
+
+    .seat-option-container li {
+        width: 70px;
+        margin: 2px;
+        margin-bottom: -5px;
+    }
+
+    #total-price {
+        display: flex;
+        align-items: center;
+        position: relative;
+        font-size: 10px;
+        word-break: break-all;
+        height: 220px;
+        padding: 15px;
+    }
+
+    #total-price {
+        font-size: 19px;
+        padding: 20px;
+        word-break: keep-all;
+    }
+
+
+    .tv-screen {
+        width: 5vh;
+        height: 20.4vh;
+        background-color: rgb(255, 255, 255);
+        position: absolute;
+        box-shadow: 0px 10px 85px 20px #953333;
+        border-left: solid rgb(137, 12, 12) 15px;
+        border-right: solid rgb(137, 12, 12) 15px;
+        border-width: 10px, 10px, 10px, 10px;
+
+    }
+}
+
+@media screen and (min-width: 402px) and (max-width: 499px) {
+    #total-price {
+        display: flex;
+        align-items: center;
+        position: relative;
+        font-size: 12px;
+        word-break: break-all;
+        height: 220px;
+        padding: 15px;
+    }
+}
+
+@media screen and (min-width: 500px) and (max-width: 670px) {
+    .tv-screen-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        box-shadow: 0px 0px 35px 0px #000000;
+        border-radius: 0px;
+        border-bottom: 1px solid rgb(38, 38, 38);
+        padding: 20px;
+    }
+
+
+
+    .ticket-option1,
+    .ticket-option2,
+    .ticket-option3 {
+        width: 100%;
+        border-radius: 20px;
+        border: none;
+        border-bottom: 1px solid rgb(38, 38, 38);
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+
+    .ticket-option1 {
+        border-bottom-left-radius: 0;
+        border-top-left-radius: 20px;
+    }
+
+    .ticket-option3 {
+        border-bottom-right-radius: 0;
+        border-top-right-radius: 20px;
+    }
+
+    .quantity {
+        width: 40px;
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    .add-ticket,
+    .remove-ticket {
+        width: 50px;
+        height: 30px;
+        margin: 10px;
+        border-radius: 10px;
+        border: none;
+        background-color: rgb(187, 41, 58);
+        color: white;
+        cursor: pointer;
+    }
+
+    .vuxen-title,
+    .barn-title,
+    .senior-title,
+    .price-tag-name,
+    .total-price-css,
+    .quantity {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        color: aliceblue;
+    }
+
+    .vuxen-title,
+    .barn-title,
+    .senior-title,
+    .price-tag-name {
+        font-size: 16px;
+    }
+
+    .total-price-css {
+        font-weight: bold;
+        font-size: 10px;
+        word-wrap: break-word;
+    }
+
+    .add-ticket,
+    .remove-ticket {
+        width: 30px;
+        height: 25px;
+        margin: 5px;
+        border-radius: 5px;
+        font-size: 12px;
+    }
+
+    .vuxen-title,
+    .barn-title,
+    .senior-title {
+        font-size: 14px;
+    }
+
+    .price-tag-name {
+        font-size: 14px;
+    }
+
+
+
+}
+
+
+
+#ticket-pricing {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vh;
+    margin: 0 auto;
+}
+
+.ticket-container {
+    justify-content: center;
+    box-shadow: 0px 0px 35px 0px #000000;
+    border-radius: 20px;
+    border-bottom: 1px solid rgb(38, 38, 38);
+}
+
+.full-ticket-page {
+    margin-top: 5vh;
+    height: 100%;
+    width: auto;
+    aspect-ratio: 11/16;
+}
+
+.ticket-option1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+    padding: 3vh;
+    border-left: 1px solid;
+    border-bottom-left-radius: 20px rgb(38, 38, 38);
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.ticket-option2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+    padding: 3vh;
+}
+
+.ticket-option3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+    padding: 3vh;
+    border-right: 1px solid rgb(38, 38, 38);
+}
+
+.quantity {
+    width: 40px;
+    text-align: center;
+    margin: 10px 0;
+}
+
+.add-ticket {
+    width: 8vh;
+    height: 4.5vh;
+    margin: 10px;
+    border-radius: 10px;
+    border: none;
+    background-color: rgb(187, 41, 58);
+    color: white;
+    cursor: pointer;
+}
+
+.remove-ticket {
+    width: 8vh;
+    height: 4.5vh;
+    margin: 3vh;
+    border-radius: 10px;
+    border: none;
+    background-color: rgb(187, 41, 58);
+    color: white;
+    cursor: pointer;
+}
+
+.vuxen-title,
+.barn-title,
+.senior-title {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    color: aliceblue;
+}
+
+.price-tag-name {
+    color: white;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.total-price-css {
+    color: rgb(255, 255, 255);
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+    position: relative;
+    width: 100%;
+    text-align: center;
+    word-wrap: break-word;
+}
+
+.quantity {
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    border-radius: 2px;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+}
+
+.ul-seat {
+    box-sizing: border-box;
+    color: white;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    padding-left: 33.3333%;
+    padding-right: 33.3333%;
+
+}
+
+.bokabtnbiljett {
+    color: black;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+
+    height: 40px;
+
+    border-radius: 10px;
+    background-color: red;
+    cursor: pointer;
+
+    box-shadow: inset 0 0 0 0 #ffffff28;
+    border-style: none;
+    transition: ease-out 0.5s;
+    outline: none;
+    font-size: 2rem;
+}
+
+.li-avaliable {
+    box-sizing: border-box;
+    background-color: white;
+    color: black;
+    box-shadow: 0px 0px 35px 0px #000000;
+    border: 1px solid rgb(147, 147, 147);
+    width: 30%;
+    border-radius: 10px;
+}
+
+.li-selected {
+    box-sizing: border-box;
+    box-shadow: 0px 0px 35px 0px #000000;
+    width: 30%;
+    border-radius: 10px;
+    word-break: keep-all;
+}
+
+.li-sold {
+    box-sizing: border-box;
+    box-shadow: 0px 0px 35px 0px #000000;
+    border-radius: 10px;
+    width: 30%;
+}
+
+.seat-option-container {
+    border-style: none;
+    justify-content: center;
+    align-items: center;
+    /*  perspective: 500px;
+margin-bottom:30px; */
+}
+
+.tv-section {
+    width: 100%;
+    height: 260px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+}
+
+.tv-outer-red {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 420px;
+    height: 208px;
+    background-color: rgb(115, 0, 0);
+    border-top-right-radius: 40px;
+    border-top-left-radius: 40px;
+}
+
+.tv-middle-red {
+    border-top-right-radius: 1px;
+    border-top-left-radius: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 410px;
+    height: 204px;
+    background-color: rgb(146, 2, 2);
+}
+
+.tv-inner-red {
+    width: 388px;
+    height: 208px;
+    background-color: rgb(180, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tv-screen-container {
+    width: 50vh;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+
+}
+
+.tv-screen {
+    width: 5vh;
+    height: 15vh;
+    /* Justera höjden efter behov */
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    box-shadow: 0px 10px 85px 20px #953333;
+    border-left: solid rgb(137, 12, 12) 15px;
+    border-right: solid rgb(137, 12, 12) 15px;
+}
+
+
+.tv-screen:hover {
+    width: 30vw;
+    height: 208px;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    box-shadow: 0px 10px 85px 20px #953333;
+    border-left: solid rgb(137, 12, 12) 15px;
+    border-right: solid rgb(137, 12, 12) 15px;
+    border-width: 10px, 10px, 10px, 10px;
+    transition: width 6s;
+}
+
+
+
+.seat-selector-container {
+    align-items: center;
+    justify-content: center;
+    display: -moz-inline-grid;
+    display: -ms-inline-grid;
+    height: 400px;
+    margin-right: 20px;
+
+}
+
+.row {
+    align-items: center;
+    align-content: center;
+    align-self: center;
+    text-align: center;
+    width: 100%;
+    position: relative;
+}
+
+.row1 {
+    align-items: center;
+    align-content: center;
+    align-self: center;
+    width: 100%;
+    position: relative;
+    left: 41%;
+}
+
+.row2 {
+    align-items: center;
+    align-content: center;
+    align-self: center;
+    margin-bottom: 10px;
+    width: 100%;
+    position: relative;
+    left: 41%;
+}
+
+.row3 {
+    align-items: center;
+    align-content: center;
+    align-self: center;
+    width: 100%;
+    position: relative;
+    left: 41%;
+}
+
+.row4 {
+    align-items: center;
+    align-content: center;
+    align-self: center;
+    width: 100%;
+    position: relative;
+    left: 41%;
+}
+
+.row5 {
+    align-items: center;
+    align-content: center;
+    align-self: center;
+    margin-bottom: 10px;
+    width: 100%;
+    position: relative;
+    left: 41%;
+}
+
+.row6 {
+    align-items: center;
+    align-content: center;
+    align-self: center;
+    width: 100%;
+    position: relative;
+    left: 41%;
+}
+
+.row7 {
+    align-items: center;
+    align-content: center;
+    align-self: center;
+    width: 100%;
+    position: relative;
+    left: 41%;
+}
+
+.row8 {
+    align-items: center;
+    align-content: center;
+    align-self: center;
+    width: 100%;
+    left: 41%;
+    position: relative;
+}
+
+.row9 {
+    align-items: center;
+    align-content: center;
+    align-self: center;
+    width: 100%;
+    position: relative;
+    left: 41%;
+}
+
+.row10 {
+    align-items: center;
+    align-content: center;
+    align-self: center;
+    width: 100%;
+    position: relative;
+    left: 41%;
+}
+
+.seat-marked {
+    position: relative;
+    display: inline-block;
+    background-color: rgb(2, 159, 2);
+    box-shadow: rgb(0, 0, 0) 100px, 100px, 900px, 90px;
+    width: 30px;
+    height: 27px;
+    margin: auto;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    margin: 5px;
+    align-items: center;
+    align-content: center;
+    align-self: center;
+}
+
+.seat-sold {
+    position: relative;
+    display: inline-block;
+    background: #afafaf linear-gradient(to right bottom, transparent 47.75%, currentColor 49.5%, currentColor 50.5%, transparent 52.25%);
+    box-shadow: rgb(0, 0, 0) 100px, 100px, 900px, 90px;
+    width: 30px;
+    height: 27px;
+    margin: auto;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    margin: 5px;
+    align-items: center;
+    align-content: center;
+    align-self: center;
+}
+
+
+.seat {
+    position: relative;
+    display: inline-block;
+    background-color: #ffffff;
+    margin: 5px;
+    width: 30px;
+    height: 27px;
+    box-shadow: rgb(0, 0, 0) 100px, 100px, 900px, 90px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    align-items: center;
+    align-content: center;
+    align-self: center;
+}
+
+.total-seats {
+    text-align: center;
+    color: white;
+}
+
+
+.li-selected {
+    background-color: rgb(2, 159, 2);
+}
+
+.li-sold {
+    background-color: #474747;
+    color: white;
+}
+
+
+
+/*---------------------TICKET PAGE ENDS HERE---------------------------------------------------- */

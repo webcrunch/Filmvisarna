@@ -1,0 +1,122 @@
+/* css register starts */
+
+body.registerPage {
+    background-color: rgb(0, 0, 0);
+}
+
+
+.register {
+    background-color: rgb(129, 15, 15);
+    width: 22%;
+    height: 45vh;
+    position: relative;
+    border-radius: 0%;
+    margin: auto;
+    border-top-right-radius: 10%;
+    border-bottom-right-radius: 12%;
+    margin-top: 15vh;
+}
+
+.register_form {
+    display: flex;
+    margin: auto;
+    background-color: rgb(23, 23, 23);
+    justify-content: center;
+    width: 22vw;
+    height: 45vh;
+    align-items: center;
+    padding: 20px;
+    border-radius: 7%;
+    position: absolute;
+    top: 1.5vh;
+    right: 1.5vh;
+
+    border-top-left-radius: 0%;
+    border-bottom-right-radius: 13%;
+
+    box-shadow: 0px 10px 200px 20px #b66969;
+}
+
+.register_form button {
+    margin: 1vh 0vh;
+}
+
+.label {
+    display: block;
+    margin-bottom: 2px;
+    font-family: system-ui;
+    font-size: auto;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+}
+
+.label.label::after {
+    content: "*";
+    color: red;
+}
+
+.username,
+.password,
+.firstname,
+.lastname {
+    display: block;
+    font-family: sans-serif;
+    font-size: 20px;
+    color: white;
+    border-radius: 3px;
+    border-style: none;
+    background-color: rgb(41, 41, 41);
+
+}
+
+.remember {
+    padding: 50px;
+    font-size: 20px;
+    background-color: lightgray;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+}
+
+.remember:hover,
+.remember:active {
+    background-color: rgb(129, 255, 205);
+}
+
+.register_button {
+    cursor: pointer;
+    width: 110%;
+    height: 3.2vh;
+    position: relative;
+    display: block;
+    margin: 2% 0 0 0;
+    padding: auto;
+    color: rgb(0, 0, 0);
+    background-color: #ffffff;
+    border-radius: 10px;
+    border-style: none;
+    box-sizing: content-box;
+    box-shadow: inset 0 0 0 0 #832323;
+    transition: ease-in 0.4s;
+
+}
+
+.register_button:hover {
+    cursor: pointer;
+    box-shadow: inset 500px 0 0 0 #53ff4a;
+    color: black;
+}
+
+.register_button:active {
+    background: linear-gradient(to left, rgb(118, 96, 96), rgb(218, 218, 218), rgb(197, 197, 197), rgb(146, 146, 146));
+    box-shadow: 0px 5px 70px 5px #ffffff;
+}
+
+.loginlink {
+    position: absolute;
+    margin-top: 6vh;
+    color: rgb(255, 255, 255);
+    float: left;
+}
+
+/* Detail page css end here */
