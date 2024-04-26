@@ -13,18 +13,7 @@
       "username": "user2",
       "password": "password2",
       "bookings": [
-        {
-          "id": 1,
-          "price": 140
-        },
-        {
-          "id": 2,
-          "price": 200
-        },
-        {
-          "id": 3,
-          "price": 65
-        }
+        
       ]
     },
     {
@@ -32,22 +21,7 @@
       "username": "user3",
       "password": "password3",
       "bookings": [
-        {
-          "id": 100,
-          "price": 150
-        },
-        {
-          "id": 22,
-          "price": 300
-        },
-        {
-          "id": 33,
-          "price": 350
-        },
-        {
-          "id": 10,
-          "price": 450
-        }
+        
       ]
     }
   ]
