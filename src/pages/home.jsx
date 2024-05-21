@@ -44,10 +44,10 @@ export default function Home() {
     </div>
 
     <div className="snack-container">
-        <a className="snacklink" href="about">
+        <a className="snacklink" href="/about">
             <img className="snackimage1" src="images/cinemasnack1.png"></img>
        </a>
-        <a className="snacklink" href="about">
+        <a className="snacklink" href="/about">
             <img className="snackimage2" src="images/cinemasnack2.png"></img>
        </a>
     </div>
