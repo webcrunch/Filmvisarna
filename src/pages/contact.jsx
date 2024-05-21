@@ -11,7 +11,7 @@ export default function Contact() {
 
 
         <h2 className="contact_header">Kontakta oss</h2>
-        <img src="Filmvisarna/images/kontakt.jpg" alt="Here will be a image" />
+        <img src="images/kontakt.jpg" alt="Here will be a image" />
         <p>För information om biljettköp och -bokning till Filmvisarna.</p>
         <p className="Adress">Adress: Stortorget 11, 124 84 Småstad, Sverige</p>
         <p className="Telefon"><a href="tel:+4733378901">Telefon: (073) 337 89 01 </a></p>
