@@ -22,7 +22,7 @@ export default function Contact() {
         <p>För frågor angående programsättning och uthyrningar skicka e-post till: program@filmvisarna.com</p>
         <p><b>Thomas Frank</b></p>
         <p>Biografansvarig, kontaktperson </p>
-        <p className="E-post">En-post: <a href="info@filmvisarna.com">thomas@filmvisarna.com</a></p>
+        <p className="E-post">E-post: <a href="info@filmvisarna.com">thomas@filmvisarna.com</a></p>
         <p className="Hemsida">Hemsida: <a href="www.filmvisarna.com">www.filmvisarna.com</a></p>
         </div>
 }
