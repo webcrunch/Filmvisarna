@@ -34,6 +34,7 @@ export default function Home() {
 
     <div className="under-home-container">   
     <div className='undertopcontainer>'>
+      
         <p className='undertext'>
             Förutom våra vanliga filmvisningar har vi också en fullt licensierad bar och försäljningsstånd
             där du kan njuta av en dryck eller en måltid före, under eller efter filmen. 
