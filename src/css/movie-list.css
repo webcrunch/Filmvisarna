@@ -13,11 +13,14 @@ body.moviePage {
   box-sizing: content-box;
   padding-left: 220px;
   padding-top: 30px;
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0 cover 20%;
 }
 
 .imagesmovies {
-  width: 140px;
-  height: 200px;
+  width: 25vh;
+  height: 90%;
   display: block;
   position: absolute;
   top: 14px;
@@ -59,9 +62,9 @@ body.moviePage {
 }
 
 .moviebtnsitplatser {
-  color: black;
+  color: rgb(0, 0, 0);
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  font-weight: bold;
+  font-weight: 300;
   /* width: 260px; */
   height: 40px;
   /* border: none; */
@@ -84,15 +87,46 @@ body.moviePage {
   box-shadow: inset 250px 0 0 0 #ffffff;
 }
 
-.filterButton {
-  margin: 10px;
-}
 
+  .filterButton {
+    margin: 2%;
+    width: 100%;
+    color: white;
+    cursor: pointer;
+}
+.movieList{
+  height: 100%;
+  width: 100%;
+}
 .filterBoxes_show {
+  display: flex;
+  flex-direction: column;
   color: white;
-  border: white solid;
+  border: #00b5fd solid;
   padding: 10px;
 }
+
+.filterBoxes_show #selectListName , #selectListCategory, #selectList, select{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 300;
+  color: white;
+  background-color: #00b5fd;
+  border-style: none;
+  height: 3vh;
+}
+input, button{
+  border-style: none;
+  height: 3vh;
+  width: 10%;
+  height: 3vh;
+  
+}
+
+p{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
 
 .filterBoxes_hide {
   display: none;
@@ -100,27 +134,48 @@ body.moviePage {
 
 .card {
   display: none;
+  
 }
+
+
 
 /*  Media queries for Movie List */
 
 @media screen and (max-width: 767px) {
+  .filterButton{
+   margin: 2vh 0 4vh 0;
+  }
+
   .imagelistdiv {
     display: none;
+  }
+  .movieList{
+    
+    height: 100%;
   }
 
   .card {
     display: block;
-    background-color: #ffffff;
+    color: white;
+    background-color: #00b5fd;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     transition: 0.3s;
     width: auto;
+    height: 100%;
     border-radius: 5px;
-    margin-bottom: 20px;
+    margin-bottom: 10%;
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0 cover 40%;
   }
 
   .card:hover {
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+   
+  }
+
+  button.moviebtnsitplatser_small.tidochsalongtitle:hover{
+    margin-left: 0%;
   }
 
   .card img {
@@ -129,22 +184,24 @@ body.moviePage {
   }
 
   .container {
-    padding: 2px 16px;
+    padding: 5% 10%;
+    width: 100%;
+   
   }
 
   .moviebtnsitplatser_small {
-    color: black;
+    color: rgb(0, 0, 0);
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    font-weight: bold;
-    height: 40px;
-    border-radius: 10px;
-    background-color: red;
+    font-weight: 300;
+    width: 100%;
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255);
     cursor: pointer;
     box-shadow: inset 0 0 0 0 #ffffff28;
     border-style: none;
     transition: ease-out 0.5s;
     outline: none;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
   }
 }
 
