@@ -17,7 +17,7 @@
       "Rachel Keller"
     ],
     "description": "Otto Anderson är en grinig änkeman, vars enda glädje kommer från att kritisera och döma sina upprörda grannar. När en ny familj flyttar in möter han sin match i kvicktänkta och höggravida Marisol, vilket leder till en oväntad vänskap som kommer att vända upp och ner på hans värld.A Man Called Otto är den amerikanska re-maken av den svenska bok och filmsuccén ”En man som heter Ove”",
-    "images": "/images/amancalledotto.jpg",
+    "images": "images/amancalledotto.jpg",
     "youtubeTrailer": "eFYUX9l-m5I",
     "trailer": "https://youtu.be/eFYUX9l-m5I",
     "reviews": [
@@ -60,9 +60,9 @@
       "Marika Lindström"
     ],
     "description": "Efter ett gräl med sin fru inser Alex Schulman att han måste ta itu med sin vrede. En ilska som gått i arv i generationer. Släktens alla konflikter och vendettor tycks börja hos en och samma person: morfar Sven Stolpe”",
-    "images": "/images/burnallmyletters.jpg",
-    "youtubeTrailer": "-DIxHED0Nxw",
-    "trailer": "https://www.youtube.com/watch?v=-DIxHED0Nxw",
+    "images": "images/burnallmyletters.jpg",
+    "youtubeTrailer": "ED0NDIxHxw",
+    "trailer": "https://www.youtube.com/watch?v=-ED0NDIxHxw",
     "reviews": [
       {
         "source": "imdb",
@@ -89,7 +89,7 @@
     "productionCountries": [
       "USA"
     ],
-    "productionYear": 2022,
+    "productionYear": 2018,
     "length": 134,
     "genre": "Action,Äventyr",
     "distributor": "Walt Disney Studios,Motion Pictures",
@@ -103,7 +103,7 @@
       "Michael B. Jordan"
     ],
     "description": "Queen Ramonda, Shuri, M’Baku, Okoye och deras specialstyrka med kvinnliga krigare, gör allt för att skydda sin nation från angripande världsmakter efter Kung T’Challas död. Wakandas invånare försöker gå vidare och tar hjälp av War Dog Nakia och Everett Ross, för att hitta en ny väg för kungariket Wakanda. Vi får också möta Namor, kungen av en dold undervattensnation.”",
-    "images": "/images/black-panther-wakanda-forever.webp",
+    "images": "images/blackpanter.jpg",
     "youtubeTrailer": "_Z3QKkl1WyM",
     "trailer": "https://www.youtube.com/embed/_Z3QKkl1WyM",
     "reviews": [
@@ -146,7 +146,7 @@
       "Michael B. Jordan"
     ],
     "description": "Mer än tio år efter händelserna i den första filmen berättar ”Avatar The Way of Water” historien om familjen Sully (Jake, Neytiri och deras barn), problemen som följer dem, allt de gör för att leva i säkerhet, slagen de utkämpar för att hålla sig levande och tragedierna de måste utstå.”",
-    "images": "/images/avatar.jpg",
+    "images": "images/avatar.jpg",
     "youtubeTrailer": "d9MyW72ELq0",
     "trailer": "https://www.youtube.com/watch?v=d9MyW72ELq0",
     "reviews": [
@@ -189,7 +189,7 @@
       "Hong Chau"
     ],
     "description": "Ett ungt par bjuds, tillsammans med en grupp främlingar, in till en avskilt belägen restaurang på en avlägsen ö. Den mycket hyllade men något besatte köksmästaren har förberett en påkostad avsmakningsmeny, men också några chockerande överraskningar.”",
-    "images": "/images/themenu.jpg",
+    "images": "images/themenu.jpg",
     "youtubeTrailer": "CAWZMssP3gM",
     "trailer": "https://www.youtube.com/watch?v=CAWZMssP3gM",
     "reviews": [
@@ -231,7 +231,7 @@
       "Miles Teller"
     ],
     "description": "Efter mer än 30 års tjänstgöring som en av US Navy's bästa piloter, är Pete ”Maverick” Mitchell där han hör hemma - en modig testpilot som ständigt tänjer på gränserna och undviker den befordran som skulle komma att hålla honom nere på marken istället för uppe i luften. När han tränar en grupp avgångselever från Top Gun för ett specialuppdrag som ingen pilot någonsin utfört tidigare, träffar Maverick löjtnant Bradley Bradshaw, även kallad ”Rooster” - sonen till Mavericks bortgångne vän, radar-officeren löjtnant Nick Bradshaw, även känd som ”Goose”. Med en osäker framtid framför sig, och hemsökt av spöken från det förflutna tvingas Maverick att konfrontera sina största fasor, vilket kulminerar i ett uppdrag som kräver den ultimata uppoffringen av de som blir utvalda till att utföra det.”",
-    "images": "/images/topgun1.jpg",
+    "images": "images/topgun1.jpg",
     "youtubeTrailer": "qSqVVswa420",
     "trailer": "https://www.youtube.com/watch?v=qSqVVswa420",
     "reviews": [
@@ -273,8 +273,10 @@
       "Chiwetel Ejiofor"
     ],
     "description": "Doctor Strange slår sig ihop med en mystisk tonårsflicka från sina drömmar som kan resa över multiversum för att bekämpa flera hot, inklusive andra universums versioner av honom själv, som hotar att utplåna miljoner över universum. De söker hjälp från Wanda the Scarlet Witch, Wong och andra.",
-    "images": "/images/doctorStrangeMultiverse.webp",
-    "youtubeTrailer": "aWzlQ2N6qqg",
+    "images": "images/doctorStrangeMultiverse.webp",
+    "youtubeTrailers": [
+      "aWzlQ2N6qqg"
+    ],
     "trailer": "https://www.youtube.com/watch?v=aWzlQ2N6qqg",
     "reviews": [
       {
@@ -315,8 +317,10 @@
       "Gary Sinise"
     ],
     "description": "Presidentskapen för Kennedy och Johnson, Vietnamkriget, Watergate-skandalen och andra historiska händelser utspelar sig ur perspektivet av en man från Alabama med en IQ på 75, vars enda önskan är att återförenas med sin barndomsälskling.",
-    "images": "/images/ForrestGump.jpg",
-    "youtubeTrailer": "bLvqoHBptjg",
+    "images": "images/ForrestGump.jpg",
+    "youtubeTrailers": [
+      "bLvqoHBptjg"
+    ],
     "trailer": "https://www.youtube.com/watch?v=bLvqoHBptjg",
     "reviews": [
       {
@@ -357,8 +361,10 @@
       "Don Rickles"
     ],
     "description": "En cowboydocka blir djupt hotad och avundsjuk när en ny rymdman actionfigur ersätter honom som toppleksak i en pojkes sovrum.",
-    "images": "/images/ToyStory.jpg",
-    "youtubeTrailer": "v-PjgYDrg70",
+    "images": "images/ToyStory.jpg",
+    "youtubeTrailers": [
+      "v-PjgYDrg70"
+    ],
     "trailer": "https://www.youtube.com/watch?v=v-PjgYDrg70",
     "reviews": [
       {

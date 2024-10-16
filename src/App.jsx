@@ -20,7 +20,6 @@ import DetailedInfo from './pages/DetailedInfo.jsx';
 import TicketPage from './pages/Ticket.jsx';
 import RegisterPage from './pages/register.jsx';
 import LoginPage from './pages/login.jsx';
-import Listing from './pages/Listings.jsx';
 // A React component is a function
 // it will run every time a state variable changes
 // thus rerendering the content you see in your Browser
@@ -39,26 +38,22 @@ export default function App() {
   }
 
 
-  let a = useStates('user', {
-    loggedin: false,
-    name: null,
-    id: null,
-    users: []
+  useStates('user', {
+    loggedin: false
   })
 
   let s = useStates('main', {
     movies: [],
     menu: [
-      { label: 'HEM', path: '/', Component: Home },
-      { label: 'FILMER', path: '/movies', Component: Movies },
-      { label: 'OM OSS ', path: '/about', Component: About }, //, Component:
-      { label: 'KONTAKT', path: '/contact', Component: Contact },
-      { path: '/movie/:moviePath', Component: DetailedInfo },
-      { path: '/auth', Component: RegisterPage },
-      { path: '/authentication', Component: LoginPage },
-      { path: '/ticket/:screeningInfo', Component: TicketPage },
-      { path: '/done/:bookingInfo', Component: Booked },
-      { path: '/yourlist', Component: Listing}
+      { label: 'HEM', path: '/Filmvisarna/', Component: Home },
+      { label: 'FILMER', path: '/Filmvisarna/movies', Component: Movies },
+      { label: 'OM OSS ', path: '/Filmvisarna/about', Component: About },
+      { label: 'KONTAKT', path: '/Filmvisarna/contact', Component: Contact },
+      { path: '/Filmvisarna/movie/:moviePath', Component: DetailedInfo },
+      { path: '/Filmvisarna/auth', Component: RegisterPage },
+      { path: '/Filmvisarna/authentication', Component: LoginPage },
+      { path: '/Filmvisarna/ticket/:moviePath', Component: TicketPage },
+      { path: '/Filmvisarna/done/:bookingId', Component: Booked }
     ],
     screenings: [],
     saloons: []
@@ -68,10 +63,9 @@ export default function App() {
   useEffect(() => {
     // Load animal data from /json/niceAnimals.json
     (async () => {
-      s.screenings = await (await fetch('/api/screenings')).json();
-      s.saloons = await (await fetch('/api/saloons')).json();
-      a.users = await (await fetch('/api/users')).json();
-      let movies = await (await fetch('/api/movies')).json();
+      s.screenings = await (await fetch('./json/screening.json')).json();
+      s.saloons = await (await fetch('./json/saloons.json')).json();
+      let movies = await (await fetch('./json/movies.json')).json();
       for (let movie of movies) {
         movie.path = kebabify(movie.title)
       }

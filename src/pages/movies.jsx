@@ -1,7 +1,8 @@
 import { useStates } from "../utilities/states";
 import { useEffect } from "react";
 import { calculatingTime } from "../utilities/length-calculating";
-import { Link, useNavigate } from "react-router-dom";
+import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function Movies() {
   let s = useStates("main");
@@ -31,7 +32,6 @@ export default function Movies() {
     open: false,
   });
 
-  const navigate = useNavigate();
   const filterVars = useStates({
     movie: "null",
     category: "null",
@@ -90,11 +90,7 @@ export default function Movies() {
     });
   }
 
-  const toTicket = (screening,moviePath) => { 
-    navigate("/ticket/" + encodeURIComponent(JSON.stringify({id:screening.id, auditorium:screening.auditorium, moviePath:moviePath})));
-  }
-
-  const sortByName = order =>  {
+  function sortByName(order) {
     l.screenings.sort((a, b) => {
       // compare case-insensitive
       // + omit beginning 'The' in comparison and omit spaces
@@ -198,10 +194,10 @@ export default function Movies() {
             <>
               <div className="imagelistdiv">
                 {/* <hr className='movieshr'></hr> */}
-                <Link to={"/movie/" + getMovies(display.film, "path")}>
+                <Link to={"/movie/" + display.film}>
                   <img
                     className="imagesmovies"
-                    src={"../" + getMovies(display.film, "images")}
+                    src={getMovies(display.film, "images")}
                     alt={"Poster av filmen " + display.film}
                   />
                 </Link>
@@ -214,37 +210,29 @@ export default function Movies() {
                     Tid: {display.time}. Längd:{" "}
                     {calculatingTime(getMovies(display.film, "length"))}
                   </h4>
-                  Genre: {getMovies(display.film, "genre").replace(/,/g, ', ')}
                 </div>
-                
-                {/* <Link
+                <Link
                   to={"/ticket/" + getMovies(display.film, "path")}
                   state={{
                     from: [
                       display.auditorium,
-                      display.film,
-                      display.date,
-                      display.time,
-                    ],
-                  }}
-                >
-                  <button className="moviebtnsitplatser">
                         display.film,
                         display.date,
                         display.time,
                       display.id
                     ],
                   }}
-                > */}
-                  <button onClick={() => toTicket(display,getMovies(display.film, "path"))} className="moviebtnsitplatser">
+                >
+                  <button className="moviebtnsitplatser">
                     Välj sittplatser
                   </button>
+                </Link>
               </div>
 
               <div className="card">
                 <Link to={"/movie/" + getMovies(display.film, "path")}>
                   <img
-                    src={"../" + getMovies(display.film, "images")}
+                    src={getMovies(display.film, "images")}
                     alt={"Poster av filmen " + display.film}
                   />
                 </Link>
@@ -262,11 +250,24 @@ export default function Movies() {
                     </h4>
                   </div>
                   <h4 className="tidochsalongtitle">
-                    Genre: {getMovies(display.film, "genre").replace(/,/g, ', ')}
+                    Genre: {getMovies(display.film, "genre")}
                   </h4>
-                  <button onClick={ () => toTicket(display,getMovies(display.film, "path"))} className="moviebtnsitplatser_small tidochsalongtitle">
+                  <Link
+                    to={"/ticket/" + getMovies(display.film, "path") }
+                    state={{
+                      from: [
+                        display.auditorium,
+                        display.film,
+                        display.date,
+                        display.time,
+                        display.id,
+                      ],
+                    }}
+                  >
+                    <button className="moviebtnsitplatser_small tidochsalongtitle">
                       Välj sittplatser
                     </button>
+                  </Link>
                 </div>
               </div>
             </>

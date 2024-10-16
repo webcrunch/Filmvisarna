@@ -17,10 +17,7 @@ export default function Home() {
 
   return <div className="home-page-container">
 
-      <div className="top-title">
-           <h1 className='flexp'>Aktuella filmer på bio</h1>
-    </div>
-    
+    <h1 className='flexp'>Aktuella filmer på bio</h1>
       <div className="flex-container">
           {movies.map(movie =>
             <>
@@ -37,6 +34,7 @@ export default function Home() {
 
     <div className="under-home-container">   
     <div className='undertopcontainer>'>
+      
         <p className='undertext'>
             Förutom våra vanliga filmvisningar har vi också en fullt licensierad bar och försäljningsstånd
             där du kan njuta av en dryck eller en måltid före, under eller efter filmen. 
@@ -47,11 +45,11 @@ export default function Home() {
     </div>
 
     <div className="snack-container">
-        <a className="snacklink" href="about">
-            <img className="snackimage1" src="/images/cinemasnack1.png"></img>
+        <a className="snacklink" href="/about">
+            <img className="snackimage1" src="images/cinemasnack1.png"></img>
        </a>
-        <a className="snacklink" href="about">
-            <img className="snackimage2" src="/images/cinemasnack2.png"></img>
+        <a className="snacklink" href="/about">
+            <img className="snackimage2" src="images/cinemasnack2.png"></img>
        </a>
     </div>
     </div>  

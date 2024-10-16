@@ -12,7 +12,7 @@ export default function About() {
     return <>
         <div className="OmOss">
             <h2>Om Oss</h2>
-            <img src="images/Om.jpg" alt="Here will be a image" />
+            <img src={"images/Om.jpg"} alt="Here will be a image" />
         </div>
 
         <div className="varumarkeslofte">
@@ -35,7 +35,7 @@ export default function About() {
 
         <div className="telefon">
             <p>Vår biosalong kan hittas på denna adress Stortorget 11, 124 84 Småstad, Sverige, behöver du kontakta oss kan du ringa telefonnumret
-            <a href="tel:+4733378901" className="contactLink"> Telefon: (073) 337 89 01 </a> eller skicka ett email till <a href="info@filmvisarna.com" className="contactLink"> info@filmvisarna.com</a>. Biografen öppnar alltid 30 minuter innan första föreställning.
+                (073) 337 89 01 eller skicka ett email till info@filmvisarna.com. Biografen öppnar alltid 30 minuter innan första föreställning.
                 Öppettiderna kan ändras vid specialevenemang, helgdagar eller skollov.</p>
         </div>
 
