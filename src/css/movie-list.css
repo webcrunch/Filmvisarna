@@ -171,6 +171,11 @@ p{
 
   .card:hover {
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+   
+  }
+
+  button.moviebtnsitplatser_small.tidochsalongtitle:hover{
+    margin-left: 0%;
   }
 
   .card img {
