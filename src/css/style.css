@@ -157,7 +157,7 @@ nav img:hover {
   footer {
     display: flex;
     
-    flex-direction: column;
+    flex-direction: row;
    
     justify-content: center;
     background-color: #1a1a1a;
@@ -173,12 +173,12 @@ nav img:hover {
   }
   
   .footer{
-    width: 10%;
-    
+    width: 100%;
+    text-align: center;
     font-size: clamp(1vh,1.5vh,2vh);
     padding: 0;
     margin: 0;
-   background-color: blue;
+   
   }
   
   footer img{
