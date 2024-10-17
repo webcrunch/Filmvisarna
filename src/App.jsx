@@ -20,6 +20,7 @@ import DetailedInfo from './pages/DetailedInfo.jsx';
 import TicketPage from './pages/Ticket.jsx';
 import RegisterPage from './pages/register.jsx';
 import LoginPage from './pages/login.jsx';
+import Listing from './pages/Listings.jsx';
 // A React component is a function
 // it will run every time a state variable changes
 // thus rerendering the content you see in your Browser
@@ -38,8 +39,11 @@ export default function App() {
   }
 
 
-  useStates('user', {
-    loggedin: false
+  let a = useStates('user', {
+    loggedin: false,
+    name: null,
+    id: null,
+    users: []
   })
 
   let s = useStates('main', {
@@ -47,25 +51,29 @@ export default function App() {
     menu: [
       { label: 'HEM', path: '/', Component: Home },
       { label: 'FILMER', path: '/movies', Component: Movies },
-      { label: 'OM OSS ', path: '/about', Component: About },
+      { label: 'OM OSS ', path: '/about', Component: About }, //, Component:
       { label: 'KONTAKT', path: '/contact', Component: Contact },
       { path: '/movie/:moviePath', Component: DetailedInfo },
       { path: '/auth', Component: RegisterPage },
       { path: '/authentication', Component: LoginPage },
-      { path: '/ticket/:moviePath', Component: TicketPage },
-      { path: '/done/:bookingId', Component: Booked }
+      { path: '/ticket/:screeningInfo', Component: TicketPage },
+      { path: '/done/:bookingInfo', Component: Booked },
+      { path: '/yourlist', Component: Listing}
     ],
     screenings: [],
-    saloons: []
+    saloons: [],
+    bokings: []
   });
 
   /* Runs when the component App loads */
   useEffect(() => {
     // Load animal data from /json/niceAnimals.json
     (async () => {
-      s.screenings = await (await fetch('./json/screening.json')).json();
-      s.saloons = await (await fetch('./json/saloons.json')).json();
-      let movies = await (await fetch('./json/movies.json')).json();
+      s.screenings = await (await fetch('/api/screenings')).json();
+      s.saloons = await (await fetch('/api/saloons')).json();
+      a.users = await (await fetch('/api/users')).json();
+      s.bookings = await (await fetch('/api/bookings_informations')).json();
+      let movies = await (await fetch('/api/movies')).json();
       for (let movie of movies) {
         movie.path = kebabify(movie.title)
       }
