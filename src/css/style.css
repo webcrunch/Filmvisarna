@@ -935,6 +935,21 @@ div .topcontainerimagediv {
   scale: 0.8;
 }
 
+div.tv-screen{
+  height: 105%;
+  animation: 2s screen-open forwards;
+}
+div.tv-screen:hover{
+  height: 105%;
+}
+@keyframes screen-open {
+  from{
+    width: 0;
+  }to{
+    width: 140%;
+  }
+}
+
 div.seat-selector-container{
 display: flex;
 flex-direction: column;
