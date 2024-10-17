@@ -1,63 +1,101 @@
 import { useStates } from "../utilities/states";
 import copyContent from '../utilities/copyFunction';
-import { calculatingTime } from '../utilities/length-calculating';
-import { useEffect } from 'react';
+import { useEffect, useState } from "react";
 import { useParams } from 'react-router-dom';
+import { get, post, del } from '../utilities/backend-talk';
 
-import generate from "../utilities/random-order-confirmation"
 export default function Booked() {
-    const { bookingId } = useParams();
-    const { movies, screenings } = useStates('main');
-    const l = useStates({
-        movie: null,
-        screning: null
+    const user = useStates('user');
+    const l = useStates('main');
+    let { bookingInfo } = useParams(); 
+    const [data, setData] = useState(null)
+    let save = useStates({
+        bookedArray:[],
+        id: null
     });
+    let movie = null;
+    let placesArray = [];
+    
+    let screening = null;
+    if(data != undefined){
+        for (const [key, value] of Object.entries(data.markedChairs)) {
+            let row = key.split(" ")[0];
+            let chair = key.split(" ")[1];
+            placesArray.push({ row: row, chair: chair })
+            placesArray.sort();
+        }
+    }
+    const handleChairsToSave = async () => {
+        
+        for (let i = 0; i < data.screeningsData.occupiedSeats.length; i++){
+            save.bookedArray.push([...data.markedChairsArray[i], ...data.screeningsData.occupiedSeats[i]].sort());
+        }
+        let bookingbj = {
+            id: user.id,
+            booking: {
+                id: data.screeningsData.id,
+                price: data.totalPrice,
+                code: data.confnr
+            }
+        }
+        let result = await post('/api/book', save);
+        if (JSON.stringify(l.screenings) === JSON.stringify(result.data)) {
+            return;
+        }
+        if (user.loggedin) {
+            let resp = await post('/api/userbooking', bookingbj);
+        } 
+        l.screenings = result.data;
+        l.bookings = await get('/api/bookings_informations');
+        // how to add it to the useastates??
+    }
+
+    useEffect( () => {
+        data != undefined ? save.id = data.screeningsData.id: null;
+        data != undefined ? handleChairsToSave(): null;
+        data != undefined ? movie = l.movies.find(movie => movie.path === data.movie): null;
+    }, [data])
 
     useEffect(() => {
-        l.movie = movies.find(movie => movie.path === bookingId);
-        l.screning = l.movie ? screenings.find(screen => screen.film === l.movie.title) : null;
+        (async () => {
+            await get(`/api/bookings_information/${bookingInfo}`).then((response) => setData(response)) 
+          })();
         document.body.classList.add("bookingPage");
         return () => document.body.classList.remove("bookingPage");
     }, []);
-
-
-    let of = {
-        phoneNumber: 333333,
-        numberOfChildren: 0,
-        numberOfAdults: 4,
-        numberOfSeniors: 2,
-        totalPris: 140,
-        confirmationNumber: generate(),
-        calculateAll() {
-            return this.numberOfAdults + this.numberOfChildren + this.numberOfSeniors
-        }
-    }
-
-    return <div className="confirmation-container">
-        {l.movie && l.screning ?
+    
+    return data && (
+        <div className="confirmation-container">
             < div className="doneA" >
                 <div className="information">
                     <h2>Tack för din bokning:</h2>
                     <h2>Viktig information:</h2>
-                    <h3>{l.movie.title}!</h3>
-
-                    <p>{l.screning.auditorium}</p>
-                    <p>{l.screning.date}</p>
-                    <p>{l.screning.time}</p>
-                    <p>{of.totalPris}kr</p>
+                    <h3>{data.title}</h3>
+                    <p>{data.screeningsData.auditorium}</p>
+                    <p>{data.screeningsData.date}</p>
+                    <p>{data.screeningsData.time}</p>
+                    <p>{data.totalPrice}kr</p>
                     <ul>
-                        <li>Barn biljetter: {of.numberOfChildren} st</li>
-                        <li>Vuxen biljetter: {of.numberOfAdults} st</li>
-                        <li>pensionär biljetter: {of.numberOfSeniors} st</li>
+                        <li>Biljetter:</li>
+                        <li>Barn: {data.numberofChildren} st</li>
+                        <li>Vuxen: {data.numberofAdults} st</li>
+                        <li>Pensionär: {data.numberofSenior} st</li>
                     </ul>
-                    <p>Total antal platser/biljetter: {of.calculateAll()} st</p>
-
-                    <h3>Boknings information:</h3>
-                    <p>Glöm inte att ta med bokningsnummret till biografen: <b>{of.confirmationNumber}</b> <button type="button" onClick={() => copyContent(of.confirmationNumber)}>Kopiera bokningsnummret</button></p>
+                    <p>Total antal platser/biljetter: {data.totalSeats} st</p>
+                    <p>Platser:</p>
+                    {
+                        placesArray.map(place => <p>Rad:{place.row} Stolrad: {place.chair}</p>)
+                    }
+                    <h3>Bokningsinformation:</h3>
+                    <p>Glöm inte att ta med bokningsnummret till biografen: <b>{data.confnr}</b> <button type="button" onClick={() => copyContent(data.confnr)}>Kopiera bokningsnummret</button></p>
                 </div>
                 <img src="/images/bookingpage.jpg" alt="Here will be a image" />
-            </div > : null}
+            </div >
+        </div >
+    )
 
-    </div>
+
+
+
 }
 
