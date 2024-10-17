@@ -210,9 +210,13 @@ export default function TicketPage() {
             -
           </button>
         </div>
-        <p className="total-price-css" id="total-price">
-          Total Pris: {clickerss.totalPrice}Kr
-        </p>
+            <div className="ticket-price-container">
+            <p className="total-price-css" id="total-price">
+              Total Pris: {clickerss.totalPrice}Kr
+            </p>
+            </div>
+    
+
       </div>
       <div className="seat-option-container">
         <ul className="ul-seat">
