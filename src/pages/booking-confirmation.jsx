@@ -13,9 +13,12 @@ export default function Booked() {
         bookedArray:[],
         id: null
     });
+
+     let movieName = useStates({
+        movieTitle:null
+    });
     let movie = null;
     let placesArray = [];
-    
     let screening = null;
     if(data != undefined){
         for (const [key, value] of Object.entries(data.markedChairs)) {
@@ -50,10 +53,12 @@ export default function Booked() {
         // how to add it to the useastates??
     }
 
-    useEffect( () => {
+    useEffect(() => {
         data != undefined ? save.id = data.screeningsData.id: null;
         data != undefined ? handleChairsToSave(): null;
-        data != undefined ? movie = l.movies.find(movie => movie.path === data.movie): null;
+        data != undefined ? movie = l.movies.find(movie => movie.path === data.movie)["title"] : null;
+        data != undefined ? movieName.movieTitle = l.movies.find(movie => movie.path === data.movie)["title"] : null;
+        console.log(movieName.movieTitle)
     }, [data])
 
     useEffect(() => {
@@ -70,11 +75,11 @@ export default function Booked() {
                 <div className="information">
                     <h2>Tack för din bokning:</h2>
                     <h2>Viktig information:</h2>
-                    <h3>{data.title}</h3>
-                    <p>{data.screeningsData.auditorium}</p>
-                    <p>{data.screeningsData.date}</p>
-                    <p>{data.screeningsData.time}</p>
-                    <p>{data.totalPrice}kr</p>
+                    <h3>Film: {movieName.movieTitle}</h3>
+                    <p>Sal: {data.screeningsData.auditorium}</p>
+                    <p>Datum:{data.screeningsData.date}</p>
+                    <p>Tid:{data.screeningsData.time}</p>
+                    <p>Pris:{data.totalPrice}kr</p>
                     <ul>
                         <li>Biljetter:</li>
                         <li>Barn: {data.numberofChildren} st</li>
