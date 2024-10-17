@@ -153,14 +153,73 @@ nav img:hover {
   filter: invert(100%);
 }
 
-@media screen and (max-width: 767px) {
-  .navlinks {
-    display: none;
+@media (max-width: 767px) {
+  footer {
+    display: flex;
+    
+    flex-direction: column;
+   
+    justify-content: center;
+    background-color: #1a1a1a;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    padding: 0;
+    margin: 0;
+    /*changed from 10% to 0. */
+    position: relative;
+  bottom: 0;
+
+    width: 100%;
+  }
+  
+  .footer{
+    width: 10%;
+    
+    font-size: clamp(1vh,1.5vh,2vh);
+    padding: 0;
+    margin: 0;
+   background-color: blue;
+  }
+  
+  footer img{
+    scale: 0.8;
   }
 
 
+
+ /*------FOOTER MEDIA QUERIES ENDS HERE-------------------------- */
+/*-------NAV MEDIA QUERIES STARTS HERE--------------------------*/
+  nav{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 85%;
+    padding: 0%;
+    margin: 0;
+    overflow: hidden;
+  }
+
+  a.navlinks{
+    font-size: clamp(2vh,3vh,4vh);
+    width: 100%;
+    margin: 1vh;
+    padding: 0%;
+    font-weight: 300;
+    text-align: center;
+  }
+
   nav img {
     display: none;
+  }
+
+  img.img{
+    border: solid 1px ;
+  
+    height: 40%;
+    position: absolute;
+   right: 0;
   }
 }
 
@@ -747,13 +806,13 @@ div .topcontainerimagediv {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-
+    overflow: none;
   }
 
  
 
   div#ticket-pricing.ticket-container{
-    
+    overflow: hidden;
     border-radius: 0;
     
     width: 100%;
@@ -793,7 +852,7 @@ div .topcontainerimagediv {
   height:50% ;
   padding: 0%;
   margin: 0%;
- 
+
 
   }
 
@@ -844,13 +903,12 @@ div .topcontainerimagediv {
 
     width: 100%;
     display: flex;
-    position: relative;
+    
     box-shadow: 0 0 0 0;
   }
 
   ul.ul-seat{
-    width: 100%;
-    background-color: red;
+    width: 70%;
     padding: 0%;
     border-radius: 0%;
     box-shadow: 0 0 0 0;
@@ -858,7 +916,7 @@ div .topcontainerimagediv {
 
   li.li-avaliable,li.li-selected,li.li-sold{
     width: 100%;
-    border-radius: 0%;
+    border-radius: 4%;
     box-shadow: 0 0 0 0;
     margin: 0;
     padding: 0;
@@ -877,17 +935,15 @@ div .topcontainerimagediv {
   scale: 0.8;
 }
 
-
-
 div.seat-selector-container{
 display: flex;
 flex-direction: column;
   position: relative;
- 
+
   width: 100%;
   margin: 0;
   padding: 0;
-  scale: 1;
+
  
 }
 
@@ -904,9 +960,20 @@ p.total-seats{
 div.row{
   display: flex;
   flex-direction: row;
-  width: 100%;
-  scale: 0.7;
+  width: 90%;
+  scale: 1;
+  
 }
+
+div.seat, div.seat-sold{
+  display: flex;
+ flex-direction: row;
+  position: relative;
+   width: 100%;
+  
+ 
+ }
+
 }
 
 /* Standard laptop screens (Full HD) */
@@ -926,6 +993,7 @@ body.ticketPage {
   justify-content: center;
   align-items: center;
   width: 100%;
+
 }
 
 #ticket-pricing {
