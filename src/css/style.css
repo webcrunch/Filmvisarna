@@ -153,6 +153,10 @@ nav img:hover {
   filter: invert(100%);
 }
 
+.hamburger, img.img{
+  display: none;
+}
+
 @media (max-width: 767px) {
   footer {
     display: flex;
