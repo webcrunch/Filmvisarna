@@ -243,7 +243,7 @@ input:checked ~ img.img{
 }
 
   img.img{
-    border: #000000 1px solid;
+    
     filter: invert(0%);
  
     position: absolute;
