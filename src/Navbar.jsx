@@ -13,12 +13,23 @@ export default function Navbar() {
     }
     return <>
       <input className='hamburger' type="checkbox" />
+    
       <nav>
-      {s.menu.map(({ label, path }) =>
+      <span></span>
+      <span></span>
+        <div className="nav-links-container">
+        {s.menu.map(({ label, path }) =>
+                label ? <NavLink className="navlinks" to={path}>{label}</NavLink> : null
+            )}
+       
+        </div>
+        
+
+ {/*      {s.menu.map(({ label, path }) =>
                 label ? <NavLink className="navlinks" to={path}>{label}</NavLink> : null
             )}
             <img className='img' onClick={() => l.opened = !l.opened} src="./images/hamburger.svg" alt="Login" />
-      
+       */}
           
         
      

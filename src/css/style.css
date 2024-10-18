@@ -157,6 +157,15 @@ nav img:hover {
   display: none;
 }
 
+span{
+  width: 40px;
+ 
+  padding: 0.2%;
+  margin-top: 3%;
+  background-color: white;
+
+}
+
 @media (max-width: 767px) {
   footer {
     display: flex;
@@ -194,89 +203,97 @@ nav img:hover {
  /*------FOOTER MEDIA QUERIES ENDS HERE-------------------------- */
 /*-------NAV MEDIA QUERIES STARTS HERE--------------------------*/
 nav{
+  display: flex;
+  flex-direction: column;
  width: 100%;
-  height: 10vh;
-  z-index: 1;
+  height: 3rem;
+  z-index: 3;
+}
+
+ 
+
+
+.hamburger{
+  display: flex;
+  position: absolute;
+  width: 10%;
+  height: 6%;
+  top: 1%;
+ right: 7%;
+  z-index: 5;
+  opacity:0;
+
 }
 
  .hamburger:checked ~ nav{
+  position: relative;
   display: flex;
-  flex-direction:column;
-  
-   
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    height: 100%;
-   
-    padding: 0%;
-    margin: 0%;
-    z-index: 0;
-
-    z-index: 2;
-    opacity: 1;
+  z-index: 3;
  
-   
+ width: 100%;
+ padding: 5%;
+ height: 100%;
+ background-color: #00a2ff;
+ transition: 0.2s ease-in;
   } 
 
-
-  .hamburger{
-    position: absolute;
-    width: 10%;
-    height: 10%;
-    top: 1%;
-    right: 5%;
-    z-index: 3;
-    opacity: 0;
- 
+  span{
+    position: relative;
+    left: 83%;
+    width: 2rem;
+    height: 1px;
+    padding: 1px;
+    margin: 1%;
+    background-color: white;
+    z-index: 5;
   }
+
+
   .hamburger:checked{
-    position: absolute;
-    width: 10%;
-    height: 11%;
-    top: 33%;
-    right: 5%;
-    z-index: 3;
-    opacity: 0;
- 
-  }
-
-  
-input:checked ~ img.img{
-  top: -40%;
-}
-
-  img.img{
-    
-    filter: invert(0%);
- 
-    position: absolute;
-    width: 10%;
    
-    top: 40%;
-    right: 5%;
-    z-index: 2;
+    opacity: 0;
+    z-index: 5;
+ 
   }
 
-  
+  input.hamburger:checked ~ nav span{
+    position: relative;
+    left: 86%;
+    width: 2rem;
+    height: 1px;
+    padding: 1px;
+    bottom: 0px;
+    margin: 4px;
+    background-color: white;
+    z-index: 5;
+    transition: 0.4s ease-in-out;
+  }
+
+  .hamburger:checked ~  nav span:nth-child(1){
+    transform: rotate(45deg);
+  }
+  .hamburger:checked ~  nav span:nth-child(2){
+    transform: rotate(-45deg) translateY(-7px) translateX(7px);
+  }
 
  a.navlinks{
   width: 100%;
-  font-size: 1vh;
- display: none;
+  display: none;
   }
 
   .hamburger:checked ~ nav a.navlinks{
-    position: relative;
-    top: 100%;
+    display:flex;
+  
+    
     width: 100%;
-    height: auto;
-    font-size: 2.2rem;
+  
+    font-size: 1.2rem;
     font-weight: 300;
-     background-color: rgb(0, 0, 0);
+    background-color: #00a2ff;
      opacity: 0.99;
      color: white;
-   display: block;
+  
+  z-index: 5;
   
   }
 
@@ -566,6 +583,9 @@ div .topcontainerimagediv {
 
   h1.flexp{
     font-size: clamp(1vh, 2.5vh, 4vh);
+    font-weight: 300;
+    color: rgb(255, 255, 255);
+
   }
 
   .topcontainerimagediv {
