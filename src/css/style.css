@@ -189,38 +189,96 @@ nav img:hover {
 
  /*------FOOTER MEDIA QUERIES ENDS HERE-------------------------- */
 /*-------NAV MEDIA QUERIES STARTS HERE--------------------------*/
-  nav{
-    display: grid;
-    grid-template-columns: auto auto auto auto;
+nav{
+ width: 100%;
+  height: 10vh;
+  z-index: 1;
+}
+
+ .hamburger:checked ~ nav{
+  display: flex;
+  flex-direction:column;
+  
+   
     align-items: center;
     justify-content: center;
     position: relative;
-    width: 100%;
+    height: 100%;
+   
     padding: 0%;
-    margin: 0;
-    overflow: hidden;
+    margin: 0%;
+    z-index: 0;
+
+    z-index: 2;
+    opacity: 1;
+ 
+   
+  } 
+
+
+  .hamburger{
+    position: absolute;
+    width: 10%;
+    height: 10%;
+    top: 1%;
+    right: 5%;
+    z-index: 3;
+    opacity: 0;
+ 
+  }
+  .hamburger:checked{
+    position: absolute;
+    width: 10%;
+    height: 11%;
+    top: 33%;
+    right: 5%;
+    z-index: 3;
+    opacity: 0;
+ 
   }
 
-  a.navlinks{
-    font-size: clamp(2vh,3vh,4vh);
-    width: 100%;
-    margin: 1vh;
-    padding: 0%;
-    font-weight: 300;
-    text-align: center;
-  }
-
-  nav img {
-    display: none;
-  }
+  
+input:checked ~ img.img{
+  top: -40%;
+}
 
   img.img{
-    border: solid 1px ;
-  
-    height: 40%;
+    border: #000000 1px solid;
+    filter: invert(0%);
+ 
     position: absolute;
-   right: 0;
+    width: 10%;
+   
+    top: 40%;
+    right: 5%;
+    z-index: 2;
   }
+
+  
+
+ a.navlinks{
+  width: 100%;
+  font-size: 1vh;
+ display: none;
+  }
+
+  .hamburger:checked ~ nav a.navlinks{
+    position: relative;
+    top: 100%;
+    width: 100%;
+    height: auto;
+    font-size: 2.2rem;
+    font-weight: 300;
+     background-color: rgb(0, 0, 0);
+     opacity: 0.99;
+     color: white;
+   display: block;
+  
+  }
+
+ 
+
+
 }
 
 /* __________________________ */

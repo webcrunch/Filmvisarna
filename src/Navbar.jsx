@@ -12,11 +12,16 @@ export default function Navbar() {
         // will have some nice api call here
     }
     return <>
-        <nav>
-            {s.menu.map(({ label, path }) =>
+      <input className='hamburger' type="checkbox" />
+      <nav>
+      {s.menu.map(({ label, path }) =>
                 label ? <NavLink className="navlinks" to={path}>{label}</NavLink> : null
             )}
-            <img className='img' onClick={() => l.opened = !l.opened} src="./images/icon-login.svg" alt="Login" />
+            <img className='img' onClick={() => l.opened = !l.opened} src="./images/hamburger.svg" alt="Login" />
+      
+          
+        
+     
             {/* <p>Välkommen tillbaka ....</p> */}
             <div className={"boxContent " + (l.opened ? 'shown' : 'hidden')}>
                 <div>
