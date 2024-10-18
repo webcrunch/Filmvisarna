@@ -946,7 +946,7 @@ div.tv-screen:hover{
   from{
     width: 0;
   }to{
-    width: 140%;
+    width: 105%;
   }
 }
 
@@ -976,7 +976,7 @@ div.row{
   display: flex;
   flex-direction: row;
   width: 90%;
-  scale: 1;
+  scale: 0.8;
   
 }
 
@@ -984,7 +984,8 @@ div.seat, div.seat-sold{
   display: flex;
  flex-direction: row;
   position: relative;
-   width: 100%;
+   width: 2.5vh;
+   height: 3.5vh;
   
  
  }
