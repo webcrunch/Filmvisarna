@@ -11,11 +11,11 @@ import {
 
 import Navbar from './Navbar';
 import Footer from './Footer';
-import Home from './pages/home.jsx';
-import Contact from './pages/contact.jsx';
-import About from './pages/about.jsx';
-import Movies from './pages/movies.jsx';
-import Booked from './pages/booking-confirmation.jsx';
+import Home from './pages/Home.jsx';
+import Contact from './pages/Contact.jsx';
+import About from './pages/About.jsx';
+import Movies from './pages/Movies.jsx';
+import Booked from './pages/BookingConfirmation.jsx';
 import DetailedInfo from './pages/DetailedInfo.jsx';
 import TicketPage from './pages/Ticket.jsx';
 import RegisterPage from './pages/register.jsx';
