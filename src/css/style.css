@@ -940,6 +940,219 @@ div .topcontainerimagediv {
 
   div.ticket-price-container{
   display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+    width: 100%;
+   margin: 0%;
+   padding: 0;
+    border: none;
+    border-radius: none;
+    
+  }
+  
+
+  p#total-price.total-price-css {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    width: 100%;
+    margin: 1vh;
+    padding: 2%;
+  }
+  
+  
+  
+  input.quantity {
+    width: 10%;
+    text-align: center;
+  
+  }
+  
+  button.add-ticket, button.remove-ticket {
+    width: 10%;
+    margin: 1%;
+    border-radius: 2px;
+    border: none;
+    background-color: #00a2ff;
+    color: white;
+    cursor: pointer;
+  }
+
+
+  div.seat-option-container{
+
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 0 0;
+    margin-bottom: 2%;
+  }
+
+  ul.ul-seat{
+    width: 100%;
+    padding: 0%;
+    border-radius: 0%;
+    box-shadow: 0 0 0 0;
+  }
+
+  li.li-avaliable,li.li-selected,li.li-sold{
+    width: 1rem;
+    border-radius: 4%;
+    box-shadow: 0 0 0 0;
+    margin: 0;
+    padding: 0;
+    
+  }
+
+  div.tv-section{
+    width: 100%;
+    height: 32vh;
+    padding: 0;
+  }
+.tv-outer-red{
+  position: absolute;
+  width: 100%;
+  margin-top: -6vh;
+  scale: 0.8;
+}
+
+div.tv-screen{
+  height: 105%;
+  animation: 2s screen-open forwards;
+}
+div.tv-screen:hover{
+  height: 105%;
+}
+@keyframes screen-open {
+  from{
+    width: 0;
+  }to{
+    width: 105%;
+  }
+}
+
+div.seat-selector-container{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  width: 1rem;
+  margin: 0;
+  padding: 0;
+
+ 
+}
+
+p.total-seats{
+  display: flex;
+  position: absolute;
+  top: -4%;
+  flex-direction: column;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+
+}
+div.row{
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  scale: 0.8;
+  
+}
+
+div.seat, div.seat-sold{
+  display: flex;
+ flex-direction: row;
+  position: relative;
+   width: 2.5vh;
+   height: 3.5vh;
+  
+ 
+ }
+
+}
+
+/* Standard laptop screens (Full HD) */
+@media (min-width: 1367px) and (max-width: 1920px) {
+  /* Styles for screens between 1366 and 1920 pixels wide */
+}
+
+/*---------TICKET PAGE MEDIA QUERIES END--------------------*/
+/*-----------------TICKET PAGE STARTS HERE----------------------------------------------------*/
+
+
+/*---------TICKET PAGE MEDIA QUERIES STARTS HERE--------------------*/
+
+/*PHONE */
+@media (min-width:0px) and (max-width: 500px) {
+  
+  div.full-ticket-page{
+    background-color: rgb(23, 23, 23);
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    overflow: none;
+  }
+
+ 
+
+  div#ticket-pricing.ticket-container{
+    overflow: hidden;
+    border-radius: 0;
+    
+    width: 100%;
+    
+    display: flex;
+    flex-direction: column;
+  
+    border-top: rgb(59, 59, 59) 2px solid;
+   margin: 0;
+   padding: 0;
+   
+  }
+
+  
+  div#ticket-pricing.ticket-container h3{
+    font-size: clamp(1vh, 2vh, 2.5vh);
+    
+    width: 20%;
+    text-align: left;
+   
+  }
+
+  p.price-tag-name{
+    font-size: clamp(1vh, 2vh, 2.5vh);
+   
+  }
+  
+  div.ticket-option1, div.ticket-option2, div.ticket-option3{
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    display: flex;
+   flex-direction: row;
+    background-color: #1a1a1a;
+    border-radius: 0%;
+  width: 100%;
+  height:50% ;
+  padding: 0%;
+  margin: 0%;
+
+
+  }
+
+  div.ticket-price-container{
+  display: flex;
   align-items: center;
   justify-content: center;
   text-align: left;
@@ -1198,13 +1411,12 @@ body.ticketPage {
 .ul-seat {
   box-sizing: border-box;
   color: white;
-  justify-content: center;
-  text-align: center;
   display: flex;
-  justify-content: space-around;
-  padding-left: 33.3333%;
-  padding-right: 33.3333%;
-
+ 
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;
+  width: 100%;
 }
 
 .bokabtnbiljett {
@@ -1231,13 +1443,33 @@ body.ticketPage {
   color: black;
   box-shadow: 0px 0px 3px 0px #000000;
   
-  width: 30%;
+  width: 100%;
   border-radius: 10px;
-}
-.li-selected{
-  color: white;
+ 
 }
 
+
+.li-available{
+  background-color: rgb(114, 114, 114);
+  padding: 0%;
+  color: white;
+  width: 100%;
+  border-radius: 10px;
+  margin: 1%;
+}
+
+.li-selected {
+  background-color: rgb(29, 109, 29);
+  padding: 0%;
+  color: white;
+  margin: 1%;
+}
+
+.li-sold {
+  background-color: #474747;
+  color: white;
+  margin: 1%;
+}
 
 .seat-option-container {
   border-style: none;
@@ -1330,13 +1562,15 @@ margin-bottom:30px; */
 
 
 .seat-selector-container {
+  display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   display: -moz-inline-grid;
   display: -ms-inline-grid;
-  height: 400px;
-  margin-right: 20px;
-
+ 
+padding: 2%;
+border: solid 2px red;
 }
 
 .row {
@@ -1348,102 +1582,12 @@ margin-bottom:30px; */
   position: relative;
 }
 
-.row1 {
-  align-items: center;
-  align-content: center;
-  align-self: center;
-  width: 100%;
-  position: relative;
-  left: 41%;
-}
-
-.row2 {
-  align-items: center;
-  align-content: center;
-  align-self: center;
-  margin-bottom: 10px;
-  width: 100%;
-  position: relative;
-  left: 41%;
-}
-
-.row3 {
-  align-items: center;
-  align-content: center;
-  align-self: center;
-  width: 100%;
-  position: relative;
-  left: 41%;
-}
-
-.row4 {
-  align-items: center;
-  align-content: center;
-  align-self: center;
-  width: 100%;
-  position: relative;
-  left: 41%;
-}
-
-.row5 {
-  align-items: center;
-  align-content: center;
-  align-self: center;
-  margin-bottom: 10px;
-  width: 100%;
-  position: relative;
-  left: 41%;
-}
-
-.row6 {
-  align-items: center;
-  align-content: center;
-  align-self: center;
-  width: 100%;
-  position: relative;
-  left: 41%;
-}
-
-.row7 {
-  align-items: center;
-  align-content: center;
-  align-self: center;
-  width: 100%;
-  position: relative;
-  left: 41%;
-}
-
-.row8 {
-  align-items: center;
-  align-content: center;
-  align-self: center;
-  width: 100%;
-  left: 41%;
-  position: relative;
-}
-
-.row9 {
-  align-items: center;
-  align-content: center;
-  align-self: center;
-  width: 100%;
-  position: relative;
-  left: 41%;
-}
-
-.row10 {
-  align-items: center;
-  align-content: center;
-  align-self: center;
-  width: 100%;
-  position: relative;
-  left: 41%;
-}
 
 .seat-marked {
   position: relative;
   display: inline-block;
   background-color: rgb(2, 159, 2);
+  border: solid 1px black;
   box-shadow: rgb(0, 0, 0) 100px, 100px, 900px, 90px;
   width: 30px;
   height: 27px;
@@ -1494,14 +1638,6 @@ margin-bottom:30px; */
 }
 
 
-.li-selected {
-  background-color: rgb(2, 159, 2);
-}
-
-.li-sold {
-  background-color: #474747;
-  color: white;
-}
 
 
 
@@ -1768,6 +1904,9 @@ body.bookingPage {
   margin-bottom: 30px;
   text-align: center;
   box-sizing: border-box;
+  font-size: clamp(1.5rem, 1.5rem, 3rem);
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 

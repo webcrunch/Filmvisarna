@@ -12,32 +12,16 @@ export default function Navbar() {
         // will have some nice api call here
     }
     return <>
-      <input className='hamburger' type="checkbox" />
-    
-      <nav>
-      <span></span>
-      <span></span>
-        <div className="nav-links-container">
-        {s.menu.map(({ label, path }) =>
+        <nav>
+            {s.menu.map(({ label, path }) =>
                 label ? <NavLink className="navlinks" to={path}>{label}</NavLink> : null
             )}
-       
-        </div>
-        
-
- {/*      {s.menu.map(({ label, path }) =>
-                label ? <NavLink className="navlinks" to={path}>{label}</NavLink> : null
-            )}
-            <img className='img' onClick={() => l.opened = !l.opened} src="./images/hamburger.svg" alt="Login" />
-       */}
-          
-        
-     
+            <img className='img' onClick={() => l.opened = !l.opened} src="/images/icon-login.svg" alt="Login" />
             {/* <p>Välkommen tillbaka ....</p> */}
             <div className={"boxContent " + (l.opened ? 'shown' : 'hidden')}>
                 <div>
-                    <p>{open.loggedin ? <Link onClick={() => logout()} to={"#"}><img src={"./images/icons8-log-out-25.png"} alt={""} />Log out</Link> : <Link to={"/authentication"}><img src={"./images/icons8-log-in-25.png"} alt={""} />Log in</Link>}</p>
-                    <p><Link to={"/auth"}><img src={"./images/icons8-add-user-male-24.png"} alt={""} />  Registrera sig </Link></p>
+                    <p>{open.loggedin ? <Link onClick={() => logout()} to={"#"}><img src={"/images/icons8-log-out-25.png"} alt={""} />Log out</Link> : <Link to={"/authentication"}><img src={"/images/icons8-log-in-25.png"} alt={""} />Log in</Link>}</p>
+                    <p><Link to={"/auth"}><img src={"/images/icons8-add-user-male-24.png"} alt={""} />  Registrera sig </Link></p>
                 </div>
             </div>
         </nav>
