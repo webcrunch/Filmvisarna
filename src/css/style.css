@@ -1883,6 +1883,11 @@ body.registerPage {
   box-shadow: 0px 60px 300px 35px #000000;
 }
 
+.register_form input {
+  width: 100%;
+  background: white;
+}
+
 .label {
   display: block;
   margin-bottom: 2px;
