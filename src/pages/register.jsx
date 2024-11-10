@@ -1,52 +1,59 @@
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import { useStates } from '../utilities/states';
-export default RegisterPage;
+import { post } from '../utilities/backend-talk';
 
-function RegisterPage(){
-	// const user = useStates('user');
-	const form = useStates({
-		username:"",
-		firstname:"",
-		lastname:"",
-		password:""
-	})
+export default function RegisterPage() {
+    const userNameRef = useRef();
+    const passwordRef = useRef();
+    const firstNameRef = useRef();
+    const lastNameRef = useRef();
+    const user = useStates('user');
 
+    useEffect(() => {
+        document.body.classList.add("registerPage");
+        return () => document.body.classList.remove("registerPage");
+    }, []);
 
-	useEffect(() => {
-		document.body.classList.add("registerPage");
-		return() => document.body.classList.remove("registerPage");
-		
-	}, [] );
+    const handleSubmit = async e => {
+        e.preventDefault();
 
-	function handleSubmit(e){
-		e.preventDefault();
-		console.log(form.username,form.firstname,form.lastname,form.password);
-	}
-
-	return <>
-
-	
-	
+        const body = {
+            id: user.users.users.length + 1,
+            username: userNameRef.current.value,
+            password: passwordRef.current.value,
+            firstname: firstNameRef.current.value,
+            lastname: lastNameRef.current.value,
+            bookings: []
+        };
 
 
-		<div className='register'>
-			<div className='register_form'>
-				<form onSubmit={handleSubmit}>
-					<label className='label'>Username</label>
-					<input type="text" className='username' id="username" name="username" {...form.bind('username')} pattern='[A-Za-z0-9]{7,}' title='Minimum 7 characters required' required />
-					<label className='label'>Password</label>
-					<input className='password' name="password" pattern="[A-Za-z0-9]{8,}" {...form.bind('password')} title='Minimum 8 characters required' required />
-					<label className='label'>Firstname</label>
-					<input className='firstname' type="text" id="firstname" name="firstname" {...form.bind('firstname')} pattern='[A-Za-z0-9]{2,}' title='Minimum 1 characters required' required />
-					<label className='label'>Lastname</label>
-					<input className='lastname' type="text" id="lastname" name="lastname" {...form.bind('lastname')} pattern='[A-Za-z0-9]{2,}' title='Minimum 1 characters required' required />
-					<a href="login.html" className='loginlink'>Already registered? Log In here!</a>
+        const result = await post('/api/register', body);
+		user.users = result.data;
+		window.location.href = '/authentication';
 
-					<button type="submit"> Register </button>
-				</form>
-			</div>
-	</div>
+    }
 
-    </>
-
+    return (
+        <div className='register'>
+            <div className='register_form'>
+       <form onSubmit={handleSubmit}>
+                    <label className='label'>Användarnamn:</label>
+                    <input type="text" ref={userNameRef} className='username' id="username" name="username"  title='Minimum 4 characters required' required />
+                    
+                    <label className='label'>Lösenord:</label>
+                    <input type="password" ref={passwordRef} className='password' name="password"  pattern="[A-Za-z0-9]{8,}" title='Minimum 8 characters required' required />
+                    
+                    <label className='label'>Förnamn:</label>
+                    <input type="text" ref={firstNameRef} className='firstname' id="firstname" name="firstname"  pattern='[A-Za-z0-9]{2,}' title='Minimum 1 character required' required />
+                    
+                    <label className='label'>Efternamn:</label>
+                    <input type="text" ref={lastNameRef} className='lastname' id="lastname" name="lastname"  pattern='[A-Za-z0-9]{2,}' title='Minimum 1 character required' required />
+                    
+                    <a href="login.html" className='loginlink'>Har du redan ett konto? Logga in här!</a>
+                    
+                    <button className="register_button" type="submit"> Skapa konto </button>
+                </form>
+            </div>
+        </div>
+    );
 }
