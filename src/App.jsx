@@ -39,14 +39,14 @@ export default function App() {
   }
 
 
-  let a = useStates('user', {
+  let user = useStates('user', {
     loggedin: false,
     name: null,
     id: null,
     users: []
   })
 
-  let s = useStates('main', {
+  let state = useStates('main', {
     movies: [],
     menu: [
       { label: 'HEM', path: '/', Component: Home },
@@ -69,15 +69,15 @@ export default function App() {
   useEffect(() => {
     // Load animal data from /json/niceAnimals.json
     (async () => {
-      s.screenings = await (await fetch('/api/screenings')).json();
-      s.saloons = await (await fetch('/api/saloons')).json();
-      a.users = await (await fetch('/api/users')).json();
-      s.bookings = await (await fetch('/api/bookings_informations')).json();
+      state.screenings = await (await fetch('/api/screenings')).json();
+      state.saloons = await (await fetch('/api/saloons')).json();
+      user.users = await (await fetch('/api/users')).json();
+      state.bookings = await (await fetch('/api/bookings_informations')).json();
       let movies = await (await fetch('/api/movies')).json();
       for (let movie of movies) {
         movie.path = kebabify(movie.title)
       }
-      s.movies = movies;
+      state.movies = movies;
     })();
   }, []);
 
@@ -88,7 +88,7 @@ export default function App() {
       <Navbar />
       <main>
         <Routes>
-          {s.menu.map(({ path, Component }) => <Route path={path} element={<Component />} />)}
+          {state.menu.map(({ path, Component }) => <Route path={path} element={<Component />} />)}
         </Routes>
       </main>
       <Footer />
