@@ -12,7 +12,7 @@ export default function Navbar() {
         // will have some nice api call here
     }
     return <>
-        <nav>
+        <nav className='navbar'>
             {s.menu.map(({ label, path }) =>
                 label ? <NavLink className="navlinks" to={path}>{label}</NavLink> : null
             )}

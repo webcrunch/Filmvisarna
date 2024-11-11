@@ -432,5 +432,29 @@
     "screen_id": 1,
     "auditorium": "Stora Salongen",
     "moviePath": "a-man-called-otto"
+  },
+  {
+    "id": "QCK383",
+    "screen_id": 1,
+    "auditorium": "Stora Salongen",
+    "moviePath": "a-man-called-otto"
+  },
+  {
+    "id": "WTJ165",
+    "screen_id": 1,
+    "auditorium": "Stora Salongen",
+    "moviePath": "a-man-called-otto"
+  },
+  {
+    "id": "QSE112",
+    "screen_id": 1,
+    "auditorium": "Stora Salongen",
+    "moviePath": "a-man-called-otto"
+  },
+  {
+    "id": "PTN021",
+    "screen_id": 1,
+    "auditorium": "Stora Salongen",
+    "moviePath": "a-man-called-otto"
   }
 ]

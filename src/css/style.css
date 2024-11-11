@@ -4,66 +4,81 @@
 @import url("movie-list.css");
 
 
-* {
+*,html,body {
   box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
+
+
 
 /* Sticky footer */
 
-#root {
-  display: flex;
-  min-height: 100vh;
-  flex-direction: column;
-}
 
-main {
-  flex: 1;
-}
+
+
 
 footer {
   display: flex;
-  justify-content: space-between;
+  align-items: center;
+  justify-content: space-evenly;
   background-color: #1a1a1a;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: white;
-  padding: 20px;
-  margin-top: 0%;
+  padding: 1%;
+ 
   /*changed from 10% to 0. */
-  position: relative;
+  position: absolute;
+  bottom: 0%;
+  width: 100%;
 }
 
-.footerleft,
-.footercenter,
-.footerright {
-  width: 30%;
+footer .footer{
+  width: 100%;
+  text-align: center;
+  font-size: clamp(1vh,1.5vh,2vh);
+  padding: 0;
+  margin: 0;
+}
+
+.footer h3 {
+  text-align: center;
+  font-size: clamp(1vh, 2vh, 2.2vh);
+  font-weight: 500;
+}
+
+.footer p {
   text-align: center;
 }
 
-.footerleft p {
-  text-align: center;
+.footer a {
+  color: rgb(0, 140, 255);
+  text-decoration: none;
 }
 
-.footerright a img {
-  display: inline-block;
-  margin: 5px;
+.footer a img {
+  width: auto;
+  padding: 1%;
 }
 
 .crfooter {
-  margin-left: 4%;
+ margin: 0%;
 }
 
 /* Navbar page start */
 
-nav {
+#root .navbar {
   background-color: #1a1a1a;
   text-decoration: none;
   width: 100%;
-  height: 70px;
+  padding: 0.5%;
   /* padding: 0 200px; */
   display: flex;
   justify-content: center;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  position: relative;
+  position: absolute;
+  top: 0%;
+  
 }
 
 .navlinks {
@@ -71,9 +86,9 @@ nav {
   /* margin: auto; */
   /* padding: -2px; */
   /* text-align: center; */
-  font-size: 1.2em;
+  font-size: clamp(0.5em, 1.2em, 2em);
   font-weight: bold;
-  padding: 30px;
+  padding: 1em;
   text-decoration: none;
   opacity: 0.7;
 }
@@ -114,11 +129,12 @@ nav img:hover {
 }
 
 .boxContent {
-  background-color: #575757;
+  background-color: #213964;
   border: #525252 solid;
   width: 20%;
+  height: auto;
   position: absolute;
-  right: 33px;
+  right: 2%;
   top: 60px;
   /* border-radius: 10%; */
   text-decoration: none;
@@ -130,22 +146,28 @@ nav img:hover {
   margin-bottom: 5px;
   margin-left: 5px;
   /* margin: 10px; */
-  display: none;
+  display: hidden;
 }
 
 .boxContent.shown {
   opacity: 1;
-  transition: opacity 2s;
+  transition: opacity 0.2s;
 }
 
 .boxContent.hidden {
   opacity: 0;
-  transition: opacity 2s;
+  transition: opacity 0.2s;
+}
+
+.boxContent p{
+  color: white;
+  padding: 2%;
+  border: solid 1px black;
 }
 
 .boxContent a {
-  color: black;
-  padding-left: 10px;
+  color: rgb(255, 255, 255);
+  padding:2%;
   text-decoration: none;
 }
 
@@ -154,7 +176,7 @@ nav img:hover {
 }
 
 .hamburger, img.img{
-  display: none;
+ 
 }
 
 span{
@@ -169,9 +191,7 @@ span{
 @media (max-width: 767px) {
   footer {
     display: flex;
-    
     flex-direction: row;
-   
     justify-content: center;
     background-color: #1a1a1a;
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -310,6 +330,16 @@ body {
 
 body.ticketPage {
   background-color: rgb(23, 23, 23);
+  width: 100%;
+}
+
+.ticketPage #root{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
 }
 
 .movieshr {
@@ -1343,9 +1373,9 @@ body.ticketPage {
 
   border-top: rgb(59, 59, 59) 2px solid;
   border-bottom: rgb(59, 59, 59) 2px solid;
-  border-radius: 10%;
+  
   height: 100%;
- 
+ border: none;
   font-weight: 400;
   font-size: clamp(1vh, 1rem, 2vh);
   color: rgb(255, 255, 255);
@@ -1362,6 +1392,9 @@ body.ticketPage {
   text-align: center;
 
   border-radius: 4%;
+  border: solid 1px grey;
+  padding: 2%;
+  color: white;
   width: 8rem;
   height: 100%;
   text-align: center;
@@ -1412,7 +1445,7 @@ body.ticketPage {
   box-sizing: border-box;
   color: white;
   display: flex;
- 
+  padding: 0%;
   justify-content: space-between;
   text-align: center;
   align-items: center;
@@ -1422,19 +1455,20 @@ body.ticketPage {
 .bokabtnbiljett {
   color: black;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  font-weight: bold;
+  font-weight: 300;
+  justify-content: center;
+  width: 50%;
+  height: auto;
 
-  height: 40px;
-
+  margin: 2%;
   border-radius: 10px;
-  background-color: red;
+  background-color: rgb(0, 162, 255);
   cursor: pointer;
 
   box-shadow: inset 0 0 0 0 #ffffff28;
   border-style: none;
   transition: ease-out 0.5s;
-  outline: none;
-  font-size: 2rem;
+  font-size: clamp( 1em, 1.5em, 2em);
 }
 
 .li-avaliable, .li-selected, .li-sold{
@@ -1456,6 +1490,7 @@ body.ticketPage {
   width: 100%;
   border-radius: 10px;
   margin: 1%;
+  padding: 1%;
 }
 
 .li-selected {
@@ -1463,15 +1498,19 @@ body.ticketPage {
   padding: 0%;
   color: white;
   margin: 1%;
+  padding: 1%;
 }
 
 .li-sold {
   background-color: #474747;
   color: white;
   margin: 1%;
+  padding: 1%;
 }
 
 .seat-option-container {
+  display: flex;
+  
   border-style: none;
   justify-content: center;
   align-items: center;
@@ -1568,9 +1607,9 @@ margin-bottom:30px; */
   justify-content: center;
   display: -moz-inline-grid;
   display: -ms-inline-grid;
- 
-padding: 2%;
-border: solid 2px red;
+  padding: 2%;
+  margin-bottom: 15%;
+  border: solid 2px red;
 }
 
 .row {
