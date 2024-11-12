@@ -58,7 +58,9 @@ footer .footer{
 
 .footer a img {
   width: auto;
-  padding: 1%;
+  padding: 0%;
+  margin: 2%;
+  scale: 1.2;
 }
 
 .crfooter {
@@ -189,34 +191,6 @@ span{
 }
 
 @media (max-width: 767px) {
-  footer {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    background-color: #1a1a1a;
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    color: white;
-    padding: 0;
-    margin: 0;
-    /*changed from 10% to 0. */
-    position: relative;
-  bottom: 0;
-
-    width: 100%;
-  }
-  
-  .footer{
-    width: 100%;
-    text-align: center;
-    font-size: clamp(1vh,1.5vh,2vh);
-    padding: 0;
-    margin: 0;
-   
-  }
-  
-  footer img{
-    scale: 0.8;
-  }
 
 
 
@@ -1213,6 +1187,54 @@ div.row{
   scale: 1;
   
 }
+
+
+  /*-------------FOOTER MEDIA QUERIES STARTS HERE---------------------- */
+  footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #1a1a1a;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    /*changed from 10% to 0. */
+    position: relative;
+    width: 100%;
+    padding: 2%;
+    margin: 0%;
+  }
+  
+  .footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+    padding: 0%;
+    margin: 0%;
+  }
+  
+  .footer:nth-child(1){
+    height: 100%;
+  }
+
+  .footer:nth-child(2){
+  
+  }
+
+  .footer:nth-child(3){
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+
+  footer img{
+    display: flex;
+    flex-direction: row;
+   scale: 0.8;
+  }
+
 
 }
 
