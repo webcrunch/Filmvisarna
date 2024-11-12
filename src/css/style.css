@@ -190,111 +190,7 @@ span{
 
 }
 
-@media (max-width: 767px) {
 
-
-
- /*------FOOTER MEDIA QUERIES ENDS HERE-------------------------- */
-/*-------NAV MEDIA QUERIES STARTS HERE--------------------------*/
-nav{
-  display: flex;
-  flex-direction: column;
- width: 100%;
-  height: 3rem;
-  z-index: 3;
-}
-
- 
-
-
-.hamburger{
-  display: flex;
-  position: absolute;
-  width: 10%;
-  height: 6%;
-  top: 1%;
- right: 7%;
-  z-index: 5;
-  opacity:0;
-
-}
-
- .hamburger:checked ~ nav{
-  position: relative;
-  display: flex;
-  z-index: 3;
- 
- width: 100%;
- padding: 5%;
- height: 100%;
- background-color: #00a2ff;
- transition: 0.2s ease-in;
-  } 
-
-  span{
-    position: relative;
-    left: 83%;
-    width: 2rem;
-    height: 1px;
-    padding: 1px;
-    margin: 1%;
-    background-color: white;
-    z-index: 5;
-  }
-
-
-  .hamburger:checked{
-   
-    opacity: 0;
-    z-index: 5;
- 
-  }
-
-  input.hamburger:checked ~ nav span{
-    position: relative;
-    left: 86%;
-    width: 2rem;
-    height: 1px;
-    padding: 1px;
-    bottom: 0px;
-    margin: 4px;
-    background-color: white;
-    z-index: 5;
-    transition: 0.4s ease-in-out;
-  }
-
-  .hamburger:checked ~  nav span:nth-child(1){
-    transform: rotate(45deg);
-  }
-  .hamburger:checked ~  nav span:nth-child(2){
-    transform: rotate(-45deg) translateY(-7px) translateX(7px);
-  }
-
- a.navlinks{
-  width: 100%;
-  display: none;
-  }
-
-  .hamburger:checked ~ nav a.navlinks{
-    display:flex;
-  
-    
-    width: 100%;
-  
-    font-size: 1.2rem;
-    font-weight: 300;
-    background-color: #00a2ff;
-     opacity: 0.99;
-     color: white;
-  
-  z-index: 5;
-  
-  }
-
- 
-
-
-}
 
 /* __________________________ */
 /*after home page----------------------------------- */
@@ -884,13 +780,128 @@ div .topcontainerimagediv {
 
 /*PHONE */
 @media (min-width:0px) and (max-width: 500px) {
+  /*-------NAV MEDIA QUERIES STARTS HERE--------------------------*/
+.navbar{
+  display: flex;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  top: 0%;
+ width: 100%;
+  height: 5em;
+  z-index: 3;
+
+}
+
+.navbar img{
+  display: flex;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.home-page-container{
+  margin-top: 22%;
+}
+
+ 
+
+
+.hamburger{
+  display: flex;
+  flex-direction: column;
+  width: 10%;
+  height: 6%;
+  top: 1%;
+ right: 7%;
+  z-index: 5;
+  opacity:0;
   
+}
+
+ .hamburger:checked ~ nav{
+  position: relative;
+  display: flex;
+  z-index: 3;
+ 
+ width: 100%;
+ padding: 5%;
+ height: 100%;
+ background-color: #00a2ff;
+ transition: 0.2s ease-in;
+  } 
+
+  span{
+    position: relative;
+    left: 83%;
+    width: 2rem;
+    height: 1px;
+    padding: 1px;
+    margin: 1%;
+    background-color: white;
+    z-index: 5;
+  }
+
+
+  .hamburger:checked{
+   
+    opacity: 0;
+    z-index: 5;
+ 
+  }
+
+  input.hamburger:checked ~ nav span{
+    position: relative;
+    left: 86%;
+    width: 2rem;
+    height: 1px;
+    padding: 1px;
+    bottom: 0px;
+    margin: 4px;
+    background-color: white;
+    z-index: 5;
+    transition: 0.4s ease-in-out;
+  }
+
+  .hamburger:checked ~  nav span:nth-child(1){
+    transform: rotate(45deg);
+  }
+  .hamburger:checked ~  nav span:nth-child(2){
+    transform: rotate(-45deg) translateY(-7px) translateX(7px);
+  }
+
+ a.navlinks{
+  width: 100%;
+  display: none;
+  }
+
+  .hamburger:checked ~ nav a.navlinks{
+    display:flex;
+  
+    
+    width: 100%;
+  
+    font-size: 1.2rem;
+    font-weight: 300;
+    background-color: #00a2ff;
+     opacity: 0.99;
+     color: white;
+  
+  z-index: 5;
+  
+  }
+
+  /*-----------NAVBAR MEDIA QUERIES ENDS HERE--------------- */
+
+
   div.full-ticket-page{
     background-color: rgb(23, 23, 23);
     width: 100%;
     height: 100%;
     padding: 0;
-    margin: 0;
+    margin-top: 15%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1197,11 +1208,10 @@ div.row{
     background-color: #1a1a1a;
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     color: white;
-    /*changed from 10% to 0. */
     position: relative;
     width: 100%;
     padding: 2%;
-    margin: 0%;
+    margin-top: 6%;
   }
   
   .footer{
