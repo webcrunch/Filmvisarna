@@ -903,6 +903,9 @@ div .topcontainerimagediv {
 
 /*---------------------HOMEPAGE ENDS HERE---------------------------------------------------- */
 
+/*-----------------TICKET PAGE STARTS HERE----------------------------------------------------*/
+
+
 /*---------TICKET PAGE MEDIA QUERIES STARTS HERE--------------------*/
 
 /*PHONE */
@@ -1118,133 +1121,9 @@ div.seat, div.seat-sold{
  
   height: 1.5em;
  }
-
-}
-
-/* Standard laptop screens (Full HD) */
-@media (min-width: 1367px) and (max-width: 1920px) {
-  /* Styles for screens between 1366 and 1920 pixels wide */
-}
-
-/*---------TICKET PAGE MEDIA QUERIES END--------------------*/
-/*-----------------TICKET PAGE STARTS HERE----------------------------------------------------*/
-
-
-/*---------TICKET PAGE MEDIA QUERIES STARTS HERE--------------------*/
-
-/*PHONE */
-@media (min-width:0px) and (max-width: 500px) {
-  
-  div.full-ticket-page{
-    background-color: rgb(23, 23, 23);
-    width: 100%;
-    height: 100%;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    overflow: none;
-  }
-
- 
-
-  div#ticket-pricing.ticket-container{
-    overflow: hidden;
-    border-radius: 0;
-    
-    width: 100%;
-    
-    display: flex;
-    flex-direction: column;
-  
-    border-top: rgb(59, 59, 59) 2px solid;
-   margin: 0;
-   padding: 0;
-   
-  }
-
-  
-  div#ticket-pricing.ticket-container h3{
-    font-size: clamp(1vh, 2vh, 2.5vh);
-    
-    width: 20%;
-    text-align: left;
-   
-  }
-
-  p.price-tag-name{
-    font-size: clamp(1vh, 2vh, 2.5vh);
-   
-  }
-  
-  div.ticket-option1, div.ticket-option2, div.ticket-option3{
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    display: flex;
-   flex-direction: row;
-    background-color: #1a1a1a;
-    border-radius: 0%;
-  width: 100%;
-  height:50% ;
-  padding: 0%;
-  margin: 0%;
-
-
-  }
-
-  div.ticket-price-container{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: left;
-    width: 100%;
-   margin: 0%;
-   padding: 0;
-    border: none;
-    border-radius: none;
-    
-  }
   
 
-  p#total-price.total-price-css {
-    display: flex;
-    justify-content: center;
-    align-items: center;
   
-    width: 100%;
-    margin: 1vh;
-    padding: 2%;
-  }
-  
-  
-  
-  input.quantity {
-    width: 10%;
-    text-align: center;
-  
-  }
-  
-  button.add-ticket, button.remove-ticket {
-    width: 10%;
-    margin: 1%;
-    border-radius: 2px;
-    border: none;
-    background-color: #00a2ff;
-    color: white;
-    cursor: pointer;
-  }
-
-
-  div.seat-option-container{
-
-    width: 100%;
-    display: flex;
-    
-    box-shadow: 0 0 0 0;
-  }
 
   ul.ul-seat{
     display: flex;
@@ -1324,11 +1203,6 @@ div.seat-selector-container{
  
 }
 
-p.total-seats{
-  flex-direction: column;
-  width: 100%;
-
-}
 div.row{
   display: flex;
   position: static;
@@ -1339,16 +1213,6 @@ div.row{
   scale: 1;
   
 }
-
-div.seat, div.seat-sold{
-  display: flex;
- flex-direction: row;
-  position: relative;
-   width: 2.5vh;
-   height: 3.5vh;
-  
- 
- }
 
 }
 
