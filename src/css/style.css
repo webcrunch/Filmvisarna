@@ -1101,8 +1101,22 @@ div.seat, div.seat-sold{
   position: relative;
    width: 2.5vh;
    height: 3.5vh;
+ }
+
+ .seat-selector-container .row .seat-marked{
   
+  width: 1.4em;
+  height: 1.5em;
+ }
+
+ .seat-selector-container .row .seat{
+   
+  height: 1.5em;
+ }
+
+ .seat-selector-container .row .seat-sold{
  
+  height: 1.5em;
  }
 
 }
