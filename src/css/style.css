@@ -1220,7 +1220,7 @@ div.row{
   }
 
   .footer:nth-child(2){
-  
+    padding: 2%;
   }
 
   .footer:nth-child(3){
@@ -1229,10 +1229,11 @@ div.row{
     width: 100%;
   }
 
-  footer img{
+  .footer a img{
     display: flex;
     flex-direction: row;
    scale: 0.8;
+   margin: 5%;
   }
 
 
