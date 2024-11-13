@@ -3,6 +3,15 @@ import { NavLink, Link } from "react-router-dom"
 import React, { useState } from "react";
 export default function Navbar() {
 
+
+    const [isChecked, setIsChecked] = useState(false);
+
+    const handleLinkClick = () => {
+        setIsChecked(false);
+    };
+
+
+
     const s = useStates('main');
     const open = useStates('user');
     const l = useStates({ opened: false });
@@ -12,13 +21,16 @@ export default function Navbar() {
         // will have some nice api call here
     }
     return <>
-    <input className='hamburger' type="checkbox" />
+    <input className='hamburger' type="checkbox"
+    id="hamburger"
+    checked={isChecked}
+    onChange={() => setIsChecked(!isChecked)}/>
 
         <nav className='navbar'>
         <span></span>
         <span></span>
             {s.menu.map(({ label, path }) =>
-                label ? <NavLink className="navlinks" to={path}>{label}</NavLink> : null
+                label ? <NavLink className="navlinks"  onClick={handleLinkClick}  to={path}>{label}</NavLink> : null
             )}
             <img className='img' onClick={() => l.opened = !l.opened} src="/images/icon-login.svg" alt="Login" />
             {/* <p>Välkommen tillbaka ....</p> */}

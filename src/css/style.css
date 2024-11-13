@@ -149,6 +149,7 @@ nav img:hover {
   margin-left: 5px;
   /* margin: 10px; */
   display: hidden;
+  z-index: 5;
 }
 
 .boxContent.shown {
@@ -177,17 +178,16 @@ nav img:hover {
   filter: invert(100%);
 }
 
-.hamburger, img.img{
- 
+.hamburger{
+  display: none;
 }
 
 span{
   width: 40px;
- 
   padding: 0.2%;
   margin-top: 3%;
   background-color: white;
-
+  display: none;
 }
 
 
@@ -788,10 +788,11 @@ div .topcontainerimagediv {
   justify-content: center;
   flex-direction: column;
   top: 0%;
- width: 100%;
+  width: 100%;
   height: 5em;
   z-index: 3;
-
+  padding: 0%;
+  margin: 0%;
 }
 
 .navbar img{
@@ -802,46 +803,73 @@ div .topcontainerimagediv {
 
 }
 
+/*BOX CONTENT MEDIA QUERIES*/
+
 .home-page-container{
   margin-top: 22%;
 }
 
-.boxContent.shown, .boxContent{
+#root .hamburger:checked ~ .navbar{
+  background-color: #00a2ff;
+}
+
+#root .hamburger:checked ~ div.boxContent.shown {
+  display: none;
+  height: 10%;
+
+}
+
+ .boxContent div p {
+   width: 100%;
+   height: 100%;
+   padding: 0%;
+  border: solid 1px rgb(0, 174, 255); 
+ }
+
+.boxContent{
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 60%;
-  height: 100%;
-}
-
-
-
-.boxContent div {
   width: 100%;
   height: 100%;
- 
+  top: 100%;
+  right: 0%;
+
+}
+
+ .boxContent div p {
+   width: 100%;
+   height: 100%;
+   padding: 0%;
+  border: solid 1px rgb(0, 174, 255); 
+ }
+.boxContent div {
+  width: 100%;
 }
 
 .boxContent div p {
   width: 100%;
-  height: 50%;
- padding: 1%;
+  height: 100%;
+  padding: 1%;
 }
+
 
 .boxContent div p a{
   width: 100%;
   height: 100%;
-  padding: 5%;
+  padding: 1%;
   display: flex;
   justify-content: center;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: static;
+ 
 }
 
 .boxContent div p a img{
-  margin-left:55%;
- 
+left: 10%;
+
 }
 
  
@@ -850,16 +878,16 @@ div .topcontainerimagediv {
 .hamburger{
   display: flex;
   position: absolute;
-  width: 20%;
-  height: 6%;
-  top: 10%;
-  right: 7%;
+  width: 10%;
+  height: 5%;
+  top: 2%;
+  left: 7%;
   z-index: 5;
-  opacity:1;
+  opacity:0.5;
   border: solid 2px red;
- 
- 
 }
+
+
 
 .hamburger:checked{
   opacity: 1;
@@ -869,29 +897,35 @@ div .topcontainerimagediv {
   position: relative;
   display: flex;
   z-index: 3;
- 
- width: 100%;
- padding: 0%;
- height: 100%;
- background-color: #00a2ff;
- transition: 0.2s ease-in;
- object-fit: cover;
+  
+  width: 100%;
+  padding: 0%;
+  height: 100%;
+  background-color: #00a2ff;
+  transition: 0.2s ease-in;
+  object-fit: cover;
   } 
 
   span{
     position: absolute;
-    left: 10%;
-    width: 3rem;
+    left: 8%;
+    width: 2rem;
     height: 2px;
     padding: 0.3%;
     margin: 0%;
     background-color: white;
   
-    z-index: 7;
+    z-index: 6;
+   
+    display: block;
   }
 
   span:nth-child(1){
     top: 30%;
+  }
+
+  span:nth-child(2){
+    top: 60%;
   }
 
 
@@ -921,21 +955,21 @@ div .topcontainerimagediv {
  a.navlinks{
   width: 100%;
   display: none;
+
   }
 
   .hamburger:checked ~ nav a.navlinks{
     display:flex;
-  
+    position: sticky;
     
     width: 100%;
-  
-    font-size: 1.2rem;
+    height: auto;
+    font-size: clamp(1em, 2em, 4em);
     font-weight: 300;
     background-color: #00a2ff;
      opacity: 0.99;
      color: white;
-  
-  z-index: 5;
+     z-index: 5;
   
   }
 
