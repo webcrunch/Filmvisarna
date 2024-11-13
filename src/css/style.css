@@ -373,8 +373,7 @@ div .topcontainerimagediv {
 }
 
 .topcontainerimagedivv p{
-  font-size: clamp(1vh, 2vh, 2.5vh);
- 
+  font-size: clamp(0.5em, 1.4vh, 1.5em);
   height: auto;
   width: 100%;
 }
@@ -497,7 +496,7 @@ div .topcontainerimagediv {
   }
   
   .topcontainerimagedivv p{
-    font-size: clamp(1vh, 2vh, 2.5vh);
+    font-size: clamp(0.5em, 1.2vh, 1.5em);
    
     height: auto;
     width: 100%;
@@ -525,9 +524,9 @@ div .topcontainerimagediv {
     flex-direction: column;
     width: 100%;  
     height:50%;
-   
-  
+    animation: none;
   }
+  
 
   .undertopcontainer{
     text-align: center;
@@ -723,7 +722,7 @@ div .topcontainerimagediv {
 .snackimage1 , .snackimage2 {
   cursor: pointer;
  
-  width: 50%;
+  width: 20%;
   box-shadow: inset 0 0 0 0 #ffffff28;
   /*very important */
   transition: ease-in 0.2s;
@@ -1729,157 +1728,65 @@ body.contactPage {
 /*-----------------------------Om Oss PAGE STARTS HERE---------------------------------------- */
 
 body.aboutPage {
-  background-color: #000000;
+  background-color: #303030;
+  box-sizing: border-box;
 }
 
-.OmOss {
+
+
+.om-oss {
+  display: flex;
+  flex-direction: row;
   text-align: center;
-  justify-content: space-between;
+  justify-content: center;
+  padding: 0%;
+  width: 100%;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: white;
-  padding: 20px;
-  position: relative;
-  padding-top: 0;
-  padding-bottom: 0;
-  padding-right: 20px;
-  padding-left: 20px;
+
+}
+.om-oss-img-container{
+  width: 100%;
+  display: flex;
 }
 
-.OmOss p {
-  margin: 0 auto;
-  padding: 10px 2px;
-  width: 50%;
-  text-align: start;
-  word-wrap: break-word;
+.om-oss-img-container img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-/*-----------------------------Om Oss PAGE ENDS HERE---------------------------------------- */
-
-.varumarkeslofte {
-  text-align: center;
-  justify-content: space-between;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  color: white;
-  padding: 20px;
-  position: relative;
-  padding-top: 0;
-  padding-bottom: 0;
-  padding-right: 20px;
-  padding-left: 20px;
-}
-
-.varumarkeslofte p {
-  margin: 0 auto;
-  padding: 10px 2px;
-  width: 50%;
-  text-align: start;
-  word-wrap: break-word;
+.om-oss-text-container{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2%;
 }
 
 .bioInfo {
+  display: flex;
+  text-align: column;
   text-align: center;
   justify-content: space-between;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: white;
-  padding: 20px;
+ 
   position: relative;
-  padding-top: 0;
-  padding-bottom: 0;
-  padding-right: 20px;
-  padding-left: 20px;
+  width: 100%;
+
 }
 
 .bioInfo p {
-  margin: 0 auto;
-  padding: 10px 2px;
-  width: 50%;
-  text-align: start;
+  padding: 2%;
+  width: 100%;
+  text-align: left;
   word-wrap: break-word;
 }
+/*-----------------------------Om Oss PAGE ENDS HERE---------------------------------------- */
 
-.karriarmojligheter {
-  text-align: center;
-  justify-content: space-between;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  color: white;
-  padding: 20px;
-  position: relative;
-  padding-top: 0;
-  padding-bottom: 0;
-  padding-right: 20px;
-  padding-left: 20px;
-}
 
-.karriarmojligheter p {
-  margin: 0 auto;
-  padding: 10px 2px;
-  width: 50%;
-  text-align: start;
-  word-wrap: break-word;
-}
-
-.telefon {
-  text-align: center;
-  justify-content: space-between;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  color: white;
-  padding: 20px;
-  position: relative;
-  padding-top: 0;
-  padding-bottom: 0;
-  padding-right: 20px;
-  padding-left: 20px;
-}
-
-.telefon p {
-  margin: 0 auto;
-  padding: 10px 2px;
-  width: 50%;
-  text-align: start;
-  word-wrap: break-word;
-}
-
-.midsommar {
-  text-align: center;
-  justify-content: space-between;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  color: white;
-  padding: 20px;
-  position: relative;
-  padding-top: 0;
-  padding-bottom: 0;
-  padding-right: 20px;
-  padding-left: 20px;
-}
-
-.midsommar p {
-  margin: 0 auto;
-  padding: 10px 2px;
-  width: 50%;
-  text-align: start;
-  word-wrap: break-word;
-}
-
-.regler {
-  text-align: center;
-  justify-content: space-between;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  color: white;
-  padding: 20px;
-  position: relative;
-  padding-top: 0;
-  padding-bottom: 0;
-  padding-right: 20px;
-  padding-left: 20px;
-}
-
-.regler p {
-  margin: 0 auto;
-  padding: 10px 2px;
-  width: 50%;
-  text-align: start;
-  word-wrap: break-word;
-}
 
 /* Booking confirmed page */
 
