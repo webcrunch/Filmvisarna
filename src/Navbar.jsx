@@ -12,7 +12,11 @@ export default function Navbar() {
         // will have some nice api call here
     }
     return <>
+    <input className='hamburger' type="checkbox" />
+
         <nav className='navbar'>
+        <span></span>
+        <span></span>
             {s.menu.map(({ label, path }) =>
                 label ? <NavLink className="navlinks" to={path}>{label}</NavLink> : null
             )}

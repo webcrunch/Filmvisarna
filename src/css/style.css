@@ -28,7 +28,7 @@ footer {
   padding: 1%;
  
   /*changed from 10% to 0. */
-  position: absolute;
+  position: relative;
   bottom: 0%;
   width: 100%;
 }
@@ -846,40 +846,52 @@ div .topcontainerimagediv {
 
  
 
-
+/*-----------HAMBURGER MENU MEDIA QUERIES START HERE------------------- */
 .hamburger{
   display: flex;
-  flex-direction: column;
-  width: 10%;
+  position: absolute;
+  width: 20%;
   height: 6%;
-  top: 1%;
- right: 7%;
+  top: 10%;
+  right: 7%;
   z-index: 5;
-  opacity:0;
-  
+  opacity:1;
+  border: solid 2px red;
+ 
+ 
 }
 
- .hamburger:checked ~ nav{
+.hamburger:checked{
+  opacity: 1;
+}
+
+ .hamburger:checked ~ .navbar{
   position: relative;
   display: flex;
   z-index: 3;
  
  width: 100%;
- padding: 5%;
+ padding: 0%;
  height: 100%;
  background-color: #00a2ff;
  transition: 0.2s ease-in;
+ object-fit: cover;
   } 
 
   span{
-    position: relative;
-    left: 83%;
-    width: 2rem;
-    height: 1px;
-    padding: 1px;
-    margin: 1%;
+    position: absolute;
+    left: 10%;
+    width: 3rem;
+    height: 2px;
+    padding: 0.3%;
+    margin: 0%;
     background-color: white;
-    z-index: 5;
+  
+    z-index: 7;
+  }
+
+  span:nth-child(1){
+    top: 30%;
   }
 
 
@@ -891,23 +903,19 @@ div .topcontainerimagediv {
   }
 
   input.hamburger:checked ~ nav span{
-    position: relative;
-    left: 86%;
-    width: 2rem;
-    height: 1px;
-    padding: 1px;
-    bottom: 0px;
-    margin: 4px;
+    top: 5%;
+    left: 10%;
+ 
     background-color: white;
     z-index: 5;
     transition: 0.4s ease-in-out;
   }
 
   .hamburger:checked ~  nav span:nth-child(1){
-    transform: rotate(45deg);
+    transform: rotate(-45deg);
   }
   .hamburger:checked ~  nav span:nth-child(2){
-    transform: rotate(-45deg) translateY(-7px) translateX(7px);
+    transform: rotate(45deg) translateY(-0px) translateX(0px);
   }
 
  a.navlinks{
