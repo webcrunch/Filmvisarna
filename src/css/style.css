@@ -171,6 +171,7 @@ nav img:hover {
 
 .hamburger{
   display: none;
+  opacity: 0;
 }
 
 span{
@@ -800,6 +801,10 @@ div .topcontainerimagediv {
   margin-top: 22%;
 }
 
+#root .hamburger{
+  opacity: 0;
+}
+
 #root .hamburger:checked ~ .navbar{
   background-color: #00a2ff;
 }
@@ -882,10 +887,6 @@ left: 10%;
   overflow: hidden;
 }
 
-.hamburger:checked{
-  opacity: 1;
-}
-
  .hamburger:checked ~ .navbar{
   position: relative;
   display: flex;
@@ -914,7 +915,7 @@ left: 10%;
   }
 
   span:nth-child(1){
-    top: 30%;
+    top: 40%;
   }
 
   span:nth-child(2){
@@ -922,20 +923,15 @@ left: 10%;
   }
 
 
-  .hamburger:checked{
-   
-    opacity: 0;
-    z-index: 5;
  
-  }
 
   input.hamburger:checked ~ nav span{
     top: 5%;
-    left: 10%;
+    left: 8%;
  
     background-color: white;
     z-index: 5;
-    transition: 0.4s ease-in-out;
+    transition: 0.2s ease-in-out;
   }
 
   .hamburger:checked ~  nav span:nth-child(1){
@@ -960,7 +956,7 @@ left: 10%;
     font-size: clamp(1em, 2em, 4em);
     font-weight: 300;
     background-color: #00a2ff;
-     opacity: 0.99;
+     opacity: 1;
      color: white;
      z-index: 5;
   
