@@ -131,23 +131,13 @@ nav img:hover {
 }
 
 .boxContent {
-  background-color: #213964;
-  border: #525252 solid;
+  background-color: #00a2ff;
   width: 20%;
   height: auto;
   position: absolute;
   right: 2%;
-  top: 60px;
-  /* border-radius: 10%; */
+  top: 80%;
   text-decoration: none;
-  /* padding-left: 20px;
-  padding-top: 5px;
-  padding-bottom: 5px; */
-  /* padding: 10px 15px 5px 10px; */
-  /* margin-top: 5px; */
-  margin-bottom: 5px;
-  margin-left: 5px;
-  /* margin: 10px; */
   display: hidden;
   z-index: 5;
 }
@@ -165,7 +155,8 @@ nav img:hover {
 .boxContent p{
   color: white;
   padding: 2%;
-  border: solid 1px black;
+  border: #525252 1px solid;
+ 
 }
 
 .boxContent a {
@@ -887,7 +878,9 @@ left: 10%;
   border: solid 2px red;
 }
 
-
+.no-scroll {
+  overflow: hidden;
+}
 
 .hamburger:checked{
   opacity: 1;
@@ -946,10 +939,10 @@ left: 10%;
   }
 
   .hamburger:checked ~  nav span:nth-child(1){
-    transform: rotate(-45deg);
+    transform: rotate(45deg);
   }
   .hamburger:checked ~  nav span:nth-child(2){
-    transform: rotate(45deg) translateY(-0px) translateX(0px);
+    transform: rotate(-45deg) translateY(-0px) translateX(0px);
   }
 
  a.navlinks{
