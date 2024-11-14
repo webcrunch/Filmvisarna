@@ -42,20 +42,27 @@ export default function DetailedInfo() {
                     <h1 className="detailedTitle">{movie.title}</h1>
                     <div className="detailedInfo">
                         <p className="detailedDesc">{movie.description}</p>
-                        <p className="detailedLength infoPart">Längd: <br /> {calculatingTime(movie.length)}</p>
-                        <p className="detailedGenre infoPart">Genre: <br /> {movie.genre}</p>
-                        <div className="clearBoth"></div>
-                        <p className="detailedReleaseDate infoPart">Premiär: <br /> {movie.productionYear}</p>
-                        <p className="detailedDirector infoPart">Regi: <br /> {movie.director}</p>
-                        <div className="clearBoth"></div>
-                        <div className='allActorsList'>
-                            <p className="detailedActors">Skådespelare: <br /> </p>
+                        <p className="detailedLength infoPart">Längd:  {calculatingTime(movie.length)}</p>
+                        <p className="detailedGenre infoPart">Genre: {movie.genre}</p>
+                    </div>
+                    <div className="detailedInfo">
+                    <h3 className="detailedReleaseDate infoPart">Premiär: <span>{movie.productionYear}</span> </h3>
+                    <h3 className="detailedDirector infoPart">Regisör:  <span>{movie.director} </span></h3>
+                    </div>
+                    
+                    <h3 className="detailedActors">Skådespelare:  
                             <ul>
                                 {movie.actors.map(actor => 
                                     <li key={actor}>{actor}</li>
                                 )}
                             </ul>
-                        </div>
+                    </h3>
+                    
+                   
+                        <div className="clearBoth"></div>
+                           
+                        <div className="clearBoth"></div>
+
                     </div>
                     <div className="buttonsUnderText">
                         <button name="btnRatings" className="buttonRatings" onClick={() => handleButtonClick('ratings')}>Show Ratings</button>
@@ -83,7 +90,7 @@ export default function DetailedInfo() {
                         )}
                     </div>
                 </div>
-            </div>
+          
         : null
     );
 }
