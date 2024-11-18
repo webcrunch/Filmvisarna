@@ -35,60 +35,85 @@ export default function DetailedInfo() {
     return (
         movie != undefined ? 
             <div className="detailedPageContainer">
-                <div className='detailedLeftContainer'>
-                    <img className="detailedImages" src={movie.images} />
-                </div>
-                <div className="detailedRightContainer">
-                    <h1 className="detailedTitle">{movie.title}</h1>
-                    <div className="detailedInfo">
-                        <p className="detailedDesc">{movie.description}</p>
-                        <p className="detailedLength infoPart">Längd:  {calculatingTime(movie.length)}</p>
-                        <p className="detailedGenre infoPart">Genre: {movie.genre}</p>
-                    </div>
-                    <div className="detailedInfo">
-                    <h3 className="detailedReleaseDate infoPart">Premiär: <span>{movie.productionYear}</span> </h3>
-                    <h3 className="detailedDirector infoPart">Regisör:  <span>{movie.director} </span></h3>
-                    </div>
-                    
-                    <h3 className="detailedActors">Skådespelare:  
-                            <ul>
-                                {movie.actors.map(actor => 
-                                    <li key={actor}>{actor}</li>
-                                )}
-                            </ul>
-                    </h3>
-                    
-                   
-                        <div className="clearBoth"></div>
-                           
-                        <div className="clearBoth"></div>
+                <h1 className="detailedTitle">{movie.title}</h1>
+                
+                
+                <div className="detailed-inner-containers">
 
+                    <div className='detailedLeftContainer'>
+                        <img className="detailedImages" src={movie.images} />
                     </div>
-                    <div className="buttonsUnderText">
-                        <button name="btnRatings" className="buttonRatings" onClick={() => handleButtonClick('ratings')}>Show Ratings</button>
-                        <button name="btnScreenings" className="buttonScreenings" onClick={() => handleButtonClick('screenings')}>View Screenings</button>
-                        {showRatings && (
-                            <div className="detailedRatingDropdown">
-                                {movie.reviews.map(rate => 
-                                    <div key={rate.source} className="detailedRating">
-                                        <p>{rate.source}</p>
-                                        <p>{rate.quote}</p>
-                                        <p>
-                                            {Array.from({ length: 5 }, (_, i) => i < rate.stars ? "⭐" : "☆")}
-                                        </p>
-                                    </div>
-                                )}
-                            </div>
-                        )}
-                        {showScreenings && (
-                            <div className="detailedScreeningsDropdown">
-                                <div className="detailedScreening">
-                                    <select {...screening.bind("categories")} id="">{dateArray.map((cat, index) => <option key={index}>{cat}</option>)}</select>
-                                    {screenings.filter(filterByDate).map(screen => <p key={screen.film}>{screen.film}{screen.date}</p>)}
+                    <div className="detailedRightContainer">
+                    
+                    <p className="detailedDesc">{movie.description}</p>
+                        <div className="detailedInfo">
+                           
+                            <p className="detailedLength infoPart"><p><b>Längd:</b>{" - "} </p> {" - "}{calculatingTime(movie.length)}</p>
+                            <p className="detailedGenre infoPart"><p><b>Genre:</b> {" - "}</p> {" - "}{movie.genre}</p>
+
+                            <p className="detailedReleaseDate infoPart"><p><b>Premiär:</b>{" - "}</p> {" - "} {movie.productionYear} </p>
+                        
+                        </div>
+                        
+                        <div className="infoPart detailedDirector"><p><b>Regisör:</b>{" - "}</p>
+                            
+                        {" - "} {movie.director} </div>
+                        
+                        <div className="info-part-bottom">
+
+                                <div className="infoPart ratings detailedActors"><p>{<b>Skådespelare:</b>}</p> 
+                                        <ul>
+                                            {movie.actors.map(actor => 
+                                                <li key={actor}>{" | "}{actor}{" | "}</li>
+                                            )}
+                                        </ul>
                                 </div>
+
+                            <div className="buttonsUnderText">
+                                    <button name="btnRatings" className="buttonRatings" onClick={() => handleButtonClick('ratings')}>Show Ratings</button>
+                                    <button name="btnScreenings" className="buttonScreenings" onClick={() => handleButtonClick('screenings')}>View Screenings</button>
                             </div>
-                        )}
-                    </div>
+                                    
+                                    {showRatings && (
+                                        <div className="detailedRatingDropdown">
+                                            {movie.reviews.map(rate => 
+                                                <div key={rate.source} className="detailedRating">
+                                                    <p>{rate.source}</p>
+                                                    <p>{rate.quote}</p>
+                                                    <p>
+                                                        {Array.from({ length: 5 }, (_, i) => i < rate.stars ? "⭐" : "☆")}
+                                                    </p>
+                                                </div>
+                                            )}
+                                        </div>
+                                    )}
+                                    {showScreenings && (
+                                        <div className="detailedScreeningsDropdown">
+                                            <div className="detailedScreening">
+                                                <select {...screening.bind("categories")} id="categories">{dateArray.map((cat, index) => <option key={index}>{cat}</option>)}</select>
+                                                {screenings.filter(filterByDate).map(screen => <p key={screen.film}>{<b>Filmen: </b>}{screen.film}{" "}{<b>visas på bio - </b>}{screen.date}</p>)}
+                                                
+                                            </div>
+                                        </div>
+                                    )}
+                          
+                                    
+                           
+                        </div>
+
+                        
+                        
+                    
+                            <div className="clearBoth"></div>
+                            
+                            <div className="clearBoth"></div>
+
+                        </div>
+
+                </div>
+                
+
+
                 </div>
           
         : null
