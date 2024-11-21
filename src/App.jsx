@@ -76,9 +76,9 @@ export default function App() {
     (async () => {
       s.screenings = await (await fetch('/api/screenings')).json();
       s.saloons = await (await fetch('/api/saloons')).json();
-      a.users = users//users//await (await fetch('/api/users')).json();
-      s.bookings = bookings//await (await fetch('/api/bookings_informations')).json();
-      let movies = movieData //await (await fetch('/api/movies')).json();
+      a.users = await (await fetch('/api/users')).json();
+      s.bookings = await (await fetch('/api/bookings_informations')).json();
+      let movies = await (await fetch('/api/movies')).json();
       for (let movie of movies) {
         movie.path = kebabify(movie.title)
       }
