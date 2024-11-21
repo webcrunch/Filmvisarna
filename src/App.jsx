@@ -1,6 +1,9 @@
 import { useStates } from './utilities/states.js';
 import { useEffect } from 'react';
 import { kebabify } from './utilities/kebabify';
+import movieData from '../public/json/movies.json'
+import bookings from "../public/json/bookings.json"
+import users from "../public/json/users.json"
 
 import {
   BrowserRouter,
@@ -73,9 +76,9 @@ export default function App() {
     (async () => {
       s.screenings = await (await fetch('/api/screenings')).json();
       s.saloons = await (await fetch('/api/saloons')).json();
-      a.users = await (await fetch('/api/users')).json();
-      s.bookings = await (await fetch('/api/bookings_informations')).json();
-      let movies = await (await fetch('/api/movies')).json();
+      a.users = users//users//await (await fetch('/api/users')).json();
+      s.bookings = bookings//await (await fetch('/api/bookings_informations')).json();
+      let movies = movieData //await (await fetch('/api/movies')).json();
       for (let movie of movies) {
         movie.path = kebabify(movie.title)
       }
