@@ -1,4 +1,4 @@
-import { useStates } from "../utilities/states";
+/* import { useStates } from "../utilities/states";
 import copyContent from '../utilities/copyFunction';
 import { useEffect, useState } from "react";
 import { useParams } from 'react-router-dom';
@@ -102,4 +102,87 @@ export default function Booked() {
             </div>
         </div>
     );
+}
+ */
+
+
+
+import { useStates } from "../utilities/states";
+import copyContent from '../utilities/copyFunction';
+import { useEffect, useState } from "react";
+import { useParams } from 'react-router-dom';
+import { get, post, del } from '../utilities/backend-talk';
+
+export default function Booked() {
+    const user = useStates('user');
+    const l = useStates('main');
+    let { bookingInfo } = useParams();
+    const [data, setData] = useState(null);
+    let save = useStates({
+        bookedArray: [],
+        id: null
+    });
+    let movieName = useStates({
+        movieTitle: null
+    });
+    let placesArray = [];
+
+    const handleChairsToSave = async () => {
+        for (let i = 0; i < data.screeningsData.occupiedSeats.length; i++) {
+            save.bookedArray.push([...data.markedChairsArray[i], ...data.screeningsData.occupiedSeats[i]].sort());
+        }
+
+        let bookingbj = {
+            id: user.id,
+            booking: {
+                id: data.screeningsData.id,
+                price: data.totalPrice,
+                code: data.confnr
+            }
+        };
+
+        let result = await post('https://filmvisarna.vercel.app/book', save);
+        if (JSON.stringify(l.screenings) === JSON.stringify(result.data)) {
+            return;
+        }
+
+        if (user.loggedin) {
+            await post('https://filmvisarna.vercel.app/userbooking', bookingbj);
+        }
+
+        l.screenings = result.data;
+        l.bookings = await get('https://filmvisarna.vercel.app/bookings_informations');
+    };
+
+    useEffect(() => {
+        if (data && !save.id) {
+            save.id = data.screeningsData.id;
+            handleChairsToSave();
+            const movie = l.movies.find(movie => movie.path === data.movie);
+            if (movie) {
+                movieName.movieTitle = movie.title;
+            }
+        }
+    }, [data, save, l.movies, movieName]);
+
+    useEffect(() => {
+        (async () => {
+            const response = await get(`https://filmvisarna.vercel.app/bookings_information/${bookingInfo}`);
+            setData(response);
+        })();
+
+        document.body.classList.add("bookingPage");
+        return () => document.body.classList.remove("bookingPage");
+    }, [bookingInfo]);
+
+    if (data !== null) {
+        for (const [key, value] of Object.entries(data.markedChairs)) {
+            let row = key.split(" ")[0];
+            let chair = key.split(" ")[1];
+            placesArray.push({ row: row, chair: chair });
+        }
+        placesArray.sort();
+    }
+
+    // Render your component here
 }
